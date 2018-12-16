@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Usagi Ito</authors>
+    <owners>Usagi Ito</owners>
+    <licenseUrl>https://github.com/usagi/usagi.cs/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/usagi/usagi.cs</projectUrl>
+    <iconUrl>https://gravatar.com/avatar/dbc8b835bed12dd8194c240139033bc8</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>
+      とりあえずコミット
+      今週末書いた趣味実装。
+    </releaseNotes>
+    <copyright>Copyright 2018 Usagi Ito</copyright>
+    <tags>usagi unit utility generic math</tags>
+  </metadata>
+</package>
