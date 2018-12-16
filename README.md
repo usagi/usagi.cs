@@ -4,7 +4,7 @@
 
 # License
 
-- [MIT](https://opensource.org/licenses/MIT)
+- [MIT](LICENSE.md)
 
 # Author
 
