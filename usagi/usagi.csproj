@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>usagi</RootNamespace>
     <AssemblyName>usagi</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,8 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="usagi.Boxing.Optional.cs" />
     <Compile Include="usagi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="usagi.Extension.Collection.cs" />
+    <Compile Include="usagi.Extension.cs" />
+    <Compile Include="usagi.Quantity.cs" />
+    <Compile Include="usagi.Quantity.Calculation.cs" />
+    <Compile Include="usagi.Quantity.GeoLocation.cs" />
+    <Compile Include="usagi.Quantity.Length.cs" />
+    <Compile Include="usagi.Quantity.PlaneAngle.cs" />
+    <Compile Include="usagi.Quantity.Unit.cs" />
+    <Compile Include="usagi.Quantity.Unit.SI.cs" />
+    <Compile Include="usagi.Quantity.Unit.SI.MetricPrefix.cs" />
+    <Compile Include="usagi.URI.cs" />
+    <Compile Include="usagi.URI.GeoURI.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

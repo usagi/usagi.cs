@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "usagi", "usagi\usagi.csproj", "{0FF5C4C1-81AD-44D0-8D0D-627ADC9F56A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "usagiTests", "usagiTests\usagiTests.csproj", "{C319445D-0E4C-4178-A7CE-FB66F3B24FD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0FF5C4C1-81AD-44D0-8D0D-627ADC9F56A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FF5C4C1-81AD-44D0-8D0D-627ADC9F56A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FF5C4C1-81AD-44D0-8D0D-627ADC9F56A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C319445D-0E4C-4178-A7CE-FB66F3B24FD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C319445D-0E4C-4178-A7CE-FB66F3B24FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C319445D-0E4C-4178-A7CE-FB66F3B24FD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C319445D-0E4C-4178-A7CE-FB66F3B24FD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

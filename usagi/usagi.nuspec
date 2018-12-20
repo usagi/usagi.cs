@@ -12,8 +12,13 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
-      とりあえずコミット
-      今週末書いた趣味実装。
+      ソースのファイル単位を整理。
+      usagi.Quantity.PlaneAngle.ToStringInDMS で分と秒にも負の符号が付くバグを修正。
+      usagi.Quantity.Length に NearlyEqualsTo を追加。
+      usagi.Quantity.Calculation.NearlyEquals が false を期待される条件でも true を返すバグを修正。
+      usagi.URI.GeoURI を追加。
+      target を .net Framework 4.6.2 から 4.7.2 へ変更。
+      単体試験プロジェクト usagiTests を追加。
     </releaseNotes>
     <copyright>Copyright 2018 Usagi Ito</copyright>
     <tags>usagi unit utility generic math</tags>
