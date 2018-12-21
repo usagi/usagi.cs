@@ -324,9 +324,9 @@ namespace usagi.Quantity
     public int CompareTo( PlaneAngle other )
     {
       return
-        ( other.InDegrees < InDegrees )
+        ( InDegrees < other.InDegrees )
           ? -1
-          : ( ( other.InDegrees > InDegrees )
+          : ( ( InDegrees > other.InDegrees )
               ? +1
               : 0
             )
@@ -396,7 +396,24 @@ namespace usagi.Quantity
     /// 正規化した場合の this ≃ a の判定
     /// </summary>
     public bool NormalizedNearlyEqualsTo( PlaneAngle a, PlaneAngle tolerance = null )
-    { return NearlyEquals( Normalize360( this ), Normalize360( a ), tolerance != null ? Normalize360( tolerance ) : null ); }
+    {
+      PlaneAngle aa, bb;
+      aa = Normalize180( this );
+      if ( Math.Abs( aa._deg ) < 90 )
+        bb = Normalize180( a );
+      else
+      {
+        aa = Normalize360( this );
+        bb = Normalize360( a );
+      }
+
+      return 
+        NearlyEquals
+        ( aa
+        , bb
+        , tolerance != null ? Normalize360( tolerance ) : null
+        );
+    }
 
     /// <summary>
     /// NearlyEquals( this, a tolerance ) への糖衣構文
@@ -419,19 +436,37 @@ namespace usagi.Quantity
     /// 正規化せずに角度が等しいか判定する
     /// 正規化が必要な場合は NormalizedEquals を使うとよい
     /// </summary>
-    public bool Equals( PlaneAngle other ) { return CompareTo( other ) == 0; }
+    public bool Equals( PlaneAngle other )
+    {
+      return CompareTo( other ) == 0;
+    }
 
     /// <summary>
     /// 正規化せずに角度が等しいか判定する
     /// 正規化が必要な場合は NormalizedEquals を使うとよい
     /// </summary>
-    public override bool Equals( object obj ) { if ( obj is PlaneAngle a ) return Equals( a ); return false; }
+    public override bool Equals( object obj )
+    {
+      if ( obj is PlaneAngle a )
+        return Equals( a );
+      return false;
+    }
 
     /// <summary>
     /// 正規化せずに角度が等しいか判定する
     /// 正規化が必要な場合は NormalizedEquals を使うとよい
     /// </summary>
-    static public bool operator ==( PlaneAngle a, PlaneAngle b ) { return a.Equals( b ); }
+    static public bool operator ==( PlaneAngle a, PlaneAngle b )
+    {
+      // a, b は共に null ではない -> a.Equals(b) -> a.CompareTo(b)==0
+      if ( a is PlaneAngle && b is PlaneAngle )
+        return a.Equals( b );
+      // a, b の何れか一方だけが null
+      if ( a is PlaneAngle || b is PlaneAngle )
+        return false;
+      // a, b は共に null
+      return true;
+    }
     /// <summary>
     /// 正規化せずに角度が等しいか判定する
     /// 正規化が必要な場合は NormalizedNotEquals を使うとよい
