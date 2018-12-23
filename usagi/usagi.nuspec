@@ -11,14 +11,8 @@
     <iconUrl>https://gravatar.com/avatar/dbc8b835bed12dd8194c240139033bc8</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>
-        usagi.Quantity.PlaneAngle のバグ修正:
-            PlaneAngle.CompareTo が符号を逆向きに return するバグを修正。
-            PlaneAngle.NearlyEqualsTo が 0 deg 付近で本来近い角度についても正規化の選択方法が不適当なために遠い角度と誤判定される場合があるバグを修正。
-            PlaneAngle.operator== が null に対して正しい結果を返さない、あるいは例外を発生するバグを修正。
-            以上の修正に関連した単体試験を usagiTests へ追加。
-    </releaseNotes>
+    <releaseNotes>https://github.com/usagi/usagi.cs/releases/tag/1.1.0</releaseNotes>
     <copyright>Copyright 2018 Usagi Ito</copyright>
-    <tags>usagi unit utility generic math</tags>
+    <tags>usagi unit utility generic math civil-engineering quantity uri plane-angle length items-control ienumerable idictionary extension</tags>
   </metadata>
 </package>
