@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-/// <summary>
-/// オブジェクトの Boxing に関する便利かもしれないおまけ機能を提供する
-/// </summary>
 namespace usagi.Boxing
 {
   /// <summary>
@@ -25,19 +20,30 @@ namespace usagi.Boxing
 
   /// <summary>
   /// 任意の型&lt;T&gt; についてオブジェクトの有無のチェック機構を設けたボクシングされた型を提供する
-  /// オブジェクトを放り込むと暗黙的に T 型のオブジェクトとしても振る舞う
-  /// null を放り込むと T 型の空のオブジェクトとして振る舞う
-  /// IDisposable なオブジェクトに対してはボクシングしたまま IDisposable できる
-  /// 内部表現は object による
+  /// <list type="bullet">
+  /// <item><description>オブジェクトを放り込むと暗黙的に T 型のオブジェクトとしても振る舞う</description></item>
+  /// <item><description>null を放り込むと T 型の空のオブジェクトとして振る舞う</description></item>
+  /// <item><description>IDisposable なオブジェクトに対してはボクシングしたまま IDisposable できる</description></item>
+  /// </list>
   /// </summary>
   /// <typeparam name="T">ボクシングしたい任意の型</typeparam>
+  /// <remarks>
+  /// 内部表現は object による
+  /// </remarks>
   public class Optional<T>
     : IDisposable
   {
     /// <summary>
     /// オブジェクトを内包していない状態でオブジェクトを要求するメソッドを呼んだりすると飛ばします。
     /// </summary>
-    public class InvalidValueException: InvalidOperationException { public InvalidValueException( string m = "" ) : base( m ) { } }
+    public class InvalidValueException: InvalidOperationException
+    {
+      /// <summary>
+      /// 生成
+      /// </summary>
+      /// <param name="m">込めたいメッセージ</param>
+      public InvalidValueException( string m = "" ) : base( m ) { }
+    }
 
     /// <summary>
     /// 内部表現
@@ -46,19 +52,19 @@ namespace usagi.Boxing
 
     /// <summary>
     /// 空のボクシングオブジェクトを生成します。
-    /// それはおおよそソフトな null っぽいものです。
+    /// <para/>それはおおよそソフトな null っぽいものです。
     /// </summary>
     public Optional() { }
     /// <summary>
     /// オブジェクトを内包したボクシングオブジェクトを生成します。
-    /// 生成されたボクシングオブジェクトはおおよそ暗黙の型変換によりT型のオブジェクトっぽく振る舞います。
+    /// <para/>生成されたボクシングオブジェクトはおおよそ暗黙の型変換によりT型のオブジェクトっぽく振る舞います。
     /// </summary>
     /// <param name="value">内包させるオブジェクト</param>
     public Optional( T value ) { Reset( value ); }
 
     /// <summary>
     /// ボクシングオブジェクトにオブジェクトを新たに内包させます。
-    /// 既に内包しているオブジェクトがあった場合その運命はガベージコレクターに委ねられます。たぶん。
+    /// <para/>既に内包しているオブジェクトがあった場合その運命はガベージコレクターに委ねられます。たぶん。
     /// </summary>
     /// <param name="value">新たに内包させるオブジェクト</param>
     /// <param name="dispose">既に内包しているオブジェクトがあり、かつ IDisposable を実装している場合に Dispose する場合は true 、しなくていい場合は false</param>
@@ -98,11 +104,13 @@ namespace usagi.Boxing
 
     /// <summary>
     /// 内包するオブジェクトがあれば value へ取り出し true を返します。
-    /// 内包するオブジェクトが無ければ value には何もせず false を返します。
-    /// Get や暗黙の型変換で例外が飛ぶ可能性を嫌う場合にどうぞ。
+    /// <para/>内包するオブジェクトが無ければ value には何もせず false を返します。
     /// </summary>
     /// <param name="value">内包するオブジェクトがあれば代入されます。無ければ何もされません。</param>
     /// <returns>内包するオブジェクトを value へ取り出せた場合は true 、そうでない場合には false が帰ります。</returns>
+    /// <remarks>
+    /// Get や暗黙の型変換で例外が飛ぶ可能性を嫌う場合にどうぞ。
+    /// </remarks>
     public bool TryGet( ref T value )
     {
       if ( o is T v )
@@ -135,6 +143,7 @@ namespace usagi.Boxing
     /// Get と等価に機能します。
     /// </summary>
     /// <param name="optional">ボクシングオブジェクト</param>
+    /// <returns>内包するT型のインスタンス</returns>
     static public implicit operator T( Optional<T> optional ) { return optional.Get(); }
 
     /// <summary>
@@ -145,13 +154,13 @@ namespace usagi.Boxing
     static public Optional<T> FromValue( T value ) { return new Optional<T>( value ); }
     /// <summary>
     /// 空のボクシングオブジェクトを生成するファクトリーとして機能するプロパティー
-    /// new Optional&ltT&gt;() の糖衣構文です。 new と ctor の ( ) をタイプしたくないあなたに。
+    /// new Optional&lt;T&gt;() の糖衣構文です。 new と ctor の ( ) をタイプしたくないあなたに。
     /// </summary>
     static public Optional<T> Null { get { return new Optional<T>(); } }
 
     /// <summary>
     /// 内包するオブジェクトが IDisposable を実装する場合には Dispose します。
-    /// ボクシングオブジェクトとしても内包するオブジェクトの運命をガベージコレクターへ任せ、自身は何も内包しない状態へ変化します。
+    /// <para/>ボクシングオブジェクトとしても内包するオブジェクトの運命をガベージコレクターへ任せ、自身は何も内包しない状態へ変化します。
     /// </summary>
     public void Dispose()
     {
@@ -161,6 +170,9 @@ namespace usagi.Boxing
     }
   }
 
+  /// <summary>
+  /// Boxing を使ったちょっとした便利機能
+  /// </summary>
   public static class Utility
   {
     /// <summary>

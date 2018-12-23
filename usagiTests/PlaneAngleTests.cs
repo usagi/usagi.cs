@@ -103,7 +103,9 @@ namespace usagi.Quantity.Tests
       var c = PlaneAngle.FromDegrees( 122 );
       var d = PlaneAngle.FromDegrees( 124 );
       var e = a + PlaneAngle.Turn;
+#pragma warning disable CS1718 // Comparison made to same variable
       Assert.IsTrue( a == a, "a" );
+#pragma warning restore CS1718 // Comparison made to same variable
       Assert.IsTrue( a == b, "b" );
       Assert.IsFalse( a == c, "c" );
       Assert.IsFalse( a == d, "d" );

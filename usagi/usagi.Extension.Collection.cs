@@ -1,22 +1,67 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System;
 
-/// <summary>
-/// IEnumerable, IDictionary など Collection 向けの Extension 
-/// </summary>
+
 namespace usagi.Extension.Collection
 {
+  /// <summary>
+  /// IEnumerable, IDictionary など Collection 向けの Extension 
+  /// </summary>
+  [System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+  internal class NamespaceDoc { }
+
+  /// <summary>
+  /// Enumerable な何かの機能拡張群
+  /// </summary>
   public static class EnumerableHelper
   {
+    /// <summary>
+    /// IEnumerable を列挙順にインデックス付きにするやつ
+    /// ref. https://ufcpp.net/blog/2016/12/tipsindexedforeach/
+    /// </summary>
+    /// <example>
+    /// <code>
+    /// // 適当な IEnumerable な何か
+    /// var items = new string[]{ "aaa", "bbb", "ccc" };
+    /// // タプルで取り出すぱたーん
+    /// foreach ( var indexed_item in items )
+    ///   Console.WriteLine( $"index={indexed_item.Index} item={indexed_item.Item}" );
+    /// // タプルを構造化束縛で取り出すぱたーん
+    /// foreach ( var (index,item) in items )
+    ///   Console.WriteLine( $"index={index} item={item}" );
+    /// </code>
+    /// </example>
+    /// <typeparam name="T">IEnumerable で取り出せる中身の型</typeparam>
+    /// <param name="items">IEnumerable な何か</param>
+    /// <returns>インデクシングされたアイテムの列挙</returns>
+    public static
+    IEnumerable<(int Index, T Item)>
+    WithIndexing<T>
+    ( this IEnumerable<T> items )
+    {
+      if ( items == null )
+        throw new ArgumentNullException( nameof( items ) );
+
+      IEnumerable<(int, T)> f()
+      {
+        var index = 0;
+        foreach ( var item in items )
+          yield return (index++, item);
+      }
+
+      return f();
+    }
+
     /// <summary>
     /// IEnumerable を実装する型 a, b について等価な値を保持するか判定する。
     /// SequenceEqual と異なり列挙される順序の影響を受けない
     /// ref. https://stackoverflow.com/a/3670089/1211392
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <param name="a"></param>
-    /// <param name="b"></param>
-    /// <returns></returns>
+    /// <typeparam name="T">IEnumerable で取り出せる中身の型</typeparam>
+    /// <param name="a">IEnumerable を実装する型 a</param>
+    /// <param name="b">IEnumerable を実装する型 b</param>
+    /// <returns>等価な値を保持している場合は true</returns>
     public static bool UnorderedEqual<T>
     ( this IEnumerable<T> a
     , IEnumerable<T> b
@@ -44,6 +89,9 @@ namespace usagi.Extension.Collection
     }
   }
 
+  /// <summary>
+  /// Dictionary な何かへの機能拡張群
+  /// </summary>
   public static class DictionaryHelper
   {
     /// <summary>
@@ -70,8 +118,7 @@ namespace usagi.Extension.Collection
       c = c ?? EqualityComparer<TV>.Default;
       foreach ( var akv in a )
       {
-        TV bv;
-        if ( !b.TryGetValue( akv.Key, out bv ) )
+        if ( !b.TryGetValue( akv.Key, out TV bv ) )
           return false;
         if ( !c.Equals( akv.Value, bv ) )
           return false;

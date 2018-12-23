@@ -1,0 +1,892 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topics>
+  <topic id="R:Project_usagi.cs.docs" project="" file="R_Project_usagi_cs_docs">
+    <topic id="N:usagi" project="_Namespaces" file="N_usagi">
+      <topic id="T:usagi.LibraryInformation" project="usagi" file="T_usagi_LibraryInformation">
+        <topic id="Fields.T:usagi.LibraryInformation" project="usagi" file="Fields_T_usagi_LibraryInformation">
+          <topic id="F:usagi.LibraryInformation.Authors" project="usagi" file="F_usagi_LibraryInformation_Authors" />
+          <topic id="F:usagi.LibraryInformation.Comitters" project="usagi" file="F_usagi_LibraryInformation_Comitters" />
+          <topic id="F:usagi.LibraryInformation.GitHub" project="usagi" file="F_usagi_LibraryInformation_GitHub" />
+          <topic id="F:usagi.LibraryInformation.License" project="usagi" file="F_usagi_LibraryInformation_License" />
+          <topic id="F:usagi.LibraryInformation.Name" project="usagi" file="F_usagi_LibraryInformation_Name" />
+          <topic id="F:usagi.LibraryInformation.NuGet" project="usagi" file="F_usagi_LibraryInformation_NuGet" />
+          <topic id="F:usagi.LibraryInformation.Readme" project="usagi" file="F_usagi_LibraryInformation_Readme" />
+        </topic>
+      </topic>
+    </topic>
+    <topic id="N:usagi.Boxing" project="_Namespaces" file="N_usagi_Boxing">
+      <topic id="T:usagi.Boxing.Optional`1" project="usagi" file="T_usagi_Boxing_Optional_1">
+        <topic id="Overload:usagi.Boxing.Optional`1.#ctor" project="usagi" file="Overload_usagi_Boxing_Optional_1__ctor">
+          <topic id="M:usagi.Boxing.Optional`1.#ctor" project="usagi" file="M_usagi_Boxing_Optional_1__ctor" />
+          <topic id="M:usagi.Boxing.Optional`1.#ctor(`0)" project="usagi" file="M_usagi_Boxing_Optional_1__ctor_1" />
+        </topic>
+        <topic id="Properties.T:usagi.Boxing.Optional`1" project="usagi" file="Properties_T_usagi_Boxing_Optional_1">
+          <topic id="P:usagi.Boxing.Optional`1.Null" project="usagi" file="P_usagi_Boxing_Optional_1_Null" />
+        </topic>
+        <topic id="Methods.T:usagi.Boxing.Optional`1" project="usagi" file="Methods_T_usagi_Boxing_Optional_1">
+          <topic id="M:usagi.Boxing.Optional`1.Dispose" project="usagi" file="M_usagi_Boxing_Optional_1_Dispose" />
+          <topic id="M:usagi.Boxing.Optional`1.FromValue(`0)" project="usagi" file="M_usagi_Boxing_Optional_1_FromValue" />
+          <topic id="M:usagi.Boxing.Optional`1.Get" project="usagi" file="M_usagi_Boxing_Optional_1_Get" />
+          <topic id="M:usagi.Boxing.Optional`1.IsValid" project="usagi" file="M_usagi_Boxing_Optional_1_IsValid" />
+          <topic id="Overload:usagi.Boxing.Optional`1.Reset" project="usagi" file="Overload_usagi_Boxing_Optional_1_Reset">
+            <topic id="M:usagi.Boxing.Optional`1.Reset(`0,System.Boolean)" project="usagi" file="M_usagi_Boxing_Optional_1_Reset" />
+            <topic id="M:usagi.Boxing.Optional`1.Reset(`0,`0@)" project="usagi" file="M_usagi_Boxing_Optional_1_Reset_1" />
+          </topic>
+          <topic id="M:usagi.Boxing.Optional`1.TryGet(`0@)" project="usagi" file="M_usagi_Boxing_Optional_1_TryGet" />
+        </topic>
+        <topic id="Operators.T:usagi.Boxing.Optional`1" project="usagi" file="Operators_T_usagi_Boxing_Optional_1">
+          <topic id="M:usagi.Boxing.Optional`1.op_False(usagi.Boxing.Optional{`0})" project="usagi" file="M_usagi_Boxing_Optional_1_op_False" />
+          <topic id="M:usagi.Boxing.Optional`1.op_Implicit(usagi.Boxing.Optional{`0})~`0" project="usagi" file="M_usagi_Boxing_Optional_1_op_Implicit" />
+          <topic id="M:usagi.Boxing.Optional`1.op_True(usagi.Boxing.Optional{`0})" project="usagi" file="M_usagi_Boxing_Optional_1_op_True" />
+        </topic>
+      </topic>
+      <topic id="T:usagi.Boxing.Optional`1.InvalidValueException" project="usagi" file="T_usagi_Boxing_Optional_1_InvalidValueException">
+        <topic id="M:usagi.Boxing.Optional`1.InvalidValueException.#ctor(System.String)" project="usagi" file="M_usagi_Boxing_Optional_1_InvalidValueException__ctor" />
+        <topic id="Properties.T:usagi.Boxing.Optional`1.InvalidValueException" project="usagi" file="Properties_T_usagi_Boxing_Optional_1_InvalidValueException" />
+        <topic id="Methods.T:usagi.Boxing.Optional`1.InvalidValueException" project="usagi" file="Methods_T_usagi_Boxing_Optional_1_InvalidValueException" />
+        <topic id="Events.T:usagi.Boxing.Optional`1.InvalidValueException" project="usagi" file="Events_T_usagi_Boxing_Optional_1_InvalidValueException" />
+      </topic>
+      <topic id="T:usagi.Boxing.Utility" project="usagi" file="T_usagi_Boxing_Utility">
+        <topic id="Methods.T:usagi.Boxing.Utility" project="usagi" file="Methods_T_usagi_Boxing_Utility">
+          <topic id="M:usagi.Boxing.Utility.FirstOfOptional``1(System.Collections.Generic.IEnumerable{``0})" project="usagi" file="M_usagi_Boxing_Utility_FirstOfOptional__1" />
+          <topic id="M:usagi.Boxing.Utility.LastOfOptional``1(System.Collections.Generic.IEnumerable{``0})" project="usagi" file="M_usagi_Boxing_Utility_LastOfOptional__1" />
+        </topic>
+      </topic>
+    </topic>
+    <topic id="N:usagi.CivilEngineering" project="_Namespaces" file="N_usagi_CivilEngineering">
+      <topic id="T:usagi.CivilEngineering.LonLatHelper" project="usagi" file="T_usagi_CivilEngineering_LonLatHelper">
+        <topic id="Methods.T:usagi.CivilEngineering.LonLatHelper" project="usagi" file="Methods_T_usagi_CivilEngineering_LonLatHelper">
+          <topic id="M:usagi.CivilEngineering.LonLatHelper.DistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" project="usagi" file="M_usagi_CivilEngineering_LonLatHelper_DistanceTo" />
+          <topic id="M:usagi.CivilEngineering.LonLatHelper.LatitudeDistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" project="usagi" file="M_usagi_CivilEngineering_LonLatHelper_LatitudeDistanceTo" />
+          <topic id="M:usagi.CivilEngineering.LonLatHelper.LongitudeDistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" project="usagi" file="M_usagi_CivilEngineering_LonLatHelper_LongitudeDistanceTo" />
+          <topic id="M:usagi.CivilEngineering.LonLatHelper.NearlyEqualsTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.Length,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" project="usagi" file="M_usagi_CivilEngineering_LonLatHelper_NearlyEqualsTo" />
+        </topic>
+      </topic>
+      <topic id="T:usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm" project="usagi" file="T_usagi_CivilEngineering_LonLatHelper_LonLatDistanceAlgorithm" />
+      <topic id="T:usagi.CivilEngineering.PixelLocation" project="usagi" file="T_usagi_CivilEngineering_PixelLocation">
+        <topic id="Overload:usagi.CivilEngineering.PixelLocation.#ctor" project="usagi" file="Overload_usagi_CivilEngineering_PixelLocation__ctor">
+          <topic id="M:usagi.CivilEngineering.PixelLocation.#ctor" project="usagi" file="M_usagi_CivilEngineering_PixelLocation__ctor" />
+          <topic id="M:usagi.CivilEngineering.PixelLocation.#ctor(System.UInt32,System.UInt32,System.Byte)" project="usagi" file="M_usagi_CivilEngineering_PixelLocation__ctor_1" />
+        </topic>
+        <topic id="Properties.T:usagi.CivilEngineering.PixelLocation" project="usagi" file="Properties_T_usagi_CivilEngineering_PixelLocation">
+          <topic id="P:usagi.CivilEngineering.PixelLocation.X" project="usagi" file="P_usagi_CivilEngineering_PixelLocation_X" />
+          <topic id="P:usagi.CivilEngineering.PixelLocation.Y" project="usagi" file="P_usagi_CivilEngineering_PixelLocation_Y" />
+          <topic id="P:usagi.CivilEngineering.PixelLocation.Z" project="usagi" file="P_usagi_CivilEngineering_PixelLocation_Z" />
+        </topic>
+        <topic id="Methods.T:usagi.CivilEngineering.PixelLocation" project="usagi" file="Methods_T_usagi_CivilEngineering_PixelLocation">
+          <topic id="M:usagi.CivilEngineering.PixelLocation.Equals(System.Object)" project="usagi" file="M_usagi_CivilEngineering_PixelLocation_Equals" />
+          <topic id="M:usagi.CivilEngineering.PixelLocation.GetHashCode" project="usagi" file="M_usagi_CivilEngineering_PixelLocation_GetHashCode" />
+          <topic id="M:usagi.CivilEngineering.PixelLocation.ToString" project="usagi" file="M_usagi_CivilEngineering_PixelLocation_ToString" />
+        </topic>
+      </topic>
+      <topic id="T:usagi.CivilEngineering.TileLocation" project="usagi" file="T_usagi_CivilEngineering_TileLocation">
+        <topic id="Overload:usagi.CivilEngineering.TileLocation.#ctor" project="usagi" file="Overload_usagi_CivilEngineering_TileLocation__ctor">
+          <topic id="M:usagi.CivilEngineering.TileLocation.#ctor" project="usagi" file="M_usagi_CivilEngineering_TileLocation__ctor" />
+          <topic id="M:usagi.CivilEngineering.TileLocation.#ctor(System.UInt32,System.UInt32,System.Byte)" project="usagi" file="M_usagi_CivilEngineering_TileLocation__ctor_1" />
+        </topic>
+        <topic id="Properties.T:usagi.CivilEngineering.TileLocation" project="usagi" file="Properties_T_usagi_CivilEngineering_TileLocation">
+          <topic id="P:usagi.CivilEngineering.TileLocation.X" project="usagi" file="P_usagi_CivilEngineering_TileLocation_X" />
+          <topic id="P:usagi.CivilEngineering.TileLocation.Y" project="usagi" file="P_usagi_CivilEngineering_TileLocation_Y" />
+          <topic id="P:usagi.CivilEngineering.TileLocation.Z" project="usagi" file="P_usagi_CivilEngineering_TileLocation_Z" />
+        </topic>
+        <topic id="Methods.T:usagi.CivilEngineering.TileLocation" project="usagi" file="Methods_T_usagi_CivilEngineering_TileLocation">
+          <topic id="M:usagi.CivilEngineering.TileLocation.Equals(System.Object)" project="usagi" file="M_usagi_CivilEngineering_TileLocation_Equals" />
+          <topic id="M:usagi.CivilEngineering.TileLocation.GetHashCode" project="usagi" file="M_usagi_CivilEngineering_TileLocation_GetHashCode" />
+          <topic id="M:usagi.CivilEngineering.TileLocation.ToString" project="usagi" file="M_usagi_CivilEngineering_TileLocation_ToString" />
+        </topic>
+      </topic>
+      <topic id="T:usagi.CivilEngineering.WebMercator" project="usagi" file="T_usagi_CivilEngineering_WebMercator">
+        <topic id="Properties.T:usagi.CivilEngineering.WebMercator" project="usagi" file="Properties_T_usagi_CivilEngineering_WebMercator">
+          <topic id="P:usagi.CivilEngineering.WebMercator.CriticalLatitude" project="usagi" file="P_usagi_CivilEngineering_WebMercator_CriticalLatitude" />
+        </topic>
+        <topic id="Methods.T:usagi.CivilEngineering.WebMercator" project="usagi" file="Methods_T_usagi_CivilEngineering_WebMercator">
+          <topic id="Overload:usagi.CivilEngineering.WebMercator.AngleToPixel" project="usagi" file="Overload_usagi_CivilEngineering_WebMercator_AngleToPixel">
+            <topic id="M:usagi.CivilEngineering.WebMercator.AngleToPixel(usagi.Quantity.GeoLocation.LonLat,System.Byte)" project="usagi" file="M_usagi_CivilEngineering_WebMercator_AngleToPixel" />
+            <topic id="M:usagi.CivilEngineering.WebMercator.AngleToPixel(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle,System.Byte)" project="usagi" file="M_usagi_CivilEngineering_WebMercator_AngleToPixel_1" />
+          </topic>
+          <topic id="Overload:usagi.CivilEngineering.WebMercator.AngleToTile" project="usagi" file="Overload_usagi_CivilEngineering_WebMercator_AngleToTile">
+            <topic id="M:usagi.CivilEngineering.WebMercator.AngleToTile(usagi.Quantity.GeoLocation.LonLat,System.Byte)" project="usagi" file="M_usagi_CivilEngineering_WebMercator_AngleToTile" />
+            <topic id="M:usagi.CivilEngineering.WebMercator.AngleToTile(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle,System.Byte)" project="usagi" file="M_usagi_CivilEngineering_WebMercator_AngleToTile_1" />
+          </topic>
+          <topic id="M:usagi.CivilEngineering.WebMercator.MapSize(System.Byte,System.UInt32)" project="usagi" file="M_usagi_CivilEngineering_WebMercator_MapSize" />
+          <topic id="M:usagi.CivilEngineering.WebMercator.NormalizeWebMercator(usagi.Quantity.GeoLocation.LonLat)" project="usagi" file="M_usagi_CivilEngineering_WebMercator_NormalizeWebMercator" />
+          <topic id="Overload:usagi.CivilEngineering.WebMercator.PixelToTile" project="usagi" file="Overload_usagi_CivilEngineering_WebMercator_PixelToTile">
+            <topic id="M:usagi.CivilEngineering.WebMercator.PixelToTile(usagi.CivilEngineering.PixelLocation,System.UInt32)" project="usagi" file="M_usagi_CivilEngineering_WebMercator_PixelToTile_1" />
+            <topic id="M:usagi.CivilEngineering.WebMercator.PixelToTile(System.UInt32,System.UInt32,System.Byte,System.UInt32)" project="usagi" file="M_usagi_CivilEngineering_WebMercator_PixelToTile" />
+          </topic>
+        </topic>
+      </topic>
+    </topic>
+    <topic id="N:usagi.CivilEngineering.Planet" project="_Namespaces" file="N_usagi_CivilEngineering_Planet">
+      <topic id="T:usagi.CivilEngineering.Planet.GeometricalSpecification" project="usagi" file="T_usagi_CivilEngineering_Planet_GeometricalSpecification">
+        <topic id="M:usagi.CivilEngineering.Planet.GeometricalSpecification.#ctor" project="usagi" file="M_usagi_CivilEngineering_Planet_GeometricalSpecification__ctor" />
+        <topic id="Properties.T:usagi.CivilEngineering.Planet.GeometricalSpecification" project="usagi" file="Properties_T_usagi_CivilEngineering_Planet_GeometricalSpecification">
+          <topic id="P:usagi.CivilEngineering.Planet.GeometricalSpecification.Earth_WGS84" project="usagi" file="P_usagi_CivilEngineering_Planet_GeometricalSpecification_Earth_WGS84" />
+        </topic>
+        <topic id="Methods.T:usagi.CivilEngineering.Planet.GeometricalSpecification" project="usagi" file="Methods_T_usagi_CivilEngineering_Planet_GeometricalSpecification" />
+      </topic>
+      <topic id="T:usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable" project="usagi" file="T_usagi_CivilEngineering_Planet_IGeometricalSpecificationGettable">
+        <topic id="Properties.T:usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable" project="usagi" file="Properties_T_usagi_CivilEngineering_Planet_IGeometricalSpecificationGettable">
+          <topic id="P:usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable.AxialRadius" project="usagi" file="P_usagi_CivilEngineering_Planet_IGeometricalSpecificationGettable_AxialRadius" />
+          <topic id="P:usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable.EquatorialRadius" project="usagi" file="P_usagi_CivilEngineering_Planet_IGeometricalSpecificationGettable_EquatorialRadius" />
+          <topic id="P:usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable.EquatorLength" project="usagi" file="P_usagi_CivilEngineering_Planet_IGeometricalSpecificationGettable_EquatorLength" />
+          <topic id="P:usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable.Flattening" project="usagi" file="P_usagi_CivilEngineering_Planet_IGeometricalSpecificationGettable_Flattening" />
+          <topic id="P:usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable.MaximumLatitudeLength" project="usagi" file="P_usagi_CivilEngineering_Planet_IGeometricalSpecificationGettable_MaximumLatitudeLength" />
+        </topic>
+      </topic>
+    </topic>
+    <topic id="N:usagi.Extension" project="_Namespaces" file="N_usagi_Extension">
+      <topic id="T:usagi.Extension.ItemsControlHelper" project="usagi" file="T_usagi_Extension_ItemsControlHelper">
+        <topic id="Methods.T:usagi.Extension.ItemsControlHelper" project="usagi" file="Methods_T_usagi_Extension_ItemsControlHelper">
+          <topic id="Overload:usagi.Extension.ItemsControlHelper.FindControl" project="usagi" file="Overload_usagi_Extension_ItemsControlHelper_FindControl">
+            <topic id="M:usagi.Extension.ItemsControlHelper.FindControl(System.Windows.Controls.ContentPresenter,System.String)" project="usagi" file="M_usagi_Extension_ItemsControlHelper_FindControl" />
+            <topic id="M:usagi.Extension.ItemsControlHelper.FindControl(System.Windows.Controls.ItemsControl,System.Int32,System.String)" project="usagi" file="M_usagi_Extension_ItemsControlHelper_FindControl_1" />
+          </topic>
+          <topic id="Overload:usagi.Extension.ItemsControlHelper.FindControlAs" project="usagi" file="Overload_usagi_Extension_ItemsControlHelper_FindControlAs">
+            <topic id="M:usagi.Extension.ItemsControlHelper.FindControlAs``1(System.Windows.Controls.ContentPresenter,System.String)" project="usagi" file="M_usagi_Extension_ItemsControlHelper_FindControlAs__1" />
+            <topic id="M:usagi.Extension.ItemsControlHelper.FindControlAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String)" project="usagi" file="M_usagi_Extension_ItemsControlHelper_FindControlAs__1_1" />
+          </topic>
+          <topic id="Overload:usagi.Extension.ItemsControlHelper.FindControls" project="usagi" file="Overload_usagi_Extension_ItemsControlHelper_FindControls">
+            <topic id="M:usagi.Extension.ItemsControlHelper.FindControls(System.Windows.Controls.ItemsControl,System.String[])" project="usagi" file="M_usagi_Extension_ItemsControlHelper_FindControls_1" />
+            <topic id="M:usagi.Extension.ItemsControlHelper.FindControls(System.Windows.Controls.ItemsControl,System.Int32,System.String[])" project="usagi" file="M_usagi_Extension_ItemsControlHelper_FindControls" />
+          </topic>
+          <topic id="M:usagi.Extension.ItemsControlHelper.FindControlsAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String[])" project="usagi" file="M_usagi_Extension_ItemsControlHelper_FindControlsAs__1" />
+          <topic id="M:usagi.Extension.ItemsControlHelper.GetContentPresenter(System.Windows.Controls.ItemsControl,System.Int32)" project="usagi" file="M_usagi_Extension_ItemsControlHelper_GetContentPresenter" />
+        </topic>
+      </topic>
+      <topic id="T:usagi.Extension.StringHelper" project="usagi" file="T_usagi_Extension_StringHelper">
+        <topic id="Methods.T:usagi.Extension.StringHelper" project="usagi" file="Methods_T_usagi_Extension_StringHelper">
+          <topic id="M:usagi.Extension.StringHelper.Contains(System.String,System.String[])" project="usagi" file="M_usagi_Extension_StringHelper_Contains" />
+          <topic id="M:usagi.Extension.StringHelper.EndsWith(System.String,System.String[])" project="usagi" file="M_usagi_Extension_StringHelper_EndsWith" />
+          <topic id="M:usagi.Extension.StringHelper.StartsOrEndsWith(System.String,System.String[])" project="usagi" file="M_usagi_Extension_StringHelper_StartsOrEndsWith" />
+          <topic id="M:usagi.Extension.StringHelper.StartsWith(System.String,System.String[])" project="usagi" file="M_usagi_Extension_StringHelper_StartsWith" />
+        </topic>
+      </topic>
+    </topic>
+    <topic id="N:usagi.Extension.Collection" project="_Namespaces" file="N_usagi_Extension_Collection">
+      <topic id="T:usagi.Extension.Collection.DictionaryHelper" project="usagi" file="T_usagi_Extension_Collection_DictionaryHelper">
+        <topic id="Methods.T:usagi.Extension.Collection.DictionaryHelper" project="usagi" file="Methods_T_usagi_Extension_Collection_DictionaryHelper">
+          <topic id="M:usagi.Extension.Collection.DictionaryHelper.UnorderedEqual``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEqualityComparer{``1})" project="usagi" file="M_usagi_Extension_Collection_DictionaryHelper_UnorderedEqual__2" />
+        </topic>
+      </topic>
+      <topic id="T:usagi.Extension.Collection.EnumerableHelper" project="usagi" file="T_usagi_Extension_Collection_EnumerableHelper">
+        <topic id="Methods.T:usagi.Extension.Collection.EnumerableHelper" project="usagi" file="Methods_T_usagi_Extension_Collection_EnumerableHelper">
+          <topic id="M:usagi.Extension.Collection.EnumerableHelper.UnorderedEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})" project="usagi" file="M_usagi_Extension_Collection_EnumerableHelper_UnorderedEqual__1" />
+          <topic id="M:usagi.Extension.Collection.EnumerableHelper.WithIndexing``1(System.Collections.Generic.IEnumerable{``0})" project="usagi" file="M_usagi_Extension_Collection_EnumerableHelper_WithIndexing__1" />
+        </topic>
+      </topic>
+    </topic>
+    <topic id="N:usagi.Quantity" project="_Namespaces" file="N_usagi_Quantity">
+      <topic id="T:usagi.Quantity.Calculation" project="usagi" file="T_usagi_Quantity_Calculation">
+        <topic id="M:usagi.Quantity.Calculation.#ctor" project="usagi" file="M_usagi_Quantity_Calculation__ctor" />
+        <topic id="Methods.T:usagi.Quantity.Calculation" project="usagi" file="Methods_T_usagi_Quantity_Calculation">
+          <topic id="M:usagi.Quantity.Calculation.Clamp``1(``0,``0,``0)" project="usagi" file="M_usagi_Quantity_Calculation_Clamp__1" />
+          <topic id="M:usagi.Quantity.Calculation.Distance``1(``0,``0,System.Func{``0,``0,``0})" project="usagi" file="M_usagi_Quantity_Calculation_Distance__1" />
+          <topic id="M:usagi.Quantity.Calculation.IsInRangeOf``1(``0,``0,``0)" project="usagi" file="M_usagi_Quantity_Calculation_IsInRangeOf__1" />
+          <topic id="M:usagi.Quantity.Calculation.Max``1(``0[])" project="usagi" file="M_usagi_Quantity_Calculation_Max__1" />
+          <topic id="M:usagi.Quantity.Calculation.Min``1(``0[])" project="usagi" file="M_usagi_Quantity_Calculation_Min__1" />
+          <topic id="Overload:usagi.Quantity.Calculation.NearlyEquals" project="usagi" file="Overload_usagi_Quantity_Calculation_NearlyEquals">
+            <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.Byte,System.Byte,System.Byte)" project="usagi" file="M_usagi_Quantity_Calculation_NearlyEquals" />
+            <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.Char,System.Char,System.Char)" project="usagi" file="M_usagi_Quantity_Calculation_NearlyEquals_1" />
+            <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.Decimal,System.Decimal,System.Decimal)" project="usagi" file="M_usagi_Quantity_Calculation_NearlyEquals_2" />
+            <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.Double,System.Double,System.Double)" project="usagi" file="M_usagi_Quantity_Calculation_NearlyEquals_3" />
+            <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.Int16,System.Int16,System.Int16)" project="usagi" file="M_usagi_Quantity_Calculation_NearlyEquals_4" />
+            <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.Int32,System.Int32,System.Int32)" project="usagi" file="M_usagi_Quantity_Calculation_NearlyEquals_5" />
+            <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.Int64,System.Int64,System.Int64)" project="usagi" file="M_usagi_Quantity_Calculation_NearlyEquals_6" />
+            <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.Single,System.Single,System.Single)" project="usagi" file="M_usagi_Quantity_Calculation_NearlyEquals_7" />
+            <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.UInt16,System.UInt16,System.UInt16)" project="usagi" file="M_usagi_Quantity_Calculation_NearlyEquals_8" />
+            <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.UInt32,System.UInt32,System.UInt32)" project="usagi" file="M_usagi_Quantity_Calculation_NearlyEquals_9" />
+            <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.UInt64,System.UInt64,System.UInt64)" project="usagi" file="M_usagi_Quantity_Calculation_NearlyEquals_10" />
+            <topic id="M:usagi.Quantity.Calculation.NearlyEquals``1(``0,``0,``0,System.Func{``0,``0,``0},System.Func{``0,``0,``0})" project="usagi" file="M_usagi_Quantity_Calculation_NearlyEquals__1" />
+          </topic>
+        </topic>
+      </topic>
+      <topic id="T:usagi.Quantity.Length" project="usagi" file="T_usagi_Quantity_Length">
+        <topic id="M:usagi.Quantity.Length.#ctor" project="usagi" file="M_usagi_Quantity_Length__ctor" />
+        <topic id="Properties.T:usagi.Quantity.Length" project="usagi" file="Properties_T_usagi_Quantity_Length">
+          <topic id="P:usagi.Quantity.Length._Å" project="usagi" file="P_usagi_Quantity_Length__Å" />
+          <topic id="P:usagi.Quantity.Length._am" project="usagi" file="P_usagi_Quantity_Length__am" />
+          <topic id="P:usagi.Quantity.Length._AngStrom" project="usagi" file="P_usagi_Quantity_Length__AngStrom" />
+          <topic id="P:usagi.Quantity.Length._apc" project="usagi" file="P_usagi_Quantity_Length__apc" />
+          <topic id="P:usagi.Quantity.Length._au" project="usagi" file="P_usagi_Quantity_Length__au" />
+          <topic id="P:usagi.Quantity.Length._Bu" project="usagi" file="P_usagi_Quantity_Length__Bu" />
+          <topic id="P:usagi.Quantity.Length._Chou" project="usagi" file="P_usagi_Quantity_Length__Chou" />
+          <topic id="P:usagi.Quantity.Length._cm" project="usagi" file="P_usagi_Quantity_Length__cm" />
+          <topic id="P:usagi.Quantity.Length._dam" project="usagi" file="P_usagi_Quantity_Length__dam" />
+          <topic id="P:usagi.Quantity.Length._dm" project="usagi" file="P_usagi_Quantity_Length__dm" />
+          <topic id="P:usagi.Quantity.Length._Em" project="usagi" file="P_usagi_Quantity_Length__Em" />
+          <topic id="P:usagi.Quantity.Length._fm" project="usagi" file="P_usagi_Quantity_Length__fm" />
+          <topic id="P:usagi.Quantity.Length._Fr" project="usagi" file="P_usagi_Quantity_Length__Fr" />
+          <topic id="P:usagi.Quantity.Length._ft" project="usagi" file="P_usagi_Quantity_Length__ft" />
+          <topic id="P:usagi.Quantity.Length._Gm" project="usagi" file="P_usagi_Quantity_Length__Gm" />
+          <topic id="P:usagi.Quantity.Length._H" project="usagi" file="P_usagi_Quantity_Length__H" />
+          <topic id="P:usagi.Quantity.Length._hm" project="usagi" file="P_usagi_Quantity_Length__hm" />
+          <topic id="P:usagi.Quantity.Length._in" project="usagi" file="P_usagi_Quantity_Length__in" />
+          <topic id="P:usagi.Quantity.Length._Jou" project="usagi" file="P_usagi_Quantity_Length__Jou" />
+          <topic id="P:usagi.Quantity.Length._Ken" project="usagi" file="P_usagi_Quantity_Length__Ken" />
+          <topic id="P:usagi.Quantity.Length._km" project="usagi" file="P_usagi_Quantity_Length__km" />
+          <topic id="P:usagi.Quantity.Length._L" project="usagi" file="P_usagi_Quantity_Length__L" />
+          <topic id="P:usagi.Quantity.Length._ly" project="usagi" file="P_usagi_Quantity_Length__ly" />
+          <topic id="P:usagi.Quantity.Length._m" project="usagi" file="P_usagi_Quantity_Length__m" />
+          <topic id="P:usagi.Quantity.Length._mi" project="usagi" file="P_usagi_Quantity_Length__mi" />
+          <topic id="P:usagi.Quantity.Length._micron" project="usagi" file="P_usagi_Quantity_Length__micron" />
+          <topic id="P:usagi.Quantity.Length._mil" project="usagi" file="P_usagi_Quantity_Length__mil" />
+          <topic id="P:usagi.Quantity.Length._mm" project="usagi" file="P_usagi_Quantity_Length__mm" />
+          <topic id="P:usagi.Quantity.Length._Mm" project="usagi" file="P_usagi_Quantity_Length__Mm" />
+          <topic id="P:usagi.Quantity.Length._Mon" project="usagi" file="P_usagi_Quantity_Length__Mon" />
+          <topic id="P:usagi.Quantity.Length._nm" project="usagi" file="P_usagi_Quantity_Length__nm" />
+          <topic id="P:usagi.Quantity.Length._pc" project="usagi" file="P_usagi_Quantity_Length__pc" />
+          <topic id="P:usagi.Quantity.Length._pica" project="usagi" file="P_usagi_Quantity_Length__pica" />
+          <topic id="P:usagi.Quantity.Length._pm" project="usagi" file="P_usagi_Quantity_Length__pm" />
+          <topic id="P:usagi.Quantity.Length._Pm" project="usagi" file="P_usagi_Quantity_Length__Pm" />
+          <topic id="P:usagi.Quantity.Length._pt" project="usagi" file="P_usagi_Quantity_Length__pt" />
+          <topic id="P:usagi.Quantity.Length._Q" project="usagi" file="P_usagi_Quantity_Length__Q" />
+          <topic id="P:usagi.Quantity.Length._RiCN" project="usagi" file="P_usagi_Quantity_Length__RiCN" />
+          <topic id="P:usagi.Quantity.Length._RiJP" project="usagi" file="P_usagi_Quantity_Length__RiJP" />
+          <topic id="P:usagi.Quantity.Length._ShakuCN" project="usagi" file="P_usagi_Quantity_Length__ShakuCN" />
+          <topic id="P:usagi.Quantity.Length._ShakuJP" project="usagi" file="P_usagi_Quantity_Length__ShakuJP" />
+          <topic id="P:usagi.Quantity.Length._Sun" project="usagi" file="P_usagi_Quantity_Length__Sun" />
+          <topic id="P:usagi.Quantity.Length._Tm" project="usagi" file="P_usagi_Quantity_Length__Tm" />
+          <topic id="P:usagi.Quantity.Length._um" project="usagi" file="P_usagi_Quantity_Length__um" />
+          <topic id="P:usagi.Quantity.Length._xu" project="usagi" file="P_usagi_Quantity_Length__xu" />
+          <topic id="P:usagi.Quantity.Length._yd" project="usagi" file="P_usagi_Quantity_Length__yd" />
+          <topic id="P:usagi.Quantity.Length._ym" project="usagi" file="P_usagi_Quantity_Length__ym" />
+          <topic id="P:usagi.Quantity.Length._Ym" project="usagi" file="P_usagi_Quantity_Length__Ym" />
+          <topic id="P:usagi.Quantity.Length._zm" project="usagi" file="P_usagi_Quantity_Length__zm" />
+          <topic id="P:usagi.Quantity.Length._Zm" project="usagi" file="P_usagi_Quantity_Length__Zm" />
+          <topic id="P:usagi.Quantity.Length._μm" project="usagi" file="P_usagi_Quantity_Length__μm" />
+          <topic id="P:usagi.Quantity.Length._丈" project="usagi" file="P_usagi_Quantity_Length__丈" />
+          <topic id="P:usagi.Quantity.Length._分" project="usagi" file="P_usagi_Quantity_Length__分" />
+          <topic id="P:usagi.Quantity.Length._寸" project="usagi" file="P_usagi_Quantity_Length__寸" />
+          <topic id="P:usagi.Quantity.Length._尺CN" project="usagi" file="P_usagi_Quantity_Length__尺CN" />
+          <topic id="P:usagi.Quantity.Length._尺JP" project="usagi" file="P_usagi_Quantity_Length__尺JP" />
+          <topic id="P:usagi.Quantity.Length._文" project="usagi" file="P_usagi_Quantity_Length__文" />
+          <topic id="P:usagi.Quantity.Length._歯" project="usagi" file="P_usagi_Quantity_Length__歯" />
+          <topic id="P:usagi.Quantity.Length._町" project="usagi" file="P_usagi_Quantity_Length__町" />
+          <topic id="P:usagi.Quantity.Length._級" project="usagi" file="P_usagi_Quantity_Length__級" />
+          <topic id="P:usagi.Quantity.Length._里CN" project="usagi" file="P_usagi_Quantity_Length__里CN" />
+          <topic id="P:usagi.Quantity.Length._里JP" project="usagi" file="P_usagi_Quantity_Length__里JP" />
+          <topic id="P:usagi.Quantity.Length._間" project="usagi" file="P_usagi_Quantity_Length__間" />
+          <topic id="P:usagi.Quantity.Length.InAngStrom" project="usagi" file="P_usagi_Quantity_Length_InAngStrom" />
+          <topic id="P:usagi.Quantity.Length.InAstronomicalUnit" project="usagi" file="P_usagi_Quantity_Length_InAstronomicalUnit" />
+          <topic id="P:usagi.Quantity.Length.InAttoParsec" project="usagi" file="P_usagi_Quantity_Length_InAttoParsec" />
+          <topic id="P:usagi.Quantity.Length.InBu" project="usagi" file="P_usagi_Quantity_Length_InBu" />
+          <topic id="P:usagi.Quantity.Length.Inch" project="usagi" file="P_usagi_Quantity_Length_Inch" />
+          <topic id="P:usagi.Quantity.Length.InChains" project="usagi" file="P_usagi_Quantity_Length_InChains" />
+          <topic id="P:usagi.Quantity.Length.InChainsUS" project="usagi" file="P_usagi_Quantity_Length_InChainsUS" />
+          <topic id="P:usagi.Quantity.Length.InChou" project="usagi" file="P_usagi_Quantity_Length_InChou" />
+          <topic id="P:usagi.Quantity.Length.InCiceros" project="usagi" file="P_usagi_Quantity_Length_InCiceros" />
+          <topic id="P:usagi.Quantity.Length.InFathom" project="usagi" file="P_usagi_Quantity_Length_InFathom" />
+          <topic id="P:usagi.Quantity.Length.InFeet" project="usagi" file="P_usagi_Quantity_Length_InFeet" />
+          <topic id="P:usagi.Quantity.Length.InFeetIN" project="usagi" file="P_usagi_Quantity_Length_InFeetIN" />
+          <topic id="P:usagi.Quantity.Length.InFeetUS" project="usagi" file="P_usagi_Quantity_Length_InFeetUS" />
+          <topic id="P:usagi.Quantity.Length.InFermi" project="usagi" file="P_usagi_Quantity_Length_InFermi" />
+          <topic id="P:usagi.Quantity.Length.InFrenchCatheterScale" project="usagi" file="P_usagi_Quantity_Length_InFrenchCatheterScale" />
+          <topic id="P:usagi.Quantity.Length.InFurlongs" project="usagi" file="P_usagi_Quantity_Length_InFurlongs" />
+          <topic id="P:usagi.Quantity.Length.InFurlongUS" project="usagi" file="P_usagi_Quantity_Length_InFurlongUS" />
+          <topic id="P:usagi.Quantity.Length.InHa" project="usagi" file="P_usagi_Quantity_Length_InHa" />
+          <topic id="P:usagi.Quantity.Length.InInches" project="usagi" file="P_usagi_Quantity_Length_InInches" />
+          <topic id="P:usagi.Quantity.Length.InJouJP" project="usagi" file="P_usagi_Quantity_Length_InJouJP" />
+          <topic id="P:usagi.Quantity.Length.InKen" project="usagi" file="P_usagi_Quantity_Length_InKen" />
+          <topic id="P:usagi.Quantity.Length.InKyuu" project="usagi" file="P_usagi_Quantity_Length_InKyuu" />
+          <topic id="P:usagi.Quantity.Length.InLightYear" project="usagi" file="P_usagi_Quantity_Length_InLightYear" />
+          <topic id="P:usagi.Quantity.Length.InLines" project="usagi" file="P_usagi_Quantity_Length_InLines" />
+          <topic id="P:usagi.Quantity.Length.InLinks" project="usagi" file="P_usagi_Quantity_Length_InLinks" />
+          <topic id="P:usagi.Quantity.Length.InLinksUS" project="usagi" file="P_usagi_Quantity_Length_InLinksUS" />
+          <topic id="P:usagi.Quantity.Length.InMeters" project="usagi" file="P_usagi_Quantity_Length_InMeters" />
+          <topic id="P:usagi.Quantity.Length.InMicron" project="usagi" file="P_usagi_Quantity_Length_InMicron" />
+          <topic id="P:usagi.Quantity.Length.InMiles" project="usagi" file="P_usagi_Quantity_Length_InMiles" />
+          <topic id="P:usagi.Quantity.Length.InMilesArabic" project="usagi" file="P_usagi_Quantity_Length_InMilesArabic" />
+          <topic id="P:usagi.Quantity.Length.InMilesAT" project="usagi" file="P_usagi_Quantity_Length_InMilesAT" />
+          <topic id="P:usagi.Quantity.Length.InMilesDE" project="usagi" file="P_usagi_Quantity_Length_InMilesDE" />
+          <topic id="P:usagi.Quantity.Length.InMilesES" project="usagi" file="P_usagi_Quantity_Length_InMilesES" />
+          <topic id="P:usagi.Quantity.Length.InMilesESOld" project="usagi" file="P_usagi_Quantity_Length_InMilesESOld" />
+          <topic id="P:usagi.Quantity.Length.InMilesGeographical" project="usagi" file="P_usagi_Quantity_Length_InMilesGeographical" />
+          <topic id="P:usagi.Quantity.Length.InMilesIE" project="usagi" file="P_usagi_Quantity_Length_InMilesIE" />
+          <topic id="P:usagi.Quantity.Length.InMilesIT" project="usagi" file="P_usagi_Quantity_Length_InMilesIT" />
+          <topic id="P:usagi.Quantity.Length.InMilesITAncient" project="usagi" file="P_usagi_Quantity_Length_InMilesITAncient" />
+          <topic id="P:usagi.Quantity.Length.InMilesITOld" project="usagi" file="P_usagi_Quantity_Length_InMilesITOld" />
+          <topic id="P:usagi.Quantity.Length.InMilesMetric" project="usagi" file="P_usagi_Quantity_Length_InMilesMetric" />
+          <topic id="P:usagi.Quantity.Length.InMilesNautical" project="usagi" file="P_usagi_Quantity_Length_InMilesNautical" />
+          <topic id="P:usagi.Quantity.Length.InMilesNOSE" project="usagi" file="P_usagi_Quantity_Length_InMilesNOSE" />
+          <topic id="P:usagi.Quantity.Length.InMilesNOSEOld" project="usagi" file="P_usagi_Quantity_Length_InMilesNOSEOld" />
+          <topic id="P:usagi.Quantity.Length.InMilesRomanAncient" project="usagi" file="P_usagi_Quantity_Length_InMilesRomanAncient" />
+          <topic id="P:usagi.Quantity.Length.InMilesUS" project="usagi" file="P_usagi_Quantity_Length_InMilesUS" />
+          <topic id="P:usagi.Quantity.Length.InMils" project="usagi" file="P_usagi_Quantity_Length_InMils" />
+          <topic id="P:usagi.Quantity.Length.InMon" project="usagi" file="P_usagi_Quantity_Length_InMon" />
+          <topic id="P:usagi.Quantity.Length.InParsec" project="usagi" file="P_usagi_Quantity_Length_InParsec" />
+          <topic id="P:usagi.Quantity.Length.InPicas" project="usagi" file="P_usagi_Quantity_Length_InPicas" />
+          <topic id="P:usagi.Quantity.Length.InPicasFR" project="usagi" file="P_usagi_Quantity_Length_InPicasFR" />
+          <topic id="P:usagi.Quantity.Length.InPicasUS" project="usagi" file="P_usagi_Quantity_Length_InPicasUS" />
+          <topic id="P:usagi.Quantity.Length.InPoints" project="usagi" file="P_usagi_Quantity_Length_InPoints" />
+          <topic id="P:usagi.Quantity.Length.InPointsFR" project="usagi" file="P_usagi_Quantity_Length_InPointsFR" />
+          <topic id="P:usagi.Quantity.Length.InPointsUS" project="usagi" file="P_usagi_Quantity_Length_InPointsUS" />
+          <topic id="P:usagi.Quantity.Length.InRiCN" project="usagi" file="P_usagi_Quantity_Length_InRiCN" />
+          <topic id="P:usagi.Quantity.Length.InRiJP" project="usagi" file="P_usagi_Quantity_Length_InRiJP" />
+          <topic id="P:usagi.Quantity.Length.InRods" project="usagi" file="P_usagi_Quantity_Length_InRods" />
+          <topic id="P:usagi.Quantity.Length.InRodsUS" project="usagi" file="P_usagi_Quantity_Length_InRodsUS" />
+          <topic id="P:usagi.Quantity.Length.InShakuCN" project="usagi" file="P_usagi_Quantity_Length_InShakuCN" />
+          <topic id="P:usagi.Quantity.Length.InShakuCNHan" project="usagi" file="P_usagi_Quantity_Length_InShakuCNHan" />
+          <topic id="P:usagi.Quantity.Length.InShakuCNSuiGreater" project="usagi" file="P_usagi_Quantity_Length_InShakuCNSuiGreater" />
+          <topic id="P:usagi.Quantity.Length.InShakuCNSuiLesser" project="usagi" file="P_usagi_Quantity_Length_InShakuCNSuiLesser" />
+          <topic id="P:usagi.Quantity.Length.InShakuCNTangGreater" project="usagi" file="P_usagi_Quantity_Length_InShakuCNTangGreater" />
+          <topic id="P:usagi.Quantity.Length.InShakuCNTangLesser" project="usagi" file="P_usagi_Quantity_Length_InShakuCNTangLesser" />
+          <topic id="P:usagi.Quantity.Length.InShakuJP" project="usagi" file="P_usagi_Quantity_Length_InShakuJP" />
+          <topic id="P:usagi.Quantity.Length.InShakuJPGofuku" project="usagi" file="P_usagi_Quantity_Length_InShakuJPGofuku" />
+          <topic id="P:usagi.Quantity.Length.InShakuJPKujira" project="usagi" file="P_usagi_Quantity_Length_InShakuJPKujira" />
+          <topic id="P:usagi.Quantity.Length.InShakuJPKyouhou" project="usagi" file="P_usagi_Quantity_Length_InShakuJPKyouhou" />
+          <topic id="P:usagi.Quantity.Length.InShakuJPMatashirou" project="usagi" file="P_usagi_Quantity_Length_InShakuJPMatashirou" />
+          <topic id="P:usagi.Quantity.Length.InShakuJPSecchu" project="usagi" file="P_usagi_Quantity_Length_InShakuJPSecchu" />
+          <topic id="P:usagi.Quantity.Length.InShakuJPTaihouGreater" project="usagi" file="P_usagi_Quantity_Length_InShakuJPTaihouGreater" />
+          <topic id="P:usagi.Quantity.Length.InShakuJPTaihouLesser" project="usagi" file="P_usagi_Quantity_Length_InShakuJPTaihouLesser" />
+          <topic id="P:usagi.Quantity.Length.InSun" project="usagi" file="P_usagi_Quantity_Length_InSun" />
+          <topic id="P:usagi.Quantity.Length.InThou" project="usagi" file="P_usagi_Quantity_Length_InThou" />
+          <topic id="P:usagi.Quantity.Length.InXUnit" project="usagi" file="P_usagi_Quantity_Length_InXUnit" />
+          <topic id="P:usagi.Quantity.Length.InYards" project="usagi" file="P_usagi_Quantity_Length_InYards" />
+          <topic id="P:usagi.Quantity.Length.Meter" project="usagi" file="P_usagi_Quantity_Length_Meter" />
+          <topic id="P:usagi.Quantity.Length.NaN" project="usagi" file="P_usagi_Quantity_Length_NaN" />
+          <topic id="P:usagi.Quantity.Length.NegativeInfinity" project="usagi" file="P_usagi_Quantity_Length_NegativeInfinity" />
+          <topic id="P:usagi.Quantity.Length.PositiveInfinity" project="usagi" file="P_usagi_Quantity_Length_PositiveInfinity" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfAngStrom" project="usagi" file="P_usagi_Quantity_Length_SymbolOfAngStrom" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfBu" project="usagi" file="P_usagi_Quantity_Length_SymbolOfBu" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfChou" project="usagi" file="P_usagi_Quantity_Length_SymbolOfChou" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfFeet" project="usagi" file="P_usagi_Quantity_Length_SymbolOfFeet" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfHa" project="usagi" file="P_usagi_Quantity_Length_SymbolOfHa" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfInches" project="usagi" file="P_usagi_Quantity_Length_SymbolOfInches" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfJou" project="usagi" file="P_usagi_Quantity_Length_SymbolOfJou" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfKen" project="usagi" file="P_usagi_Quantity_Length_SymbolOfKen" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfKyuu" project="usagi" file="P_usagi_Quantity_Length_SymbolOfKyuu" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfLines" project="usagi" file="P_usagi_Quantity_Length_SymbolOfLines" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfMeters" project="usagi" file="P_usagi_Quantity_Length_SymbolOfMeters" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfMiles" project="usagi" file="P_usagi_Quantity_Length_SymbolOfMiles" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfMon" project="usagi" file="P_usagi_Quantity_Length_SymbolOfMon" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfPicas" project="usagi" file="P_usagi_Quantity_Length_SymbolOfPicas" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfPoints" project="usagi" file="P_usagi_Quantity_Length_SymbolOfPoints" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfRi" project="usagi" file="P_usagi_Quantity_Length_SymbolOfRi" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfShaku" project="usagi" file="P_usagi_Quantity_Length_SymbolOfShaku" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfSun" project="usagi" file="P_usagi_Quantity_Length_SymbolOfSun" />
+          <topic id="P:usagi.Quantity.Length.SymbolOfYards" project="usagi" file="P_usagi_Quantity_Length_SymbolOfYards" />
+          <topic id="P:usagi.Quantity.Length.Zero" project="usagi" file="P_usagi_Quantity_Length_Zero" />
+        </topic>
+        <topic id="Methods.T:usagi.Quantity.Length" project="usagi" file="Methods_T_usagi_Quantity_Length">
+          <topic id="M:usagi.Quantity.Length.CompareTo(usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_Length_CompareTo" />
+          <topic id="M:usagi.Quantity.Length.From_Å(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_Å" />
+          <topic id="M:usagi.Quantity.Length.From_am(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_am" />
+          <topic id="M:usagi.Quantity.Length.From_AngStrom(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_AngStrom" />
+          <topic id="M:usagi.Quantity.Length.From_apc(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_apc" />
+          <topic id="M:usagi.Quantity.Length.From_au(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_au" />
+          <topic id="M:usagi.Quantity.Length.From_Bu(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_Bu" />
+          <topic id="M:usagi.Quantity.Length.From_Chou(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_Chou" />
+          <topic id="M:usagi.Quantity.Length.From_cm(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_cm" />
+          <topic id="M:usagi.Quantity.Length.From_dam(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_dam" />
+          <topic id="M:usagi.Quantity.Length.From_dm(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_dm" />
+          <topic id="M:usagi.Quantity.Length.From_Em(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_Em" />
+          <topic id="M:usagi.Quantity.Length.From_fm(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_fm" />
+          <topic id="M:usagi.Quantity.Length.From_Fr(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_Fr" />
+          <topic id="M:usagi.Quantity.Length.From_ft(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_ft" />
+          <topic id="M:usagi.Quantity.Length.From_Gm(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_Gm" />
+          <topic id="M:usagi.Quantity.Length.From_H(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_H" />
+          <topic id="M:usagi.Quantity.Length.From_hm(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_hm" />
+          <topic id="M:usagi.Quantity.Length.From_in(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_in" />
+          <topic id="M:usagi.Quantity.Length.From_Jou(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_Jou" />
+          <topic id="M:usagi.Quantity.Length.From_Ken(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_Ken" />
+          <topic id="M:usagi.Quantity.Length.From_km(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_km" />
+          <topic id="M:usagi.Quantity.Length.From_L(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_L" />
+          <topic id="M:usagi.Quantity.Length.From_ly(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_ly" />
+          <topic id="M:usagi.Quantity.Length.From_m(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_m" />
+          <topic id="M:usagi.Quantity.Length.From_mi(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_mi" />
+          <topic id="M:usagi.Quantity.Length.From_mil(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_mil" />
+          <topic id="M:usagi.Quantity.Length.From_mm(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_mm" />
+          <topic id="M:usagi.Quantity.Length.From_Mm(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_Mm" />
+          <topic id="M:usagi.Quantity.Length.From_Mon(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_Mon" />
+          <topic id="M:usagi.Quantity.Length.From_nm(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_nm" />
+          <topic id="M:usagi.Quantity.Length.From_pc(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_pc" />
+          <topic id="M:usagi.Quantity.Length.From_pica(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_pica" />
+          <topic id="M:usagi.Quantity.Length.From_pm(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_pm" />
+          <topic id="M:usagi.Quantity.Length.From_Pm(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_Pm" />
+          <topic id="M:usagi.Quantity.Length.From_pt(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_pt" />
+          <topic id="M:usagi.Quantity.Length.From_Q(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_Q" />
+          <topic id="M:usagi.Quantity.Length.From_RiCN(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_RiCN" />
+          <topic id="M:usagi.Quantity.Length.From_RiJP(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_RiJP" />
+          <topic id="M:usagi.Quantity.Length.From_ShakuCN(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_ShakuCN" />
+          <topic id="M:usagi.Quantity.Length.From_ShakuJP(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_ShakuJP" />
+          <topic id="M:usagi.Quantity.Length.From_Sun(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_Sun" />
+          <topic id="M:usagi.Quantity.Length.From_Tm(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_Tm" />
+          <topic id="M:usagi.Quantity.Length.From_um(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_um" />
+          <topic id="M:usagi.Quantity.Length.From_xu(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_xu" />
+          <topic id="M:usagi.Quantity.Length.From_yd(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_yd" />
+          <topic id="M:usagi.Quantity.Length.From_ym(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_ym" />
+          <topic id="M:usagi.Quantity.Length.From_Ym(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_Ym" />
+          <topic id="M:usagi.Quantity.Length.From_zm(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_zm" />
+          <topic id="M:usagi.Quantity.Length.From_Zm(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_Zm" />
+          <topic id="M:usagi.Quantity.Length.From_μm(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_μm" />
+          <topic id="M:usagi.Quantity.Length.From_丈(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_丈" />
+          <topic id="M:usagi.Quantity.Length.From_分(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_分" />
+          <topic id="M:usagi.Quantity.Length.From_寸(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_寸" />
+          <topic id="M:usagi.Quantity.Length.From_尺CN(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_尺CN" />
+          <topic id="M:usagi.Quantity.Length.From_尺JP(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_尺JP" />
+          <topic id="M:usagi.Quantity.Length.From_文(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_文" />
+          <topic id="M:usagi.Quantity.Length.From_歯(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_歯" />
+          <topic id="M:usagi.Quantity.Length.From_町(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_町" />
+          <topic id="M:usagi.Quantity.Length.From_級(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_級" />
+          <topic id="M:usagi.Quantity.Length.From_里CN(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_里CN" />
+          <topic id="M:usagi.Quantity.Length.From_里JP(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_里JP" />
+          <topic id="M:usagi.Quantity.Length.From_間(System.Double)" project="usagi" file="M_usagi_Quantity_Length_From_間" />
+          <topic id="M:usagi.Quantity.Length.IsInfinity" project="usagi" file="M_usagi_Quantity_Length_IsInfinity" />
+          <topic id="M:usagi.Quantity.Length.IsNaN" project="usagi" file="M_usagi_Quantity_Length_IsNaN" />
+          <topic id="M:usagi.Quantity.Length.IsNegativeInfinity" project="usagi" file="M_usagi_Quantity_Length_IsNegativeInfinity" />
+          <topic id="M:usagi.Quantity.Length.IsPositiveInfinity" project="usagi" file="M_usagi_Quantity_Length_IsPositiveInfinity" />
+          <topic id="M:usagi.Quantity.Length.NearlyEquals(usagi.Quantity.Length,usagi.Quantity.Length,usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_Length_NearlyEquals" />
+          <topic id="M:usagi.Quantity.Length.NearlyEqualsTo(usagi.Quantity.Length,usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_Length_NearlyEqualsTo" />
+          <topic id="Overload:usagi.Quantity.Length.ToString" project="usagi" file="Overload_usagi_Quantity_Length_ToString">
+            <topic id="M:usagi.Quantity.Length.ToString(System.String,System.IFormatProvider)" project="usagi" file="M_usagi_Quantity_Length_ToString" />
+          </topic>
+          <topic id="M:usagi.Quantity.Length.ToString_cm(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToString_cm" />
+          <topic id="M:usagi.Quantity.Length.ToString_km(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToString_km" />
+          <topic id="M:usagi.Quantity.Length.ToString_m(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToString_m" />
+          <topic id="M:usagi.Quantity.Length.ToString_mm(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToString_mm" />
+          <topic id="M:usagi.Quantity.Length.ToString_Mm(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToString_Mm" />
+          <topic id="M:usagi.Quantity.Length.ToString_nm(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToString_nm" />
+          <topic id="M:usagi.Quantity.Length.ToString_um(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToString_um" />
+          <topic id="M:usagi.Quantity.Length.ToString_μm(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToString_μm" />
+          <topic id="M:usagi.Quantity.Length.ToStringInAngStrom(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInAngStrom" />
+          <topic id="M:usagi.Quantity.Length.ToStringInBu(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInBu" />
+          <topic id="M:usagi.Quantity.Length.ToStringInChou(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInChou" />
+          <topic id="M:usagi.Quantity.Length.ToStringInFeet(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInFeet" />
+          <topic id="M:usagi.Quantity.Length.ToStringInHa(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInHa" />
+          <topic id="M:usagi.Quantity.Length.ToStringInInches(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInInches" />
+          <topic id="M:usagi.Quantity.Length.ToStringInJou(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInJou" />
+          <topic id="M:usagi.Quantity.Length.ToStringInKen(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInKen" />
+          <topic id="M:usagi.Quantity.Length.ToStringInKyuu(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInKyuu" />
+          <topic id="M:usagi.Quantity.Length.ToStringInLines(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInLines" />
+          <topic id="M:usagi.Quantity.Length.ToStringInMeters(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInMeters" />
+          <topic id="M:usagi.Quantity.Length.ToStringInMiles(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInMiles" />
+          <topic id="M:usagi.Quantity.Length.ToStringInMon(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInMon" />
+          <topic id="M:usagi.Quantity.Length.ToStringInPicas(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInPicas" />
+          <topic id="M:usagi.Quantity.Length.ToStringInPoints(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInPoints" />
+          <topic id="M:usagi.Quantity.Length.ToStringInRi(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInRi" />
+          <topic id="M:usagi.Quantity.Length.ToStringInShaku(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInShaku" />
+          <topic id="M:usagi.Quantity.Length.ToStringInSun(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInSun" />
+          <topic id="M:usagi.Quantity.Length.ToStringInYards(System.String)" project="usagi" file="M_usagi_Quantity_Length_ToStringInYards" />
+        </topic>
+        <topic id="Operators.T:usagi.Quantity.Length" project="usagi" file="Operators_T_usagi_Quantity_Length">
+          <topic id="M:usagi.Quantity.Length.op_Addition(usagi.Quantity.Length,usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_Length_op_Addition" />
+          <topic id="Overload:usagi.Quantity.Length.op_Division" project="usagi" file="Overload_usagi_Quantity_Length_op_Division">
+            <topic id="M:usagi.Quantity.Length.op_Division(usagi.Quantity.Length,System.Double)" project="usagi" file="M_usagi_Quantity_Length_op_Division" />
+            <topic id="M:usagi.Quantity.Length.op_Division(usagi.Quantity.Length,usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_Length_op_Division_1" />
+          </topic>
+          <topic id="M:usagi.Quantity.Length.op_GreaterThan(usagi.Quantity.Length,usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_Length_op_GreaterThan" />
+          <topic id="M:usagi.Quantity.Length.op_GreaterThanOrEqual(usagi.Quantity.Length,usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_Length_op_GreaterThanOrEqual" />
+          <topic id="M:usagi.Quantity.Length.op_LessThan(usagi.Quantity.Length,usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_Length_op_LessThan" />
+          <topic id="M:usagi.Quantity.Length.op_LessThanOrEqual(usagi.Quantity.Length,usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_Length_op_LessThanOrEqual" />
+          <topic id="M:usagi.Quantity.Length.op_Modulus(usagi.Quantity.Length,usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_Length_op_Modulus" />
+          <topic id="Overload:usagi.Quantity.Length.op_Multiply" project="usagi" file="Overload_usagi_Quantity_Length_op_Multiply">
+            <topic id="M:usagi.Quantity.Length.op_Multiply(System.Double,usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_Length_op_Multiply" />
+            <topic id="M:usagi.Quantity.Length.op_Multiply(usagi.Quantity.Length,System.Double)" project="usagi" file="M_usagi_Quantity_Length_op_Multiply_1" />
+          </topic>
+          <topic id="M:usagi.Quantity.Length.op_Subtraction(usagi.Quantity.Length,usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_Length_op_Subtraction" />
+          <topic id="M:usagi.Quantity.Length.op_UnaryNegation(usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_Length_op_UnaryNegation" />
+          <topic id="M:usagi.Quantity.Length.op_UnaryPlus(usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_Length_op_UnaryPlus" />
+        </topic>
+      </topic>
+      <topic id="T:usagi.Quantity.PlaneAngle" project="usagi" file="T_usagi_Quantity_PlaneAngle">
+        <topic id="Properties.T:usagi.Quantity.PlaneAngle" project="usagi" file="Properties_T_usagi_Quantity_PlaneAngle">
+          <topic id="P:usagi.Quantity.PlaneAngle._deg" project="usagi" file="P_usagi_Quantity_PlaneAngle__deg" />
+          <topic id="P:usagi.Quantity.PlaneAngle._deg_p" project="usagi" file="P_usagi_Quantity_PlaneAngle__deg_p" />
+          <topic id="P:usagi.Quantity.PlaneAngle._g" project="usagi" file="P_usagi_Quantity_PlaneAngle__g" />
+          <topic id="P:usagi.Quantity.PlaneAngle._ᵍ" project="usagi" file="P_usagi_Quantity_PlaneAngle__ᵍ" />
+          <topic id="P:usagi.Quantity.PlaneAngle._mils" project="usagi" file="P_usagi_Quantity_PlaneAngle__mils" />
+          <topic id="P:usagi.Quantity.PlaneAngle._min" project="usagi" file="P_usagi_Quantity_PlaneAngle__min" />
+          <topic id="P:usagi.Quantity.PlaneAngle._min_p" project="usagi" file="P_usagi_Quantity_PlaneAngle__min_p" />
+          <topic id="P:usagi.Quantity.PlaneAngle._pts" project="usagi" file="P_usagi_Quantity_PlaneAngle__pts" />
+          <topic id="P:usagi.Quantity.PlaneAngle._rad" project="usagi" file="P_usagi_Quantity_PlaneAngle__rad" />
+          <topic id="P:usagi.Quantity.PlaneAngle._sec" project="usagi" file="P_usagi_Quantity_PlaneAngle__sec" />
+          <topic id="P:usagi.Quantity.PlaneAngle._sec_p" project="usagi" file="P_usagi_Quantity_PlaneAngle__sec_p" />
+          <topic id="P:usagi.Quantity.PlaneAngle._turns" project="usagi" file="P_usagi_Quantity_PlaneAngle__turns" />
+          <topic id="P:usagi.Quantity.PlaneAngle._τ" project="usagi" file="P_usagi_Quantity_PlaneAngle__τ" />
+          <topic id="P:usagi.Quantity.PlaneAngle.CentiDegree" project="usagi" file="P_usagi_Quantity_PlaneAngle_CentiDegree" />
+          <topic id="P:usagi.Quantity.PlaneAngle.CentiMinute" project="usagi" file="P_usagi_Quantity_PlaneAngle_CentiMinute" />
+          <topic id="P:usagi.Quantity.PlaneAngle.CentiSecond" project="usagi" file="P_usagi_Quantity_PlaneAngle_CentiSecond" />
+          <topic id="P:usagi.Quantity.PlaneAngle.DeciDegree" project="usagi" file="P_usagi_Quantity_PlaneAngle_DeciDegree" />
+          <topic id="P:usagi.Quantity.PlaneAngle.DeciMinute" project="usagi" file="P_usagi_Quantity_PlaneAngle_DeciMinute" />
+          <topic id="P:usagi.Quantity.PlaneAngle.DeciSecond" project="usagi" file="P_usagi_Quantity_PlaneAngle_DeciSecond" />
+          <topic id="P:usagi.Quantity.PlaneAngle.Degree" project="usagi" file="P_usagi_Quantity_PlaneAngle_Degree" />
+          <topic id="P:usagi.Quantity.PlaneAngle.Gradian" project="usagi" file="P_usagi_Quantity_PlaneAngle_Gradian" />
+          <topic id="P:usagi.Quantity.PlaneAngle.InDegrees" project="usagi" file="P_usagi_Quantity_PlaneAngle_InDegrees" />
+          <topic id="P:usagi.Quantity.PlaneAngle.InGradians" project="usagi" file="P_usagi_Quantity_PlaneAngle_InGradians" />
+          <topic id="P:usagi.Quantity.PlaneAngle.InMils" project="usagi" file="P_usagi_Quantity_PlaneAngle_InMils" />
+          <topic id="P:usagi.Quantity.PlaneAngle.InMinutes" project="usagi" file="P_usagi_Quantity_PlaneAngle_InMinutes" />
+          <topic id="P:usagi.Quantity.PlaneAngle.InPoints" project="usagi" file="P_usagi_Quantity_PlaneAngle_InPoints" />
+          <topic id="P:usagi.Quantity.PlaneAngle.InRadians" project="usagi" file="P_usagi_Quantity_PlaneAngle_InRadians" />
+          <topic id="P:usagi.Quantity.PlaneAngle.InSeconds" project="usagi" file="P_usagi_Quantity_PlaneAngle_InSeconds" />
+          <topic id="P:usagi.Quantity.PlaneAngle.InTurns" project="usagi" file="P_usagi_Quantity_PlaneAngle_InTurns" />
+          <topic id="P:usagi.Quantity.PlaneAngle.Mil" project="usagi" file="P_usagi_Quantity_PlaneAngle_Mil" />
+          <topic id="P:usagi.Quantity.PlaneAngle.MilliDegree" project="usagi" file="P_usagi_Quantity_PlaneAngle_MilliDegree" />
+          <topic id="P:usagi.Quantity.PlaneAngle.MilliMinute" project="usagi" file="P_usagi_Quantity_PlaneAngle_MilliMinute" />
+          <topic id="P:usagi.Quantity.PlaneAngle.MilliSecond" project="usagi" file="P_usagi_Quantity_PlaneAngle_MilliSecond" />
+          <topic id="P:usagi.Quantity.PlaneAngle.Minute" project="usagi" file="P_usagi_Quantity_PlaneAngle_Minute" />
+          <topic id="P:usagi.Quantity.PlaneAngle.NaN" project="usagi" file="P_usagi_Quantity_PlaneAngle_NaN" />
+          <topic id="P:usagi.Quantity.PlaneAngle.NegativeInfinity" project="usagi" file="P_usagi_Quantity_PlaneAngle_NegativeInfinity" />
+          <topic id="P:usagi.Quantity.PlaneAngle.PartOfDegrees" project="usagi" file="P_usagi_Quantity_PlaneAngle_PartOfDegrees" />
+          <topic id="P:usagi.Quantity.PlaneAngle.PartOfMinutes" project="usagi" file="P_usagi_Quantity_PlaneAngle_PartOfMinutes" />
+          <topic id="P:usagi.Quantity.PlaneAngle.PartOfSeconds" project="usagi" file="P_usagi_Quantity_PlaneAngle_PartOfSeconds" />
+          <topic id="P:usagi.Quantity.PlaneAngle.Point" project="usagi" file="P_usagi_Quantity_PlaneAngle_Point" />
+          <topic id="P:usagi.Quantity.PlaneAngle.PositiveInfinity" project="usagi" file="P_usagi_Quantity_PlaneAngle_PositiveInfinity" />
+          <topic id="P:usagi.Quantity.PlaneAngle.Radian" project="usagi" file="P_usagi_Quantity_PlaneAngle_Radian" />
+          <topic id="P:usagi.Quantity.PlaneAngle.RegexOfCommons" project="usagi" file="P_usagi_Quantity_PlaneAngle_RegexOfCommons" />
+          <topic id="P:usagi.Quantity.PlaneAngle.RegexOfDegrees" project="usagi" file="P_usagi_Quantity_PlaneAngle_RegexOfDegrees" />
+          <topic id="P:usagi.Quantity.PlaneAngle.Second" project="usagi" file="P_usagi_Quantity_PlaneAngle_Second" />
+          <topic id="P:usagi.Quantity.PlaneAngle.Turn" project="usagi" file="P_usagi_Quantity_PlaneAngle_Turn" />
+          <topic id="P:usagi.Quantity.PlaneAngle.Zero" project="usagi" file="P_usagi_Quantity_PlaneAngle_Zero" />
+        </topic>
+        <topic id="Methods.T:usagi.Quantity.PlaneAngle" project="usagi" file="Methods_T_usagi_Quantity_PlaneAngle">
+          <topic id="M:usagi.Quantity.PlaneAngle.CompareTo(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_CompareTo" />
+          <topic id="Overload:usagi.Quantity.PlaneAngle.Equals" project="usagi" file="Overload_usagi_Quantity_PlaneAngle_Equals">
+            <topic id="M:usagi.Quantity.PlaneAngle.Equals(System.Object)" project="usagi" file="M_usagi_Quantity_PlaneAngle_Equals" />
+            <topic id="M:usagi.Quantity.PlaneAngle.Equals(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_Equals_1" />
+          </topic>
+          <topic id="M:usagi.Quantity.PlaneAngle.From_acos(System.Double)" project="usagi" file="M_usagi_Quantity_PlaneAngle_From_acos" />
+          <topic id="M:usagi.Quantity.PlaneAngle.From_asin(System.Double)" project="usagi" file="M_usagi_Quantity_PlaneAngle_From_asin" />
+          <topic id="M:usagi.Quantity.PlaneAngle.From_atan(System.Double)" project="usagi" file="M_usagi_Quantity_PlaneAngle_From_atan" />
+          <topic id="M:usagi.Quantity.PlaneAngle.FromDegrees(System.Double,System.Double,System.Double)" project="usagi" file="M_usagi_Quantity_PlaneAngle_FromDegrees" />
+          <topic id="M:usagi.Quantity.PlaneAngle.FromGradians(System.Double)" project="usagi" file="M_usagi_Quantity_PlaneAngle_FromGradians" />
+          <topic id="M:usagi.Quantity.PlaneAngle.FromMils(System.Double)" project="usagi" file="M_usagi_Quantity_PlaneAngle_FromMils" />
+          <topic id="M:usagi.Quantity.PlaneAngle.FromPoints(System.Double)" project="usagi" file="M_usagi_Quantity_PlaneAngle_FromPoints" />
+          <topic id="M:usagi.Quantity.PlaneAngle.FromRadians(System.Double)" project="usagi" file="M_usagi_Quantity_PlaneAngle_FromRadians" />
+          <topic id="M:usagi.Quantity.PlaneAngle.FromTurns(System.Double)" project="usagi" file="M_usagi_Quantity_PlaneAngle_FromTurns" />
+          <topic id="M:usagi.Quantity.PlaneAngle.GetHashCode" project="usagi" file="M_usagi_Quantity_PlaneAngle_GetHashCode" />
+          <topic id="M:usagi.Quantity.PlaneAngle.IsInfinity" project="usagi" file="M_usagi_Quantity_PlaneAngle_IsInfinity" />
+          <topic id="M:usagi.Quantity.PlaneAngle.IsNaN" project="usagi" file="M_usagi_Quantity_PlaneAngle_IsNaN" />
+          <topic id="M:usagi.Quantity.PlaneAngle.IsNegativeInfinity" project="usagi" file="M_usagi_Quantity_PlaneAngle_IsNegativeInfinity" />
+          <topic id="M:usagi.Quantity.PlaneAngle.IsPositiveInfinity" project="usagi" file="M_usagi_Quantity_PlaneAngle_IsPositiveInfinity" />
+          <topic id="M:usagi.Quantity.PlaneAngle.NearlyEquals(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_NearlyEquals" />
+          <topic id="M:usagi.Quantity.PlaneAngle.NearlyEqualsTo(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_NearlyEqualsTo" />
+          <topic id="Overload:usagi.Quantity.PlaneAngle.Normalize180" project="usagi" file="Overload_usagi_Quantity_PlaneAngle_Normalize180">
+            <topic id="M:usagi.Quantity.PlaneAngle.Normalize180" project="usagi" file="M_usagi_Quantity_PlaneAngle_Normalize180" />
+            <topic id="M:usagi.Quantity.PlaneAngle.Normalize180(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_Normalize180_1" />
+          </topic>
+          <topic id="Overload:usagi.Quantity.PlaneAngle.Normalize360" project="usagi" file="Overload_usagi_Quantity_PlaneAngle_Normalize360">
+            <topic id="M:usagi.Quantity.PlaneAngle.Normalize360" project="usagi" file="M_usagi_Quantity_PlaneAngle_Normalize360" />
+            <topic id="M:usagi.Quantity.PlaneAngle.Normalize360(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_Normalize360_1" />
+          </topic>
+          <topic id="M:usagi.Quantity.PlaneAngle.NormalizedCompareTo(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_NormalizedCompareTo" />
+          <topic id="M:usagi.Quantity.PlaneAngle.NormalizedEqualsTo(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_NormalizedEqualsTo" />
+          <topic id="Overload:usagi.Quantity.PlaneAngle.NormalizedGreaterThan" project="usagi" file="Overload_usagi_Quantity_PlaneAngle_NormalizedGreaterThan">
+            <topic id="M:usagi.Quantity.PlaneAngle.NormalizedGreaterThan(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_NormalizedGreaterThan" />
+            <topic id="M:usagi.Quantity.PlaneAngle.NormalizedGreaterThan(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_NormalizedGreaterThan_1" />
+          </topic>
+          <topic id="Overload:usagi.Quantity.PlaneAngle.NormalizedLessThan" project="usagi" file="Overload_usagi_Quantity_PlaneAngle_NormalizedLessThan">
+            <topic id="M:usagi.Quantity.PlaneAngle.NormalizedLessThan(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_NormalizedLessThan" />
+            <topic id="M:usagi.Quantity.PlaneAngle.NormalizedLessThan(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_NormalizedLessThan_1" />
+          </topic>
+          <topic id="M:usagi.Quantity.PlaneAngle.NormalizedNearlyEqualsTo(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_NormalizedNearlyEqualsTo" />
+          <topic id="M:usagi.Quantity.PlaneAngle.Parse(System.String,System.Boolean)" project="usagi" file="M_usagi_Quantity_PlaneAngle_Parse" />
+          <topic id="M:usagi.Quantity.PlaneAngle.ParseCommons(System.String)" project="usagi" file="M_usagi_Quantity_PlaneAngle_ParseCommons" />
+          <topic id="M:usagi.Quantity.PlaneAngle.ParseDegrees(System.String)" project="usagi" file="M_usagi_Quantity_PlaneAngle_ParseDegrees" />
+          <topic id="M:usagi.Quantity.PlaneAngle.ToDegrees(System.Double)" project="usagi" file="M_usagi_Quantity_PlaneAngle_ToDegrees" />
+          <topic id="M:usagi.Quantity.PlaneAngle.ToRadians(System.Double)" project="usagi" file="M_usagi_Quantity_PlaneAngle_ToRadians" />
+          <topic id="Overload:usagi.Quantity.PlaneAngle.ToString" project="usagi" file="Overload_usagi_Quantity_PlaneAngle_ToString">
+            <topic id="M:usagi.Quantity.PlaneAngle.ToString" project="usagi" file="M_usagi_Quantity_PlaneAngle_ToString" />
+            <topic id="M:usagi.Quantity.PlaneAngle.ToString(System.String,System.IFormatProvider)" project="usagi" file="M_usagi_Quantity_PlaneAngle_ToString_1" />
+          </topic>
+          <topic id="M:usagi.Quantity.PlaneAngle.ToStringInDegrees(System.String)" project="usagi" file="M_usagi_Quantity_PlaneAngle_ToStringInDegrees" />
+          <topic id="M:usagi.Quantity.PlaneAngle.ToStringInDMS(System.String)" project="usagi" file="M_usagi_Quantity_PlaneAngle_ToStringInDMS" />
+          <topic id="M:usagi.Quantity.PlaneAngle.ToStringInGradians(System.String)" project="usagi" file="M_usagi_Quantity_PlaneAngle_ToStringInGradians" />
+          <topic id="M:usagi.Quantity.PlaneAngle.ToStringInMils(System.String)" project="usagi" file="M_usagi_Quantity_PlaneAngle_ToStringInMils" />
+          <topic id="M:usagi.Quantity.PlaneAngle.ToStringInMinutes(System.String)" project="usagi" file="M_usagi_Quantity_PlaneAngle_ToStringInMinutes" />
+          <topic id="M:usagi.Quantity.PlaneAngle.ToStringInPoints(System.String)" project="usagi" file="M_usagi_Quantity_PlaneAngle_ToStringInPoints" />
+          <topic id="M:usagi.Quantity.PlaneAngle.ToStringInRadians(System.String)" project="usagi" file="M_usagi_Quantity_PlaneAngle_ToStringInRadians" />
+          <topic id="M:usagi.Quantity.PlaneAngle.ToStringInSeconds(System.String)" project="usagi" file="M_usagi_Quantity_PlaneAngle_ToStringInSeconds" />
+          <topic id="M:usagi.Quantity.PlaneAngle.ToStringInTurns(System.String)" project="usagi" file="M_usagi_Quantity_PlaneAngle_ToStringInTurns" />
+        </topic>
+        <topic id="Operators.T:usagi.Quantity.PlaneAngle" project="usagi" file="Operators_T_usagi_Quantity_PlaneAngle">
+          <topic id="M:usagi.Quantity.PlaneAngle.op_Addition(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_op_Addition" />
+          <topic id="Overload:usagi.Quantity.PlaneAngle.op_Division" project="usagi" file="Overload_usagi_Quantity_PlaneAngle_op_Division">
+            <topic id="M:usagi.Quantity.PlaneAngle.op_Division(usagi.Quantity.PlaneAngle,System.Double)" project="usagi" file="M_usagi_Quantity_PlaneAngle_op_Division" />
+            <topic id="M:usagi.Quantity.PlaneAngle.op_Division(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_op_Division_1" />
+          </topic>
+          <topic id="M:usagi.Quantity.PlaneAngle.op_Equality(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_op_Equality" />
+          <topic id="M:usagi.Quantity.PlaneAngle.op_GreaterThan(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_op_GreaterThan" />
+          <topic id="M:usagi.Quantity.PlaneAngle.op_GreaterThanOrEqual(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_op_GreaterThanOrEqual" />
+          <topic id="M:usagi.Quantity.PlaneAngle.op_Inequality(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_op_Inequality" />
+          <topic id="M:usagi.Quantity.PlaneAngle.op_LessThan(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_op_LessThan" />
+          <topic id="M:usagi.Quantity.PlaneAngle.op_LessThanOrEqual(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_op_LessThanOrEqual" />
+          <topic id="M:usagi.Quantity.PlaneAngle.op_Modulus(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_op_Modulus" />
+          <topic id="Overload:usagi.Quantity.PlaneAngle.op_Multiply" project="usagi" file="Overload_usagi_Quantity_PlaneAngle_op_Multiply">
+            <topic id="M:usagi.Quantity.PlaneAngle.op_Multiply(System.Double,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_op_Multiply" />
+            <topic id="M:usagi.Quantity.PlaneAngle.op_Multiply(usagi.Quantity.PlaneAngle,System.Double)" project="usagi" file="M_usagi_Quantity_PlaneAngle_op_Multiply_1" />
+          </topic>
+          <topic id="M:usagi.Quantity.PlaneAngle.op_Subtraction(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_op_Subtraction" />
+          <topic id="M:usagi.Quantity.PlaneAngle.op_UnaryNegation(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_op_UnaryNegation" />
+          <topic id="M:usagi.Quantity.PlaneAngle.op_UnaryPlus(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngle_op_UnaryPlus" />
+        </topic>
+        <topic id="Fields.T:usagi.Quantity.PlaneAngle" project="usagi" file="Fields_T_usagi_Quantity_PlaneAngle">
+          <topic id="F:usagi.Quantity.PlaneAngle.RegexPatternOfCommons" project="usagi" file="F_usagi_Quantity_PlaneAngle_RegexPatternOfCommons" />
+          <topic id="F:usagi.Quantity.PlaneAngle.RegexPatternOfDegrees" project="usagi" file="F_usagi_Quantity_PlaneAngle_RegexPatternOfDegrees" />
+          <topic id="F:usagi.Quantity.PlaneAngle.SymbolOfDegrees" project="usagi" file="F_usagi_Quantity_PlaneAngle_SymbolOfDegrees" />
+          <topic id="F:usagi.Quantity.PlaneAngle.SymbolOfGradians" project="usagi" file="F_usagi_Quantity_PlaneAngle_SymbolOfGradians" />
+          <topic id="F:usagi.Quantity.PlaneAngle.SymbolOfMils" project="usagi" file="F_usagi_Quantity_PlaneAngle_SymbolOfMils" />
+          <topic id="F:usagi.Quantity.PlaneAngle.SymbolOfMinutes" project="usagi" file="F_usagi_Quantity_PlaneAngle_SymbolOfMinutes" />
+          <topic id="F:usagi.Quantity.PlaneAngle.SymbolOfPoints" project="usagi" file="F_usagi_Quantity_PlaneAngle_SymbolOfPoints" />
+          <topic id="F:usagi.Quantity.PlaneAngle.SymbolOfRadians" project="usagi" file="F_usagi_Quantity_PlaneAngle_SymbolOfRadians" />
+          <topic id="F:usagi.Quantity.PlaneAngle.SymbolOfSeconds" project="usagi" file="F_usagi_Quantity_PlaneAngle_SymbolOfSeconds" />
+          <topic id="F:usagi.Quantity.PlaneAngle.SymbolOfTurns" project="usagi" file="F_usagi_Quantity_PlaneAngle_SymbolOfTurns" />
+        </topic>
+      </topic>
+    </topic>
+    <topic id="N:usagi.Quantity.GeoLocation" project="_Namespaces" file="N_usagi_Quantity_GeoLocation">
+      <topic id="T:usagi.Quantity.GeoLocation.IAltitude" project="usagi" file="T_usagi_Quantity_GeoLocation_IAltitude">
+        <topic id="Properties.T:usagi.Quantity.GeoLocation.IAltitude" project="usagi" file="Properties_T_usagi_Quantity_GeoLocation_IAltitude" />
+      </topic>
+      <topic id="T:usagi.Quantity.GeoLocation.IAltitudeGettable" project="usagi" file="T_usagi_Quantity_GeoLocation_IAltitudeGettable">
+        <topic id="Properties.T:usagi.Quantity.GeoLocation.IAltitudeGettable" project="usagi" file="Properties_T_usagi_Quantity_GeoLocation_IAltitudeGettable">
+          <topic id="P:usagi.Quantity.GeoLocation.IAltitudeGettable.Altitude" project="usagi" file="P_usagi_Quantity_GeoLocation_IAltitudeGettable_Altitude" />
+        </topic>
+      </topic>
+      <topic id="T:usagi.Quantity.GeoLocation.IAltitudeSetttable" project="usagi" file="T_usagi_Quantity_GeoLocation_IAltitudeSetttable">
+        <topic id="Properties.T:usagi.Quantity.GeoLocation.IAltitudeSetttable" project="usagi" file="Properties_T_usagi_Quantity_GeoLocation_IAltitudeSetttable">
+          <topic id="P:usagi.Quantity.GeoLocation.IAltitudeSetttable.Altitude" project="usagi" file="P_usagi_Quantity_GeoLocation_IAltitudeSetttable_Altitude" />
+        </topic>
+      </topic>
+      <topic id="T:usagi.Quantity.GeoLocation.IFromGeoCoordinate" project="usagi" file="T_usagi_Quantity_GeoLocation_IFromGeoCoordinate">
+        <topic id="Methods.T:usagi.Quantity.GeoLocation.IFromGeoCoordinate" project="usagi" file="Methods_T_usagi_Quantity_GeoLocation_IFromGeoCoordinate">
+          <topic id="M:usagi.Quantity.GeoLocation.IFromGeoCoordinate.FromGeoCoordinate(System.Device.Location.GeoCoordinate)" project="usagi" file="M_usagi_Quantity_GeoLocation_IFromGeoCoordinate_FromGeoCoordinate" />
+        </topic>
+      </topic>
+      <topic id="T:usagi.Quantity.GeoLocation.ILonLat" project="usagi" file="T_usagi_Quantity_GeoLocation_ILonLat">
+        <topic id="Properties.T:usagi.Quantity.GeoLocation.ILonLat" project="usagi" file="Properties_T_usagi_Quantity_GeoLocation_ILonLat" />
+        <topic id="Methods.T:usagi.Quantity.GeoLocation.ILonLat" project="usagi" file="Methods_T_usagi_Quantity_GeoLocation_ILonLat" />
+      </topic>
+      <topic id="T:usagi.Quantity.GeoLocation.ILonLatAlt" project="usagi" file="T_usagi_Quantity_GeoLocation_ILonLatAlt">
+        <topic id="Properties.T:usagi.Quantity.GeoLocation.ILonLatAlt" project="usagi" file="Properties_T_usagi_Quantity_GeoLocation_ILonLatAlt" />
+        <topic id="Methods.T:usagi.Quantity.GeoLocation.ILonLatAlt" project="usagi" file="Methods_T_usagi_Quantity_GeoLocation_ILonLatAlt" />
+      </topic>
+      <topic id="T:usagi.Quantity.GeoLocation.ILonLatAltGettable" project="usagi" file="T_usagi_Quantity_GeoLocation_ILonLatAltGettable">
+        <topic id="Properties.T:usagi.Quantity.GeoLocation.ILonLatAltGettable" project="usagi" file="Properties_T_usagi_Quantity_GeoLocation_ILonLatAltGettable" />
+        <topic id="Methods.T:usagi.Quantity.GeoLocation.ILonLatAltGettable" project="usagi" file="Methods_T_usagi_Quantity_GeoLocation_ILonLatAltGettable" />
+      </topic>
+      <topic id="T:usagi.Quantity.GeoLocation.ILonLatAltSettable" project="usagi" file="T_usagi_Quantity_GeoLocation_ILonLatAltSettable">
+        <topic id="Properties.T:usagi.Quantity.GeoLocation.ILonLatAltSettable" project="usagi" file="Properties_T_usagi_Quantity_GeoLocation_ILonLatAltSettable" />
+      </topic>
+      <topic id="T:usagi.Quantity.GeoLocation.ILonLatGettable" project="usagi" file="T_usagi_Quantity_GeoLocation_ILonLatGettable">
+        <topic id="Properties.T:usagi.Quantity.GeoLocation.ILonLatGettable" project="usagi" file="Properties_T_usagi_Quantity_GeoLocation_ILonLatGettable">
+          <topic id="P:usagi.Quantity.GeoLocation.ILonLatGettable.Latitude" project="usagi" file="P_usagi_Quantity_GeoLocation_ILonLatGettable_Latitude" />
+          <topic id="P:usagi.Quantity.GeoLocation.ILonLatGettable.Longitude" project="usagi" file="P_usagi_Quantity_GeoLocation_ILonLatGettable_Longitude" />
+        </topic>
+        <topic id="Methods.T:usagi.Quantity.GeoLocation.ILonLatGettable" project="usagi" file="Methods_T_usagi_Quantity_GeoLocation_ILonLatGettable" />
+      </topic>
+      <topic id="T:usagi.Quantity.GeoLocation.ILonLatSettable" project="usagi" file="T_usagi_Quantity_GeoLocation_ILonLatSettable">
+        <topic id="Properties.T:usagi.Quantity.GeoLocation.ILonLatSettable" project="usagi" file="Properties_T_usagi_Quantity_GeoLocation_ILonLatSettable">
+          <topic id="P:usagi.Quantity.GeoLocation.ILonLatSettable.Latitude" project="usagi" file="P_usagi_Quantity_GeoLocation_ILonLatSettable_Latitude" />
+          <topic id="P:usagi.Quantity.GeoLocation.ILonLatSettable.Longitude" project="usagi" file="P_usagi_Quantity_GeoLocation_ILonLatSettable_Longitude" />
+        </topic>
+      </topic>
+      <topic id="T:usagi.Quantity.GeoLocation.IToGeoCoordinate" project="usagi" file="T_usagi_Quantity_GeoLocation_IToGeoCoordinate">
+        <topic id="Methods.T:usagi.Quantity.GeoLocation.IToGeoCoordinate" project="usagi" file="Methods_T_usagi_Quantity_GeoLocation_IToGeoCoordinate">
+          <topic id="M:usagi.Quantity.GeoLocation.IToGeoCoordinate.ToGeoCoordinate" project="usagi" file="M_usagi_Quantity_GeoLocation_IToGeoCoordinate_ToGeoCoordinate" />
+        </topic>
+      </topic>
+      <topic id="T:usagi.Quantity.GeoLocation.LonLat" project="usagi" file="T_usagi_Quantity_GeoLocation_LonLat">
+        <topic id="Overload:usagi.Quantity.GeoLocation.LonLat.#ctor" project="usagi" file="Overload_usagi_Quantity_GeoLocation_LonLat__ctor">
+          <topic id="M:usagi.Quantity.GeoLocation.LonLat.#ctor" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLat__ctor" />
+          <topic id="M:usagi.Quantity.GeoLocation.LonLat.#ctor(usagi.Quantity.GeoLocation.ILonLatGettable)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLat__ctor_1" />
+          <topic id="M:usagi.Quantity.GeoLocation.LonLat.#ctor(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLat__ctor_2" />
+        </topic>
+        <topic id="Properties.T:usagi.Quantity.GeoLocation.LonLat" project="usagi" file="Properties_T_usagi_Quantity_GeoLocation_LonLat">
+          <topic id="P:usagi.Quantity.GeoLocation.LonLat.Latitude" project="usagi" file="P_usagi_Quantity_GeoLocation_LonLat_Latitude" />
+          <topic id="P:usagi.Quantity.GeoLocation.LonLat.Longitude" project="usagi" file="P_usagi_Quantity_GeoLocation_LonLat_Longitude" />
+        </topic>
+        <topic id="Methods.T:usagi.Quantity.GeoLocation.LonLat" project="usagi" file="Methods_T_usagi_Quantity_GeoLocation_LonLat">
+          <topic id="M:usagi.Quantity.GeoLocation.LonLat.DistanceToPlaneAngle(usagi.Quantity.GeoLocation.ILonLatGettable)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLat_DistanceToPlaneAngle" />
+          <topic id="M:usagi.Quantity.GeoLocation.LonLat.FromDegrees(System.Double,System.Double)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLat_FromDegrees" />
+          <topic id="M:usagi.Quantity.GeoLocation.LonLat.FromGeoCoordinate(System.Device.Location.GeoCoordinate)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLat_FromGeoCoordinate" />
+          <topic id="Overload:usagi.Quantity.GeoLocation.LonLat.NearlyEqualsTo" project="usagi" file="Overload_usagi_Quantity_GeoLocation_LonLat_NearlyEqualsTo">
+            <topic id="M:usagi.Quantity.GeoLocation.LonLat.NearlyEqualsTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLat_NearlyEqualsTo" />
+            <topic id="M:usagi.Quantity.GeoLocation.LonLat.NearlyEqualsTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLat_NearlyEqualsTo_1" />
+          </topic>
+          <topic id="M:usagi.Quantity.GeoLocation.LonLat.Parse(System.String)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLat_Parse" />
+          <topic id="M:usagi.Quantity.GeoLocation.LonLat.ToGeoCoordinate" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLat_ToGeoCoordinate" />
+          <topic id="Overload:usagi.Quantity.GeoLocation.LonLat.ToString" project="usagi" file="Overload_usagi_Quantity_GeoLocation_LonLat_ToString">
+            <topic id="M:usagi.Quantity.GeoLocation.LonLat.ToString" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLat_ToString" />
+            <topic id="M:usagi.Quantity.GeoLocation.LonLat.ToString(System.Int32)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLat_ToString_1" />
+          </topic>
+        </topic>
+        <topic id="Operators.T:usagi.Quantity.GeoLocation.LonLat" project="usagi" file="Operators_T_usagi_Quantity_GeoLocation_LonLat">
+          <topic id="M:usagi.Quantity.GeoLocation.LonLat.op_Addition(usagi.Quantity.GeoLocation.LonLat,usagi.Quantity.GeoLocation.ILonLatGettable)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLat_op_Addition" />
+          <topic id="M:usagi.Quantity.GeoLocation.LonLat.op_Subtraction(usagi.Quantity.GeoLocation.LonLat,usagi.Quantity.GeoLocation.ILonLatGettable)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLat_op_Subtraction" />
+        </topic>
+      </topic>
+      <topic id="T:usagi.Quantity.GeoLocation.LonLatAlt" project="usagi" file="T_usagi_Quantity_GeoLocation_LonLatAlt">
+        <topic id="Overload:usagi.Quantity.GeoLocation.LonLatAlt.#ctor" project="usagi" file="Overload_usagi_Quantity_GeoLocation_LonLatAlt__ctor">
+          <topic id="M:usagi.Quantity.GeoLocation.LonLatAlt.#ctor" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLatAlt__ctor" />
+          <topic id="M:usagi.Quantity.GeoLocation.LonLatAlt.#ctor(System.Device.Location.GeoCoordinate)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLatAlt__ctor_1" />
+          <topic id="M:usagi.Quantity.GeoLocation.LonLatAlt.#ctor(usagi.Quantity.GeoLocation.ILonLatAltGettable)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLatAlt__ctor_2" />
+          <topic id="M:usagi.Quantity.GeoLocation.LonLatAlt.#ctor(usagi.Quantity.GeoLocation.ILonLatGettable)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLatAlt__ctor_3" />
+          <topic id="M:usagi.Quantity.GeoLocation.LonLatAlt.#ctor(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.IAltitudeGettable)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLatAlt__ctor_4" />
+          <topic id="M:usagi.Quantity.GeoLocation.LonLatAlt.#ctor(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLatAlt__ctor_5" />
+          <topic id="M:usagi.Quantity.GeoLocation.LonLatAlt.#ctor(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle,usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLatAlt__ctor_6" />
+        </topic>
+        <topic id="Properties.T:usagi.Quantity.GeoLocation.LonLatAlt" project="usagi" file="Properties_T_usagi_Quantity_GeoLocation_LonLatAlt">
+          <topic id="P:usagi.Quantity.GeoLocation.LonLatAlt.Altitude" project="usagi" file="P_usagi_Quantity_GeoLocation_LonLatAlt_Altitude" />
+        </topic>
+        <topic id="Methods.T:usagi.Quantity.GeoLocation.LonLatAlt" project="usagi" file="Methods_T_usagi_Quantity_GeoLocation_LonLatAlt">
+          <topic id="M:usagi.Quantity.GeoLocation.LonLatAlt.FromGeoCoordinate(System.Device.Location.GeoCoordinate)" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLatAlt_FromGeoCoordinate" />
+          <topic id="M:usagi.Quantity.GeoLocation.LonLatAlt.ToGeoCoordinate" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLatAlt_ToGeoCoordinate" />
+          <topic id="Overload:usagi.Quantity.GeoLocation.LonLatAlt.ToString" project="usagi" file="Overload_usagi_Quantity_GeoLocation_LonLatAlt_ToString">
+            <topic id="M:usagi.Quantity.GeoLocation.LonLatAlt.ToString" project="usagi" file="M_usagi_Quantity_GeoLocation_LonLatAlt_ToString" />
+          </topic>
+        </topic>
+      </topic>
+    </topic>
+    <topic id="N:usagi.Quantity.LengthMathExtension" project="_Namespaces" file="N_usagi_Quantity_LengthMathExtension">
+      <topic id="T:usagi.Quantity.LengthMathExtension.LengthMathHelper" project="usagi" file="T_usagi_Quantity_LengthMathExtension_LengthMathHelper">
+        <topic id="Methods.T:usagi.Quantity.LengthMathExtension.LengthMathHelper" project="usagi" file="Methods_T_usagi_Quantity_LengthMathExtension_LengthMathHelper">
+          <topic id="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.Abs(usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_LengthMathExtension_LengthMathHelper_Abs" />
+          <topic id="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.ACos(usagi.Quantity.Length,usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_LengthMathExtension_LengthMathHelper_ACos" />
+          <topic id="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.ASin(usagi.Quantity.Length,usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_LengthMathExtension_LengthMathHelper_ASin" />
+          <topic id="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.ATan2(usagi.Quantity.Length,usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_LengthMathExtension_LengthMathHelper_ATan2" />
+          <topic id="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.Sign(usagi.Quantity.Length)" project="usagi" file="M_usagi_Quantity_LengthMathExtension_LengthMathHelper_Sign" />
+        </topic>
+      </topic>
+    </topic>
+    <topic id="N:usagi.Quantity.PlaneAngleMathExtension" project="_Namespaces" file="N_usagi_Quantity_PlaneAngleMathExtension">
+      <topic id="T:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper" project="usagi" file="T_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper">
+        <topic id="Methods.T:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper" project="usagi" file="Methods_T_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper">
+          <topic id="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Abs(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Abs" />
+          <topic id="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Cos(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Cos" />
+          <topic id="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Cosh(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Cosh" />
+          <topic id="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Sign(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Sign" />
+          <topic id="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Sin(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Sin" />
+          <topic id="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Sinh(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Sinh" />
+          <topic id="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Tan(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Tan" />
+          <topic id="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Tanh(usagi.Quantity.PlaneAngle)" project="usagi" file="M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Tanh" />
+        </topic>
+      </topic>
+    </topic>
+    <topic id="N:usagi.Quantity.Unit.SI" project="_Namespaces" file="N_usagi_Quantity_Unit_SI">
+      <topic id="T:usagi.Quantity.Unit.SI.MetricPrefix" project="usagi" file="T_usagi_Quantity_Unit_SI_MetricPrefix">
+        <topic id="M:usagi.Quantity.Unit.SI.MetricPrefix.#ctor" project="usagi" file="M_usagi_Quantity_Unit_SI_MetricPrefix__ctor" />
+        <topic id="Properties.T:usagi.Quantity.Unit.SI.MetricPrefix" project="usagi" file="Properties_T_usagi_Quantity_Unit_SI_MetricPrefix">
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._a" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__a" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._c" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__c" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._d" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__d" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._da" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__da" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._E" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__E" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._f" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__f" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._G" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__G" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._h" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__h" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._k" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__k" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._m" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__m" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._M" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__M" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._n" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__n" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._p" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__p" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._P" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__P" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._T" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__T" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._u" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__u" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._y" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__y" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._Y" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__Y" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._z" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__z" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._Z" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__Z" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix._μ" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix__μ" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix.Multiplier" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix_Multiplier" />
+          <topic id="P:usagi.Quantity.Unit.SI.MetricPrefix.Prefix" project="usagi" file="P_usagi_Quantity_Unit_SI_MetricPrefix_Prefix" />
+        </topic>
+        <topic id="Methods.T:usagi.Quantity.Unit.SI.MetricPrefix" project="usagi" file="Methods_T_usagi_Quantity_Unit_SI_MetricPrefix">
+          <topic id="M:usagi.Quantity.Unit.SI.MetricPrefix.CompareTo(usagi.Quantity.Unit.SI.MetricPrefix)" project="usagi" file="M_usagi_Quantity_Unit_SI_MetricPrefix_CompareTo" />
+          <topic id="Overload:usagi.Quantity.Unit.SI.MetricPrefix.Equals" project="usagi" file="Overload_usagi_Quantity_Unit_SI_MetricPrefix_Equals">
+            <topic id="M:usagi.Quantity.Unit.SI.MetricPrefix.Equals(System.Object)" project="usagi" file="M_usagi_Quantity_Unit_SI_MetricPrefix_Equals" />
+            <topic id="M:usagi.Quantity.Unit.SI.MetricPrefix.Equals(usagi.Quantity.Unit.SI.MetricPrefix)" project="usagi" file="M_usagi_Quantity_Unit_SI_MetricPrefix_Equals_1" />
+          </topic>
+          <topic id="M:usagi.Quantity.Unit.SI.MetricPrefix.GetHashCode" project="usagi" file="M_usagi_Quantity_Unit_SI_MetricPrefix_GetHashCode" />
+          <topic id="M:usagi.Quantity.Unit.SI.MetricPrefix.Parse(System.String)" project="usagi" file="M_usagi_Quantity_Unit_SI_MetricPrefix_Parse" />
+          <topic id="Overload:usagi.Quantity.Unit.SI.MetricPrefix.ToString" project="usagi" file="Overload_usagi_Quantity_Unit_SI_MetricPrefix_ToString">
+            <topic id="M:usagi.Quantity.Unit.SI.MetricPrefix.ToString" project="usagi" file="M_usagi_Quantity_Unit_SI_MetricPrefix_ToString" />
+            <topic id="M:usagi.Quantity.Unit.SI.MetricPrefix.ToString(System.String,System.IFormatProvider)" project="usagi" file="M_usagi_Quantity_Unit_SI_MetricPrefix_ToString_1" />
+          </topic>
+        </topic>
+        <topic id="Operators.T:usagi.Quantity.Unit.SI.MetricPrefix" project="usagi" file="Operators_T_usagi_Quantity_Unit_SI_MetricPrefix">
+          <topic id="M:usagi.Quantity.Unit.SI.MetricPrefix.op_Equality(usagi.Quantity.Unit.SI.MetricPrefix,usagi.Quantity.Unit.SI.MetricPrefix)" project="usagi" file="M_usagi_Quantity_Unit_SI_MetricPrefix_op_Equality" />
+          <topic id="M:usagi.Quantity.Unit.SI.MetricPrefix.op_GreaterThan(usagi.Quantity.Unit.SI.MetricPrefix,usagi.Quantity.Unit.SI.MetricPrefix)" project="usagi" file="M_usagi_Quantity_Unit_SI_MetricPrefix_op_GreaterThan" />
+          <topic id="Overload:usagi.Quantity.Unit.SI.MetricPrefix.op_Implicit" project="usagi" file="Overload_usagi_Quantity_Unit_SI_MetricPrefix_op_Implicit">
+            <topic id="M:usagi.Quantity.Unit.SI.MetricPrefix.op_Implicit(usagi.Quantity.Unit.SI.MetricPrefix)~System.Double" project="usagi" file="M_usagi_Quantity_Unit_SI_MetricPrefix_op_Implicit" />
+            <topic id="M:usagi.Quantity.Unit.SI.MetricPrefix.op_Implicit(usagi.Quantity.Unit.SI.MetricPrefix)~System.String" project="usagi" file="M_usagi_Quantity_Unit_SI_MetricPrefix_op_Implicit_1" />
+          </topic>
+          <topic id="M:usagi.Quantity.Unit.SI.MetricPrefix.op_Inequality(usagi.Quantity.Unit.SI.MetricPrefix,usagi.Quantity.Unit.SI.MetricPrefix)" project="usagi" file="M_usagi_Quantity_Unit_SI_MetricPrefix_op_Inequality" />
+          <topic id="M:usagi.Quantity.Unit.SI.MetricPrefix.op_LessThan(usagi.Quantity.Unit.SI.MetricPrefix,usagi.Quantity.Unit.SI.MetricPrefix)" project="usagi" file="M_usagi_Quantity_Unit_SI_MetricPrefix_op_LessThan" />
+        </topic>
+        <topic id="Fields.T:usagi.Quantity.Unit.SI.MetricPrefix" project="usagi" file="Fields_T_usagi_Quantity_Unit_SI_MetricPrefix">
+          <topic id="F:usagi.Quantity.Unit.SI.MetricPrefix.RegexPattern" project="usagi" file="F_usagi_Quantity_Unit_SI_MetricPrefix_RegexPattern" />
+        </topic>
+      </topic>
+    </topic>
+    <topic id="N:usagi.URI" project="_Namespaces" file="N_usagi_URI">
+      <topic id="T:usagi.URI.GeoURI" project="usagi" file="T_usagi_URI_GeoURI">
+        <topic id="Overload:usagi.URI.GeoURI.#ctor" project="usagi" file="Overload_usagi_URI_GeoURI__ctor">
+          <topic id="M:usagi.URI.GeoURI.#ctor(System.String)" project="usagi" file="M_usagi_URI_GeoURI__ctor" />
+          <topic id="M:usagi.URI.GeoURI.#ctor(System.Uri)" project="usagi" file="M_usagi_URI_GeoURI__ctor_1" />
+          <topic id="M:usagi.URI.GeoURI.#ctor(usagi.Quantity.GeoLocation.LonLat,System.String,System.String)" project="usagi" file="M_usagi_URI_GeoURI__ctor_2" />
+          <topic id="M:usagi.URI.GeoURI.#ctor(usagi.Quantity.GeoLocation.LonLatAlt,System.String,System.String)" project="usagi" file="M_usagi_URI_GeoURI__ctor_3" />
+          <topic id="M:usagi.URI.GeoURI.#ctor(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle,usagi.Quantity.Length,System.String,System.String)" project="usagi" file="M_usagi_URI_GeoURI__ctor_4" />
+        </topic>
+        <topic id="Properties.T:usagi.URI.GeoURI" project="usagi" file="Properties_T_usagi_URI_GeoURI">
+          <topic id="P:usagi.URI.GeoURI.Altitude" project="usagi" file="P_usagi_URI_GeoURI_Altitude" />
+          <topic id="P:usagi.URI.GeoURI.CoordinateReferenceSystem" project="usagi" file="P_usagi_URI_GeoURI_CoordinateReferenceSystem" />
+          <topic id="P:usagi.URI.GeoURI.Latitude" project="usagi" file="P_usagi_URI_GeoURI_Latitude" />
+          <topic id="P:usagi.URI.GeoURI.Longitude" project="usagi" file="P_usagi_URI_GeoURI_Longitude" />
+          <topic id="P:usagi.URI.GeoURI.OriginalString" project="usagi" file="P_usagi_URI_GeoURI_OriginalString" />
+          <topic id="P:usagi.URI.GeoURI.Scheme" project="usagi" file="P_usagi_URI_GeoURI_Scheme" />
+          <topic id="P:usagi.URI.GeoURI.Uncertainty" project="usagi" file="P_usagi_URI_GeoURI_Uncertainty" />
+        </topic>
+        <topic id="Methods.T:usagi.URI.GeoURI" project="usagi" file="Methods_T_usagi_URI_GeoURI">
+          <topic id="Overload:usagi.URI.GeoURI.Equals" project="usagi" file="Overload_usagi_URI_GeoURI_Equals">
+            <topic id="M:usagi.URI.GeoURI.Equals(usagi.URI.GeoURI)" project="usagi" file="M_usagi_URI_GeoURI_Equals" />
+          </topic>
+          <topic id="M:usagi.URI.GeoURI.NearlyEquals(usagi.URI.GeoURI,usagi.Quantity.PlaneAngle,usagi.Quantity.Length)" project="usagi" file="M_usagi_URI_GeoURI_NearlyEquals" />
+          <topic id="M:usagi.URI.GeoURI.ToGeoCoordinate" project="usagi" file="M_usagi_URI_GeoURI_ToGeoCoordinate" />
+          <topic id="M:usagi.URI.GeoURI.ToString" project="usagi" file="M_usagi_URI_GeoURI_ToString" />
+        </topic>
+        <topic id="Fields.T:usagi.URI.GeoURI" project="usagi" file="Fields_T_usagi_URI_GeoURI">
+          <topic id="F:usagi.URI.GeoURI.Regex" project="usagi" file="F_usagi_URI_GeoURI_Regex" />
+          <topic id="F:usagi.URI.GeoURI.RegexPattern" project="usagi" file="F_usagi_URI_GeoURI_RegexPattern" />
+          <topic id="F:usagi.URI.GeoURI.UriSchemeGeo" project="usagi" file="F_usagi_URI_GeoURI_UriSchemeGeo" />
+        </topic>
+      </topic>
+      <topic id="T:usagi.URI.GeoURI.AltitudeParseFailedException" project="usagi" file="T_usagi_URI_GeoURI_AltitudeParseFailedException">
+        <topic id="M:usagi.URI.GeoURI.AltitudeParseFailedException.#ctor" project="usagi" file="M_usagi_URI_GeoURI_AltitudeParseFailedException__ctor" />
+        <topic id="Properties.T:usagi.URI.GeoURI.AltitudeParseFailedException" project="usagi" file="Properties_T_usagi_URI_GeoURI_AltitudeParseFailedException" />
+        <topic id="Methods.T:usagi.URI.GeoURI.AltitudeParseFailedException" project="usagi" file="Methods_T_usagi_URI_GeoURI_AltitudeParseFailedException" />
+        <topic id="Events.T:usagi.URI.GeoURI.AltitudeParseFailedException" project="usagi" file="Events_T_usagi_URI_GeoURI_AltitudeParseFailedException" />
+      </topic>
+      <topic id="T:usagi.URI.GeoURI.GeoURIException" project="usagi" file="T_usagi_URI_GeoURI_GeoURIException">
+        <topic id="M:usagi.URI.GeoURI.GeoURIException.#ctor" project="usagi" file="M_usagi_URI_GeoURI_GeoURIException__ctor" />
+        <topic id="Properties.T:usagi.URI.GeoURI.GeoURIException" project="usagi" file="Properties_T_usagi_URI_GeoURI_GeoURIException" />
+        <topic id="Methods.T:usagi.URI.GeoURI.GeoURIException" project="usagi" file="Methods_T_usagi_URI_GeoURI_GeoURIException" />
+        <topic id="Events.T:usagi.URI.GeoURI.GeoURIException" project="usagi" file="Events_T_usagi_URI_GeoURI_GeoURIException" />
+      </topic>
+      <topic id="T:usagi.URI.GeoURI.GeoURIPatternIsNotMatchedException" project="usagi" file="T_usagi_URI_GeoURI_GeoURIPatternIsNotMatchedException">
+        <topic id="M:usagi.URI.GeoURI.GeoURIPatternIsNotMatchedException.#ctor" project="usagi" file="M_usagi_URI_GeoURI_GeoURIPatternIsNotMatchedException__ctor" />
+        <topic id="Properties.T:usagi.URI.GeoURI.GeoURIPatternIsNotMatchedException" project="usagi" file="Properties_T_usagi_URI_GeoURI_GeoURIPatternIsNotMatchedException" />
+        <topic id="Methods.T:usagi.URI.GeoURI.GeoURIPatternIsNotMatchedException" project="usagi" file="Methods_T_usagi_URI_GeoURI_GeoURIPatternIsNotMatchedException" />
+        <topic id="Events.T:usagi.URI.GeoURI.GeoURIPatternIsNotMatchedException" project="usagi" file="Events_T_usagi_URI_GeoURI_GeoURIPatternIsNotMatchedException" />
+      </topic>
+      <topic id="T:usagi.URI.GeoURI.LatitudeParseFailedException" project="usagi" file="T_usagi_URI_GeoURI_LatitudeParseFailedException">
+        <topic id="M:usagi.URI.GeoURI.LatitudeParseFailedException.#ctor" project="usagi" file="M_usagi_URI_GeoURI_LatitudeParseFailedException__ctor" />
+        <topic id="Properties.T:usagi.URI.GeoURI.LatitudeParseFailedException" project="usagi" file="Properties_T_usagi_URI_GeoURI_LatitudeParseFailedException" />
+        <topic id="Methods.T:usagi.URI.GeoURI.LatitudeParseFailedException" project="usagi" file="Methods_T_usagi_URI_GeoURI_LatitudeParseFailedException" />
+        <topic id="Events.T:usagi.URI.GeoURI.LatitudeParseFailedException" project="usagi" file="Events_T_usagi_URI_GeoURI_LatitudeParseFailedException" />
+      </topic>
+      <topic id="T:usagi.URI.GeoURI.LongitudeParseFailedException" project="usagi" file="T_usagi_URI_GeoURI_LongitudeParseFailedException">
+        <topic id="M:usagi.URI.GeoURI.LongitudeParseFailedException.#ctor" project="usagi" file="M_usagi_URI_GeoURI_LongitudeParseFailedException__ctor" />
+        <topic id="Properties.T:usagi.URI.GeoURI.LongitudeParseFailedException" project="usagi" file="Properties_T_usagi_URI_GeoURI_LongitudeParseFailedException" />
+        <topic id="Methods.T:usagi.URI.GeoURI.LongitudeParseFailedException" project="usagi" file="Methods_T_usagi_URI_GeoURI_LongitudeParseFailedException" />
+        <topic id="Events.T:usagi.URI.GeoURI.LongitudeParseFailedException" project="usagi" file="Events_T_usagi_URI_GeoURI_LongitudeParseFailedException" />
+      </topic>
+      <topic id="T:usagi.URI.GeoURI.SchemeIsNotGeoURIException" project="usagi" file="T_usagi_URI_GeoURI_SchemeIsNotGeoURIException">
+        <topic id="M:usagi.URI.GeoURI.SchemeIsNotGeoURIException.#ctor" project="usagi" file="M_usagi_URI_GeoURI_SchemeIsNotGeoURIException__ctor" />
+        <topic id="Properties.T:usagi.URI.GeoURI.SchemeIsNotGeoURIException" project="usagi" file="Properties_T_usagi_URI_GeoURI_SchemeIsNotGeoURIException" />
+        <topic id="Methods.T:usagi.URI.GeoURI.SchemeIsNotGeoURIException" project="usagi" file="Methods_T_usagi_URI_GeoURI_SchemeIsNotGeoURIException" />
+        <topic id="Events.T:usagi.URI.GeoURI.SchemeIsNotGeoURIException" project="usagi" file="Events_T_usagi_URI_GeoURI_SchemeIsNotGeoURIException" />
+      </topic>
+    </topic>
+  </topic>
+</topics>

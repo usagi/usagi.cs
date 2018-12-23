@@ -5,8 +5,10 @@ namespace usagi.Quantity
 {
   /// <summary>
   /// 平面角オブジェクト
-  /// 内部表現は double による度数法表現
   /// </summary>
+  /// <remarks>
+  /// 内部表現は double による度数法表現
+  /// </remarks>
   public class PlaneAngle
     : IComparable<PlaneAngle>
     , IEquatable<PlaneAngle>
@@ -63,25 +65,40 @@ namespace usagi.Quantity
     static public Regex RegexOfCommons { get; } = new Regex( RegexPatternOfCommons );
     /// <summary>
     /// デフォルトコンストラクター
-    /// 0 値の角度を生成する
+    /// <para/>0 値の角度を生成する
     /// </summary>
     PlaneAngle() { }
     /// <summary>
     /// コピーコンストラクター
-    /// 複製元は変更せずに同じ値を持つ新たな平面角オブジェクトを生成する
+    /// <para/>複製元は変更せずに同じ値を持つ新たな平面角オブジェクトを生成する
     /// </summary>
     /// <param name="a">複製元</param>
     PlaneAngle( PlaneAngle a ) { InDegrees = a.InDegrees; }
 
     /// <summary>
     /// 度数法からのファクトリー
-    /// 度, 分, 秒, °, ′, ′′, deg
-    /// 主に一般生活中の平面角、測地学でよく使われる。
+    /// <para/>度, 分, 秒, °, ′, ′′, deg
+    /// <para/>主に一般生活中の平面角、測地学でよく使われる。
     /// </summary>
     /// <param name="degrees">度</param>
     /// <param name="minutes">分</param>
     /// <param name="seconds">秒</param>
-    static public PlaneAngle FromDegrees( double degrees, double minutes = 0, double seconds = 0 ) { return new PlaneAngle() { InDegrees = degrees + ( minutes / 60.0 ) + ( seconds / 60.0 / 60.0 ) }; }
+    /// <remarks>
+    /// minutes, seconds の符号は自動的に degrees の符号に統一されます。
+    /// このお節介は degrees, minutes, seconds それぞれで異なる符号（方向）を与える事は通常ありえませんが、
+    /// 3つのパラメーターに明示的に分離して実引数を与える際に全てに負の符号を付けるべきかユーザーが揺らぐ可能性を考慮し、
+    /// どのように与えても推定的に意図される degrees と同じ向きに minutes, seconds の符号を統一するものです。
+    /// 万一、本当に異なる向きの degrees + minutes + seconds を与えたい場合は個別に生成して加算すると良いでしょう。
+    /// </remarks>
+    /// <returns>生成された平面角インスタンス</returns>
+    static public PlaneAngle FromDegrees
+    ( double degrees, double minutes = 0, double seconds = 0 )
+    {
+      var sign = Math.Sign( degrees ) < 0 ? -1.0 : +1.0;
+      minutes = sign * Math.Abs( minutes );
+      seconds = sign * Math.Abs( seconds );
+      return new PlaneAngle() { InDegrees = degrees + ( minutes / 60.0 ) + ( seconds / 60.0 / 60.0 ) };
+    }
     /// <summary>
     /// ラジアンからのファクトリー
     /// rad
@@ -92,32 +109,32 @@ namespace usagi.Quantity
     static public PlaneAngle FromRadians( double radians ) { return FromDegrees( ToDegrees( radians ) ); }
     /// <summary>
     /// ポイントからのファクトリー
-    /// ポイント, 点, pt
-    /// 主に航海系、航空系で用いられる。
+    /// <para/>ポイント, 点, pt
+    /// <para/>主に航海系、航空系で用いられる。
     /// </summary>
     /// <param name="points">ポイント</param>
     /// <returns>生成された平面角オブジェクト</returns>
     static public PlaneAngle FromPoints( double points ) { return FromDegrees( points * ( 1.0 / 32.0 ) ); }
     /// <summary>
     /// ミルからのファクトリー
-    /// ミル, 密位, シュトリヒ, strich, mils
-    /// 主に軍事系で用いられる。
+    /// <para/>ミル, 密位, シュトリヒ, strich, mils
+    /// <para/>主に軍事系で用いられる。
     /// </summary>
     /// <param name="mils">ミル</param>
     /// <returns>生成された平面角オブジェクト</returns>
     static public PlaneAngle FromMils( double mils ) { return FromRadians( mils * 1.0e-3 ); }
     /// <summary>
     /// グラヂアンからのファクトリー
-    /// グラヂアン, グラード, グレイド, ゴン, gradian, graded, gon
-    /// 主にフランス及びその周辺国の一部の測量系に用いられる。
+    /// <para/>グラヂアン, グラード, グレイド, ゴン, gradian, graded, gon
+    /// <para/>主にフランス及びその周辺国の一部の測量系に用いられる。
     /// </summary>
     /// <param name="gradians">グラヂアン</param>
     /// <returns>生成された平面角オブジェクト</returns>
     static public PlaneAngle FromGradians( double gradians ) { return FromDegrees( gradians * ( 9.0 / 10.0 ) ); }
     /// <summary>
     /// ターンからのファクトリー
-    /// ターン, turns, 回転
-    /// 主に円周全体の回転を視覚的にわかりやすく表現したい目的で用いられる。
+    /// <para/>ターン, turns, 回転
+    /// <para/>主に円周全体の回転を視覚的にわかりやすく表現したい目的で用いられる。
     /// </summary>
     /// <param name="turns">ターン</param>
     /// <returns>生成された平面角オブジェクト</returns>
@@ -125,8 +142,8 @@ namespace usagi.Quantity
 
     /// <summary>
     /// 度数法の Degrees 単位での入出力用のプロパティー
-    /// 他の全ての単位表現プロパティーの中で唯一直接的に内部に値を持つプロパティー。
-    /// 他のすべての単位の扱いは内部的にはこの値との変換により実装される
+    /// <para/>他の全ての単位表現プロパティーの中で唯一直接的に内部に値を持つプロパティー。
+    /// <para/>他のすべての単位の扱いは内部的にはこの値との変換により実装される
     /// </summary>
     public double InDegrees { get; set; } = 0;
     /// <summary>
@@ -172,43 +189,65 @@ namespace usagi.Quantity
     /// </summary>
     public double InTurns { get { return InDegrees / 360.0; } set { InDegrees = value * 360.0; } }
 
+    /// <summary>
+    /// 度単位で文字列化
+    /// </summary>
+    /// <returns>文字列化された平面角</returns>
     public override string ToString() { return ToStringInDegrees(); }
 
     /// <summary>
     /// 度数法の Degrees 単位で文字列化する。数値に加え、単位として SymbolOfDegrees が付く。
     /// </summary>
+    /// <param name="format">フォーマット</param>
+    /// <returns>文字列</returns>
     public string ToStringInDegrees( string format = "F2" ) { return $"{InDegrees.ToString( format )}{SymbolOfDegrees}"; }
     /// <summary>
     /// 度数法の Minutes 単位で文字列化する。数値に加え、単位として SymbolOfMinutes が付く。
     /// </summary>
+    /// <param name="format">フォーマット</param>
+    /// <returns>文字列</returns>
     public string ToStringInMinutes( string format = "F2" ) { return $"{InMinutes.ToString( format )}{SymbolOfMinutes}"; }
     /// <summary>
     /// 度数法の Seconds 単位で文字列化する。数値に加え、単位として SymbolOfSeconds が付く。
     /// </summary>
+    /// <param name="format">フォーマット</param>
+    /// <returns>文字列</returns>
     public string ToStringInSeconds( string format = "F2" ) { return $"{InSeconds.ToString( format )}{SymbolOfSeconds}"; }
     /// <summary>
     /// 度数法の整数 Degrees 成分、整数 Minutes 成分、実数 Seconds 成分により文字列化する。数値に加え、単位として SymbolOfDegrees, SymbolOfMinutes, SymbolOfDegrees が付く。
     /// </summary>
+    /// <param name="seconds_format">フォーマット</param>
+    /// <returns>文字列</returns>
     public string ToStringInDMS( string seconds_format = "F2" ) { return $"{PartOfDegrees}{SymbolOfDegrees}{Math.Abs( PartOfMinutes )}{SymbolOfMinutes}{Math.Abs( PartOfSeconds ).ToString( seconds_format )}{SymbolOfSeconds}"; }
     /// <summary>
     /// Radians 単位で文字列化する。数値に加え、単位として SymbolOfRadians が付く。
     /// </summary>
+    /// <param name="format">フォーマット</param>
+    /// <returns>文字列</returns>
     public string ToStringInRadians( string format = "F2" ) { return $"{InRadians}{SymbolOfRadians}"; }
     /// <summary>
     /// Points 単位で文字列化する。数値に加え、単位として SymbolOfPoints が付く。
     /// </summary>
+    /// <param name="format">フォーマット</param>
+    /// <returns>文字列</returns>
     public string ToStringInPoints( string format = "F2" ) { return $"{InPoints}{SymbolOfPoints}"; }
     /// <summary>
     /// Mils 単位で文字列化する。数値に加え、単位として SymbolOfMils が付く。
     /// </summary>
+    /// <param name="format">フォーマット</param>
+    /// <returns>文字列</returns>
     public string ToStringInMils( string format = "F2" ) { return $"{InMils}{SymbolOfMils}"; }
     /// <summary>
     /// Gradian 単位で文字列化する。数値に加え、単位として SymbolOfGradians が付く。
     /// </summary>
+    /// <param name="format">フォーマット</param>
+    /// <returns>文字列</returns>
     public string ToStringInGradians( string format = "F2" ) { return $"{InGradians}{SymbolOfGradians}"; }
     /// <summary>
     /// Turns 単位で文字列化する。数値に加え、単位として SymbolOfTurns が付く。
     /// </summary>
+    /// <param name="format">フォーマット</param>
+    /// <returns>文字列</returns>
     public string ToStringInTurns( string format = "F2" ) { return $"{InTurns}{SymbolOfTurns}"; }
 
     /// <summary>InDegrees への糖衣構文</summary>
@@ -242,82 +281,107 @@ namespace usagi.Quantity
     /// 度数法による Degrees または Minutes または Seconds の組み合わせ
     /// または Radians, Points, Mils, Gradians, Turns で読み取り可能な文字列
     /// から PlaneAngle オブジェクトを生成する。
-    /// 読み取り不能な場合は null を返す。
+    /// <para/>読み取り不能な場合は null を返す。
     /// </summary>
     /// <param name="str">任意の文字列</param>
+    /// <param name="try_in_degrees">単位を検出できない場合は deg 単位としてパースを試みる場合は true</param>
     /// <returns>読み取りに成功した場合は PlaneAngle オブジェクト、読み取れなかった場合は null</returns>
-    static public PlaneAngle Parse( string str )
+    static public PlaneAngle Parse( string str, bool try_in_degrees = false )
     {
-      return ParseDegrees( str ) ?? ParseCommons( str );
+      return 
+        ParseDegrees( str )
+        ?? ParseCommons( str )
+        ?? ( try_in_degrees ? ParseDegrees( $"{str} deg" ) : null )
+        ;
     }
     /// <summary>
     /// 度数法による Degrees または Minutes または Seconds の組み合わせ
     /// から PlaneAngle オブジェクトを生成する。
-    /// 読み取り不能な場合は null を返す。
+    /// <para/>読み取り不能な場合は null を返す。
     /// </summary>
     /// <param name="str">任意の文字列</param>
     /// <returns>読み取りに成功した場合は PlaneAngle オブジェクト、読み取れなかった場合は null</returns>
     static public PlaneAngle ParseDegrees( string str )
     {
       var m = RegexOfDegrees.Match( str );
-      if ( m == null )
+      if
+      (   m == null
+      ||  ! m.Success
+      ||  (   !m.Groups[ "degrees" ].Success
+          &&  !m.Groups[ "minutes" ].Success
+          &&  !m.Groups[ "seconds" ].Success
+          )
+      )
         return null;
 
       double degrees = 0;
       {
-        double buffer = 0;
-        if ( double.TryParse( m.Groups[ "degrees" ].Value, out buffer ) )
-          degrees = buffer;
-        if ( double.TryParse( m.Groups[ "minutes" ].Value, out buffer ) )
-          degrees += buffer / 60.0;
-        if ( double.TryParse( m.Groups[ "seconds" ].Value, out buffer ) )
-          degrees += buffer / 60.0 / 60.0;
+        {
+          if ( m.Groups[ "degrees" ] is Group deg && deg.Success && double.TryParse( deg.Value, out double buffer ) )
+            degrees = buffer;
+        }
+        {
+          if ( m.Groups[ "minutes" ] is Group min && min.Success && double.TryParse( min.Value, out double buffer ) )
+            degrees += buffer / 60.0;
+        }
+        {
+          if ( m.Groups[ "seconds" ] is Group sec && sec.Success && double.TryParse( sec.Value, out double buffer ) )
+            degrees += buffer / 60.0 / 60.0;
+        }
       }
-      return FromDegrees( m.Groups[ "negative" ].Value == "-" ? -degrees : degrees );
+      return 
+        FromDegrees
+        ( ( m.Groups[ "negative" ] is Group neg && neg.Success && neg.Value == "-" )
+          ? -degrees
+          : degrees
+        );
     }
     /// <summary>
     /// Radians, Points, Mils, Gradians, Turns で読み取り可能な文字列
     /// から PlaneAngle オブジェクトを生成する。
-    /// 読み取り不能な場合は null を返す。
+    /// <para/>読み取り不能な場合は null を返す。
     /// </summary>
     /// <param name="str">任意の文字列</param>
     /// <returns>読み取りに成功した場合は PlaneAngle オブジェクト、読み取れなかった場合は null</returns>
     static public PlaneAngle ParseCommons( string str )
     {
       var m = RegexOfCommons.Match( str );
-      if ( m == null )
+      if ( m == null || !m.Success )
         return null;
       // 値を処理
-      var value = double.Parse( m.Groups[ "prefix" ].Value );
+      var value = double.Parse( m.Groups[ "value" ].Value );
       // SI接頭辞があれば値へ適用
       if ( Unit.SI.MetricPrefix.Parse( m.Groups[ "prefix" ].Value ) is Unit.SI.MetricPrefix unit_prefix )
         value *= unit_prefix;
       // 負なら値へ適用
-      if ( m.Groups[ "negative" ] != null )
+      if ( m.Groups[ "negative" ] is Group neg && neg.Success && neg.Value == "-" )
         value *= -1;
       // 単位系から適切なファクトリーで生成
-      if ( m.Groups[ "rad" ] != null )
+      if ( m.Groups[ "rad" ].Success )
         return FromRadians( value );
-      if ( m.Groups[ "pts" ] != null )
-        return FromRadians( value );
-      if ( m.Groups[ "mils" ] != null )
-        return FromRadians( value );
-      if ( m.Groups[ "gradians" ] != null )
-        return FromRadians( value );
-      if ( m.Groups[ "turns" ] != null )
-        return FromRadians( value );
+      if ( m.Groups[ "pts" ].Success )
+        return FromPoints( value );
+      if ( m.Groups[ "mils" ].Success )
+        return FromMils( value );
+      if ( m.Groups[ "gradians" ].Success )
+        return FromGradians( value );
+      if ( m.Groups[ "turns" ].Success )
+        return FromTurns( value );
       return null;
     }
 
     /// <summary>
     /// 度数法の整数 Degrees 成分、整数 Minutes 成分、実数 Seconds 成分により文字列化する。数値に加え、単位として SymbolOfDegrees, SymbolOfMinutes, SymbolOfDegrees が付く。
-    /// ToStringInDMS のプロクシー
+    /// <para/>ToStringInDMS のプロクシー
     /// </summary>
+    /// <param name="format">フォーマット</param>
+    /// <param name="formatProvider">フォーマットプロバイダー</param>
+    /// <returns>文字列</returns>
     public string ToString( string format, IFormatProvider formatProvider ) { return ToStringInDMS( format ); }
 
     /// <summary>
     /// 平面角オブジェクトを比較
-    /// 正規化せずに比較する。正規化が必要な場合は NormalizedCompareTo を使うとよい
+    /// <para/>正規化せずに比較する。正規化が必要な場合は NormalizedCompareTo を使うとよい
     /// </summary>
     /// <param name="other">比較対象の平面角オブジェクト</param>
     /// <returns>this が小さければ -1, this==other なら 0, this が大きければ +1</returns>
@@ -373,28 +437,36 @@ namespace usagi.Quantity
 
     /// <summary>
     /// [0...360) deg へ正規化した場合の角度の比較を行います。
-    /// 例: a=-30, b=60 が与えられた場合、 330 vs. 60 となり結果は false となります。
+    /// <para/>例: a=-30, b=60 が与えられた場合、 330 vs. 60 となり結果は false となります。
     /// </summary>
-    /// <param name="a"></param>
-    /// <param name="b"></param>
-    /// <returns></returns>
+    /// <param name="a">比較対象の平面角</param>
+    /// <returns>正規化した上で CompareTo した結果</returns>
     public int NormalizedCompareTo( PlaneAngle a ) { return Normalize360( this ).CompareTo( Normalize360( a ) ); }
 
     /// <summary>
     /// 正規化した場合の this &lt; a の判定
     /// </summary>
+    /// <param name="a">比較対象の平面角</param>
+    /// <returns>正規化した上で this &lt; s ならば true</returns>
     public bool NormalizedLessThan( PlaneAngle a ) { return NormalizedCompareTo( a ) < 0; }
     /// <summary>
     /// 正規化した場合の this &gt; a の判定
     /// </summary>
+    /// <param name="a">比較対象の平面角</param>
+    /// <returns>正規化した上で this > s ならば true</returns>
     public bool NormalizedGreaterThan( PlaneAngle a ) { return NormalizedCompareTo( a ) > 0; }
     /// <summary>
     /// 正規化した場合の this == a の判定
     /// </summary>
+    /// <param name="a">比較対象の平面角</param>
+    /// <returns>正規化した上で this == s ならば true</returns>
     public bool NormalizedEqualsTo( PlaneAngle a ) { return NormalizedCompareTo( a ) == 0; }
     /// <summary>
     /// 正規化した場合の this ≃ a の判定
     /// </summary>
+    /// <param name="a">比較対象の平面角</param>
+    /// <param name="tolerance">許容誤差</param>
+    /// <returns>正規化した上で this ≃ s ならば true</returns>
     public bool NormalizedNearlyEqualsTo( PlaneAngle a, PlaneAngle tolerance = null )
     {
       PlaneAngle aa, bb;
@@ -418,7 +490,9 @@ namespace usagi.Quantity
     /// <summary>
     /// NearlyEquals( this, a tolerance ) への糖衣構文
     /// </summary>
+    /// <param name="a">比較対象の平面角</param>
     /// <param name="tolerance">許容範囲（誤差） null の場合は PlaneAngle.CentiSecond が代用される</param>
+    /// <returns>等価と見做せる場合は ture</returns>
     public bool NearlyEqualsTo( PlaneAngle a, PlaneAngle tolerance = null )
     { return NearlyEquals( this, a, tolerance ); }
 
@@ -436,6 +510,8 @@ namespace usagi.Quantity
     /// 正規化せずに角度が等しいか判定する
     /// 正規化が必要な場合は NormalizedEquals を使うとよい
     /// </summary>
+    /// <param name="other">比較対象</param>
+    /// <returns>等価なら true</returns>
     public bool Equals( PlaneAngle other )
     {
       return CompareTo( other ) == 0;
@@ -443,8 +519,10 @@ namespace usagi.Quantity
 
     /// <summary>
     /// 正規化せずに角度が等しいか判定する
-    /// 正規化が必要な場合は NormalizedEquals を使うとよい
+    /// <para/>正規化が必要な場合は NormalizedEquals を使うとよい
     /// </summary>
+    /// <param name="obj">比較対象</param>
+    /// <returns>等価なら true</returns>
     public override bool Equals( object obj )
     {
       if ( obj is PlaneAngle a )
@@ -454,8 +532,11 @@ namespace usagi.Quantity
 
     /// <summary>
     /// 正規化せずに角度が等しいか判定する
-    /// 正規化が必要な場合は NormalizedEquals を使うとよい
+    /// <para/>正規化が必要な場合は NormalizedEquals を使うとよい
     /// </summary>
+    /// <param name="a">平面角</param>
+    /// <param name="b">平面角</param>
+    /// <returns>等価なら true</returns>
     static public bool operator ==( PlaneAngle a, PlaneAngle b )
     {
       // a, b は共に null ではない -> a.Equals(b) -> a.CompareTo(b)==0
@@ -469,58 +550,127 @@ namespace usagi.Quantity
     }
     /// <summary>
     /// 正規化せずに角度が等しいか判定する
-    /// 正規化が必要な場合は NormalizedNotEquals を使うとよい
+    /// <para/>正規化が必要な場合は NormalizedNotEquals を使うとよい
     /// </summary>
+    /// <param name="a">平面角</param>
+    /// <param name="b">平面角</param>
+    /// <returns>不等なら true</returns>
     static public bool operator !=( PlaneAngle a, PlaneAngle b ) { return !( a == b ); }
     /// <summary>
     /// 正規化せずに角度が a &lt; b か判定する
-    /// 正規化が必要な場合は NormalizedLessThan を使うとよい
+    /// <para/>正規化が必要な場合は NormalizedLessThan を使うとよい
     /// </summary>
+    /// <param name="a">平面角</param>
+    /// <param name="b">平面角</param>
+    /// <returns>a &lt; b なら true</returns>
     static public bool operator <( PlaneAngle a, PlaneAngle b ) { return a.CompareTo( b ) < 0; }
     /// <summary>
-    /// 正規化せずに角度が a &gt; b か判定する
-    /// 正規化が必要な場合は NormalizedGreaterThan を使うとよい
+    /// 正規化せずに角度が a &lt;= b か判定する
+    /// <para/>正規化が必要な場合は NormalizedLessThan を使うとよい
     /// </summary>
+    /// <param name="a">平面角</param>
+    /// <param name="b">平面角</param>
+    /// <returns>a &lt;= bなら true</returns>
+    static public bool operator <=( PlaneAngle a, PlaneAngle b ) { return a.CompareTo( b ) <= 0; }
+    /// <summary>
+    /// 正規化せずに角度が a &gt; b か判定する
+    /// <para/>正規化が必要な場合は NormalizedGreaterThan を使うとよい
+    /// </summary>
+    /// <param name="a">平面角</param>
+    /// <param name="b">平面角</param>
+    /// <returns>a > b なら true</returns>
     static public bool operator >( PlaneAngle a, PlaneAngle b ) { return a.CompareTo( b ) > 0; }
+    /// <summary>
+    /// 正規化せずに角度が a &gt;= b か判定する
+    /// <para/>正規化が必要な場合は NormalizedGreaterThan を使うとよい
+    /// </summary>
+    /// <param name="a">平面角</param>
+    /// <param name="b">平面角</param>
+    /// <returns>a >= b なら true</returns>
+    static public bool operator >=( PlaneAngle a, PlaneAngle b ) { return a.CompareTo( b ) >= 0; }
     /// <summary>
     /// 正規化した場合に角度が a &lt; b か判定する
     /// </summary>
+    /// <param name="a">平面角</param>
+    /// <param name="b">平面角</param>
+    /// <returns>正規化した上で a &lt; b なら true</returns>
     static public bool NormalizedLessThan( PlaneAngle a, PlaneAngle b ) { return a.NormalizedLessThan( b ); }
     /// <summary>
     /// 正規化した場合に角度が a &gt; b か判定する
     /// </summary>
+    /// <param name="a">平面角</param>
+    /// <param name="b">平面角</param>
+    /// <returns>正規化した上で a > b なら true</returns>
     static public bool NormalizedGreaterThan( PlaneAngle a, PlaneAngle b ) { return a.NormalizedGreaterThan( b ); }
 
     /// <summary>
     /// 符号を反転する単項演算子
     /// </summary>
+    /// <param name="a">平面角</param>
+    /// <returns>符号を反転した平面角</returns>
     static public PlaneAngle operator -( PlaneAngle a ) { return FromDegrees( -a.InDegrees ); }
     /// <summary>
     /// 符号をどうもしない単項演算子
     /// </summary>
+    /// <param name="a">平面角</param>
+    /// <returns>複製されただけの平面角</returns>
     static public PlaneAngle operator +( PlaneAngle a ) { return FromDegrees( a.InDegrees ); }
     /// <summary>
     /// 減算する2項演算子
     /// </summary>
+    /// <param name="a">平面角 a</param>
+    /// <param name="b">平面角 b</param>
+    /// <returns>a - b した平面角</returns>
     static public PlaneAngle operator -( PlaneAngle a, PlaneAngle b ) { return FromDegrees( a.InDegrees - b.InDegrees ); }
     /// <summary>
     /// 加算する2項演算子
     /// </summary>
+    /// <param name="a">平面角 a</param>
+    /// <param name="b">平面角 b</param>
+    /// <returns>a + b した平面角</returns>
     static public PlaneAngle operator +( PlaneAngle a, PlaneAngle b ) { return FromDegrees( a.InDegrees + b.InDegrees ); }
     /// <summary>
     /// 角度を無次元数により掛け算する2項演算子
-    /// Note: 角度次元同士の掛け算は角度2乗次元の結果を生じるが PlaneAngle 型では取り扱いの範疇を超えるため実装していない。
     /// </summary>
+    /// <remarks>
+    /// Note: 角度次元同士の掛け算は角度2乗次元の結果を生じるが PlaneAngle 型では取り扱いの範疇を超えるため実装していない。
+    /// </remarks>
+    /// <param name="a">平面角</param>
+    /// <param name="b">無次元の係数</param>
+    /// <returns>無次元の係数を掛けた平面角</returns>
     static public PlaneAngle operator *( PlaneAngle a, double b ) { return FromDegrees( a.InDegrees * b ); }
     /// <summary>
-    /// 角度を無次元数により割り算する2項演算子
-    /// Note: 角度次元同士の割り算は無次元の結果を生じるが PlaneAngle 型では取り扱いの範疇を超えるため実装していない。
+    /// 角度を無次元数により掛け算する2項演算子
     /// </summary>
-    static public PlaneAngle operator /( PlaneAngle a, double b ) { return FromDegrees( a.InDegrees / b ); }
+    /// <remarks>
+    /// 交換法則が成立するので実装詳細は b * a に投げている
+    /// </remarks>
+    /// <param name="a">無次元の係数</param>
+    /// <param name="b">平面角</param>
+    /// <returns>無次元の係数を掛けた平面角</returns>
+    static public PlaneAngle operator *( double a, PlaneAngle b ) { return b * a; }
+    /// <summary>
+    /// 角度を無次元数により割り算する2項演算子
+    /// <para/>Note: 角度次元同士の割り算は無次元の結果を生じるが PlaneAngle 型では取り扱いの範疇を超えるため実装していない。
+    /// </summary>
+    /// <param name="a">割られる平面角</param>
+    /// <param name="b">割りに行く側の係数</param>
+    /// <returns>比</returns>
+    static public PlaneAngle operator /( PlaneAngle a, double b ) { return FromDegrees( a._deg / b ); }
+    /// <summary>
+    /// 平面角を平面角で除算した比を得る2項演算子
+    /// </summary>
+    /// <param name="a">割られる平面角</param>
+    /// <param name="b">割りに行く側の平面角</param>
+    /// <returns>比</returns>
+    static public double operator /( PlaneAngle a, PlaneAngle b ) { return a._deg / b._deg; }
     /// <summary>
     /// 角度の剰余を計算する2項演算子
-    /// Note: 実用上の有意性を考慮し、剰余については正規化した場合の結果を計算する
+    /// <para/>Note: 実用上の有意性を考慮し、剰余については正規化した場合の結果を計算する
     /// </summary>
+    /// <param name="a">平面角 a</param>
+    /// <param name="b">平面角 b</param>
+    /// <returns>a % b した剰余な平面角</returns>
     static public PlaneAngle operator %( PlaneAngle a, PlaneAngle b )
     { return FromDegrees( Normalize360( a ).InDegrees % Normalize360( b ).InDegrees ); }
 
@@ -569,6 +719,57 @@ namespace usagi.Quantity
     /// <summary>角度0の平面角オブジェクトを得る糖衣構文</summary>
     static public PlaneAngle Zero { get { return new PlaneAngle(); } }
 
+    /// <summary>NaN な平面角オブジェクトを得る糖衣構文</summary>
+    static public PlaneAngle NaN { get { return FromDegrees( double.NaN ); } }
+
+    /// <summary>
+    /// 比から逆正弦で平面角を生成
+    /// </summary>
+    /// <param name="ratio">比</param>
+    /// <returns>平面角</returns>
+    static public PlaneAngle From_asin( double ratio ) { return FromDegrees( Math.Asin( ratio ) ); }
+    /// <summary>
+    /// 比から逆余弦で平面角を生成
+    /// </summary>
+    /// <param name="ratio">比</param>
+    /// <returns>平面角</returns>
+    static public PlaneAngle From_acos( double ratio ) { return FromDegrees( Math.Acos( ratio ) ); }
+    /// <summary>
+    /// 比から逆正接で平面角を生成
+    /// </summary>
+    /// <param name="ratio">比</param>
+    /// <returns>平面角</returns>
+    static public PlaneAngle From_atan( double ratio ) { return FromDegrees( Math.Atan( ratio ) ); }
+
+    /// <summary>PositiveInfinity な平面角オブジェクトを得る糖衣構文</summary>
+    static public PlaneAngle PositiveInfinity { get { return FromDegrees( double.PositiveInfinity ); } }
+
+    /// <summary>NegativeInfinity な平面角オブジェクトを得る糖衣構文</summary>
+    static public PlaneAngle NegativeInfinity { get { return FromDegrees( double.NegativeInfinity ); } }
+
+    /// <summary>
+    /// NaN 判定
+    /// </summary>
+    /// <returns>NaN なら true</returns>
+    public bool IsNaN() { return double.IsNaN( _deg ); }
+
+    /// <summary>
+    /// ∞ 判定
+    /// 符号は何れであれ∞か判定する。
+    /// </summary>
+    /// <returns>∞ なら true</returns>
+    public bool IsInfinity() { return double.IsInfinity( _deg ); }
+    /// <summary>
+    /// +∞判定
+    /// </summary>
+    /// <returns>+∞ なら true</returns>
+    public bool IsPositiveInfinity() { return double.IsPositiveInfinity( _deg ); }
+    /// <summary>
+    /// -∞判定
+    /// </summary>
+    /// <returns>-∞ なら true</returns>
+    public bool IsNegativeInfinity() { return double.IsNegativeInfinity( _deg ); }
+
     /// <summary>
     /// 弧度法の Radians 量を度数法の Degrees 量へ変換
     /// </summary>
@@ -582,6 +783,10 @@ namespace usagi.Quantity
     /// <returns>弧度法の Radians 量</returns>
     static public double ToRadians( double degrees ) { return Math.PI * degrees / 180.0; }
 
+    /// <summary>
+    /// ハッシュ値を取得
+    /// </summary>
+    /// <returns>ハッシュ値</returns>
     public override int GetHashCode() { return InDegrees.GetHashCode(); }
   }
 }

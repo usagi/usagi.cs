@@ -1,0 +1,3645 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>usagi</name>
+  </assembly>
+  <members>
+    <member name="N:usagi.Boxing">
+      <summary>
+            オブジェクトの Boxing に関する便利かもしれないおまけ機能を提供する
+            </summary>
+    </member>
+    <member name="T:usagi.Boxing.Optional">
+      <summary>
+            Optional&lt;T&gt; への糖衣構文
+            </summary>
+    </member>
+    <member name="M:usagi.Boxing.Optional.FromValue``1(``0)">
+      <summary>
+            Optional&lt;T&gt;.FromValu&lt;T&gt; への糖衣構文
+            </summary>
+      <typeparam name="T">ボクシングしたい任意のオブジェクトの型</typeparam>
+      <param name="value">ボクシングしたい任意のオブジェクト</param>
+      <returns>ボクシングされた任意のオブジェクト</returns>
+    </member>
+    <member name="T:usagi.Boxing.Optional`1">
+      <summary>
+            任意の型&lt;T&gt; についてオブジェクトの有無のチェック機構を設けたボクシングされた型を提供する
+            <list type="bullet"><item><description>オブジェクトを放り込むと暗黙的に T 型のオブジェクトとしても振る舞う</description></item><item><description>null を放り込むと T 型の空のオブジェクトとして振る舞う</description></item><item><description>IDisposable なオブジェクトに対してはボクシングしたまま IDisposable できる</description></item></list></summary>
+      <typeparam name="T">ボクシングしたい任意の型</typeparam>
+      <remarks>
+            内部表現は object による
+            </remarks>
+    </member>
+    <member name="T:usagi.Boxing.Optional`1.InvalidValueException">
+      <summary>
+            オブジェクトを内包していない状態でオブジェクトを要求するメソッドを呼んだりすると飛ばします。
+            </summary>
+    </member>
+    <member name="M:usagi.Boxing.Optional`1.InvalidValueException.#ctor(System.String)">
+      <summary>
+            生成
+            </summary>
+      <param name="m">込めたいメッセージ</param>
+    </member>
+    <member name="F:usagi.Boxing.Optional`1.o">
+      <summary>
+            内部表現
+            </summary>
+    </member>
+    <member name="M:usagi.Boxing.Optional`1.#ctor">
+      <summary>
+            空のボクシングオブジェクトを生成します。
+            <para />それはおおよそソフトな null っぽいものです。
+            </summary>
+    </member>
+    <member name="M:usagi.Boxing.Optional`1.#ctor(`0)">
+      <summary>
+            オブジェクトを内包したボクシングオブジェクトを生成します。
+            <para />生成されたボクシングオブジェクトはおおよそ暗黙の型変換によりT型のオブジェクトっぽく振る舞います。
+            </summary>
+      <param name="value">内包させるオブジェクト</param>
+    </member>
+    <member name="M:usagi.Boxing.Optional`1.Reset(`0,System.Boolean)">
+      <summary>
+            ボクシングオブジェクトにオブジェクトを新たに内包させます。
+            <para />既に内包しているオブジェクトがあった場合その運命はガベージコレクターに委ねられます。たぶん。
+            </summary>
+      <param name="value">新たに内包させるオブジェクト</param>
+      <param name="dispose">既に内包しているオブジェクトがあり、かつ IDisposable を実装している場合に Dispose する場合は true 、しなくていい場合は false</param>
+      <returns>新たなオブジェクトを内包した this</returns>
+    </member>
+    <member name="M:usagi.Boxing.Optional`1.Reset(`0,`0@)">
+      <summary>
+            新たなオブジェクトを内包させると同時に既に内包しているオブジェクトがあった場合には取り出せる版の Reset　です。
+            </summary>
+      <param name="value">新たに内包させるオブジェクト</param>
+      <param name="previously">既に内包しているオブジェクトがあった場合に取り出す先</param>
+      <returns>新たなオブジェクトを内包した this</returns>
+    </member>
+    <member name="M:usagi.Boxing.Optional`1.Get">
+      <summary>
+            内包するオブジェクトがあれば取り出します。
+            この機能は T 型への暗黙の型変換と等価です。
+            </summary>
+      <exception cref="T:usagi.Boxing.Optional`1.InvalidValueException">内包するオブジェクトが無い場合に飛びます。</exception>
+      <returns>内包するオブジェクト</returns>
+    </member>
+    <member name="M:usagi.Boxing.Optional`1.TryGet(`0@)">
+      <summary>
+            内包するオブジェクトがあれば value へ取り出し true を返します。
+            <para />内包するオブジェクトが無ければ value には何もせず false を返します。
+            </summary>
+      <param name="value">内包するオブジェクトがあれば代入されます。無ければ何もされません。</param>
+      <returns>内包するオブジェクトを value へ取り出せた場合は true 、そうでない場合には false が帰ります。</returns>
+      <remarks>
+            Get や暗黙の型変換で例外が飛ぶ可能性を嫌う場合にどうぞ。
+            </remarks>
+    </member>
+    <member name="M:usagi.Boxing.Optional`1.IsValid">
+      <summary>
+            内包するオブジェクトの有無を返します。
+            </summary>
+      <returns>内包するオブジェクトがあれば true 、無ければ false が返ります。</returns>
+    </member>
+    <member name="M:usagi.Boxing.Optional`1.op_True(usagi.Boxing.Optional{`0})">
+      <summary>
+            内包するオブジェクトが有効な場合に operator true として true を返します。
+            </summary>
+      <param name="optional">ボクシングオブジェクト</param>
+      <returns>内包するオブジェクトが有効な場合は true 、そうでなければ false</returns>
+    </member>
+    <member name="M:usagi.Boxing.Optional`1.op_False(usagi.Boxing.Optional{`0})">
+      <summary>
+            内包するオブジェクトが無効な場合に operator false として true を返します。
+            </summary>
+      <param name="optional">ボクシングオブジェクト</param>
+      <returns>内包するオブジェクトが無効な場合は true 、そうでなければ false</returns>
+    </member>
+    <member name="M:usagi.Boxing.Optional`1.op_Implicit(usagi.Boxing.Optional{`0})~`0">
+      <summary>
+            暗黙の型変換により T 型へ変換します。
+            Get と等価に機能します。
+            </summary>
+      <param name="optional">ボクシングオブジェクト</param>
+      <returns>内包するT型のインスタンス</returns>
+    </member>
+    <member name="M:usagi.Boxing.Optional`1.FromValue(`0)">
+      <summary>
+            内包させたいオブジェクトからボクシングオブジェクトを生成するファクトリー
+            </summary>
+      <param name="value">内包させたいオブジェクト</param>
+      <returns>value を内包したボクシングオブジェクト</returns>
+    </member>
+    <member name="P:usagi.Boxing.Optional`1.Null">
+      <summary>
+            空のボクシングオブジェクトを生成するファクトリーとして機能するプロパティー
+            new Optional&lt;T&gt;() の糖衣構文です。 new と ctor の ( ) をタイプしたくないあなたに。
+            </summary>
+    </member>
+    <member name="M:usagi.Boxing.Optional`1.Dispose">
+      <summary>
+            内包するオブジェクトが IDisposable を実装する場合には Dispose します。
+            <para />ボクシングオブジェクトとしても内包するオブジェクトの運命をガベージコレクターへ任せ、自身は何も内包しない状態へ変化します。
+            </summary>
+    </member>
+    <member name="T:usagi.Boxing.Utility">
+      <summary>
+            Boxing を使ったちょっとした便利機能
+            </summary>
+    </member>
+    <member name="M:usagi.Boxing.Utility.FirstOfOptional``1(System.Collections.Generic.IEnumerable{``0})">
+      <summary>
+            列挙の先頭要素をボクシングオブジェクトで取り出します。
+            </summary>
+      <typeparam name="T">列挙された任意の型</typeparam>
+      <param name="values">列挙された任意の型のオブジェクト群</param>
+      <returns>列挙の先頭要素または空のボクシングオブジェクト</returns>
+    </member>
+    <member name="M:usagi.Boxing.Utility.LastOfOptional``1(System.Collections.Generic.IEnumerable{``0})">
+      <summary>
+            列挙の末尾要素をボクシングオブジェクトで取り出します。
+            </summary>
+      <typeparam name="T">列挙された任意の型</typeparam>
+      <param name="values">列挙された任意の型のオブジェクト群</param>
+      <returns>列挙の末尾要素または空のボクシングオブジェクト</returns>
+    </member>
+    <member name="T:usagi.CivilEngineering.LonLatHelper">
+      <summary>
+            経緯度型 <see cref="T:usagi.Quantity.GeoLocation.LonLat" />, 経緯度取得可能インターフェース <see cref="T:usagi.Quantity.GeoLocation.ILonLatGettable" /> 
+            を拡張する
+            </summary>
+    </member>
+    <member name="T:usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm">
+      <summary>
+            平面角次元群による経緯度から長さ次元の距離を計算する際に使用するアルゴリズム
+            </summary>
+    </member>
+    <member name="F:usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm.Haversine">
+      <summary>
+            Haversine 法（半正矢関数の公式）
+            <list type="bullet"><item><description>惑星の赤道方向への半径から概算する。</description></item><item><description>惑星の楕円体としての扁平率は無視する。</description></item><item><description>負荷は軽いが高精度な計算結果を求めたい場合には向かない。</description></item></list></summary>
+      <seealso href="https://en.wikipedia.org/wiki/Haversine_formula" />
+      <seealso href="https://ja.wikipedia.org/wiki/%E7%90%83%E9%9D%A2%E4%B8%89%E8%A7%92%E6%B3%95#haversine_%E5%8D%8A%E6%AD%A3%E7%9F%A2%E9%96%A2%E6%95%B0" />
+    </member>
+    <member name="F:usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm.Vincenty">
+      <summary>
+            Vincenty 法
+            <list type="bullet"><item><description>惑星を楕円体近似した赤道方向への半径、回転軸方向への半径、扁平率を考慮し、十分な計算精度を反復計算により確保する。</description></item><item><description>負荷は高いが高精度な計算結果を求めたい場合に向く。</description></item></list></summary>
+      <seealso href="https://jsperf.com/vincenty-vs-haversine-distance-calculations" />
+      <seealso href="https://en.wikipedia.org/wiki/Vincenty%27s_formulae" />
+      <seealso href="https://ja.wikipedia.org/wiki/Vincenty%E6%B3%95" />
+    </member>
+    <member name="M:usagi.CivilEngineering.LonLatHelper.NearlyEqualsTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.Length,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
+      <summary>
+            経緯度の位置 a, b の惑星を楕円体近似した場合の距離が
+            許容範囲 tolerance 以下か判定
+            </summary>
+      <param name="a">経緯度の位置1つめ</param>
+      <param name="b">経緯度の位置2つめ</param>
+      <param name="tolerance">許容範囲</param>
+      <param name="llda">経緯度の距離を計算するアルゴリズム</param>
+      <param name="planet">楕円体近似した惑星の形状定義; null の場合は <see cref="P:usagi.CivilEngineering.Planet.GeometricalSpecification.Earth_WGS84" /> が採用されます </param>
+      <returns>許容範囲以下なら true</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.LonLatHelper.LongitudeDistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
+      <summary>
+            経緯度の位置 a と b の中間の緯度における経度方向の距離を計算する
+            </summary>
+      <param name="a">経緯度の位置1つめ</param>
+      <param name="b">経緯度の位置2つめ</param>
+      <param name="llda">経緯度の距離を計算するアルゴリズム</param>
+      <param name="planet">楕円体近似した惑星の形状定義; null の場合は <see cref="P:usagi.CivilEngineering.Planet.GeometricalSpecification.Earth_WGS84" /> が採用されます </param>
+      <returns>経度方向の距離</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.LonLatHelper.LatitudeDistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
+      <summary>
+            経緯度の位置 a と b の緯度方向の距離を計算する
+            </summary>
+      <param name="a">経緯度の位置1つめ</param>
+      <param name="b">経緯度の位置2つめ</param>
+      <param name="llda">経緯度の距離を計算するアルゴリズム</param>
+      <param name="planet">楕円体近似した惑星の形状定義; null の場合は <see cref="P:usagi.CivilEngineering.Planet.GeometricalSpecification.Earth_WGS84" /> が採用されます </param>
+      <returns>緯度方向の距離</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.LonLatHelper.DistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
+      <summary>
+            2つの経緯度 a, b について、
+            楕円体近似した惑星の形状定義 planet 上における
+            惑星表面上の地点間の距離を長さ次元で計算します
+            </summary>
+      <param name="a">経緯度の位置1つめ</param>
+      <param name="b">経緯度の位置2つめ</param>
+      <param name="llda">経緯度の距離を計算するアルゴリズム</param>
+      <param name="planet">楕円体近似した惑星の形状定義; null の場合は <see cref="P:usagi.CivilEngineering.Planet.GeometricalSpecification.Earth_WGS84" /> が採用されます </param>
+      <returns>距離</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.LonLatHelper.DistanceToHaversine(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
+      <summary>
+            DistanceTo の Haversine アルゴリズム版の実装詳細
+            </summary>
+      <param name="a">経緯度の位置1つめ</param>
+      <param name="b">経緯度の位置2つめ</param>
+      <param name="planet">楕円体近似した惑星の形状定義; null の場合は <see cref="P:usagi.CivilEngineering.Planet.GeometricalSpecification.Earth_WGS84" /> が採用されます </param>
+      <returns>距離</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.LonLatHelper.DistanceToVincenty(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
+      <summary>
+            DistanceTo の Vincenty アルゴリズム版の実装詳細
+            </summary>
+      <param name="a">経緯度の位置1つめ</param>
+      <param name="b">経緯度の位置2つめ</param>
+      <param name="planet">楕円体近似した惑星の形状定義; null の場合は <see cref="P:usagi.CivilEngineering.Planet.GeometricalSpecification.Earth_WGS84" /> が採用されます </param>
+      <returns>距離</returns>
+    </member>
+    <member name="N:usagi.CivilEngineering.Planet">
+      <summary>
+            惑星の諸元
+            </summary>
+    </member>
+    <member name="T:usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable">
+      <summary>
+            惑星の幾何学的な諸元を取得可能
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable.Flattening">
+      <summary>
+            楕円体近似した場合の扁平率
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable.EquatorialRadius">
+      <summary>
+            楕円体近似した場合の中心から赤道方向への半径
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable.EquatorLength">
+      <summary>
+            楕円体近似した場合の赤道長
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable.AxialRadius">
+      <summary>
+            楕円体近似した場合の回転軸方向への半径
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable.MaximumLatitudeLength">
+      <summary>
+            楕円体近似した場合の緯度範囲 [ 0 ... 90 ] deg 間の距離
+            </summary>
+    </member>
+    <member name="T:usagi.CivilEngineering.Planet.GeometricalSpecification">
+      <summary>
+            惑星の楕円体近似した形状の定義を取得できる
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.Planet.GeometricalSpecification.Earth_WGS84">
+      <summary>
+            地球の幾何学的な諸元(WGS84測地系)
+            </summary>
+    </member>
+    <member name="T:usagi.CivilEngineering.Planet.GeometricalSpecification._Earth_WGS84">
+      <summary>
+            地球の幾何学的な諸元(WGS84)
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.Planet.GeometricalSpecification._Earth_WGS84.MaximumLatitudeLength">
+      <remarks>
+            楕円の円周の計算は負荷がそこそこ高くなるので事前に計算した値を入れた。
+            </remarks>
+    </member>
+    <member name="T:usagi.CivilEngineering.WebMercator">
+      <summary>
+            WebMercator な機能群
+            </summary>
+      <seealso href="https://en.wikipedia.org/wiki/Web_Mercator_projection" />
+    </member>
+    <member name="P:usagi.CivilEngineering.WebMercator.CriticalLatitude">
+      <summary>
+            WebMercator における臨界緯度（限界緯度）
+            </summary>
+    </member>
+    <member name="M:usagi.CivilEngineering.WebMercator.NormalizeWebMercator(usagi.Quantity.GeoLocation.LonLat)">
+      <summary>
+            任意の経緯度を WebMercator で表現可能な適当な経緯度へ正規化する
+            緯度が90°を超える場合は経度は必要に応じて反転され、緯度も反転後の経度に合わせて正規化される。
+            正規化後の緯度は ± <see cref="P:usagi.CivilEngineering.WebMercator.CriticalLatitude" /> へ丸められる
+            </summary>
+      <param name="a">任意の経緯度</param>
+      <returns>正規化された経緯度</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.WebMercator.MapSize(System.Byte,System.UInt32)">
+      <summary>
+            LOD=z におけるピクセル空間の次元の広さを計算
+            </summary>
+      <param name="z">Level of Detail ( LOD; or Zoom Level )</param>
+      <param name="tile_size">タイル1枚あたりの次元の広さ</param>
+      <returns>LOD=z におけるピクセル空間の広さ</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.WebMercator.AngleToPixel(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle,System.Byte)">
+      <summary>
+            経緯度 -&gt; ピクセル座標系の位置
+            </summary>
+      <param name="lon">経度</param>
+      <param name="lat">緯度</param>
+      <param name="z">Level of Detail ( LOD; or Zoom Level )</param>
+      <returns>ピクセル座標系の位置</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.WebMercator.AngleToPixel(usagi.Quantity.GeoLocation.LonLat,System.Byte)">
+      <summary>
+            経緯度 -&gt; ピクセル座標系の位置
+            </summary>
+      <param name="a">経緯度</param>
+      <param name="z">Level of Detail ( LOD; or Zoom Level )</param>
+      <returns>ピクセル座標系の位置</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.WebMercator.PixelToTile(System.UInt32,System.UInt32,System.Byte,System.UInt32)">
+      <summary>
+            ピクセル座標系の位置 -&gt; 所属するタイル座標系の位置
+            </summary>
+      <param name="x">ピクセル X 座標</param>
+      <param name="y">ピクセル Y 座標</param>
+      <param name="z">Level of Detail ( LOD; or Zoom Level )</param>
+      <param name="tile_size">タイルの次元あたりの大きさ</param>
+      <returns>所属するタイル座標系の位置</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.WebMercator.PixelToTile(usagi.CivilEngineering.PixelLocation,System.UInt32)">
+      <summary>
+            ピクセル座標系の位置 -&gt; 所属するタイル座標系の位置
+            </summary>
+      <param name="p">ピクセル座標系の位置</param>
+      <param name="tile_size">タイルの次元あたりの大きさ</param>
+      <returns>所属するタイル座標系の位置</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.WebMercator.AngleToTile(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle,System.Byte)">
+      <summary>
+            経緯度 -&gt; 所属するタイル座標系の位置
+            </summary>
+      <param name="lon">経度</param>
+      <param name="lat">緯度</param>
+      <param name="z">Level of Detail ( LOD; or Zoom Level )</param>
+      <returns>所属するタイル座標系の位置</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.WebMercator.AngleToTile(usagi.Quantity.GeoLocation.LonLat,System.Byte)">
+      <summary>
+            経緯度 -&gt; 所属するタイル座標系の位置
+            </summary>
+      <param name="a">経緯度</param>
+      <param name="z">Level of Detail ( LOD; or Zoom Level )</param>
+      <returns>所属するタイル座標系の位置</returns>
+    </member>
+    <member name="N:usagi.CivilEngineering">
+      <summary>
+            土木っぽい何か
+            </summary>
+    </member>
+    <member name="T:usagi.CivilEngineering.PixelLocation">
+      <summary>
+            ピクセル座標系の位置
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.PixelLocation.X">
+      <summary>
+            ピクセル X 座標
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.PixelLocation.Y">
+      <summary>
+            ピクセル Y 座標
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.PixelLocation.Z">
+      <summary>
+            Level of Detail ( LOD; or Zoom Level )
+            X, Y 座標の空間の大きさを定義する Z 値（この値は厳密には座標ではない）
+            </summary>
+    </member>
+    <member name="M:usagi.CivilEngineering.PixelLocation.#ctor">
+      <summary>
+            X = Y = Z = 0 で生成
+            </summary>
+    </member>
+    <member name="M:usagi.CivilEngineering.PixelLocation.#ctor(System.UInt32,System.UInt32,System.Byte)">
+      <summary>
+            X, Y, Z 値を指定して生成
+            </summary>
+      <param name="x">X 座標</param>
+      <param name="y">Y 座標</param>
+      <param name="z">Z 値</param>
+    </member>
+    <member name="M:usagi.CivilEngineering.PixelLocation.ToString">
+      <summary>
+            文字列化
+            </summary>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.PixelLocation.Equals(System.Object)">
+      <summary>
+            等価な位置を保持するか判定
+            </summary>
+      <param name="obj">比較対象</param>
+      <returns>等価な位置を保持していれば true</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.PixelLocation.GetHashCode">
+      <summary>
+            ハッシュ値を計算
+            </summary>
+      <returns>ハッシュ値</returns>
+    </member>
+    <member name="T:usagi.CivilEngineering.TileLocation">
+      <summary>
+            タイル座標系の位置
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.TileLocation.X">
+      <summary>
+            タイル X 座標
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.TileLocation.Y">
+      <summary>
+            タイル Y 座標
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.TileLocation.Z">
+      <summary>
+            Level of Detail ( LOD; or Zoom Level )
+            X, Y 座標の空間の大きさを定義する Z 値（この値は厳密には座標ではない）
+            </summary>
+    </member>
+    <member name="M:usagi.CivilEngineering.TileLocation.#ctor">
+      <summary>
+            X=Y=Z=0 で生成
+            </summary>
+    </member>
+    <member name="M:usagi.CivilEngineering.TileLocation.#ctor(System.UInt32,System.UInt32,System.Byte)">
+      <summary>
+            X, Y, Z 値を指定して生成
+            </summary>
+      <param name="x">X 座標</param>
+      <param name="y">Y 座標</param>
+      <param name="z">Z 値</param>
+    </member>
+    <member name="M:usagi.CivilEngineering.TileLocation.ToString">
+      <summary>
+            文字列化
+            </summary>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.TileLocation.Equals(System.Object)">
+      <summary>
+            等価な位置を保持するか判定
+            </summary>
+      <param name="obj">比較対象</param>
+      <returns>等価な位置を保持していれば true</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.TileLocation.GetHashCode">
+      <summary>
+            ハッシュ値を計算
+            </summary>
+      <returns>ハッシュ値</returns>
+    </member>
+    <member name="N:usagi">
+      <summary>
+            usagi.cs
+            <para />わたしが欲しいと思った適当な機能たち for C#
+            </summary>
+      <seealso href="https://www.nuget.org/packages/usagi/">NuGet: packages/usagi</seealso>
+      <seealso href="https://github.com/usagi/usagi.cs/">GitHhub: usagi/usagi.cs</seealso>
+      <seealso href="https://github.com/usagi/usagi.cs/LICENSE.md">License: MIT</seealso>
+      <seealso href="https://github.com/usagi/">Author's github: usagi</seealso>
+      <seealso href="https://twitter.com/USAGI_WRP">Author's Twitter: USAGI_WRP</seealso>
+      <seealso href="https://www.facebook.com/usagi.wrp">Author's Facebook: usagi.wrp</seealso>
+      <seealso href="https://usagi.hatenablog.jp/">Author's Blog( C++ and techs ): C++ ときどき ごはん、わりとてぃーぶれいく☆</seealso>
+    </member>
+    <member name="T:usagi.LibraryInformation">
+      <summary>
+            このライブラリーの諸元
+            </summary>
+    </member>
+    <member name="F:usagi.LibraryInformation.Name">
+      <summary>
+            ライブラリー名称
+            </summary>
+    </member>
+    <member name="F:usagi.LibraryInformation.NuGet">
+      <summary>
+            NuGet のパッケージ URI
+            </summary>
+    </member>
+    <member name="F:usagi.LibraryInformation.GitHub">
+      <summary>
+            GitHub のリポジトリー URI
+            </summary>
+    </member>
+    <member name="F:usagi.LibraryInformation.License">
+      <summary>
+            ライセンス
+            </summary>
+    </member>
+    <member name="F:usagi.LibraryInformation.Readme">
+      <summary>
+            りーどみー
+            </summary>
+    </member>
+    <member name="F:usagi.LibraryInformation.Authors">
+      <summary>
+            作った人々
+            </summary>
+    </member>
+    <member name="F:usagi.LibraryInformation.Comitters">
+      <summary>
+            貢献してくれた人々
+            </summary>
+    </member>
+    <member name="T:usagi.Extension.StringHelper">
+      <summary>
+            string 型を機能拡張する何か
+            </summary>
+    </member>
+    <member name="M:usagi.Extension.StringHelper.Contains(System.String,System.String[])">
+      <summary>
+            Contains の複数パターンを OR 判定できる版
+            </summary>
+      <example>
+        <code>
+            string p1 = "This is a sushi.";
+            string p2 = "This is an urchin.";
+            var a1 = p1.Contains( "a ", "an " ); // true
+            var a2 = p2.Contains( "a ", "an " ); // true
+            </code>
+      </example>
+      <param name="s">元文字列</param>
+      <param name="ss">判定したい文字列群</param>
+      <returns>s に ss の何れかが含まれれば true</returns>
+    </member>
+    <member name="M:usagi.Extension.StringHelper.StartsWith(System.String,System.String[])">
+      <summary>
+            StartsWith の複数パターンを OR 判定できる版
+            </summary>
+      <param name="s">元文字列</param>
+      <param name="ss">判定したい文字列群</param>
+      <returns>s が ss の何れかで始まっていれば true</returns>
+    </member>
+    <member name="M:usagi.Extension.StringHelper.EndsWith(System.String,System.String[])">
+      <summary>
+            StartsWith の複数パターンを OR 判定できる版
+            </summary>
+      <param name="s">元文字列</param>
+      <param name="ss">判定したい文字列群</param>
+      <returns>s が ss の何れかで終わっていれば true</returns>
+    </member>
+    <member name="M:usagi.Extension.StringHelper.StartsOrEndsWith(System.String,System.String[])">
+      <summary>
+            StartsWith または EndsWith の複数パターンを OR 判定
+            </summary>
+      <param name="s">元文字列</param>
+      <param name="ss">判定したい文字列群</param>
+      <returns>s が ss の何れかで始まるか終わるかしていれば true</returns>
+    </member>
+    <member name="M:usagi.Extension.StringHelper.OrCombinator(System.String,System.Func{System.String,System.String,System.Boolean},System.String[])">
+      <summary>
+            ss に含まれる文字列 sss について f( s, sss ) が成立するものがあるか判定する
+            </summary>
+      <remarks>
+        <see cref="M:usagi.Extension.StringHelper.Contains(System.String,System.String[])" />
+        <see cref="M:usagi.Extension.StringHelper.StartsWith(System.String,System.String[])" />
+        <see cref="M:usagi.Extension.StringHelper.EndsWith(System.String,System.String[])" />
+            の実装詳細のために作った。
+            </remarks>
+      <param name="s">元文字列</param>
+      <param name="f">ss の要素 sss ごとに f(s,sss) するファンクター</param>
+      <param name="ss">f で s と判定させる文字列群</param>
+      <returns>成立するものがあれば true</returns>
+    </member>
+    <member name="N:usagi.Extension.Collection">
+      <summary>
+            IEnumerable, IDictionary など Collection 向けの Extension 
+            </summary>
+    </member>
+    <member name="T:usagi.Extension.Collection.EnumerableHelper">
+      <summary>
+            Enumerable な何かの機能拡張群
+            </summary>
+    </member>
+    <member name="M:usagi.Extension.Collection.EnumerableHelper.WithIndexing``1(System.Collections.Generic.IEnumerable{``0})">
+      <summary>
+            IEnumerable を列挙順にインデックス付きにするやつ
+            ref. https://ufcpp.net/blog/2016/12/tipsindexedforeach/
+            </summary>
+      <example>
+        <code>
+            // 適当な IEnumerable な何か
+            var items = new string[]{ "aaa", "bbb", "ccc" };
+            // タプルで取り出すぱたーん
+            foreach ( var indexed_item in items )
+              Console.WriteLine( $"index={indexed_item.Index} item={indexed_item.Item}" );
+            // タプルを構造化束縛で取り出すぱたーん
+            foreach ( var (index,item) in items )
+              Console.WriteLine( $"index={index} item={item}" );
+            </code>
+      </example>
+      <typeparam name="T">IEnumerable で取り出せる中身の型</typeparam>
+      <param name="items">IEnumerable な何か</param>
+      <returns>インデクシングされたアイテムの列挙</returns>
+    </member>
+    <member name="M:usagi.Extension.Collection.EnumerableHelper.UnorderedEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+      <summary>
+            IEnumerable を実装する型 a, b について等価な値を保持するか判定する。
+            SequenceEqual と異なり列挙される順序の影響を受けない
+            ref. https://stackoverflow.com/a/3670089/1211392
+            </summary>
+      <typeparam name="T">IEnumerable で取り出せる中身の型</typeparam>
+      <param name="a">IEnumerable を実装する型 a</param>
+      <param name="b">IEnumerable を実装する型 b</param>
+      <returns>等価な値を保持している場合は true</returns>
+    </member>
+    <member name="T:usagi.Extension.Collection.DictionaryHelper">
+      <summary>
+            Dictionary な何かへの機能拡張群
+            </summary>
+    </member>
+    <member name="M:usagi.Extension.Collection.DictionaryHelper.UnorderedEqual``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEqualityComparer{``1})">
+      <summary>
+            IDictionary を実装する型 a, b について等価な Key と Value の組み合わせ群を保持するか判定する。
+            SequenceEqual と異なり列挙される順序の影響を受けない
+            ref. https://stackoverflow.com/a/3928856/1211392
+            </summary>
+      <typeparam name="TK">Key の型</typeparam>
+      <typeparam name="TV">Value の型</typeparam>
+      <param name="a">比較において this となる IDictionary を実装する型のインスタンス</param>
+      <param name="b">比較において this と比較される IDictionary を実装する型のインスタンス</param>
+      <param name="c">TV型の等価判定関数。 null を与えた場合は EqualityComparer&lt;TV&gt;.Default を採用する</param>
+      <returns>a, b が等価な Key と Value の組み合わせ群を保持する場合は true 、そうでなければ false</returns>
+    </member>
+    <member name="N:usagi.Extension">
+      <summary>
+            既存の何かに対する Extension 群
+            </summary>
+    </member>
+    <member name="T:usagi.Extension.ItemsControlHelper">
+      <summary>
+            System.Windows.Control.ItemsControlHelper に対する機能拡張
+            </summary>
+    </member>
+    <member name="M:usagi.Extension.ItemsControlHelper.GetContentPresenter(System.Windows.Controls.ItemsControl,System.Int32)">
+      <summary>
+            ItemsControl から index 番目のアイテムの ContentPresenter を引っ張り出す
+            </summary>
+      <param name="control">引っ張り出し元</param>
+      <param name="index">ContentPresenter を引っ張り出したいアイテムのインデックス</param>
+      <returns>引っ張り出された ContentPresenter または null</returns>
+    </member>
+    <member name="M:usagi.Extension.ItemsControlHelper.FindControlAs``1(System.Windows.Controls.ContentPresenter,System.String)">
+      <summary>
+            ContentPresenter から name のコントロールを T 型で引っ張り出す
+            </summary>
+      <typeparam name="T">引っ張り出したいコントロールの型</typeparam>
+      <param name="presenter">引っ張り出し元</param>
+      <param name="name">引っ張り出したいコントロールの名前</param>
+      <returns>引っ張り出された T 型のコントロールまたは null</returns>
+    </member>
+    <member name="M:usagi.Extension.ItemsControlHelper.FindControl(System.Windows.Controls.ContentPresenter,System.String)">
+      <summary>
+            ContentPresenter から name のコントロールを Control 型で引っ張り出す
+            必要に応じて結果を as って使いたい場合にどうぞ。
+            </summary>
+      <param name="presenter">引っ張り出し元</param>
+      <param name="name">引っ張り出したいコントロールの名前</param>
+      <returns>引っ張り出されたコントロールまたは null</returns>
+    </member>
+    <member name="M:usagi.Extension.ItemsControlHelper.FindControlAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String)">
+      <summary>
+            GetContentPresenter + FindControlAs の合体技
+            <para />control の index 番目のアイテムから名前が name のコントロールを T 型で引っ張り出す
+            </summary>
+      <example>
+        <code>
+            if ( control.FindControlAs&lt;TextBlock&gt;( 0, "Name1" ) is TextBlock c )
+              Console.WriteLine( c.Text );
+            </code>
+      </example>
+      <typeparam name="T">引っ張り出したいコントロールの型</typeparam>
+      <param name="control">引っ張り出し元</param>
+      <param name="index">名前が name のコントロールを引っ張り出したい control のアイテムのインデックス</param>
+      <param name="name">引っ張り出したいアイテムの名前</param>
+      <returns>引っ張り出されたコントロールまたは null</returns>
+    </member>
+    <member name="M:usagi.Extension.ItemsControlHelper.FindControl(System.Windows.Controls.ItemsControl,System.Int32,System.String)">
+      <summary>
+            GetContentPresenter + FindControl の合体技
+            <para />control の index 番目のアイテムから名前が name のコントロールを Control 型で引っ張り出す
+            </summary>
+      <example>
+        <code>
+            if ( control.FindControl( 0, "Name1" ) is Control c )
+            {
+              Console.WriteLine( c.IsTabStop );
+              if ( c is TextBlock cc )
+                ConsoleWriteLine( cc.Text );
+            }
+            </code>
+      </example>
+      <param name="control">引っ張り出し元</param>
+      <param name="index">名前が name のコントロールを引っ張り出したい control のアイテムのインデックス</param>
+      <param name="name">引っ張り出したいアイテムの名前</param>
+      <returns>引っ張り出されたコントロールまたは null</returns>
+    </member>
+    <member name="M:usagi.Extension.ItemsControlHelper.FindControlsAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String[])">
+      <summary>
+            GetContentPresenter + FindControlAs の合体技 FindControlAs の進化版
+            <para />一度に複数の名前を与えて対応する複数のコントロールを引っ張り出せる。
+            </summary>
+      <example>
+        <code>
+            var cs = control.FindControlsAs&lt;TextBlock&gt;( 0, "Name1", "Name2", "Name3" );
+            cs[ "Name1" ].DataContext = hoge;
+            cs[ "Name2" ].DataContext = fuga;
+            Console.WriteLine( cs[ "Name3" ].Text );
+            </code>
+      </example>
+      <typeparam name="T">引っ張り出したいコントロールの型</typeparam>
+      <param name="control">引っ張り出し元</param>
+      <param name="index">名前が name のコントロールを引っ張り出したい control のアイテムのインデックス</param>
+      <param name="names">引っ張り出したいアイテムの名前群</param>
+      <returns>{Key=名前, Value=引っ張り出されたコントロールまたは null}の辞書</returns>
+    </member>
+    <member name="M:usagi.Extension.ItemsControlHelper.FindControls(System.Windows.Controls.ItemsControl,System.Int32,System.String[])">
+      <summary>
+            GetContentPresenter + FindControl の合体技 FindControls の進化版
+            <para />一度に複数の名前を与えて対応する複数のコントロールを引っ張り出せる。
+            </summary>
+      <example>
+        <code>
+            var cs = control.FindControls( 0, "Name1", "Name2", "Name3" );
+            if ( cs[ "Name1" ] is Image c )
+              c.DataContext = hoge;
+            if ( cs[ "Name2" ] is ComboBox c )
+              c.DataContext = fuga;
+            if ( cs[ "Name3" ] is TextBlock )
+              Console.WriteLine( c.Text );
+            </code>
+      </example>
+      <param name="control">引っ張り出し元</param>
+      <param name="index">名前が name のコントロールを引っ張り出したい control のアイテムのインデックス</param>
+      <param name="names">引っ張り出したいアイテムの名前群</param>
+      <returns>{Key=名前, Value=引っ張り出されたコントロールまたは null}の辞書</returns>
+    </member>
+    <member name="M:usagi.Extension.ItemsControlHelper.FindControls(System.Windows.Controls.ItemsControl,System.String[])">
+      <summary>
+            FindControls のさらにずぼら横着進化した版
+            control の全てのアイテムごとに、一度に複数の名前を与えて対応する複数のコントロールを引っ張り出せる。
+            </summary>
+      <example>
+        <code>
+            var css = control.FindControls( "Name1", "Name2", "Name3" );
+            foreach ( var cs in css )
+            {
+              cs[ "Name1" ].DataContext = hoge;
+              cs[ "Name2" ].DataContext = fuga;
+              if ( cs[ "Name3" ] is TextBlock c )
+                Console.WriteLine( c.Text );
+            }
+            </code>
+      </example>
+      <param name="control">引っ張り出し元</param>
+      <param name="names">引っ張り出し元の各アイテムごとに引っ張り出したいコントロールの名前群</param>
+      <returns>{{Key=名前, Value=引っ張り出されたコントロールまたは null}の辞書}の列挙</returns>
+    </member>
+    <member name="N:usagi.Quantity">
+      <summary>
+            物理量またはそれっぽい何かを扱う
+            </summary>
+    </member>
+    <member name="T:usagi.Quantity.Calculation">
+      <summary>
+            計算機能
+            <para />基本的に Generic
+            </summary>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.Clamp``1(``0,``0,``0)">
+      <summary>
+            a を [ floor ... ceil ] に丸める
+            </summary>
+      <typeparam name="T">比較計算可能な任意の型</typeparam>
+      <param name="a">丸め元とする値</param>
+      <param name="floor">床値（値域の末端に含まれる）</param>
+      <param name="ceil">天井値（値域の末端に含まれる）</param>
+      <returns>a を [ floor ... ceil ] へで丸め込こんだ値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.Distance``1(``0,``0,System.Func{``0,``0,``0})">
+      <summary>
+            a と b の距離（差）を計算する
+            <para />a と b の順序はどうでもよい
+            </summary>
+      <typeparam name="T">減算可能な任意の型</typeparam>
+      <param name="a">距離を計算する1つめの値</param>
+      <param name="b">距離を計算する2つめの値</param>
+      <param name="OperatorSubtract">T型の減算関数</param>
+      <returns>a と bの距離（差）</returns>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.IsInRangeOf``1(``0,``0,``0)">
+      <summary>
+            a が [ floor ... ceil ] に含まれるか判定する
+            </summary>
+      <typeparam name="T">比較計算可能な任意の型</typeparam>
+      <param name="a">判定対象の値</param>
+      <param name="floor">床値（値域の末端に含まれる）</param>
+      <param name="ceil">天井値（値域の末端に含まれる）</param>
+      <returns>a が [ floor ... ceil ] に含まれる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.Min``1(``0[])">
+      <summary>
+            任意個の値から最小の値を1つ抽出する
+            </summary>
+      <typeparam name="T">比較計算可能な任意の型</typeparam>
+      <param name="values">任意個の値群</param>
+      <returns>抽出された最小の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.Max``1(``0[])">
+      <summary>
+            任意個の値から最大の値を1つ抽出する
+            </summary>
+      <typeparam name="T">比較計算可能な任意の型</typeparam>
+      <param name="values">任意個の値群</param>
+      <returns>抽出された最大の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.NearlyEquals``1(``0,``0,``0,System.Func{``0,``0,``0},System.Func{``0,``0,``0})">
+      <summary>
+            a と b の差が tolerance 以下か判定する
+            <para />許容範囲（許容誤差）において近似的に等価
+            </summary>
+      <typeparam name="T">比較計算可能かつ減算可能かつ加算可能な任意の型</typeparam>
+      <param name="a">差を判定したい1つめの値</param>
+      <param name="b">差を判定したい2つめの値</param>
+      <param name="tolerance">許容範囲（許容誤差）</param>
+      <param name="OperatorSubtract">T型の減算関数</param>
+      <param name="OperatorAdd">T型の加算関数</param>
+      <returns>a と b の差が tolerance 以下なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.Double,System.Double,System.Double)">
+      <summary>
+            double 特殊化版
+            <para />double, float, decimal に対しては内部的にも同じ型のまま計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.Single,System.Single,System.Single)">
+      <summary>
+            float 特殊化版
+            <para />double, float, decimal に対しては内部的にも同じ型のまま計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+            decimal 特殊化版
+            <para />double, float, decimal に対しては内部的にも同じ型のまま計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.Byte,System.Byte,System.Byte)">
+      <summary>
+            byte 特殊化版
+            <para />byte, UInt16, UInt32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.UInt16,System.UInt16,System.UInt16)">
+      <summary>
+            UInt16 特殊化版
+            <para />byte, UInt16, UInt32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.UInt32,System.UInt32,System.UInt32)">
+      <summary>
+            UInt32 特殊化版
+            <para />byte, UInt16, UInt32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.UInt64,System.UInt64,System.UInt64)">
+      <summary>
+            UInt64 特殊化版
+            <para />UInt64, Int64 に対しては内部的に decimal 型で計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.Char,System.Char,System.Char)">
+      <summary>
+            char 特殊化版
+            <para />char, Int16, Int32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.Int16,System.Int16,System.Int16)">
+      <summary>
+            Int16 特殊化版
+            <para />char, Int16, Int32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Int32 特殊化版
+            <para />char, Int16, Int32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.Int64,System.Int64,System.Int64)">
+      <summary>
+            Int64 特殊化版
+            <para />UInt64, Int64 に対しては内部的に decimal 型で計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="N:usagi.Quantity.GeoLocation">
+      <summary>
+            地理上の位置を扱う
+            </summary>
+    </member>
+    <member name="T:usagi.Quantity.GeoLocation.ILonLatGettable">
+      <summary>
+            PlaneAngle 型の Longitude, Latitude プロパティーを読める
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.GeoLocation.ILonLatGettable.Longitude">
+      <summary>
+            経度を取得
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.GeoLocation.ILonLatGettable.Latitude">
+      <summary>
+            緯度を取得
+            </summary>
+    </member>
+    <member name="T:usagi.Quantity.GeoLocation.ILonLatSettable">
+      <summary>
+            PlaneAngle 型の Longitude, Latitude プロパティーを書ける
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.GeoLocation.ILonLatSettable.Longitude">
+      <summary>
+            経度を設定
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.GeoLocation.ILonLatSettable.Latitude">
+      <summary>
+            緯度を設定
+            </summary>
+    </member>
+    <member name="T:usagi.Quantity.GeoLocation.ILonLat">
+      <summary>
+            PlaneAngle 型の Longitude, Latitude プロパティーを読み書きできる
+            </summary>
+    </member>
+    <member name="T:usagi.Quantity.GeoLocation.IAltitudeGettable">
+      <summary>
+            Length 型の標高（高度）プロパティーを取得できる
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.GeoLocation.IAltitudeGettable.Altitude">
+      <summary>
+            標高（高度）を取得
+            </summary>
+    </member>
+    <member name="T:usagi.Quantity.GeoLocation.IAltitudeSetttable">
+      <summary>
+            Length 型の標高（高度）プロパティーを設定できる
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.GeoLocation.IAltitudeSetttable.Altitude">
+      <summary>
+            標高（高度）を設定
+            </summary>
+    </member>
+    <member name="T:usagi.Quantity.GeoLocation.IAltitude">
+      <summary>
+            Length 型の標高（高度）プロパティーを読み書きできる
+            </summary>
+    </member>
+    <member name="T:usagi.Quantity.GeoLocation.ILonLatAltGettable">
+      <summary>
+            PlaneAngle 型の Longitude, Latitude プロパティーを読めて
+            <para />Length 型の Altitude プロパティーも読める
+            </summary>
+    </member>
+    <member name="T:usagi.Quantity.GeoLocation.ILonLatAltSettable">
+      <summary>
+            PlaneAngle 型の Longitude, Latitude プロパティーを書けて
+            <para />Length 型の Altitude プロパティーも書ける
+            </summary>
+    </member>
+    <member name="T:usagi.Quantity.GeoLocation.ILonLatAlt">
+      <summary>
+            PlaneAngle 型の Longitude, Latitude プロパティーを読み書きできて
+            <para />Length 型の Altitude プロパティーも読み書きできる
+            </summary>
+    </member>
+    <member name="T:usagi.Quantity.GeoLocation.IToGeoCoordinate">
+      <summary>
+            System.Device.Location.GeoCoordinate 型への変換メソッドを持つ
+            </summary>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.IToGeoCoordinate.ToGeoCoordinate">
+      <summary>
+            System.Device.Location.GeoCoordinate 型へ変換
+            </summary>
+      <returns>System.Device.Location.GeoCoordinate 型の位置</returns>
+    </member>
+    <member name="T:usagi.Quantity.GeoLocation.IFromGeoCoordinate">
+      <summary>
+            System.Device.Location.GeoCoordinate 型からの変換メソッドを持つ
+            </summary>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.IFromGeoCoordinate.FromGeoCoordinate(System.Device.Location.GeoCoordinate)">
+      <summary>
+            System.Device.Location.GeoCoordinate 型からの変換
+            </summary>
+      <param name="a">System.Device.Location.GeoCoordinate 型の位置</param>
+    </member>
+    <member name="T:usagi.Quantity.GeoLocation.LonLat">
+      <summary>
+            経緯度
+            <para />経度と緯度を平面角オブジェクトでシンプルに持つ
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.GeoLocation.LonLat.Longitude">
+      <summary>
+            経度
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.GeoLocation.LonLat.Latitude">
+      <summary>
+            緯度
+            </summary>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLat.#ctor">
+      <summary>
+            Longitude=Latitude=0 で生成
+            </summary>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLat.#ctor(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            経緯度を指定して生成
+            </summary>
+      <param name="lon">経度</param>
+      <param name="lat">緯度</param>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLat.#ctor(usagi.Quantity.GeoLocation.ILonLatGettable)">
+      <summary>
+            経緯度を取得可能な何かから生成
+            </summary>
+      <param name="lonlat">ILonLatGettable な何か</param>
+      <see cref="T:usagi.Quantity.GeoLocation.ILonLatGettable" />
+      <seealso cref="T:usagi.URI.GeoURI" />
+      <remarks>LonLat からのコピーコンストラクターとしても機能する</remarks>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLat.ToGeoCoordinate">
+      <summary>
+        <see cref="T:System.Device.Location.GeoCoordinate" /> を生成
+            </summary>
+      <returns>GeoCoordinate</returns>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLat.FromGeoCoordinate(System.Device.Location.GeoCoordinate)">
+      <summary>
+        <see cref="T:System.Device.Location.GeoCoordinate" /> から経緯度を取り込む
+            </summary>
+      <param name="a">取り込み元</param>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLat.FromDegrees(System.Double,System.Double)">
+      <summary>
+            経緯度を degrees 単位の平面角から生成
+            </summary>
+      <param name="lon">経度 [deg]</param>
+      <param name="lat">緯度 [deg]</param>
+      <returns>経緯度</returns>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLat.ToString">
+      <summary>
+            文字列化
+            </summary>
+      <returns>文字列化した経緯度</returns>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLat.ToString(System.Int32)">
+      <summary>
+            浮動小数点数の少数部の桁数指定付きの文字列化
+            </summary>
+      <param name="digit">小数部の桁数</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLat.Parse(System.String)">
+      <summary>
+            一般的な文章に出現しがちな文字列の経緯度表記から生成を試みるファクトリー
+            緯度、経度の順にカンマ文字または空白文字を区切りとし、
+            緯度の冒頭または末尾に 北緯, 南緯, N, S の何れかがあるか省略（＝北緯）され、
+            経度の冒頭または末尾に 東経, 西経, E, W の何れかがあるか省略（＝東経）され、
+            緯度と経度の角度値が何れも平面角型でパース可能な文字列に対して期待動作する。
+            <para />lonlat 例1: <code>"43° 3′ 43.5″ N, 141° 21′ 15.8″ E"</code><para />lonlat 例2: <code>"北緯43度3分43.5秒 東経141度21分15.8秒"</code></summary>
+      <param name="lonlat">
+            緯度、経度の順にカンマ文字または空白文字を区切りとし、
+            緯度の冒頭または末尾に 北緯, 南緯, N, S の何れかがあるか省略（＝北緯）され、
+            経度の冒頭または末尾に 東経, 西経, E, W の何れかがあるか省略（＝東経）され、
+            緯度と経度の角度値が何れも平面角型でパース可能な文字列。
+            </param>
+      <returns>パースに成功した場合は LonLat インスタンス、失敗した場合は null</returns>
+      <example>
+        <code>
+            // ありがちなパターン
+            var a = LonLat.Parse( "43° 3′ 43.5″ N, 141° 21′ 15.8″ E" );
+            var b = LonLat.Parse( "北緯43度3分43.5秒 東経141度21分15.8秒" );
+            // 単位が不明で実数が並んでいるだけの場合は deg 単位としてパースを試みます
+            var c = LonLat.Parse( "43.062083, 141.354389" );
+            var d = LonLat.Parse( "43.062083 141.354389" );
+            var e = LonLat.Parse( "N 43.062083, E 141.354389" );
+            // GeoURI 文字列からもパース可能
+            var f = LonLat.Parse( "geo:43.062083,141.354389" );
+            // 使いみちはさておき実装都合 PlaneAngle がパース可能な単位はパースに成功する
+            var g = LonLat.Parse( "0.751575131115 rad , 2.467099500189 rad" );
+            var h = LonLat.Parse( "0.11961689722τ , 0.39265108055τ" );
+            </code>
+      </example>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLat.op_Addition(usagi.Quantity.GeoLocation.LonLat,usagi.Quantity.GeoLocation.ILonLatGettable)">
+      <summary>
+            経緯度の足し算
+            </summary>
+      <param name="a">経緯度</param>
+      <param name="b">経緯度っぽい何か</param>
+      <returns>足し合わせた経緯度</returns>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLat.op_Subtraction(usagi.Quantity.GeoLocation.LonLat,usagi.Quantity.GeoLocation.ILonLatGettable)">
+      <summary>
+            経緯度の引き算
+            </summary>
+      <param name="a">元の経緯度</param>
+      <param name="b">引く経緯度</param>
+      <returns>引いた経緯度</returns>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLat.DistanceToPlaneAngle(usagi.Quantity.GeoLocation.ILonLatGettable)">
+      <summary>
+            経緯度間の距離を平面角で計算
+            <para />計算はまあまあ早いが地球のような楕円体のフラッディングレートは考慮しないのでかなり大雑把。
+            </summary>
+      <remarks>
+            必要なら <see cref="M:usagi.CivilEngineering.LonLatHelper.DistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" /> を使うと良い
+            </remarks>
+      <param name="b">比較対象</param>
+      <returns>平面角単位での距離</returns>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLat.NearlyEqualsTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.PlaneAngle)">
+      <summary>
+            平面角次元の距離が許容範囲以内で近似的に等価と未為せるか判定
+            </summary>
+      <param name="x">判定対象</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等価と未為せる場合は true</returns>
+            必要なら <see cref="M:usagi.CivilEngineering.LonLatHelper.NearlyEqualsTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.Length,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" /> を使うと良い
+        </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLat.NearlyEqualsTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            平面角次元の距離が経度軸、緯度軸それぞれで許容範囲以内で近似的に等価と未為せるか判定
+            </summary>
+      <param name="x">判定対象</param>
+      <param name="lon_tolerance">経度軸の許容範囲; null の場合は 1″</param>
+      <param name="lat_tolerance">緯度軸の許容範囲; null の場合は 1″</param>
+      <returns>近似的に等価と未為せる場合は true</returns>
+            必要なら <see cref="M:usagi.CivilEngineering.LonLatHelper.NearlyEqualsTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.Length,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" /> を使うと良い
+        </member>
+    <member name="T:usagi.Quantity.GeoLocation.LonLatAlt">
+      <summary>
+            経緯度＋標高
+            <para />LonLat の派生で長さオブジェクトの標高を追加で持つ
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.GeoLocation.LonLatAlt.Altitude">
+      <summary>
+            標高（高度）
+            </summary>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLatAlt.#ctor">
+      <summary>
+            0 値の経緯度標高を生成
+            </summary>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLatAlt.#ctor(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            経緯度を基に Altitude=0 で生成
+            </summary>
+      <param name="lon">経度</param>
+      <param name="lat">緯度</param>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLatAlt.#ctor(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle,usagi.Quantity.Length)">
+      <summary>
+            経緯度、標高を基に生成
+            </summary>
+      <param name="lon">経度</param>
+      <param name="lat">緯度</param>
+      <param name="alt">標高</param>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLatAlt.#ctor(usagi.Quantity.GeoLocation.ILonLatGettable)">
+      <summary>
+            経緯度取得可能インターフェースを実装する何かから生成
+            </summary>
+      <param name="lonlat">経緯度インターフェースを実装する何か</param>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLatAlt.#ctor(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.IAltitudeGettable)">
+      <summary>
+            経緯度取得可能インターフェースを実装する何かと標高取得可能インターフェースを実装する何かから生成
+            </summary>
+      <param name="lonlat">経緯度取得可能インターフェースを実装する何か</param>
+      <param name="a">標高取得可能インターフェースを実装する何か</param>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLatAlt.#ctor(usagi.Quantity.GeoLocation.ILonLatAltGettable)">
+      <summary>
+            経緯度標高取得可能インターフェースを実装する何かから生成
+            </summary>
+      <param name="lonlatalt">経緯度標高取得可能インターフェースを実装する何か</param>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLatAlt.#ctor(System.Device.Location.GeoCoordinate)">
+      <summary>
+        <see cref="T:System.Device.Location.GeoCoordinate" /> を元に生成
+            </summary>
+      <param name="a">元</param>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLatAlt.ToGeoCoordinate">
+      <summary>
+        <see cref="T:System.Device.Location.GeoCoordinate" /> を生成
+            </summary>
+      <returns>生成された <see cref="T:System.Device.Location.GeoCoordinate" /></returns>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLatAlt.FromGeoCoordinate(System.Device.Location.GeoCoordinate)">
+      <summary>
+        <see cref="T:System.Device.Location.GeoCoordinate" /> から値を取り込む
+            </summary>
+      <param name="a">取り込み元</param>
+    </member>
+    <member name="M:usagi.Quantity.GeoLocation.LonLatAlt.ToString">
+      <summary>
+            文字列化
+            </summary>
+      <returns>文字列化した経緯度標高</returns>
+    </member>
+    <member name="T:usagi.Quantity.Length">
+      <summary>
+            平面角オブジェクト
+            <para />内部表現は double による meters 表現
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfMeters">
+      <summary>メートルに使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfInches">
+      <summary>インチに使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfFeet">
+      <summary>フィートに使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfYards">
+      <summary>ヤードに使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfMiles">
+      <summary>マイルに使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfLines">
+      <summary>ラインに使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfPicas">
+      <summary>パイカに使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfPoints">
+      <summary>ポイントに使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfShaku">
+      <summary>尺に使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfSun">
+      <summary>寸に使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfBu">
+      <summary>分に使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfMon">
+      <summary>文に使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfJou">
+      <summary>丈に使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfRi">
+      <summary>里に使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfKen">
+      <summary>間に使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfChou">
+      <summary>町に使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfHa">
+      <summary>歯に使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfKyuu">
+      <summary>級に使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.SymbolOfAngStrom">
+      <summary>オングストロームに使う単位記号</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMeters">
+      <summary>
+            メートル単位の値の入出力プロパティー
+            唯一の値の実体を持ち、他の単位の扱いはすべてこのプロパティーの実体との変換により扱われる
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InInches">
+      <summary>インチ</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InThou">
+      <summary>サウ, サウザン</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMils">
+      <summary>ミル</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InLines">
+      <summary>イングリッシュ・ライン, U.K. Lines, French Lines (ligne; L)</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InPicas">
+      <summary>パイカ, Pica(P, P/)</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InPicasFR">
+      <summary>フレンチ・パイカ, French Pica</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InPicasUS">
+      <summary>アメリカン・パイカ, ジョンソン・パイカ, U.S. Pica</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InPoints">
+      <summary>ポイント, Points</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InPointsUS">
+      <summary>アメリカン・ポイント, U.S. Points</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InPointsFR">
+      <summary>フレンチ・ポイント, ディド・ポイント, Points</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InCiceros">
+      <summary>シセロ, cicero, cicéro</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InFeet">
+      <summary>国際フート, International foot</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InFeetUS">
+      <summary>アメリカ・測量フート, U.S. survey foot</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InFeetIN">
+      <summary>インド・測量フート, Indian survery foot</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InChains">
+      <summary>チェイン</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InChainsUS">
+      <summary>アメリカ・チェイン</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InRods">
+      <summary>ロッド</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InRodsUS">
+      <summary>アメリカ・ロッド</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InLinks">
+      <summary>リンク</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InLinksUS">
+      <summary>アメリカ・リンク</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InFurlongs">
+      <summary>ハロン</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InFurlongUS">
+      <summary>アメリカ・ハロン</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InYards">
+      <summary>ヤード</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMiles">
+      <summary>マイル, International mile</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMilesUS">
+      <summary>アメリカ測量マイル, US survey mile</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMilesNautical">
+      <summary>International nautical mile, 国際海里</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMilesGeographical">
+      <summary>Geographical mile</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMilesIT">
+      <summary>イタリア・マイル, miglio</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMilesITOld">
+      <summary>伝統イタリア・マイル, miglio</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMilesITAncient">
+      <summary>古代イタリア・マイル, miglio</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMilesRomanAncient">
+      <summary>古代ローマ, milliarium</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMilesES">
+      <summary>新制スペイン・マイル, milla</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMilesESOld">
+      <summary>旧制スペイン・マイル, milla</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMilesArabic">
+      <summary>アラビア・マイル, mille</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMilesDE">
+      <summary>ドイツ・マイル, Meile</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMilesAT">
+      <summary>オーストリア・マイル</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMilesNOSE">
+      <summary>ノルウェー・マイル, スウェーデン・マイル, mil</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMilesNOSEOld">
+      <summary>伝統ノルウェー・マイル, 伝統スウェーデン・マイル, mil</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMilesMetric">
+      <summary>メートルマイル, metric mile</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMilesIE">
+      <summary>アイルランド・マイル</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InFathom">
+      <summary>Fathom 海の深さに使われる</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InShakuJP">
+      <summary>日本の曲尺（かねじゃく）, Shaku</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InShakuJPKujira">
+      <summary>日本の鯨尺（くじらじゃく）</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InShakuJPGofuku">
+      <summary>日本の呉服尺、鯨尺の亜種</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InShakuJPSecchu">
+      <summary>日本の折衷尺、伊能忠敬の又四郎と享保尺の平均尺、明示度量衡取締法における曲尺</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InShakuJPKyouhou">
+      <summary>日本の享保尺、竹尺、徳川吉宗が紀州熊野神社の古尺を写して天体観測に用いたらしい</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InShakuJPMatashirou">
+      <summary>日本の又四郎尺、永正の京都の指物師の又四郎さんが作って大工に使われたらしい</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InShakuJPTaihouGreater">
+      <summary>日本の大宝律令の小尺、唐尺に由来し、平安時代のスタンダードらしい</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InShakuJPTaihouLesser">
+      <summary>日本の大宝律令の大尺、高麗尺に由来し、土地の測量に使われたらしい</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InShakuCN">
+      <summary>中国の市制（伝統単位の国際単位系による再定義系）の尺</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InShakuCNTangLesser">
+      <summary>中国の古代の唐(Táng; 西暦[618...907)年)王朝で使われていた小尺</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InShakuCNTangGreater">
+      <summary>中国の古代の唐(Táng; 西暦[618...907)年)王朝で使われていた大尺</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InShakuCNSuiLesser">
+      <summary>中国の古代の隋(Suí; 西暦[581...618)年)王朝で使われていた小尺</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InShakuCNSuiGreater">
+      <summary>中国の古代の隋(Suí; 西暦[581...618)年)王朝で使われていた大尺</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InShakuCNHan">
+      <summary>中国の古代の唐(Hàn; 西暦[-206...8, 25...220)年)王朝で使われていた尺</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InSun">
+      <summary>寸（すん）、平安の「す」、古代の「き」、日本の尺の1/10</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InBu">
+      <summary>分（ぶ）、日本の寸の1/10</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMon">
+      <summary>文（もん）、日本の古代の貨幣の直径が転じて長さの単位となった</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InJouJP">
+      <summary>丈</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InKen">
+      <summary>間</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InChou">
+      <summary>町</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InRiJP">
+      <summary>里（日本）</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InRiCN">
+      <summary>里（中国、市制）</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InHa">
+      <summary>歯、H、日本の印刷業界単位</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InKyuu">
+      <summary>級、Q、日本の印刷業界単位</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InFrenchCatheterScale">
+      <summary>フレンチカテーテルスケール、シャリエルスケール、フランスゲージ 主に医療現場で使われる</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InFermi">
+      <summary>フェルミ</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InAngStrom">
+      <summary>オングストローム</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InMicron">
+      <summary>ミクロン</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InXUnit">
+      <summary>X線単位, xu</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InAstronomicalUnit">
+      <summary>天文単位, au</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InLightYear">
+      <summary>光年, ly, light year</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InParsec">
+      <summary>パーセク, pc, parallax second</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.InAttoParsec">
+      <summary>アット・パーセク, apc</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._in">
+      <summary>インチの入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._yd">
+      <summary>ヤードの入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._ft">
+      <summary>フートの入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._mi">
+      <summary>マイルの入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._mil">
+      <summary>ミルの入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._L">
+      <summary>ラインの入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._pica">
+      <summary>パイカの入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._pt">
+      <summary>ポイントの入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._ShakuJP">
+      <summary>尺（日本）の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._尺JP">
+      <summary>尺（日本）の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._ShakuCN">
+      <summary>尺（中国）の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._尺CN">
+      <summary>尺（中国）の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._Sun">
+      <summary>寸の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._寸">
+      <summary>寸の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._Bu">
+      <summary>分の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._分">
+      <summary>分の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._Mon">
+      <summary>文の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._文">
+      <summary>文の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._Jou">
+      <summary>丈の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._丈">
+      <summary>丈の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._Ken">
+      <summary>間の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._間">
+      <summary>間の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._Chou">
+      <summary>町の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._町">
+      <summary>町の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._RiJP">
+      <summary>里（日本）の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._里JP">
+      <summary>里（日本）の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._RiCN">
+      <summary>里（中国）の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._里CN">
+      <summary>里（中国）の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._歯">
+      <summary>歯の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._H">
+      <summary>歯の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._級">
+      <summary>級の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._Q">
+      <summary>級の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._Å">
+      <summary>オングストロームの入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._AngStrom">
+      <summary>オングストロームの入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._micron">
+      <summary>ミクロンの入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._xu">
+      <summary>X線単位の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._au">
+      <summary>天文単位の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._ly">
+      <summary>光年の入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._pc">
+      <summary>パーセクの入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._apc">
+      <summary>アット・パーセクの入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._Fr">
+      <summary>フレンチ・カテーテル・スケール</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._Ym">
+      <summary>ヨッタ・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._Zm">
+      <summary>ゼッタ・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._Em">
+      <summary>エクサ・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._Pm">
+      <summary>ペタ・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._Tm">
+      <summary>テラ・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._Gm">
+      <summary>ギガ・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._Mm">
+      <summary>メガ・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._km">
+      <summary>キロ・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._hm">
+      <summary>ヘクト・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._dam">
+      <summary>デカ・・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._m">
+      <summary>メートル入出力プロパティー糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._dm">
+      <summary>デシ・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._cm">
+      <summary>センチ・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._mm">
+      <summary>ミリ・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._μm">
+      <summary>マイクロ・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._um">
+      <summary>マイクロ・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._nm">
+      <summary>ナノ・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._pm">
+      <summary>ピコ・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._fm">
+      <summary>フェムト・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._am">
+      <summary>アット・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._zm">
+      <summary>ゼプト・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length._ym">
+      <summary>ヨクト・メートル入出力プロパティー</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.Zero">
+      <summary>
+            0 値
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.Meter">
+      <summary>
+            1 m
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.Inch">
+      <summary>
+            1 in
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.NaN">
+      <summary>NaN な平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.PositiveInfinity">
+      <summary>PositiveInfinity な平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.Length.NegativeInfinity">
+      <summary>NegativeInfinity な平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="M:usagi.Quantity.Length.IsNaN">
+      <summary>
+            NaN 判定
+            </summary>
+      <returns>NaN なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.IsInfinity">
+      <summary>
+            ∞ 判定
+            符号は何れであれ∞か判定する。
+            </summary>
+      <returns>∞ なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.IsPositiveInfinity">
+      <summary>
+            +∞判定
+            </summary>
+      <returns>+∞ なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.IsNegativeInfinity">
+      <summary>
+            -∞判定
+            </summary>
+      <returns>-∞ なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToString(System.String,System.IFormatProvider)">
+      <summary>
+            メートル単位で文字列化
+            </summary>
+      <param name="format">フォーマット指定文字列</param>
+      <param name="formatProvider">フォーマットプロバイダー</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInInches(System.String)">
+      <summary>インチ単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInFeet(System.String)">
+      <summary>フィート単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInYards(System.String)">
+      <summary>ヤード単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInMiles(System.String)">
+      <summary>マイル単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInLines(System.String)">
+      <summary>ライン単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInPicas(System.String)">
+      <summary>パイカ単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInPoints(System.String)">
+      <summary>ポイント単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInShaku(System.String)">
+      <summary>尺単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInSun(System.String)">
+      <summary>寸単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInBu(System.String)">
+      <summary>分単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInMon(System.String)">
+      <summary>文単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInJou(System.String)">
+      <summary>丈単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInRi(System.String)">
+      <summary>里単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInKen(System.String)">
+      <summary>間単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInChou(System.String)">
+      <summary>町単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInHa(System.String)">
+      <summary>歯単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInKyuu(System.String)">
+      <summary>級単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInAngStrom(System.String)">
+      <summary>オングストローム単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToStringInMeters(System.String)">
+      <summary>メートル単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToString_Mm(System.String)">
+      <summary>メガ・メートル単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToString_km(System.String)">
+      <summary>キロ・メートル単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToString_m(System.String)">
+      <summary>メートル単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToString_cm(System.String)">
+      <summary>センチ・メートル単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToString_mm(System.String)">
+      <summary>ミリ・メートル単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToString_μm(System.String)">
+      <summary>マイクロ・メートル単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToString_um(System.String)">
+      <summary>マイクロ・メートル単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.ToString_nm(System.String)">
+      <summary>ナノ・メートル単位で文字列化</summary>
+      <param name="format">フォーマット指定文字列</param>
+      <returns>文字列化された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_Ym(System.Double)">
+      <summary>ヨッタ・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_Zm(System.Double)">
+      <summary>ゼッタ・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_Em(System.Double)">
+      <summary>エクサ・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_Pm(System.Double)">
+      <summary>ペタ・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_Tm(System.Double)">
+      <summary>テラ・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_Gm(System.Double)">
+      <summary>ギガ・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_Mm(System.Double)">
+      <summary>メガ・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_km(System.Double)">
+      <summary>キロ・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_hm(System.Double)">
+      <summary>ヘクト・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_dam(System.Double)">
+      <summary>デカ・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_m(System.Double)">
+      <summary>メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_dm(System.Double)">
+      <summary>デシ・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_cm(System.Double)">
+      <summary>センチ・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_mm(System.Double)">
+      <summary>ミリ・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_μm(System.Double)">
+      <summary>マイクロ・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_um(System.Double)">
+      <summary>マイクロ・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_nm(System.Double)">
+      <summary>ナノ・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_pm(System.Double)">
+      <summary>ピコ・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_fm(System.Double)">
+      <summary>フェムト・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_am(System.Double)">
+      <summary>アット・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_zm(System.Double)">
+      <summary>ゼプト・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_ym(System.Double)">
+      <summary>ヨクト・メートルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_in(System.Double)">
+      <summary>インチの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_ft(System.Double)">
+      <summary>フィートの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_yd(System.Double)">
+      <summary>ヤードの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_mi(System.Double)">
+      <summary>マイルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_mil(System.Double)">
+      <summary>ミルの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_L(System.Double)">
+      <summary>ラインの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_pica(System.Double)">
+      <summary>パイカの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_pt(System.Double)">
+      <summary>ポイントの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_ShakuJP(System.Double)">
+      <summary>尺（日本）の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_尺JP(System.Double)">
+      <summary>尺（日本）の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_ShakuCN(System.Double)">
+      <summary>尺（中国）の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_尺CN(System.Double)">
+      <summary>尺（中国）の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_Sun(System.Double)">
+      <summary>寸の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_寸(System.Double)">
+      <summary>寸の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_Bu(System.Double)">
+      <summary>分の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_分(System.Double)">
+      <summary>分の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_Mon(System.Double)">
+      <summary>文の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_文(System.Double)">
+      <summary>文の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_Jou(System.Double)">
+      <summary>丈の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_丈(System.Double)">
+      <summary>丈の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_Ken(System.Double)">
+      <summary>間の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_間(System.Double)">
+      <summary>間の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_Chou(System.Double)">
+      <summary>町の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_町(System.Double)">
+      <summary>町の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_RiJP(System.Double)">
+      <summary>里（日本）の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_里JP(System.Double)">
+      <summary>里（日本）の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_RiCN(System.Double)">
+      <summary>里（中国）の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_里CN(System.Double)">
+      <summary>里（中国）の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_H(System.Double)">
+      <summary>歯の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_歯(System.Double)">
+      <summary>歯の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_Q(System.Double)">
+      <summary>級の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_級(System.Double)">
+      <summary>級の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_AngStrom(System.Double)">
+      <summary>オングストロームの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_Å(System.Double)">
+      <summary>オングストロームの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_xu(System.Double)">
+      <summary>X線単位の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_au(System.Double)">
+      <summary>天文単位の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_ly(System.Double)">
+      <summary>光年の値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_pc(System.Double)">
+      <summary>パーセクの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_apc(System.Double)">
+      <summary>アット・パーセクの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.From_Fr(System.Double)">
+      <summary>フレンチ・カテーテル・スケールの値を元に生成</summary>
+      <param name="v">元の値</param>
+      <returns>生成された長さインスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.CompareTo(usagi.Quantity.Length)">
+      <summary>
+            大・小・等価の比較
+            </summary>
+      <param name="other">比較対象</param>
+      <returns>小=-1, 等価=0, 大=+1</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.op_LessThan(usagi.Quantity.Length,usagi.Quantity.Length)">
+      <summary>
+            a が b より小さいか判定
+            </summary>
+      <param name="a">長さ a</param>
+      <param name="b">長さ b</param>
+      <returns>a が b より小さければ true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.op_GreaterThan(usagi.Quantity.Length,usagi.Quantity.Length)">
+      <summary>
+            a が b より大きいか判定
+            </summary>
+      <param name="a">長さ a</param>
+      <param name="b">長さ b</param>
+      <returns>a が b より大きければ true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.op_LessThanOrEqual(usagi.Quantity.Length,usagi.Quantity.Length)">
+      <summary>
+            a が b より小さいか、または等価か判定
+            </summary>
+      <param name="a">長さ a</param>
+      <param name="b">長さ b</param>
+      <returns>a が b より小さいか等価ならば true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.op_GreaterThanOrEqual(usagi.Quantity.Length,usagi.Quantity.Length)">
+      <summary>
+            a が b より大きいか、または等価か判定
+            </summary>
+      <param name="a">長さ a</param>
+      <param name="b">長さ b</param>
+      <returns>a が b より大きいか等価ならば true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.op_UnaryNegation(usagi.Quantity.Length)">
+      <summary>
+            単項負演算（符号反転）
+            </summary>
+      <param name="a">長さ</param>
+      <returns>符号を反転した長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.op_UnaryPlus(usagi.Quantity.Length)">
+      <summary>
+            単項正演算（複製を得るだけ）
+            </summary>
+      <param name="a">長さ</param>
+      <returns>複製</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.op_Subtraction(usagi.Quantity.Length,usagi.Quantity.Length)">
+      <summary>
+            二項減算演算
+            </summary>
+      <param name="a">元の長さ</param>
+      <param name="b">引く長さ</param>
+      <returns>引き算した長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.op_Addition(usagi.Quantity.Length,usagi.Quantity.Length)">
+      <summary>
+            二項加算演算
+            </summary>
+      <param name="a">加算する長さ1つめ</param>
+      <param name="b">加算する長さ2つめ</param>
+      <returns>加算した長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.op_Multiply(usagi.Quantity.Length,System.Double)">
+      <summary>
+            二項積算演算（長さ次元×無次元＝長さ次元）
+            </summary>
+      <param name="a">元の長さ</param>
+      <param name="b">倍率</param>
+      <returns>積算された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.op_Multiply(System.Double,usagi.Quantity.Length)">
+      <summary>
+            二項積算演算（無次元×長さ次元＝長さ次元）
+            </summary>
+      <param name="a">倍率</param>
+      <param name="b">元の長さ</param>
+      <returns>積算された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.op_Division(usagi.Quantity.Length,System.Double)">
+      <summary>
+            二項除算演算（長さ次元÷無次元＝長さ次元）
+            </summary>
+      <param name="a">元の長さ</param>
+      <param name="b">割る数</param>
+      <returns>除算された長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.op_Division(usagi.Quantity.Length,usagi.Quantity.Length)">
+      <summary>
+            二項除算演算（長さ次元÷長さ次元＝無次元）
+            </summary>
+      <param name="a">元の長さ</param>
+      <param name="b">割る数</param>
+      <returns>除算された無次元数（比）</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.op_Modulus(usagi.Quantity.Length,usagi.Quantity.Length)">
+      <summary>
+            二項剰余演算（長さ次元%長さ次元＝長さ次元）
+            </summary>
+      <param name="a">元の長さ</param>
+      <param name="b">割る長さ</param>
+      <returns>割ったら余る長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.NearlyEqualsTo(usagi.Quantity.Length,usagi.Quantity.Length)">
+      <summary>
+            近似的に等価か判定
+            </summary>
+      <param name="a">比較対象の長さ</param>
+      <param name="tolerance">許容範囲（許容誤差）</param>
+      <returns>近似的に等価ならば true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Length.NearlyEquals(usagi.Quantity.Length,usagi.Quantity.Length,usagi.Quantity.Length)">
+      <summary>
+            a と b の差が tolerance 以下か判定する
+            </summary>
+      <param name="a">任意の長さ1つめ</param>
+      <param name="b">任意の長さ2つめ</param>
+      <param name="tolerance">許容範囲（誤差） null の場合は Length.From_mm(1) が代用される</param>
+      <returns>a と b の差が tolerance 以下なら true 、そうでなければ false</returns>
+    </member>
+    <member name="N:usagi.Quantity.LengthMathExtension">
+      <summary>
+            Length に System.Math 相当の機能拡張を施す
+            </summary>
+    </member>
+    <member name="T:usagi.Quantity.LengthMathExtension.LengthMathHelper">
+      <summary>
+            Length への System.Math 相当の機能拡張
+            </summary>
+    </member>
+    <member name="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.Abs(usagi.Quantity.Length)">
+      <summary>
+            符号を正に強制します
+            </summary>
+      <param name="a">長さ</param>
+      <returns>確実に正の符号の長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.ASin(usagi.Quantity.Length,usagi.Quantity.Length)">
+      <summary>
+            逆正弦値を cathetus / hypotenuse から計算しますよ
+            </summary>
+      <param name="hypotenuse">斜辺 ( this )</param>
+      <param name="cathetus">隣辺 ( 相手 )</param>
+      <returns>逆正接による平面角</returns>
+    </member>
+    <member name="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.ACos(usagi.Quantity.Length,usagi.Quantity.Length)">
+      <summary>
+            逆余弦値を cathetus / hypotenuse から計算しますよ
+            </summary>
+      <param name="hypotenuse">斜辺 ( this )</param>
+      <param name="cathetus">隣辺 ( 相手 )</param>
+      <returns>逆余弦による平面角</returns>
+    </member>
+    <member name="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.ATan2(usagi.Quantity.Length,usagi.Quantity.Length)">
+      <summary>
+            逆正接値を計算しますよ
+            </summary>
+      <param name="x">長さ ( this )</param>
+      <param name="y">長さ ( 相手 )</param>
+      <returns>逆正接値</returns>
+    </member>
+    <member name="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.Sign(usagi.Quantity.Length)">
+      <summary>
+            符号を抽出しますよ
+            </summary>
+      <param name="a">長さ</param>
+      <returns>符号; -1, 0, +1 の何れか</returns>
+    </member>
+    <member name="T:usagi.Quantity.PlaneAngle">
+      <summary>
+            平面角オブジェクト
+            </summary>
+      <remarks>
+            内部表現は double による度数法表現
+            </remarks>
+    </member>
+    <member name="F:usagi.Quantity.PlaneAngle.SymbolOfDegrees">
+      <summary>
+            ToString 系で使用する Degrees の単位記号
+            </summary>
+    </member>
+    <member name="F:usagi.Quantity.PlaneAngle.SymbolOfMinutes">
+      <summary>
+            ToString 系で使用する Minutes の単位記号
+            </summary>
+    </member>
+    <member name="F:usagi.Quantity.PlaneAngle.SymbolOfSeconds">
+      <summary>
+            ToString 系で使用する Seconds の単位記号
+            </summary>
+    </member>
+    <member name="F:usagi.Quantity.PlaneAngle.SymbolOfRadians">
+      <summary>
+            ToString 系で使用する Radians の単位記号
+            </summary>
+    </member>
+    <member name="F:usagi.Quantity.PlaneAngle.SymbolOfPoints">
+      <summary>
+            ToString 系で使用する Points の単位記号
+            </summary>
+    </member>
+    <member name="F:usagi.Quantity.PlaneAngle.SymbolOfMils">
+      <summary>
+            ToString 系で使用する Mils の単位記号
+            </summary>
+    </member>
+    <member name="F:usagi.Quantity.PlaneAngle.SymbolOfGradians">
+      <summary>
+            ToString 系で使用する Gradians の単位記号
+            </summary>
+    </member>
+    <member name="F:usagi.Quantity.PlaneAngle.SymbolOfTurns">
+      <summary>
+            ToString 系で使用する Turns の単位記号
+            </summary>
+    </member>
+    <member name="F:usagi.Quantity.PlaneAngle.RegexPatternOfDegrees">
+      <summary>
+            度分秒系の文字列をパースする正規表現パターン
+            </summary>
+    </member>
+    <member name="F:usagi.Quantity.PlaneAngle.RegexPatternOfCommons">
+      <summary>
+            平面角系の単位の付いた数値文字列をパースする正規表現パターン
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.RegexOfDegrees">
+      <summary>
+            度分秒系の文字列をパースする正規表現
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.RegexOfCommons">
+      <summary>
+            平面角系の単位の付いた数値文字列をパースする正規表現
+            </summary>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.#ctor">
+      <summary>
+            デフォルトコンストラクター
+            <para />0 値の角度を生成する
+            </summary>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.#ctor(usagi.Quantity.PlaneAngle)">
+      <summary>
+            コピーコンストラクター
+            <para />複製元は変更せずに同じ値を持つ新たな平面角オブジェクトを生成する
+            </summary>
+      <param name="a">複製元</param>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.FromDegrees(System.Double,System.Double,System.Double)">
+      <summary>
+            度数法からのファクトリー
+            <para />度, 分, 秒, °, ′, ′′, deg
+            <para />主に一般生活中の平面角、測地学でよく使われる。
+            </summary>
+      <param name="degrees">度</param>
+      <param name="minutes">分</param>
+      <param name="seconds">秒</param>
+      <remarks>
+            minutes, seconds の符号は自動的に degrees の符号に統一されます。
+            このお節介は degrees, minutes, seconds それぞれで異なる符号（方向）を与える事は通常ありえませんが、
+            3つのパラメーターに明示的に分離して実引数を与える際に全てに負の符号を付けるべきかユーザーが揺らぐ可能性を考慮し、
+            どのように与えても推定的に意図される degrees と同じ向きに minutes, seconds の符号を統一するものです。
+            万一、本当に異なる向きの degrees + minutes + seconds を与えたい場合は個別に生成して加算すると良いでしょう。
+            </remarks>
+      <returns>生成された平面角インスタンス</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.FromRadians(System.Double)">
+      <summary>
+            ラジアンからのファクトリー
+            rad
+            主に数学系、電気工学系でよく使われる。
+            </summary>
+      <param name="radians">ラジアン</param>
+      <returns>生成された平面角オブジェクト</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.FromPoints(System.Double)">
+      <summary>
+            ポイントからのファクトリー
+            <para />ポイント, 点, pt
+            <para />主に航海系、航空系で用いられる。
+            </summary>
+      <param name="points">ポイント</param>
+      <returns>生成された平面角オブジェクト</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.FromMils(System.Double)">
+      <summary>
+            ミルからのファクトリー
+            <para />ミル, 密位, シュトリヒ, strich, mils
+            <para />主に軍事系で用いられる。
+            </summary>
+      <param name="mils">ミル</param>
+      <returns>生成された平面角オブジェクト</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.FromGradians(System.Double)">
+      <summary>
+            グラヂアンからのファクトリー
+            <para />グラヂアン, グラード, グレイド, ゴン, gradian, graded, gon
+            <para />主にフランス及びその周辺国の一部の測量系に用いられる。
+            </summary>
+      <param name="gradians">グラヂアン</param>
+      <returns>生成された平面角オブジェクト</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.FromTurns(System.Double)">
+      <summary>
+            ターンからのファクトリー
+            <para />ターン, turns, 回転
+            <para />主に円周全体の回転を視覚的にわかりやすく表現したい目的で用いられる。
+            </summary>
+      <param name="turns">ターン</param>
+      <returns>生成された平面角オブジェクト</returns>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.InDegrees">
+      <summary>
+            度数法の Degrees 単位での入出力用のプロパティー
+            <para />他の全ての単位表現プロパティーの中で唯一直接的に内部に値を持つプロパティー。
+            <para />他のすべての単位の扱いは内部的にはこの値との変換により実装される
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.InMinutes">
+      <summary>
+            度数法の Minutes 単位での入出力用のプロパティー
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.InSeconds">
+      <summary>
+            度数法の Seconds 単位での入出力用のプロパティー
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.PartOfDegrees">
+      <summary>
+            度数法の整数 Degrees 成分の値の入出力用のプロパティー
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.PartOfMinutes">
+      <summary>
+            度数法の整数 Minutes 成分の値の入出力用のプロパティー
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.PartOfSeconds">
+      <summary>
+            度数法の実数 Seconds 成分の値の入出力用のプロパティー
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.InRadians">
+      <summary>
+            ラジアン単位での入出力用プロパティー
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.InPoints">
+      <summary>
+            ポイント単位での入出力用プロパティー
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.InMils">
+      <summary>
+            ミル単位での入出力用プロパティー
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.InGradians">
+      <summary>
+            グラヂアン単位での入出力用プロパティー
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.InTurns">
+      <summary>
+            ターン単位での入出力用プロパティー
+            </summary>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.ToString">
+      <summary>
+            度単位で文字列化
+            </summary>
+      <returns>文字列化された平面角</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.ToStringInDegrees(System.String)">
+      <summary>
+            度数法の Degrees 単位で文字列化する。数値に加え、単位として SymbolOfDegrees が付く。
+            </summary>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.ToStringInMinutes(System.String)">
+      <summary>
+            度数法の Minutes 単位で文字列化する。数値に加え、単位として SymbolOfMinutes が付く。
+            </summary>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.ToStringInSeconds(System.String)">
+      <summary>
+            度数法の Seconds 単位で文字列化する。数値に加え、単位として SymbolOfSeconds が付く。
+            </summary>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.ToStringInDMS(System.String)">
+      <summary>
+            度数法の整数 Degrees 成分、整数 Minutes 成分、実数 Seconds 成分により文字列化する。数値に加え、単位として SymbolOfDegrees, SymbolOfMinutes, SymbolOfDegrees が付く。
+            </summary>
+      <param name="seconds_format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.ToStringInRadians(System.String)">
+      <summary>
+            Radians 単位で文字列化する。数値に加え、単位として SymbolOfRadians が付く。
+            </summary>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.ToStringInPoints(System.String)">
+      <summary>
+            Points 単位で文字列化する。数値に加え、単位として SymbolOfPoints が付く。
+            </summary>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.ToStringInMils(System.String)">
+      <summary>
+            Mils 単位で文字列化する。数値に加え、単位として SymbolOfMils が付く。
+            </summary>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.ToStringInGradians(System.String)">
+      <summary>
+            Gradian 単位で文字列化する。数値に加え、単位として SymbolOfGradians が付く。
+            </summary>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.ToStringInTurns(System.String)">
+      <summary>
+            Turns 単位で文字列化する。数値に加え、単位として SymbolOfTurns が付く。
+            </summary>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle._deg">
+      <summary>InDegrees への糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle._min">
+      <summary>InMinutes への糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle._sec">
+      <summary>InSeconds への糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle._deg_p">
+      <summary>PartOfDegrees への糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle._min_p">
+      <summary>PartOfMinutes への糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle._sec_p">
+      <summary>PartOfSeconds への糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle._rad">
+      <summary>InRadians への糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle._pts">
+      <summary>InPts への糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle._mils">
+      <summary>InMils への糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle._ᵍ">
+      <summary>InGradians への糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle._g">
+      <summary>InGradians への糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle._τ">
+      <summary>InTurns への糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle._turns">
+      <summary>InTurns への糖衣構文</summary>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.Parse(System.String,System.Boolean)">
+      <summary>
+            度数法による Degrees または Minutes または Seconds の組み合わせ
+            または Radians, Points, Mils, Gradians, Turns で読み取り可能な文字列
+            から PlaneAngle オブジェクトを生成する。
+            <para />読み取り不能な場合は null を返す。
+            </summary>
+      <param name="str">任意の文字列</param>
+      <param name="try_in_degrees">単位を検出できない場合は deg 単位としてパースを試みる場合は true</param>
+      <returns>読み取りに成功した場合は PlaneAngle オブジェクト、読み取れなかった場合は null</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.ParseDegrees(System.String)">
+      <summary>
+            度数法による Degrees または Minutes または Seconds の組み合わせ
+            から PlaneAngle オブジェクトを生成する。
+            <para />読み取り不能な場合は null を返す。
+            </summary>
+      <param name="str">任意の文字列</param>
+      <returns>読み取りに成功した場合は PlaneAngle オブジェクト、読み取れなかった場合は null</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.ParseCommons(System.String)">
+      <summary>
+            Radians, Points, Mils, Gradians, Turns で読み取り可能な文字列
+            から PlaneAngle オブジェクトを生成する。
+            <para />読み取り不能な場合は null を返す。
+            </summary>
+      <param name="str">任意の文字列</param>
+      <returns>読み取りに成功した場合は PlaneAngle オブジェクト、読み取れなかった場合は null</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.ToString(System.String,System.IFormatProvider)">
+      <summary>
+            度数法の整数 Degrees 成分、整数 Minutes 成分、実数 Seconds 成分により文字列化する。数値に加え、単位として SymbolOfDegrees, SymbolOfMinutes, SymbolOfDegrees が付く。
+            <para />ToStringInDMS のプロクシー
+            </summary>
+      <param name="format">フォーマット</param>
+      <param name="formatProvider">フォーマットプロバイダー</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.CompareTo(usagi.Quantity.PlaneAngle)">
+      <summary>
+            平面角オブジェクトを比較
+            <para />正規化せずに比較する。正規化が必要な場合は NormalizedCompareTo を使うとよい
+            </summary>
+      <param name="other">比較対象の平面角オブジェクト</param>
+      <returns>this が小さければ -1, this==other なら 0, this が大きければ +1</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.Normalize360">
+      <summary>
+            this 自身を [ 0 ... 360 ) へ正規化する。正規化前の情報は失われる。
+            </summary>
+      <returns>this</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.Normalize180">
+      <summary>
+            this 自身を [ -180 ... 180 ) へ正規化する。正規化前の情報は失われる。
+            </summary>
+      <returns>this</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.Normalize360(usagi.Quantity.PlaneAngle)">
+      <summary>
+            a を元に新たに [ 0 ... 360 ) へ正規化した平面角オブジェクトを生成するファクトリー
+            </summary>
+      <param name="a">元とする平面角オブジェクト。変更される事はない</param>
+      <returns>新たに生成され正規化された平面角オブジェクト</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.Normalize180(usagi.Quantity.PlaneAngle)">
+      <summary>
+            a を元に新たに [ -180 ... 180 ) へ正規化した平面角オブジェクトを生成するファクトリー
+            </summary>
+      <param name="a">元とする平面角オブジェクト。変更される事はない</param>
+      <returns>新たに生成され正規化された平面角オブジェクト</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.NormalizedCompareTo(usagi.Quantity.PlaneAngle)">
+      <summary>
+            [0...360) deg へ正規化した場合の角度の比較を行います。
+            <para />例: a=-30, b=60 が与えられた場合、 330 vs. 60 となり結果は false となります。
+            </summary>
+      <param name="a">比較対象の平面角</param>
+      <returns>正規化した上で CompareTo した結果</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.NormalizedLessThan(usagi.Quantity.PlaneAngle)">
+      <summary>
+            正規化した場合の this &lt; a の判定
+            </summary>
+      <param name="a">比較対象の平面角</param>
+      <returns>正規化した上で this &lt; s ならば true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.NormalizedGreaterThan(usagi.Quantity.PlaneAngle)">
+      <summary>
+            正規化した場合の this &gt; a の判定
+            </summary>
+      <param name="a">比較対象の平面角</param>
+      <returns>正規化した上で this &gt; s ならば true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.NormalizedEqualsTo(usagi.Quantity.PlaneAngle)">
+      <summary>
+            正規化した場合の this == a の判定
+            </summary>
+      <param name="a">比較対象の平面角</param>
+      <returns>正規化した上で this == s ならば true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.NormalizedNearlyEqualsTo(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            正規化した場合の this ≃ a の判定
+            </summary>
+      <param name="a">比較対象の平面角</param>
+      <param name="tolerance">許容誤差</param>
+      <returns>正規化した上で this ≃ s ならば true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.NearlyEqualsTo(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            NearlyEquals( this, a tolerance ) への糖衣構文
+            </summary>
+      <param name="a">比較対象の平面角</param>
+      <param name="tolerance">許容範囲（誤差） null の場合は PlaneAngle.CentiSecond が代用される</param>
+      <returns>等価と見做せる場合は ture</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.NearlyEquals(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            a と b の差が tolerance 以下か判定する
+            </summary>
+      <param name="a">任意の平面角1つめ</param>
+      <param name="b">任意の平面角2つめ</param>
+      <param name="tolerance">許容範囲（誤差） null の場合は PlaneAngle.CentiSecond が代用される</param>
+      <returns>a と b の差が tolerance 以下なら true 、そうでなければ false</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.Equals(usagi.Quantity.PlaneAngle)">
+      <summary>
+            正規化せずに角度が等しいか判定する
+            正規化が必要な場合は NormalizedEquals を使うとよい
+            </summary>
+      <param name="other">比較対象</param>
+      <returns>等価なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.Equals(System.Object)">
+      <summary>
+            正規化せずに角度が等しいか判定する
+            <para />正規化が必要な場合は NormalizedEquals を使うとよい
+            </summary>
+      <param name="obj">比較対象</param>
+      <returns>等価なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.op_Equality(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            正規化せずに角度が等しいか判定する
+            <para />正規化が必要な場合は NormalizedEquals を使うとよい
+            </summary>
+      <param name="a">平面角</param>
+      <param name="b">平面角</param>
+      <returns>等価なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.op_Inequality(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            正規化せずに角度が等しいか判定する
+            <para />正規化が必要な場合は NormalizedNotEquals を使うとよい
+            </summary>
+      <param name="a">平面角</param>
+      <param name="b">平面角</param>
+      <returns>不等なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.op_LessThan(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            正規化せずに角度が a &lt; b か判定する
+            <para />正規化が必要な場合は NormalizedLessThan を使うとよい
+            </summary>
+      <param name="a">平面角</param>
+      <param name="b">平面角</param>
+      <returns>a &lt; b なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.op_LessThanOrEqual(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            正規化せずに角度が a &lt;= b か判定する
+            <para />正規化が必要な場合は NormalizedLessThan を使うとよい
+            </summary>
+      <param name="a">平面角</param>
+      <param name="b">平面角</param>
+      <returns>a &lt;= bなら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.op_GreaterThan(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            正規化せずに角度が a &gt; b か判定する
+            <para />正規化が必要な場合は NormalizedGreaterThan を使うとよい
+            </summary>
+      <param name="a">平面角</param>
+      <param name="b">平面角</param>
+      <returns>a &gt; b なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.op_GreaterThanOrEqual(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            正規化せずに角度が a &gt;= b か判定する
+            <para />正規化が必要な場合は NormalizedGreaterThan を使うとよい
+            </summary>
+      <param name="a">平面角</param>
+      <param name="b">平面角</param>
+      <returns>a &gt;= b なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.NormalizedLessThan(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            正規化した場合に角度が a &lt; b か判定する
+            </summary>
+      <param name="a">平面角</param>
+      <param name="b">平面角</param>
+      <returns>正規化した上で a &lt; b なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.NormalizedGreaterThan(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            正規化した場合に角度が a &gt; b か判定する
+            </summary>
+      <param name="a">平面角</param>
+      <param name="b">平面角</param>
+      <returns>正規化した上で a &gt; b なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.op_UnaryNegation(usagi.Quantity.PlaneAngle)">
+      <summary>
+            符号を反転する単項演算子
+            </summary>
+      <param name="a">平面角</param>
+      <returns>符号を反転した平面角</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.op_UnaryPlus(usagi.Quantity.PlaneAngle)">
+      <summary>
+            符号をどうもしない単項演算子
+            </summary>
+      <param name="a">平面角</param>
+      <returns>複製されただけの平面角</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.op_Subtraction(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            減算する2項演算子
+            </summary>
+      <param name="a">平面角 a</param>
+      <param name="b">平面角 b</param>
+      <returns>a - b した平面角</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.op_Addition(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            加算する2項演算子
+            </summary>
+      <param name="a">平面角 a</param>
+      <param name="b">平面角 b</param>
+      <returns>a + b した平面角</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.op_Multiply(usagi.Quantity.PlaneAngle,System.Double)">
+      <summary>
+            角度を無次元数により掛け算する2項演算子
+            </summary>
+      <remarks>
+            Note: 角度次元同士の掛け算は角度2乗次元の結果を生じるが PlaneAngle 型では取り扱いの範疇を超えるため実装していない。
+            </remarks>
+      <param name="a">平面角</param>
+      <param name="b">無次元の係数</param>
+      <returns>無次元の係数を掛けた平面角</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.op_Multiply(System.Double,usagi.Quantity.PlaneAngle)">
+      <summary>
+            角度を無次元数により掛け算する2項演算子
+            </summary>
+      <remarks>
+            交換法則が成立するので実装詳細は b * a に投げている
+            </remarks>
+      <param name="a">無次元の係数</param>
+      <param name="b">平面角</param>
+      <returns>無次元の係数を掛けた平面角</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.op_Division(usagi.Quantity.PlaneAngle,System.Double)">
+      <summary>
+            角度を無次元数により割り算する2項演算子
+            <para />Note: 角度次元同士の割り算は無次元の結果を生じるが PlaneAngle 型では取り扱いの範疇を超えるため実装していない。
+            </summary>
+      <param name="a">割られる平面角</param>
+      <param name="b">割りに行く側の係数</param>
+      <returns>比</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.op_Division(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            平面角を平面角で除算した比を得る2項演算子
+            </summary>
+      <param name="a">割られる平面角</param>
+      <param name="b">割りに行く側の平面角</param>
+      <returns>比</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.op_Modulus(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+      <summary>
+            角度の剰余を計算する2項演算子
+            <para />Note: 実用上の有意性を考慮し、剰余については正規化した場合の結果を計算する
+            </summary>
+      <param name="a">平面角 a</param>
+      <param name="b">平面角 b</param>
+      <returns>a % b した剰余な平面角</returns>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.Degree">
+      <summary>度数法の1度の平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.DeciDegree">
+      <summary>度数法の1/10度の平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.CentiDegree">
+      <summary>度数法の1/100度の平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.MilliDegree">
+      <summary>度数法の1/1000度の平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.Minute">
+      <summary>度数法の1分の平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.DeciMinute">
+      <summary>度数法の1/10分の平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.CentiMinute">
+      <summary>度数法の1/100分の平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.MilliMinute">
+      <summary>度数法の1/1000分の平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.Second">
+      <summary>度数法の1秒の平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.DeciSecond">
+      <summary>度数法の1/10秒の平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.CentiSecond">
+      <summary>度数法の1/100秒の平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.MilliSecond">
+      <summary>度数法の1/1000秒の平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.Radian">
+      <summary>1ラジアンの平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.Point">
+      <summary>1ポイントの平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.Mil">
+      <summary>1ミルの平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.Gradian">
+      <summary>1グラヂアンの平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.Turn">
+      <summary>1ターンの平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.Zero">
+      <summary>角度0の平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.NaN">
+      <summary>NaN な平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.From_asin(System.Double)">
+      <summary>
+            比から逆正弦で平面角を生成
+            </summary>
+      <param name="ratio">比</param>
+      <returns>平面角</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.From_acos(System.Double)">
+      <summary>
+            比から逆余弦で平面角を生成
+            </summary>
+      <param name="ratio">比</param>
+      <returns>平面角</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.From_atan(System.Double)">
+      <summary>
+            比から逆正接で平面角を生成
+            </summary>
+      <param name="ratio">比</param>
+      <returns>平面角</returns>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.PositiveInfinity">
+      <summary>PositiveInfinity な平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="P:usagi.Quantity.PlaneAngle.NegativeInfinity">
+      <summary>NegativeInfinity な平面角オブジェクトを得る糖衣構文</summary>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.IsNaN">
+      <summary>
+            NaN 判定
+            </summary>
+      <returns>NaN なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.IsInfinity">
+      <summary>
+            ∞ 判定
+            符号は何れであれ∞か判定する。
+            </summary>
+      <returns>∞ なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.IsPositiveInfinity">
+      <summary>
+            +∞判定
+            </summary>
+      <returns>+∞ なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.IsNegativeInfinity">
+      <summary>
+            -∞判定
+            </summary>
+      <returns>-∞ なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.ToDegrees(System.Double)">
+      <summary>
+            弧度法の Radians 量を度数法の Degrees 量へ変換
+            </summary>
+      <param name="radians">弧度法の Radians 量</param>
+      <returns>度数法の Degrees 量</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.ToRadians(System.Double)">
+      <summary>
+            度数法の Degrees 量を弧度法の Radians 量へ変換
+            </summary>
+      <param name="degrees">度数法の Degrees 量</param>
+      <returns>弧度法の Radians 量</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngle.GetHashCode">
+      <summary>
+            ハッシュ値を取得
+            </summary>
+      <returns>ハッシュ値</returns>
+    </member>
+    <member name="N:usagi.Quantity.PlaneAngleMathExtension">
+      <summary>
+            PlaneAngle に System.Math 相当の機能拡張を施す
+            </summary>
+    </member>
+    <member name="T:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper">
+      <summary>
+            PlaneAngle への System.Math 相当の機能拡張
+            </summary>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Abs(usagi.Quantity.PlaneAngle)">
+      <summary>
+            符号を正に強制します
+            </summary>
+      <param name="a">平面角</param>
+      <returns>確実に正の符号の平面角</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Sin(usagi.Quantity.PlaneAngle)">
+      <summary>
+            正弦値を計算しますよ
+            </summary>
+      <param name="a">平面角</param>
+      <returns>正弦値</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Cos(usagi.Quantity.PlaneAngle)">
+      <summary>
+            余弦値を計算しますよ
+            </summary>
+      <param name="a">平面角</param>
+      <returns>余弦値</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Tan(usagi.Quantity.PlaneAngle)">
+      <summary>
+            正接値を計算しますよ
+            </summary>
+      <param name="a">平面角</param>
+      <returns>正接値</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Sinh(usagi.Quantity.PlaneAngle)">
+      <summary>
+            双曲線正弦値を計算しますよ
+            </summary>
+      <param name="a">平面角</param>
+      <returns>双曲線正弦値</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Cosh(usagi.Quantity.PlaneAngle)">
+      <summary>
+            双曲線余弦値を計算しますよ
+            </summary>
+      <param name="a">平面角</param>
+      <returns>双曲線余弦値</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Tanh(usagi.Quantity.PlaneAngle)">
+      <summary>
+            双曲線正接値を計算しますよ
+            </summary>
+      <param name="a">平面角</param>
+      <returns>双曲線正接値</returns>
+    </member>
+    <member name="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Sign(usagi.Quantity.PlaneAngle)">
+      <summary>
+            符号を抽出しますよ
+            </summary>
+      <param name="a">平面角</param>
+      <returns>符号; -1, 0, +1 の何れか</returns>
+    </member>
+    <member name="N:usagi.Quantity.Unit">
+      <summary>
+            単位に関する何か
+            </summary>
+    </member>
+    <member name="N:usagi.Quantity.Unit.SI">
+      <summary>
+            SI単位系の何か
+            </summary>
+    </member>
+    <member name="T:usagi.Quantity.Unit.SI.MetricPrefix">
+      <summary>
+            SI Metric Prefix
+            <list type="bullet"><item><description>SI接頭辞について文字列と係数の相互変換を提供します。</description></item><item><description>(double) への暗黙の型変換を持ちます。</description></item><item><description>μ については慣用として u が当てられる事もあるため何れでも micro として扱います。</description></item></list></summary>
+      <remarks>
+            内部表現は文字列、数値との変換は内蔵テーブルの参照を行います。
+            <para />この型は繰り返し頻繁に計算へそのまま用いる用途には向きませんから、そうした必要のある場合は Multiplier を取得して必要な計算を行う事をおすすめします。
+            </remarks>
+    </member>
+    <member name="F:usagi.Quantity.Unit.SI.MetricPrefix.RegexPattern">
+      <summary>
+            SI接頭辞の正規表現パターン
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix.Mapper">
+      <summary>
+            Internal Table
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._Y">
+      <summary>ヨッタを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._Z">
+      <summary>ゼッタを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._E">
+      <summary>エクサを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._P">
+      <summary>ペタを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._T">
+      <summary>テラを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._G">
+      <summary>ギガを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._M">
+      <summary>メガを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._k">
+      <summary>キロを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._h">
+      <summary>ヘクトを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._da">
+      <summary>デカを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._d">
+      <summary>デシを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._c">
+      <summary>センチを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._m">
+      <summary>ミリを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._μ">
+      <summary>マイクロを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._u">
+      <summary>マイクロを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._n">
+      <summary>ナノを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._p">
+      <summary>ピコを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._f">
+      <summary>フェムトを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._a">
+      <summary>アットを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._z">
+      <summary>ゼプトを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix._y">
+      <summary>ヨクトを生成</summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix.Prefix">
+      <summary>
+            文字列としてのSI接頭辞が得られる。
+            <para />等倍の場合は空文字列が得られる。
+            </summary>
+    </member>
+    <member name="P:usagi.Quantity.Unit.SI.MetricPrefix.Multiplier">
+      <summary>
+            数値としての倍率（係数）が得られる。
+            </summary>
+    </member>
+    <member name="M:usagi.Quantity.Unit.SI.MetricPrefix.Parse(System.String)">
+      <summary>
+            文字列からのファクトリー
+            <list type="bullet"><item><description>与えられた文字列がSI接頭辞として有効な場合は MetricPrefix オブジェクトを返す。</description></item><item><description>与えられた文字列が空文字列の場合は等倍（1.0倍）の MetricPrefix オブジェクトを返す。</description></item><item><description>与えられた文字列がSI接頭辞として無効な場合は null を返す。</description></item></list></summary>
+      <param name="str">任意の文字列</param>
+      <returns>MetricPrefix オブジェクトまたは null</returns>
+    </member>
+    <member name="M:usagi.Quantity.Unit.SI.MetricPrefix.ToString(System.String,System.IFormatProvider)">
+      <summary>
+            文字列化する
+            </summary>
+      <param name="format">フォーマット</param>
+      <param name="formatProvider">フォーマットプロバイダー</param>
+      <returns>SI接頭辞の文字列または等倍の場合は空文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Unit.SI.MetricPrefix.CompareTo(usagi.Quantity.Unit.SI.MetricPrefix)">
+      <summary>
+            大・小・等価を比較
+            </summary>
+      <param name="other">比較対象</param>
+      <returns>小=-1, 等価=0, 大=+1</returns>
+    </member>
+    <member name="M:usagi.Quantity.Unit.SI.MetricPrefix.Equals(usagi.Quantity.Unit.SI.MetricPrefix)">
+      <summary>
+            等価な係数値か判定
+            </summary>
+      <param name="other">比較対象</param>
+      <returns>等価なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Unit.SI.MetricPrefix.Equals(System.Object)">
+      <summary>
+            SI補助単位として比較可能かつ等価か判定
+            </summary>
+      <param name="obj">SI補助単位として扱えるかもしれない何か</param>
+      <returns>等価なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Unit.SI.MetricPrefix.GetHashCode">
+      <summary>
+            ハッシュ値を取得
+            </summary>
+      <returns>ハッシュ値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Unit.SI.MetricPrefix.ToString">
+      <summary>
+            文字列化
+            </summary>
+      <returns>文字列化されたプリフィックス</returns>
+    </member>
+    <member name="M:usagi.Quantity.Unit.SI.MetricPrefix.op_Implicit(usagi.Quantity.Unit.SI.MetricPrefix)~System.Double">
+      <summary>
+            MetricPrefix オブジェクトから暗黙の型変換で double の係数を得る
+            </summary>
+      <param name="p">有効な MetricPrefix オブジェクト</param>
+      <returns>係数値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Unit.SI.MetricPrefix.op_Implicit(usagi.Quantity.Unit.SI.MetricPrefix)~System.String">
+      <summary>
+            MetricPrefix オブジェクトから暗黙の型変換で string のSI接頭辞文字列を得る
+            </summary>
+      <param name="p">有効な MetricPrefix オブジェクト</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Unit.SI.MetricPrefix.op_Equality(usagi.Quantity.Unit.SI.MetricPrefix,usagi.Quantity.Unit.SI.MetricPrefix)">
+      <summary>
+            等価な係数値か判定
+            </summary>
+      <param name="a">SI補助単位1つめ</param>
+      <param name="b">SI補助単位2つめ</param>
+      <returns>等価なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Unit.SI.MetricPrefix.op_Inequality(usagi.Quantity.Unit.SI.MetricPrefix,usagi.Quantity.Unit.SI.MetricPrefix)">
+      <summary>
+            不等な係数値か判定
+            </summary>
+      <param name="a">SI補助単位1つめ</param>
+      <param name="b">SI補助単位2つめ</param>
+      <returns>不等なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Unit.SI.MetricPrefix.op_LessThan(usagi.Quantity.Unit.SI.MetricPrefix,usagi.Quantity.Unit.SI.MetricPrefix)">
+      <summary>
+            a が b より小さな係数値か判定
+            </summary>
+      <param name="a">SI補助単位 a</param>
+      <param name="b">SI補助単位 b</param>
+      <returns>a が b より小さな係数値なら true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Unit.SI.MetricPrefix.op_GreaterThan(usagi.Quantity.Unit.SI.MetricPrefix,usagi.Quantity.Unit.SI.MetricPrefix)">
+      <summary>
+            a が b より大きな係数値か判定
+            </summary>
+      <param name="a">SI補助単位 a</param>
+      <param name="b">SI補助単位 b</param>
+      <returns>a が b より大きな係数値なら true</returns>
+    </member>
+    <member name="N:usagi.URI">
+      <summary>
+            URI っぽい何か
+            </summary>
+    </member>
+    <member name="T:usagi.URI.GeoURI">
+      <summary>
+            RFC5870 GeoURI を扱う型
+            <para />例: href='geo:48.198634,16.371648;crs=wgs84;u=40'
+            </summary>
+      <remarks>
+            pattern 1: geo:%lat%,%lon%;u=%unc%
+            <para />pattern 2: geo:%lat%,%lon%,%alt%;u=%unc%
+            <para />pattern 3: geo:%lat%,%lon%,%alt%;crs=%crs%;u=%unc%
+            <para />  %lat% is a Latitude
+            <para />  %lon% is a Longitude
+            <para />  %alt% is an Altitude ( optional )
+            <para />  %unc% is an Uncertainty Parameter ( optional )
+            <para />  %crs% is a Coordinate Reference System ( optional )
+            <para />なお、 <see cref="T:System.Uri" /> から派生させたかったが . 文字を含まない Host の検出で例外を出すため関わらない事にした。
+            </remarks>
+      <seealso href="https://tools.ietf.org/rfc/rfc5870" />
+    </member>
+    <member name="T:usagi.URI.GeoURI.GeoURIException">
+      <summary>GeoURI固有の何らかの例外</summary>
+    </member>
+    <member name="T:usagi.URI.GeoURI.SchemeIsNotGeoURIException">
+      <summary>Scheme が geo じゃないよ例外</summary>
+    </member>
+    <member name="T:usagi.URI.GeoURI.GeoURIPatternIsNotMatchedException">
+      <summary>GeoURI として認識できない場合に飛ばす例外</summary>
+    </member>
+    <member name="T:usagi.URI.GeoURI.LongitudeParseFailedException">
+      <summary>経度の認識に失敗したら飛ぶ例外</summary>
+    </member>
+    <member name="T:usagi.URI.GeoURI.LatitudeParseFailedException">
+      <summary>緯度の認識に失敗したら飛ぶ例外</summary>
+    </member>
+    <member name="T:usagi.URI.GeoURI.AltitudeParseFailedException">
+      <summary>高度の認識に失敗したら飛ぶ例外</summary>
+    </member>
+    <member name="F:usagi.URI.GeoURI.UriSchemeGeo">
+      <summary>
+            GeoURI の Scheme
+            </summary>
+    </member>
+    <member name="F:usagi.URI.GeoURI.RegexPattern">
+      <summary>
+            GeoURI を解析可能な正規表現パターン
+            </summary>
+    </member>
+    <member name="F:usagi.URI.GeoURI.Regex">
+      <summary>
+            GeoURI を解析可能な正規表現
+            </summary>
+    </member>
+    <member name="P:usagi.URI.GeoURI.Longitude">
+      <summary>
+            経度
+            </summary>
+    </member>
+    <member name="P:usagi.URI.GeoURI.Latitude">
+      <summary>
+            緯度
+            </summary>
+    </member>
+    <member name="P:usagi.URI.GeoURI.Altitude">
+      <summary>
+            標高（高度）
+            デフォルト null
+            </summary>
+    </member>
+    <member name="P:usagi.URI.GeoURI.Uncertainty">
+      <summary>
+            GeoURI の u (Uncertainty; 不確実性) パラメーター
+            <para />デフォルト null
+            </summary>
+      <remarks>
+            つまるところ何かしらシステムなどに応じてユーザー定義されたパラメーターを扱いたい場合のそれ
+            </remarks>
+    </member>
+    <member name="P:usagi.URI.GeoURI.CoordinateReferenceSystem">
+      <summary>
+            測地系を表す文字列
+            <para />デフォルト null
+            </summary>
+    </member>
+    <member name="P:usagi.URI.GeoURI.Scheme">
+      <summary>
+            URI の Scheme
+            </summary>
+    </member>
+    <member name="P:usagi.URI.GeoURI.OriginalString">
+      <summary>
+            与えられた元の URI 文字列
+            </summary>
+    </member>
+    <member name="M:usagi.URI.GeoURI.#ctor(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle,usagi.Quantity.Length,System.String,System.String)">
+      <summary>
+            指定可能な全てのパラメーターを元に生成
+            </summary>
+      <param name="lon">経度</param>
+      <param name="lat">緯度</param>
+      <param name="alt">標高（高度）; 省略時 null</param>
+      <param name="crs">測地系; 省略時 null</param>
+      <param name="u">不確実性パラメーター値; 省略時 null</param>
+    </member>
+    <member name="M:usagi.URI.GeoURI.#ctor(usagi.Quantity.GeoLocation.LonLat,System.String,System.String)">
+      <summary>
+            経緯度を元に生成
+            </summary>
+      <param name="a">経緯度</param>
+      <param name="crs">測地系; 省略時 null</param>
+      <param name="u">不確実性パラメーター値; 省略時 null</param>
+    </member>
+    <member name="M:usagi.URI.GeoURI.#ctor(usagi.Quantity.GeoLocation.LonLatAlt,System.String,System.String)">
+      <summary>
+            経緯度高度を元に生成
+            </summary>
+      <param name="a">経緯度高度</param>
+      <param name="crs">測地系; 省略時 null</param>
+      <param name="u">不確実性パラメーター値; 省略時 null</param>
+    </member>
+    <member name="M:usagi.URI.GeoURI.#ctor(System.Uri)">
+      <summary>
+            URI を元に生成
+            </summary>
+      <remarks>
+            このコンストラクターを使用する場合、 <see cref="T:System.Uri" /> は GeoURI を完全には扱えない事に留意する必要があるかもしれない
+            </remarks>
+      <param name="uri">URI</param>
+    </member>
+    <member name="M:usagi.URI.GeoURI.#ctor(System.String)">
+      <summary>
+            GeoURI が期待される任意の文字列を元に生成
+            </summary>
+      <param name="str">任意の文字列</param>
+    </member>
+    <member name="M:usagi.URI.GeoURI.ToGeoCoordinate">
+      <summary>
+        <see cref="T:System.Device.Location.GeoCoordinate" /> を生成
+            </summary>
+      <returns>
+        <see cref="T:System.Device.Location.GeoCoordinate" /> なインスタンス</returns>
+    </member>
+    <member name="M:usagi.URI.GeoURI.NormalizeLonLat">
+      <summary>
+            Longitude [ -180 ... +180 )
+            Latitude [ -90 ... +90 )
+            に正規化する。
+            </summary>
+    </member>
+    <member name="M:usagi.URI.GeoURI.ToString">
+      <summary>
+            文字列化
+            </summary>
+      <remarks>
+            OriginalString に等しい結果が得られる
+            </remarks>
+      <returns>文字列の GeoURI </returns>
+    </member>
+    <member name="M:usagi.URI.GeoURI.Equals(usagi.URI.GeoURI)">
+      <summary>
+            経度、緯度、標高、座標系、不確実性パラメーターが完全に一致するか比較する
+            </summary>
+      <param name="other">比較対象</param>
+      <returns>一致する場合は true</returns>
+      <remarks>
+            平面角の内部実装は浮動小数点数型なのでよほど意図しない限り完全一致はまずしない。
+            <para />必要に応じて <see cref="M:usagi.URI.GeoURI.NearlyEquals(usagi.URI.GeoURI,usagi.Quantity.PlaneAngle,usagi.Quantity.Length)" /> を使うとよい。
+            </remarks>
+    </member>
+    <member name="M:usagi.URI.GeoURI.NearlyEquals(usagi.URI.GeoURI,usagi.Quantity.PlaneAngle,usagi.Quantity.Length)">
+      <summary>
+            経度、緯度、高度が許容範囲内で近似的に等価かつ測地系と不確実性パラメーターが完全に一致するか判定
+            </summary>
+      <param name="other">比較対象</param>
+      <param name="angle_tolelance">平面角の許容範囲</param>
+      <param name="length_tolerance">長さの許容範囲</param>
+      <returns>一致する場合は true</returns>
+    </member>
+  </members>
+</doc>
