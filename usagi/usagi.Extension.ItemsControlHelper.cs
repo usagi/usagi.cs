@@ -189,7 +189,7 @@ namespace usagi.Extension
     /// </example>
     /// <param name="control">引っ張り出し元</param>
     /// <param name="names">引っ張り出し元の各アイテムごとに引っ張り出したいコントロールの名前群</param>
-    /// <returns>{{Key=名前, Value=引っ張り出されたコントロールまたは null}の辞書}の列挙</returns>
+    /// <returns>&lt;&lt;Key=名前, Value=引っ張り出されたコントロールまたは null&gt;の辞書&gt;の列挙</returns>
     static public
     IEnumerable<IDictionary<string, Control>>
     FindControls
