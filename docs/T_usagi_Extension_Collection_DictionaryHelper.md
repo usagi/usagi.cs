@@ -1,4 +1,6 @@
-# DictionaryHelper クラス<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# DictionaryHelper クラス
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 Dictionary な何かへの機能拡張群
 

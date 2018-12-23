@@ -1,4 +1,4 @@
-# Length.InHa プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length.InHa プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 歯、H、日本の印刷業界単位
 

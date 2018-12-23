@@ -1,4 +1,4 @@
-# GeoURI コンストラクター (String)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# GeoURI コンストラクター (String)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 GeoURI が期待される任意の文字列を元に生成
 

@@ -1,4 +1,6 @@
-# MetricPrefix クラス<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# MetricPrefix クラス
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 SI Metric Prefix
 &nbsp;<ul><li>SI接頭辞について文字列と係数の相互変換を提供します。</li><li>(double) への暗黙の型変換を持ちます。</li><li>μ については慣用として u が当てられる事もあるため何れでも micro として扱います。</li></ul>

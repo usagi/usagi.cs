@@ -1,4 +1,4 @@
-# TileLocation.Z プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# TileLocation.Z プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 Level of Detail ( LOD; or Zoom Level ) X, Y 座標の空間の大きさを定義する Z 値（この値は厳密には座標ではない）
 

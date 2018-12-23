@@ -1,4 +1,6 @@
-# GeometricalSpecification クラス<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# GeometricalSpecification クラス
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 惑星の楕円体近似した形状の定義を取得できる
 

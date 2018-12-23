@@ -1,4 +1,4 @@
-# MetricPrefix&nbsp;Implicit 変換 (MetricPrefix to Double)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# MetricPrefix&nbsp;Implicit 変換 (MetricPrefix to Double)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 MetricPrefix オブジェクトから暗黙の型変換で double の係数を得る
 

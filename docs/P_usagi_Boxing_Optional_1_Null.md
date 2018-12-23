@@ -1,4 +1,4 @@
-# Optional(*T*).Null プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Optional(*T*).Null プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 空のボクシングオブジェクトを生成するファクトリーとして機能するプロパティー new Optional<T>() の糖衣構文です。 new と ctor の ( ) をタイプしたくないあなたに。
 

@@ -1,4 +1,4 @@
-# GeoURI コンストラクター (PlaneAngle, PlaneAngle, Length, String, String)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# GeoURI コンストラクター (PlaneAngle, PlaneAngle, Length, String, String)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 指定可能な全てのパラメーターを元に生成
 

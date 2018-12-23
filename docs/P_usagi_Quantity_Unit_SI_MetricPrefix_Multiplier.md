@@ -1,4 +1,4 @@
-# MetricPrefix.Multiplier プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# MetricPrefix.Multiplier プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 数値としての倍率（係数）が得られる。
 

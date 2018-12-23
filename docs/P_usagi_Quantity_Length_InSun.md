@@ -1,4 +1,4 @@
-# Length.InSun プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length.InSun プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 寸（すん）、平安の「す」、古代の「き」、日本の尺の1/10
 

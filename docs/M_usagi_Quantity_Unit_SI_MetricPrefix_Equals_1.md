@@ -1,4 +1,4 @@
-# MetricPrefix.Equals メソッド (MetricPrefix)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# MetricPrefix.Equals メソッド (MetricPrefix)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 等価な係数値か判定
 

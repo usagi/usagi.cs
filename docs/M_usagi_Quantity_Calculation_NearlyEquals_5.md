@@ -1,4 +1,4 @@
-# Calculation.NearlyEquals メソッド (Int32, Int32, Int32)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Calculation.NearlyEquals メソッド (Int32, Int32, Int32)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 Int32 特殊化版 
 

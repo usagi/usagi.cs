@@ -1,4 +1,6 @@
-# usagi.Extension 名前空間<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# usagi.Extension 名前空間
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 既存の何かに対する Extension 群
 

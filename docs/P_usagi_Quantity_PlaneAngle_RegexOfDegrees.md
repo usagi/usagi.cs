@@ -1,4 +1,4 @@
-# PlaneAngle.RegexOfDegrees プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.RegexOfDegrees プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 度分秒系の文字列をパースする正規表現
 

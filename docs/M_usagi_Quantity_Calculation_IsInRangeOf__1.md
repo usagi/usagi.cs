@@ -1,4 +1,4 @@
-# Calculation.IsInRangeOf(*T*) メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Calculation.IsInRangeOf(*T*) メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 a が [ floor ... ceil ] に含まれるか判定する
 

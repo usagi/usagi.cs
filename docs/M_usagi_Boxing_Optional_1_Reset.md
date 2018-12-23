@@ -1,4 +1,4 @@
-# Optional(*T*).Reset メソッド (*T*, Boolean)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Optional(*T*).Reset メソッド (*T*, Boolean)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 ボクシングオブジェクトにオブジェクトを新たに内包させます。 
 

@@ -1,4 +1,6 @@
-# InvalidValueException イベント<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small><a href="T_usagi_Boxing_Optional_1_InvalidValueException.md">Optional(T).InvalidValueException</a> 型は下記のメンバーを公開します。
+# InvalidValueException イベント
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div><a href="T_usagi_Boxing_Optional_1_InvalidValueException.md">Optional(T).InvalidValueException</a> 型は下記のメンバーを公開します。
 
 
 ## イベント

@@ -1,4 +1,6 @@
-# usagi.Quantity.LengthMathExtension 名前空間<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# usagi.Quantity.LengthMathExtension 名前空間
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 Length に System.Math 相当の機能拡張を施す
 

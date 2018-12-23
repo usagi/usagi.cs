@@ -1,4 +1,4 @@
-# PlaneAngle.ToRadians メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.ToRadians メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 度数法の Degrees 量を弧度法の Radians 量へ変換
 

@@ -1,4 +1,4 @@
-# GeoURI コンストラクター (LonLat, String, String)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# GeoURI コンストラクター (LonLat, String, String)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 経緯度を元に生成
 

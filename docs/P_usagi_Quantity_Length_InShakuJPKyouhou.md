@@ -1,4 +1,4 @@
-# Length.InShakuJPKyouhou プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length.InShakuJPKyouhou プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 日本の享保尺、竹尺、徳川吉宗が紀州熊野神社の古尺を写して天体観測に用いたらしい
 

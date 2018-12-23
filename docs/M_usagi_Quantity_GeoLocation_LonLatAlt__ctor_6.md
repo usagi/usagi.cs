@@ -1,4 +1,4 @@
-# LonLatAlt コンストラクター (PlaneAngle, PlaneAngle, Length)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# LonLatAlt コンストラクター (PlaneAngle, PlaneAngle, Length)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 経緯度、標高を基に生成
 

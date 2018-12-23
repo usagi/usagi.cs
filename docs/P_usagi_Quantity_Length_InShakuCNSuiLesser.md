@@ -1,4 +1,4 @@
-# Length.InShakuCNSuiLesser プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length.InShakuCNSuiLesser プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 中国の古代の隋(Suí; 西暦[581...618)年)王朝で使われていた小尺
 

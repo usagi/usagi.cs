@@ -1,4 +1,4 @@
-# Length.InShakuJPTaihouGreater プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length.InShakuJPTaihouGreater プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 日本の大宝律令の小尺、唐尺に由来し、平安時代のスタンダードらしい
 

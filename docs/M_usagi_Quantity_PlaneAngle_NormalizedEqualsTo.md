@@ -1,4 +1,4 @@
-# PlaneAngle.NormalizedEqualsTo メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.NormalizedEqualsTo メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 正規化した場合の this == a の判定
 

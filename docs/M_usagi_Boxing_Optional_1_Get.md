@@ -1,4 +1,4 @@
-# Optional(*T*).Get メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Optional(*T*).Get メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 内包するオブジェクトがあれば取り出します。 この機能は T 型への暗黙の型変換と等価です。
 

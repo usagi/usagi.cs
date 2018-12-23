@@ -1,4 +1,6 @@
-# LonLatAlt メソッド<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small><a href="T_usagi_Quantity_GeoLocation_LonLatAlt.md">LonLatAlt</a> 型は下記のメンバーを公開します。
+# LonLatAlt メソッド
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div><a href="T_usagi_Quantity_GeoLocation_LonLatAlt.md">LonLatAlt</a> 型は下記のメンバーを公開します。
 
 
 ## メソッド

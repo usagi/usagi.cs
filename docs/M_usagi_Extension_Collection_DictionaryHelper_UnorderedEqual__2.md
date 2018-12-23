@@ -1,4 +1,4 @@
-# DictionaryHelper.UnorderedEqual(*TK*, *TV*) メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# DictionaryHelper.UnorderedEqual(*TK*, *TV*) メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 IDictionary を実装する型 a, b について等価な Key と Value の組み合わせ群を保持するか判定する。 SequenceEqual と異なり列挙される順序の影響を受けない ref. https://stackoverflow.com/a/3928856/1211392
 

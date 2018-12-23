@@ -1,4 +1,4 @@
-# GeoURI.Altitude プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# GeoURI.Altitude プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 標高（高度） デフォルト null
 

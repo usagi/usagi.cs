@@ -1,4 +1,4 @@
-# PlaneAngle.InGradians プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.InGradians プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 グラヂアン単位での入出力用プロパティー
 

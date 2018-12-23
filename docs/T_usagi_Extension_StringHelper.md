@@ -1,4 +1,6 @@
-# StringHelper クラス<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# StringHelper クラス
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 string 型を機能拡張する何か
 

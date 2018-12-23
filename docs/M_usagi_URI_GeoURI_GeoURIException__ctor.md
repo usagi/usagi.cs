@@ -1,4 +1,4 @@
-# GeoURI.GeoURIException コンストラクター <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small><a href="T_usagi_URI_GeoURI_GeoURIException.md">GeoURI.GeoURIException</a>クラスの新しいインスタンスを初期化します
+# GeoURI.GeoURIException コンストラクター <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div><a href="T_usagi_URI_GeoURI_GeoURIException.md">GeoURI.GeoURIException</a>クラスの新しいインスタンスを初期化します
 
 
     <strong>名前空間:</strong>

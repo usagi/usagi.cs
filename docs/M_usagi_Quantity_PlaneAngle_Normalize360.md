@@ -1,4 +1,4 @@
-# PlaneAngle.Normalize360 メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.Normalize360 メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 this 自身を [ 0 ... 360 ) へ正規化する。正規化前の情報は失われる。
 

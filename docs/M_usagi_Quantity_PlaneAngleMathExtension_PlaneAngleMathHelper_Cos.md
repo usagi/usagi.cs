@@ -1,4 +1,4 @@
-# PlaneAngleMathHelper.Cos メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngleMathHelper.Cos メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 余弦値を計算しますよ
 

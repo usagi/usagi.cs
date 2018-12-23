@@ -1,4 +1,4 @@
-# WebMercator.AngleToPixel メソッド (LonLat, Byte)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# WebMercator.AngleToPixel メソッド (LonLat, Byte)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 経緯度 -> ピクセル座標系の位置
 

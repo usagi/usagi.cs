@@ -1,4 +1,4 @@
-# Calculation.NearlyEquals メソッド (UInt64, UInt64, UInt64)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Calculation.NearlyEquals メソッド (UInt64, UInt64, UInt64)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 UInt64 特殊化版 
 

@@ -1,4 +1,4 @@
-# Optional(*T*).TryGet メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Optional(*T*).TryGet メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 内包するオブジェクトがあれば value へ取り出し true を返します。 
 

@@ -1,4 +1,4 @@
-# Length.InShakuJPSecchu プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length.InShakuJPSecchu プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 日本の折衷尺、伊能忠敬の又四郎と享保尺の平均尺、明示度量衡取締法における曲尺
 

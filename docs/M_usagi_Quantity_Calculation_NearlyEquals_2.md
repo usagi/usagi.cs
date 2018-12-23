@@ -1,4 +1,4 @@
-# Calculation.NearlyEquals メソッド (Decimal, Decimal, Decimal)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Calculation.NearlyEquals メソッド (Decimal, Decimal, Decimal)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 decimal 特殊化版 
 

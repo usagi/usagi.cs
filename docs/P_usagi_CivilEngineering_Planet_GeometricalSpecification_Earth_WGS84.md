@@ -1,4 +1,4 @@
-# GeometricalSpecification.Earth_WGS84 プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# GeometricalSpecification.Earth_WGS84 プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 地球の幾何学的な諸元(WGS84測地系)
 

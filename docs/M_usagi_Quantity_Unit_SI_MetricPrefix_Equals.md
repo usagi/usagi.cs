@@ -1,4 +1,4 @@
-# MetricPrefix.Equals メソッド (Object)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# MetricPrefix.Equals メソッド (Object)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 SI補助単位として比較可能かつ等価か判定
 

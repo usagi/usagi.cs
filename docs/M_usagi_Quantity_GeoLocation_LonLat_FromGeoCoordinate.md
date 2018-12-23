@@ -1,4 +1,4 @@
-# LonLat.FromGeoCoordinate メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small><a href="http://msdn2.microsoft.com/ja-jp/library/ee425989" target="_blank">GeoCoordinate</a> から経緯度を取り込む
+# LonLat.FromGeoCoordinate メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div><a href="http://msdn2.microsoft.com/ja-jp/library/ee425989" target="_blank">GeoCoordinate</a> から経緯度を取り込む
 
 
     <strong>名前空間:</strong>

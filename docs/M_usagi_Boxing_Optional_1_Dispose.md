@@ -1,4 +1,4 @@
-# Optional(*T*).Dispose メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Optional(*T*).Dispose メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 内包するオブジェクトが IDisposable を実装する場合には Dispose します。 
 

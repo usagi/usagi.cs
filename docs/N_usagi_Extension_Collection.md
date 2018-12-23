@@ -1,4 +1,6 @@
-# usagi.Extension.Collection 名前空間<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# usagi.Extension.Collection 名前空間
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 IEnumerable, IDictionary など Collection 向けの Extension
 

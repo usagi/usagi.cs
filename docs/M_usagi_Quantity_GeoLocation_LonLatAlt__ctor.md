@@ -1,4 +1,4 @@
-# LonLatAlt コンストラクター <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# LonLatAlt コンストラクター <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 0 値の経緯度標高を生成
 

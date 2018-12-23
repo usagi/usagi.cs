@@ -1,4 +1,4 @@
-# Length.From_Fr メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length.From_Fr メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 フレンチ・カテーテル・スケールの値を元に生成
 

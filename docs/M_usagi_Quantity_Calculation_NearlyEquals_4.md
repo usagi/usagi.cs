@@ -1,4 +1,4 @@
-# Calculation.NearlyEquals メソッド (Int16, Int16, Int16)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Calculation.NearlyEquals メソッド (Int16, Int16, Int16)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 Int16 特殊化版 
 

@@ -1,4 +1,4 @@
-# ItemsControlHelper.FindControlsAs(*T*) メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# ItemsControlHelper.FindControlsAs(*T*) メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 GetContentPresenter + FindControlAs の合体技 FindControlAs の進化版 
 

@@ -1,4 +1,4 @@
-# LengthMathHelper.ATan2 メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# LengthMathHelper.ATan2 メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 逆正接値を計算しますよ
 

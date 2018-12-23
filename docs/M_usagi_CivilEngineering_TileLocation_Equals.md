@@ -1,4 +1,4 @@
-# TileLocation.Equals メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# TileLocation.Equals メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 等価な位置を保持するか判定
 

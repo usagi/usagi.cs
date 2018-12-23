@@ -1,4 +1,6 @@
-# IGeometricalSpecificationGettable インターフェイス<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# IGeometricalSpecificationGettable インターフェイス
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 惑星の幾何学的な諸元を取得可能
 

@@ -1,4 +1,4 @@
-# MetricPrefix&nbsp;Implicit 変換 (MetricPrefix to String)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# MetricPrefix&nbsp;Implicit 変換 (MetricPrefix to String)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 MetricPrefix オブジェクトから暗黙の型変換で string のSI接頭辞文字列を得る
 

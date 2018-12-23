@@ -1,4 +1,4 @@
-# ItemsControlHelper.FindControl メソッド (ContentPresenter, String)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# ItemsControlHelper.FindControl メソッド (ContentPresenter, String)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 ContentPresenter から name のコントロールを Control 型で引っ張り出す 必要に応じて結果を as って使いたい場合にどうぞ。
 

@@ -1,4 +1,4 @@
-# PlaneAngle.Normalize360 メソッド (PlaneAngle)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.Normalize360 メソッド (PlaneAngle)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 a を元に新たに [ 0 ... 360 ) へ正規化した平面角オブジェクトを生成するファクトリー
 

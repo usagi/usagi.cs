@@ -1,4 +1,4 @@
-# Calculation.NearlyEquals メソッド (UInt32, UInt32, UInt32)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Calculation.NearlyEquals メソッド (UInt32, UInt32, UInt32)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 UInt32 特殊化版 
 

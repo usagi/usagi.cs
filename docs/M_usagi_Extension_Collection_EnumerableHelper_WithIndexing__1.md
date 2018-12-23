@@ -1,4 +1,4 @@
-# EnumerableHelper.WithIndexing(*T*) メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# EnumerableHelper.WithIndexing(*T*) メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 IEnumerable を列挙順にインデックス付きにするやつ ref. https://ufcpp.net/blog/2016/12/tipsindexedforeach/
 

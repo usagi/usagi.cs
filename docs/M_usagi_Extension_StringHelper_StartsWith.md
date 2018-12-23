@@ -1,4 +1,4 @@
-# StringHelper.StartsWith メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# StringHelper.StartsWith メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 StartsWith の複数パターンを OR 判定できる版
 

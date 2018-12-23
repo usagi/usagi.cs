@@ -1,4 +1,4 @@
-# PlaneAngle.Division 演算子 (PlaneAngle, Double)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.Division 演算子 (PlaneAngle, Double)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 角度を無次元数により割り算する2項演算子 
 

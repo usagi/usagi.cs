@@ -1,4 +1,4 @@
-# Length.ToString_μm メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length.ToString_μm メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 マイクロ・メートル単位で文字列化
 

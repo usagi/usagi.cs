@@ -1,4 +1,4 @@
-# PlaneAngle.Division 演算子 (PlaneAngle, PlaneAngle)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.Division 演算子 (PlaneAngle, PlaneAngle)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 平面角を平面角で除算した比を得る2項演算子
 

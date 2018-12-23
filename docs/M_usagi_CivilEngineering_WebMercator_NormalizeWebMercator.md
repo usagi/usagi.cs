@@ -1,4 +1,4 @@
-# WebMercator.NormalizeWebMercator メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# WebMercator.NormalizeWebMercator メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 任意の経緯度を WebMercator で表現可能な適当な経緯度へ正規化する 緯度が90°を超える場合は経度は必要に応じて反転され、緯度も反転後の経度に合わせて正規化される。 正規化後の緯度は ± <a href="P_usagi_CivilEngineering_WebMercator_CriticalLatitude.md">CriticalLatitude</a> へ丸められる
 

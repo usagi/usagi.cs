@@ -1,4 +1,4 @@
-# Length.InLines プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length.InLines プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 イングリッシュ・ライン, U.K. Lines, French Lines (ligne; L)
 

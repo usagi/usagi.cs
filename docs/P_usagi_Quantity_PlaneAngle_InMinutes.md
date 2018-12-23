@@ -1,4 +1,4 @@
-# PlaneAngle.InMinutes プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.InMinutes プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 度数法の Minutes 単位での入出力用のプロパティー
 

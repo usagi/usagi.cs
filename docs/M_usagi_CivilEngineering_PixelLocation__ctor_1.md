@@ -1,4 +1,4 @@
-# PixelLocation コンストラクター (UInt32, UInt32, Byte)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PixelLocation コンストラクター (UInt32, UInt32, Byte)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 X, Y, Z 値を指定して生成
 

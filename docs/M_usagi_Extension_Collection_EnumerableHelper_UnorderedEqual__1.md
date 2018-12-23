@@ -1,4 +1,4 @@
-# EnumerableHelper.UnorderedEqual(*T*) メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# EnumerableHelper.UnorderedEqual(*T*) メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 IEnumerable を実装する型 a, b について等価な値を保持するか判定する。 SequenceEqual と異なり列挙される順序の影響を受けない ref. https://stackoverflow.com/a/3670089/1211392
 

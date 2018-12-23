@@ -1,4 +1,4 @@
-# GeoURI.NearlyEquals メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# GeoURI.NearlyEquals メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 経度、緯度、高度が許容範囲内で近似的に等価かつ測地系と不確実性パラメーターが完全に一致するか判定
 

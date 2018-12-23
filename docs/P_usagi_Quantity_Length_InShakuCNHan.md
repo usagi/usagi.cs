@@ -1,4 +1,4 @@
-# Length.InShakuCNHan プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length.InShakuCNHan プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 中国の古代の唐(Hàn; 西暦[-206...8, 25...220)年)王朝で使われていた尺
 

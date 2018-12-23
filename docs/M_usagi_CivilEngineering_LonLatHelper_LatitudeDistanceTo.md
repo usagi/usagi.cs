@@ -1,4 +1,4 @@
-# LonLatHelper.LatitudeDistanceTo メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# LonLatHelper.LatitudeDistanceTo メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 経緯度の位置 a と b の緯度方向の距離を計算する
 

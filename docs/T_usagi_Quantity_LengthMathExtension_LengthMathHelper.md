@@ -1,4 +1,6 @@
-# LengthMathHelper クラス<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# LengthMathHelper クラス
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 Length への System.Math 相当の機能拡張
 

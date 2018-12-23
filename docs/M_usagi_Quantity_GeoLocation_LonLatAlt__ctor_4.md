@@ -1,4 +1,4 @@
-# LonLatAlt コンストラクター (ILonLatGettable, IAltitudeGettable)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# LonLatAlt コンストラクター (ILonLatGettable, IAltitudeGettable)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 経緯度取得可能インターフェースを実装する何かと標高取得可能インターフェースを実装する何かから生成
 

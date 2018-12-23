@@ -1,4 +1,4 @@
-# PlaneAngle.Equals メソッド (PlaneAngle)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.Equals メソッド (PlaneAngle)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 正規化せずに角度が等しいか判定する 正規化が必要な場合は NormalizedEquals を使うとよい
 

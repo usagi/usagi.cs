@@ -1,4 +1,4 @@
-# Length.Multiply 演算子 (Length, Double)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length.Multiply 演算子 (Length, Double)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 二項積算演算（長さ次元×無次元＝長さ次元）
 

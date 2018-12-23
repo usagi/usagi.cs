@@ -1,4 +1,4 @@
-# LonLat.NearlyEqualsTo メソッド (ILonLatGettable, PlaneAngle)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# LonLat.NearlyEqualsTo メソッド (ILonLatGettable, PlaneAngle)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 平面角次元の距離が許容範囲以内で近似的に等価と未為せるか判定
 

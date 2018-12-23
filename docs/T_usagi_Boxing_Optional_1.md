@@ -1,4 +1,6 @@
-# Optional(*T*) クラス<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Optional(*T*) クラス
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 任意の型<T> についてオブジェクトの有無のチェック機構を設けたボクシングされた型を提供する
 &nbsp;<ul><li>オブジェクトを放り込むと暗黙的に T 型のオブジェクトとしても振る舞う</li><li>null を放り込むと T 型の空のオブジェクトとして振る舞う</li><li>IDisposable なオブジェクトに対してはボクシングしたまま IDisposable できる</li></ul>

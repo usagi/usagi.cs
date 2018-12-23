@@ -1,4 +1,4 @@
-# PlaneAngle.FromRadians メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.FromRadians メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 ラジアンからのファクトリー rad 主に数学系、電気工学系でよく使われる。
 

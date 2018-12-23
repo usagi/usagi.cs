@@ -1,4 +1,4 @@
-# LonLat.Parse メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# LonLat.Parse メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 一般的な文章に出現しがちな文字列の経緯度表記から生成を試みるファクトリー 緯度、経度の順にカンマ文字または空白文字を区切りとし、 緯度の冒頭または末尾に 北緯, 南緯, N, S の何れかがあるか省略（＝北緯）され、 経度の冒頭または末尾に 東経, 西経, E, W の何れかがあるか省略（＝東経）され、 緯度と経度の角度値が何れも平面角型でパース可能な文字列に対して期待動作する。 
 

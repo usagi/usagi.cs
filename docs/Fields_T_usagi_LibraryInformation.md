@@ -1,4 +1,6 @@
-# LibraryInformation フィールド<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small><a href="T_usagi_LibraryInformation.md">LibraryInformation</a> 型は下記のメンバーを公開します。
+# LibraryInformation フィールド
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div><a href="T_usagi_LibraryInformation.md">LibraryInformation</a> 型は下記のメンバーを公開します。
 
 
 ## フィールド

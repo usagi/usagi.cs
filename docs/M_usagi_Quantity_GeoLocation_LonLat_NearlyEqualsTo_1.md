@@ -1,4 +1,4 @@
-# LonLat.NearlyEqualsTo メソッド (ILonLatGettable, PlaneAngle, PlaneAngle)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# LonLat.NearlyEqualsTo メソッド (ILonLatGettable, PlaneAngle, PlaneAngle)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 平面角次元の距離が経度軸、緯度軸それぞれで許容範囲以内で近似的に等価と未為せるか判定
 

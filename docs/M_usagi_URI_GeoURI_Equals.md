@@ -1,4 +1,4 @@
-# GeoURI.Equals メソッド (GeoURI)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# GeoURI.Equals メソッド (GeoURI)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 経度、緯度、標高、座標系、不確実性パラメーターが完全に一致するか比較する
 

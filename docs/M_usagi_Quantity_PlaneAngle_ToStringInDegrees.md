@@ -1,4 +1,4 @@
-# PlaneAngle.ToStringInDegrees メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.ToStringInDegrees メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 度数法の Degrees 単位で文字列化する。数値に加え、単位として SymbolOfDegrees が付く。
 

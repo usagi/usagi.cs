@@ -1,4 +1,6 @@
-# Length 演算子<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small><a href="T_usagi_Quantity_Length.md">Length</a> 型は下記のメンバーを公開します。
+# Length 演算子
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div><a href="T_usagi_Quantity_Length.md">Length</a> 型は下記のメンバーを公開します。
 
 
 ## 演算子

@@ -1,4 +1,4 @@
-# LonLat コンストラクター (ILonLatGettable)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# LonLat コンストラクター (ILonLatGettable)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 経緯度を取得可能な何かから生成
 

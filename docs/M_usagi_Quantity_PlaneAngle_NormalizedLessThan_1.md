@@ -1,4 +1,4 @@
-# PlaneAngle.NormalizedLessThan メソッド (PlaneAngle, PlaneAngle)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.NormalizedLessThan メソッド (PlaneAngle, PlaneAngle)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 正規化した場合に角度が a < b か判定する
 

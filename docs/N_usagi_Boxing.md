@@ -1,4 +1,6 @@
-# usagi.Boxing 名前空間<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# usagi.Boxing 名前空間
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 オブジェクトの Boxing に関する便利かもしれないおまけ機能を提供する
 

@@ -1,4 +1,6 @@
-# GeoURI.SchemeIsNotGeoURIException クラス<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# GeoURI.SchemeIsNotGeoURIException クラス
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 Scheme が geo じゃないよ例外
 

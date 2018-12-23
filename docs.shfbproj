@@ -14,12 +14,12 @@
     <Name>Documentation</Name>
     <!-- SHFB properties -->
     <FrameworkVersion>.NET Framework 4.7.2</FrameworkVersion>
-    <OutputPath>.\Help\</OutputPath>
+    <OutputPath>docs\</OutputPath>
     <HtmlHelpName>usagi.cs.docs</HtmlHelpName>
     <Language>ja-JP</Language>
-    <HelpFileFormat>HtmlHelp1</HelpFileFormat>
+    <HelpFileFormat>Markdown</HelpFileFormat>
     <SyntaxFilters>C#</SyntaxFilters>
-    <PresentationStyle>VS2013</PresentationStyle>
+    <PresentationStyle>Markdown</PresentationStyle>
     <CleanIntermediates>True</CleanIntermediates>
     <KeepLogFile>False</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
@@ -40,7 +40,11 @@
     <NamingMethod>MemberName</NamingMethod>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <RootNamespaceTitle>usagi.cs docs</RootNamespaceTitle>
-    <HeaderText>&amp;lt%3bsmall&amp;gt%3b[&amp;amp%3blt%3b&amp;amp%3blt%3bBack to Home]%28https://github.com/usagi/usagi.cs/blob/master/Help/Home.md%29&amp;lt%3b/small&amp;gt%3b</HeaderText>
+    <HeaderText>&amp;lt%3bdiv style=&amp;quot%3bfont-size:30%25&amp;quot%3b&amp;gt%3b
+&amp;lt%3ba href=&amp;quot%3bhttps://github.com/usagi/usagi.cs/blob/master/docs/Home.md&amp;quot%3b&amp;gt%3b≪Back to Home&amp;lt%3b/a&amp;gt%3b
+ ‖ &amp;lt%3ba hfre=&amp;quot%3bhttps://www.nuget.org/packages/usagi/&amp;quot%3b&amp;gt%3bNuGet Package&amp;lt%3b/a&amp;gt%3b
+ ‖ &amp;lt%3ba href=&amp;quot%3bhttps://github.com/usagi/usagi.cs&amp;quot%3b&amp;gt%3bGitHub Repository&amp;lt%3b/a&amp;gt%3b
+&amp;lt%3b/div&amp;gt%3b</HeaderText>
     <FooterText>- nuget.org -&amp;gt%3b https://www.nuget.org/packages/usagi/
 - github -&amp;gt%3b https://github.com/usagi/usagi.cs</FooterText>
     <CopyrightHref>https://github.com/usagi/usagi.cs/blob/master/LICENSE.md</CopyrightHref>
@@ -58,6 +62,7 @@
       <NamespaceSummaryItem name="usagi.CivilEngineering" isDocumented="True" xmlns="" />
       <NamespaceSummaryItem name="usagi.Extension.Collection" isDocumented="True" xmlns="" />
     </NamespaceSummaries>
+    <WarnOnMissingSourceContext>False</WarnOnMissingSourceContext>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

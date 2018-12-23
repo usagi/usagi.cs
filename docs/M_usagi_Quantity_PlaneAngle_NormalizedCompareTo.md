@@ -1,4 +1,4 @@
-# PlaneAngle.NormalizedCompareTo メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.NormalizedCompareTo メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 [0...360) deg へ正規化した場合の角度の比較を行います。 
 

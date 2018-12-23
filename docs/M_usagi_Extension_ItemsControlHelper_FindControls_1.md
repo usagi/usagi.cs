@@ -1,4 +1,4 @@
-# ItemsControlHelper.FindControls メソッド (ItemsControl, String[])<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# ItemsControlHelper.FindControls メソッド (ItemsControl, String[])<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 FindControls のさらにずぼら横着進化した版 control の全てのアイテムごとに、一度に複数の名前を与えて対応する複数のコントロールを引っ張り出せる。
 

@@ -1,4 +1,4 @@
-# WebMercator.PixelToTile メソッド (UInt32, UInt32, Byte, UInt32)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# WebMercator.PixelToTile メソッド (UInt32, UInt32, Byte, UInt32)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 ピクセル座標系の位置 -> 所属するタイル座標系の位置
 

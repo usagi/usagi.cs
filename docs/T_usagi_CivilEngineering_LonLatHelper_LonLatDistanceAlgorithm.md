@@ -1,4 +1,6 @@
-# LonLatHelper.LonLatDistanceAlgorithm 列挙体<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# LonLatHelper.LonLatDistanceAlgorithm 列挙体
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 平面角次元群による経緯度から長さ次元の距離を計算する際に使用するアルゴリズム
 

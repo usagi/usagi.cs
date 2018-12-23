@@ -1,4 +1,6 @@
-# PlaneAngle.SymbolOfGradians フィールド<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.SymbolOfGradians フィールド
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 ToString 系で使用する Gradians の単位記号
 

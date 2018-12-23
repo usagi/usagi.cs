@@ -1,4 +1,4 @@
-# Calculation.NearlyEquals メソッド (Char, Char, Char)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Calculation.NearlyEquals メソッド (Char, Char, Char)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 char 特殊化版 
 

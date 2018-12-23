@@ -1,4 +1,4 @@
-# Length.InMeters プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length.InMeters プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 メートル単位の値の入出力プロパティー 唯一の値の実体を持ち、他の単位の扱いはすべてこのプロパティーの実体との変換により扱われる
 

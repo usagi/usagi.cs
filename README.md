@@ -4,7 +4,7 @@
 
 - NuGet: https://www.nuget.org/packages/usagi/
 - GitHub: https://github.com/usagi/usagi.cs/
-    - docs: [Help/](Help/Home.md)
+    - docs: [docs/](docs/Home.md)
 
 # License
 

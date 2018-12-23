@@ -1,4 +1,4 @@
-# IGeometricalSpecificationGettable.Flattening プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# IGeometricalSpecificationGettable.Flattening プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 楕円体近似した場合の扁平率
 

@@ -1,4 +1,4 @@
-# Length._RiJP プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length._RiJP プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 里（日本）の入出力プロパティー糖衣構文
 

@@ -1,4 +1,4 @@
-# PlaneAngleMathHelper.Sign メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngleMathHelper.Sign メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 符号を抽出しますよ
 

@@ -1,4 +1,4 @@
-# PlaneAngle.ToStringInTurns メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.ToStringInTurns メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 Turns 単位で文字列化する。数値に加え、単位として SymbolOfTurns が付く。
 

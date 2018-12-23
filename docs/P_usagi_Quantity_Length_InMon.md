@@ -1,4 +1,4 @@
-# Length.InMon プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length.InMon プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 文（もん）、日本の古代の貨幣の直径が転じて長さの単位となった
 

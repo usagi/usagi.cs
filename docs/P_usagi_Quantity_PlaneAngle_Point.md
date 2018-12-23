@@ -1,4 +1,4 @@
-# PlaneAngle.Point プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.Point プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 1ポイントの平面角オブジェクトを得る糖衣構文
 

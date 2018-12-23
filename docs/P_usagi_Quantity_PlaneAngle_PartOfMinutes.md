@@ -1,4 +1,4 @@
-# PlaneAngle.PartOfMinutes プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.PartOfMinutes プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 度数法の整数 Minutes 成分の値の入出力用のプロパティー
 

@@ -1,4 +1,4 @@
-# WebMercator.MapSize メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# WebMercator.MapSize メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 LOD=z におけるピクセル空間の次元の広さを計算
 

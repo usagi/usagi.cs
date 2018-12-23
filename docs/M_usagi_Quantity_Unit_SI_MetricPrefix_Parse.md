@@ -1,4 +1,4 @@
-# MetricPrefix.Parse メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# MetricPrefix.Parse メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 文字列からのファクトリー
 &nbsp;<ul><li>与えられた文字列がSI接頭辞として有効な場合は MetricPrefix オブジェクトを返す。</li><li>与えられた文字列が空文字列の場合は等倍（1.0倍）の MetricPrefix オブジェクトを返す。</li><li>与えられた文字列がSI接頭辞として無効な場合は null を返す。</li></ul>&nbsp;

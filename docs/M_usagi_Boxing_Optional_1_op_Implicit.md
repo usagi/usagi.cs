@@ -1,4 +1,4 @@
-# Optional(*T*)&nbsp;Implicit 変換 (Optional(*T*) to *T*)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Optional(*T*)&nbsp;Implicit 変換 (Optional(*T*) to *T*)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 暗黙の型変換により T 型へ変換します。 Get と等価に機能します。
 

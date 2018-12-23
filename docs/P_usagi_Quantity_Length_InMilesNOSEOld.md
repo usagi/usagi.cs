@@ -1,4 +1,4 @@
-# Length.InMilesNOSEOld プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length.InMilesNOSEOld プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 伝統ノルウェー・マイル, 伝統スウェーデン・マイル, mil
 

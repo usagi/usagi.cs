@@ -1,4 +1,6 @@
-# AltitudeParseFailedException プロパティ<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small><a href="T_usagi_URI_GeoURI_AltitudeParseFailedException.md">GeoURI.AltitudeParseFailedException</a> 型は下記のメンバーを公開します。
+# AltitudeParseFailedException プロパティ
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div><a href="T_usagi_URI_GeoURI_AltitudeParseFailedException.md">GeoURI.AltitudeParseFailedException</a> 型は下記のメンバーを公開します。
 
 
 ## プロパティ

@@ -1,4 +1,6 @@
-# IAltitude インターフェイス<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# IAltitude インターフェイス
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 Length 型の標高（高度）プロパティーを読み書きできる
 

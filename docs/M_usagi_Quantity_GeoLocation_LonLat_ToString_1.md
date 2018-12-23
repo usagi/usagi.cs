@@ -1,4 +1,4 @@
-# LonLat.ToString メソッド (Int32)<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# LonLat.ToString メソッド (Int32)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 浮動小数点数の少数部の桁数指定付きの文字列化
 

@@ -1,4 +1,4 @@
-# Length.InShakuJPMatashirou プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length.InShakuJPMatashirou プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 日本の又四郎尺、永正の京都の指物師の又四郎さんが作って大工に使われたらしい
 

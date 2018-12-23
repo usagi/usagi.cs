@@ -1,4 +1,4 @@
-# PlaneAngle.ParseDegrees メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# PlaneAngle.ParseDegrees メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 度数法による Degrees または Minutes または Seconds の組み合わせ から PlaneAngle オブジェクトを生成する。 
 

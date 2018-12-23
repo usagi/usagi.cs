@@ -1,4 +1,4 @@
-# Calculation.NearlyEquals(*T*) メソッド (*T*, *T*, *T*, Func(*T*, *T*, *T*), Func(*T*, *T*, *T*))<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Calculation.NearlyEquals(*T*) メソッド (*T*, *T*, *T*, Func(*T*, *T*, *T*), Func(*T*, *T*, *T*))<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 a と b の差が tolerance 以下か判定する 
 

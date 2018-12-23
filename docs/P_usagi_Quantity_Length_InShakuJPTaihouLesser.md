@@ -1,4 +1,4 @@
-# Length.InShakuJPTaihouLesser プロパティ <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Length.InShakuJPTaihouLesser プロパティ <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 日本の大宝律令の大尺、高麗尺に由来し、土地の測量に使われたらしい
 

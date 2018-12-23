@@ -1,4 +1,6 @@
-# usagi.Quantity.GeoLocation 名前空間<small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# usagi.Quantity.GeoLocation 名前空間
+
+<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 地理上の位置を扱う
 

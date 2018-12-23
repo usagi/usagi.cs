@@ -1,4 +1,4 @@
-# Utility.FirstOfOptional(*T*) メソッド <small>[<<Back to Home](https://github.com/usagi/usagi.cs/blob/master/Help/Home.md)</small> 
+# Utility.FirstOfOptional(*T*) メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 列挙の先頭要素をボクシングオブジェクトで取り出します。
 
