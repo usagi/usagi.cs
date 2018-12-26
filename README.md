@@ -15,10 +15,10 @@
     - `FindChild` 系を追加し `FindControl` 系を Deprecated とした理由は [Issue #1 DataTemplate に TextBox もった ItemsControl に usagi.Extension.ItemsControlHelper.FindControls すると NullReferenceException で死ぬ](https://github.com/usagi/usagi.cs/issues/1) を参照。 
 - `usagi.Extension.Collection.EnumerableHelper`
     - `Range` エクステンション追加
-        - `(begin, count)` -> `[begin, ..., begin + count]` の要素を列挙。 `Enumerable.Range` への糖衣構文
+        - `(begin, count)` -> `[begin, ..., begin + count)` の要素を列挙。 `Enumerable.Range` への糖衣構文
         - `(count)` -> `(0, count)` への糖衣構文
         - `(count, generator())` -> count 個の generator の結果を生成
-        - `(begin, count, generator(n))` -> [begin, ... , begin + count] を始域とし二項関係 generator により写像される終域の要素を列挙
+        - `(begin, count, generator(n))` -> [begin, ... , begin + count) を始域とし二項関係 generator により写像される終域の要素を列挙
         - `(count, generator(n))` -> `(0, count, generator(n))` への糖衣構文
 - `usagi.Extension.string.StringHelper`
     - `ToMemoryStream` エクステンション追加
