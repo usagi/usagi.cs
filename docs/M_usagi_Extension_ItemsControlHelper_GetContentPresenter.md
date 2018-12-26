@@ -5,21 +5,21 @@ ItemsControl から index 番目のアイテムの ContentPresenter を引っ張
 
     <strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_Extension.md">usagi.Extension</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 1.1.0.0 (1.1.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 1.2.0.0 (1.2.0.0)
 
 ## 構文
 
 **C#**<br />
 ``` C#
 public static ContentPresenter GetContentPresenter(
-	this ItemsControl control,
+	this ItemsControl c,
 	int index
 )
 ```
 
 
 #### パラメーター
-&nbsp;<dl><dt>control</dt><dd>型: <a href="http://msdn2.microsoft.com/ja-jp/library/ms611045" target="_blank">System.Windows.Controls.ItemsControl</a><br />引っ張り出し元</dd><dt>index</dt><dd>型: <a href="http://msdn2.microsoft.com/ja-jp/library/td2s409d" target="_blank">System.Int32</a><br />ContentPresenter を引っ張り出したいアイテムのインデックス</dd></dl>
+&nbsp;<dl><dt>c</dt><dd>型: <a href="http://msdn2.microsoft.com/ja-jp/library/ms611045" target="_blank">System.Windows.Controls.ItemsControl</a><br />引っ張り出し元</dd><dt>index</dt><dd>型: <a href="http://msdn2.microsoft.com/ja-jp/library/td2s409d" target="_blank">System.Int32</a><br />ContentPresenter を引っ張り出したいアイテムのインデックス</dd></dl>
 
 #### 戻り値
 型: <a href="http://msdn2.microsoft.com/ja-jp/library/ms609804" target="_blank">ContentPresenter</a><br />引っ張り出された ContentPresenter または null

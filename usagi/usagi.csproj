@@ -55,6 +55,7 @@
     <Compile Include="usagi.CivilEngineering.cs" />
     <Compile Include="usagi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="usagi.Extension.MemoryStream.cs" />
     <Compile Include="usagi.Extension.string.cs" />
     <Compile Include="usagi.Extension.Collection.cs" />
     <Compile Include="usagi.Extension.cs" />

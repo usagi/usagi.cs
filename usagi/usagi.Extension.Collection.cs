@@ -87,6 +87,87 @@ namespace usagi.Extension.Collection
           return false;
       return counter.Values.All( c => c == 0 );
     }
+
+    /// <summary>
+    /// [ begin, ...., begin + count ) な列挙を得る。
+    /// 但し、 <code>count &lt; 0</code> では空の結果を得る。
+    /// <para/>
+    /// <see cref="Enumerable.Range(int, int)"/> への糖衣構文
+    /// </summary>
+    /// <remarks>
+    /// とかしても Enumerable.Range と EnumerableHelper.Range を
+    /// 使い分けするの手間なのでこっちで .Range の面倒を全てみられるよう用意した。
+    /// </remarks>
+    /// <param name="begin">はじまり</param>
+    /// <param name="count">いくつ欲しいのか</param>
+    /// <returns>[ begin, ...., begin + count ) な列挙</returns>
+    public static IEnumerable<int> Range( int begin, int count )
+    { return Enumerable.Range( begin, count ); }
+
+    /// <summary>
+    /// [ 0, ...., count ) な列挙を得る
+    /// <para/>
+    /// <see cref="Range(int, int)"/>
+    /// へ <code>( 0, count )</code> を渡す糖衣構文
+    /// </summary>
+    /// <remarks>
+    /// とかしても Enumerable.Range と EnumerableHelper.Range を
+    /// 使い分けするの手間なのでこっちで .Range の面倒を全てみられるよう用意した。
+    /// </remarks>
+    /// <param name="count">いくつ欲しいのか</param>
+    /// <returns>[ begin, ...., begin + count ) な列挙</returns>
+    public static IEnumerable<int> Range( int count )
+    { return Enumerable.Range( 0, count ); }
+
+    /// <summary>
+    /// generator で count 個の列挙を得る。
+    /// 但し、 <code>count &lt; 0</code> では空の結果を得る。
+    /// </summary>
+    /// <typeparam name="T">generator 出力する型</typeparam>
+    /// <param name="count">出力を得たい数量</param>
+    /// <param name="generator">出力を生成可能なファンクター</param>
+    /// <returns>generator により生成される count 個の列挙</returns>
+    public static IEnumerable<T> Range<T>( int count, Func<T> generator )
+    {
+      while ( --count >= 0 )
+        yield return generator();
+    }
+
+    /// <summary>
+    /// [ begin, ... , count ) を始域とし、
+    /// generator を写像として得られる
+    /// 順序対の終域の要素の列挙を得る。
+    /// 但し、 <code>count &lt; 0</code> では空の結果を得る。
+    /// </summary>
+    /// <typeparam name="T">generator の出力する型</typeparam>
+    /// <param name="begin">始域のはじめに列挙される数</param>
+    /// <param name="count">始域の要素数</param>
+    /// <param name="generator">始域の要素から出力を生成可能なファンクター</param>
+    /// <returns>
+    /// [ begin, ... , count ) を始域とし、
+    /// generator を写像として得られる
+    /// 順序対の終域の要素の列挙
+    /// </returns>
+    public static IEnumerable<T> Range<T>( int begin, int count, Func<int, T> generator )
+    { return from _ in Range( begin, count ) select generator( _ ); }
+
+    /// <summary>
+    /// [ 0, ... , count ) を始域とし、
+    /// generator を写像として得られる
+    /// 順序対の終域の要素の列挙を得る。
+    /// 但し、 <code>count &lt; 0</code> では空の結果を得る。
+    /// </summary>
+    /// <typeparam name="T">generator の出力する型</typeparam>
+    /// <param name="count">始域の要素数</param>
+    /// <param name="generator">始域の要素から出力を生成可能なファンクター</param>
+    /// <returns>
+    /// [ 0, ... , count ) を始域とし、
+    /// generator を写像として得られる
+    /// 順序対の終域の要素の列挙を得る
+    /// </returns>
+    public static IEnumerable<T> Range<T>( int count, Func<int, T> generator )
+    { return Range( 0, count, generator ); }
+
   }
 
   /// <summary>

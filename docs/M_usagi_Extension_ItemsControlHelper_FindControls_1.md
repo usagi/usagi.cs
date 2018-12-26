@@ -1,16 +1,17 @@
-# ItemsControlHelper.FindControls メソッド (ItemsControl, String[])<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
+# ItemsControlHelper.FindControls メソッド (ItemsControl, String[])<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div><strong>注意: このAPIは廃止予定です。</strong>
 
 FindControls のさらにずぼら横着進化した版 control の全てのアイテムごとに、一度に複数の名前を与えて対応する複数のコントロールを引っ張り出せる。
 
 
     <strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_Extension.md">usagi.Extension</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 1.1.0.0 (1.1.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 1.2.0.0 (1.2.0.0)
 
 ## 構文
 
 **C#**<br />
 ``` C#
+[ObsoleteAttribute("Deprecated=1.2.0, Obsolete>1.2.0 削除予定。FindChildrenAs<Control> で代用可能。但し Control ではなく FrameworkElement を使うべきではないか留意すると良い。")]
 public static IEnumerable<IDictionary<string, Control>> FindControls(
 	this ItemsControl control,
 	params string[] names

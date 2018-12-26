@@ -10,7 +10,7 @@ LonLat の派生で長さオブジェクトの標高を追加で持つ
 ## 継承階層
 <a href="http://msdn2.microsoft.com/ja-jp/library/e5kfa45b" target="_blank">System.Object</a><br />&nbsp;&nbsp;<a href="T_usagi_Quantity_GeoLocation_LonLat.md">usagi.Quantity.GeoLocation.LonLat</a><br />&nbsp;&nbsp;&nbsp;&nbsp;usagi.Quantity.GeoLocation.LonLatAlt<br /><strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_Quantity_GeoLocation.md">usagi.Quantity.GeoLocation</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 1.1.0.0 (1.1.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 1.2.0.0 (1.2.0.0)
 
 ## 構文
 

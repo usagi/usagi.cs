@@ -1,4 +1,4 @@
-# ItemsControlHelper.FindControl メソッド (ItemsControl, Int32, String)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
+# ItemsControlHelper.FindControl メソッド (ItemsControl, Int32, String)<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div><strong>注意: このAPIは廃止予定です。</strong>
 
 GetContentPresenter + FindControl の合体技 
 
@@ -7,12 +7,13 @@ control の index 番目のアイテムから名前が name のコントロー�
 
     <strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_Extension.md">usagi.Extension</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 1.1.0.0 (1.1.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 1.2.0.0 (1.2.0.0)
 
 ## 構文
 
 **C#**<br />
 ``` C#
+[ObsoleteAttribute("Deprecated=1.2.0, Obsolete>1.2.0 削除予定。FindChildAs<Control> で代用可能。但し Control ではなく FrameworkElement を使うべきではないか留意すると良い。")]
 public static Control FindControl(
 	this ItemsControl control,
 	int index,

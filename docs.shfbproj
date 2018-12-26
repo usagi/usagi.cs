@@ -17,9 +17,9 @@
     <OutputPath>docs\</OutputPath>
     <HtmlHelpName>usagi.cs.docs</HtmlHelpName>
     <Language>ja-JP</Language>
-    <HelpFileFormat>Markdown</HelpFileFormat>
+    <HelpFileFormat>HtmlHelp1</HelpFileFormat>
     <SyntaxFilters>C#</SyntaxFilters>
-    <PresentationStyle>Markdown</PresentationStyle>
+    <PresentationStyle>VS2013</PresentationStyle>
     <CleanIntermediates>True</CleanIntermediates>
     <KeepLogFile>False</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
@@ -42,8 +42,6 @@
     <RootNamespaceTitle>usagi.cs docs</RootNamespaceTitle>
     <HeaderText>&amp;lt%3bdiv style=&amp;quot%3bfont-size:30%25&amp;quot%3b&amp;gt%3b
 &amp;lt%3ba href=&amp;quot%3bhttps://github.com/usagi/usagi.cs/blob/master/docs/Home.md&amp;quot%3b&amp;gt%3b≪Back to Home&amp;lt%3b/a&amp;gt%3b
- ‖ &amp;lt%3ba hfre=&amp;quot%3bhttps://www.nuget.org/packages/usagi/&amp;quot%3b&amp;gt%3bNuGet Package&amp;lt%3b/a&amp;gt%3b
- ‖ &amp;lt%3ba href=&amp;quot%3bhttps://github.com/usagi/usagi.cs&amp;quot%3b&amp;gt%3bGitHub Repository&amp;lt%3b/a&amp;gt%3b
 &amp;lt%3b/div&amp;gt%3b</HeaderText>
     <FooterText>- nuget.org -&amp;gt%3b https://www.nuget.org/packages/usagi/
 - github -&amp;gt%3b https://github.com/usagi/usagi.cs</FooterText>

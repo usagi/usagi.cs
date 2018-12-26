@@ -8,7 +8,8 @@
 Contains の複数パターンを OR 判定できる版</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Extension_StringHelper_EndsWith.md">EndsWith</a></td><td>
 StartsWith の複数パターンを OR 判定できる版</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Extension_StringHelper_StartsOrEndsWith.md">StartsOrEndsWith</a></td><td>
 StartsWith または EndsWith の複数パターンを OR 判定</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Extension_StringHelper_StartsWith.md">StartsWith</a></td><td>
-StartsWith の複数パターンを OR 判定できる版</td></tr></table>&nbsp;
+StartsWith の複数パターンを OR 判定できる版</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Extension_StringHelper_ToMemoryStream.md">ToMemoryStream</a></td><td>
+MemoryStream へ変換</td></tr></table>&nbsp;
 <a href="#stringhelper-メソッド">トップ</a>
 
 ## 関連項目

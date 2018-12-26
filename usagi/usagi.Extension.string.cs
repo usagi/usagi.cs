@@ -1,5 +1,7 @@
 ﻿using System.Linq;
 using System;
+using System.IO;
+using System.Text;
 
 namespace usagi.Extension
 {
@@ -67,5 +69,14 @@ namespace usagi.Extension
     /// <returns>成立するものがあれば true</returns>
     internal static bool OrCombinator( this string s, Func<string, string, bool> f, params string[] ss )
     { return ( from _ in ss where f( s, _ ) select true ).Any(); }
+
+    /// <summary>
+    /// MemoryStream へ変換
+    /// </summary>
+    /// <param name="s">元文字列</param>
+    /// <param name="e">エンコーディング; null の場合は <see cref="Encoding.UTF8"/> を使う</param>
+    /// <returns>s を元にしたメモリーストリーム</returns>
+    public static MemoryStream ToMemoryStream( this string s, Encoding e = null )
+    { return new MemoryStream( ( e ?? Encoding.UTF8 ).GetBytes( s ) ); }
   }
 }

@@ -8,7 +8,7 @@ SI Metric Prefix
 ## 継承階層
 <a href="http://msdn2.microsoft.com/ja-jp/library/e5kfa45b" target="_blank">System.Object</a><br />&nbsp;&nbsp;usagi.Quantity.Unit.SI.MetricPrefix<br /><strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_Quantity_Unit_SI.md">usagi.Quantity.Unit.SI</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 1.1.0.0 (1.1.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 1.2.0.0 (1.2.0.0)
 
 ## 構文
 

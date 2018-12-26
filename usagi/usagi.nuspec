@@ -9,10 +9,30 @@
     <licenseUrl>https://github.com/usagi/usagi.cs/blob/master/LICENSE.md</licenseUrl>
     <projectUrl>https://github.com/usagi/usagi.cs</projectUrl>
     <iconUrl>https://gravatar.com/avatar/dbc8b835bed12dd8194c240139033bc8</iconUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>https://github.com/usagi/usagi.cs/releases/tag/1.1.0</releaseNotes>
+    <releaseNotes>https://github.com/usagi/usagi.cs/tags</releaseNotes>
     <copyright>Copyright 2018 Usagi Ito</copyright>
-    <tags>usagi unit utility generic math civil-engineering quantity uri plane-angle length items-control ienumerable idictionary extension</tags>
+    <tags>
+      usagi
+      Unit
+      Utility
+      Generic
+      Math
+      CivilEngineering
+      Quantity
+      URI
+      PlaneAngle
+      Length
+      ItemsControl
+      IEnumerable
+      IDictionary
+      Extension
+      Range
+      string
+      MemoryStream
+      Japanese
+      日本語
+    </tags>
   </metadata>
 </package>

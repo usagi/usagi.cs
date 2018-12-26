@@ -1,4 +1,4 @@
-# ItemsControlHelper.FindControls メソッド (ItemsControl, Int32, String[])<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
+# ItemsControlHelper.FindControls メソッド (ItemsControl, Int32, String[])<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div><strong>注意: このAPIは廃止予定です。</strong>
 
 GetContentPresenter + FindControl の合体技 FindControls の進化版 
 
@@ -7,12 +7,13 @@ GetContentPresenter + FindControl の合体技 FindControls の進化版
 
     <strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_Extension.md">usagi.Extension</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 1.1.0.0 (1.1.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 1.2.0.0 (1.2.0.0)
 
 ## 構文
 
 **C#**<br />
 ``` C#
+[ObsoleteAttribute("Deprecated=1.2.0, Obsolete>1.2.0 削除予定。FindChildren で代用可能。このメソッドは where T: Control だが意図としては FrameworkElement が正しく、また実際にはその継承関係に無い object も Presenter から取得可能なため、このメソッドは不要かつ危険性も高いと考え削除予定に至る。")]
 public static IDictionary<string, Control> FindControls(
 	this ItemsControl control,
 	int index,

@@ -8,7 +8,7 @@ Dictionary な何かへの機能拡張群
 ## 継承階層
 <a href="http://msdn2.microsoft.com/ja-jp/library/e5kfa45b" target="_blank">System.Object</a><br />&nbsp;&nbsp;usagi.Extension.Collection.DictionaryHelper<br /><strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_Extension_Collection.md">usagi.Extension.Collection</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 1.1.0.0 (1.1.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 1.2.0.0 (1.2.0.0)
 
 ## 構文
 

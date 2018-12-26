@@ -2,8 +2,8 @@
 
 
 ## オーバーロードの一覧
-&nbsp;<table><tr><th></th><th>名前</th><th>説明</th></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Extension_ItemsControlHelper_FindControlAs__1.md">FindControlAs(T)(ContentPresenter, String)</a></td><td>
-ContentPresenter から name のコントロールを T 型で引っ張り出す</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")![Code example](media/CodeExample.png "Code example")</td><td><a href="M_usagi_Extension_ItemsControlHelper_FindControlAs__1_1.md">FindControlAs(T)(ItemsControl, Int32, String)</a></td><td>
+&nbsp;<table><tr><th></th><th>名前</th><th>説明</th></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Extension_ItemsControlHelper_FindControlAs__1.md">FindControlAs(T)(ContentPresenter, String)</a></td><td><strong>廃止予定。</strong>
+ContentPresenter から name のコントロールを T 型で引っ張り出す</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")![Code example](media/CodeExample.png "Code example")</td><td><a href="M_usagi_Extension_ItemsControlHelper_FindControlAs__1_1.md">FindControlAs(T)(ItemsControl, Int32, String)</a></td><td><strong>廃止予定。</strong>
 GetContentPresenter + FindControlAs の合体技 
 
 control の index 番目のアイテムから名前が name のコントロールを T 型で引っ張り出す</td></tr></table>&nbsp;

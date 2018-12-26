@@ -5,7 +5,7 @@ this 自身を [ 0 ... 360 ) へ正規化する。正規化前の情報は失わ
 
     <strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_Quantity.md">usagi.Quantity</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 1.1.0.0 (1.1.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 1.2.0.0 (1.2.0.0)
 
 ## 構文
 

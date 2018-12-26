@@ -22,5 +22,13 @@ namespace usagi.Extension.Collection.Tests
       Assert.IsFalse( a.SequenceEqual( b ) );
       Assert.IsTrue( a.UnorderedEqual( b ) );
     }
+
+    [TestMethod()]
+    public void WithIndexingTest()
+    {
+      var vs = Enumerable.Range( 0, 100 );
+      foreach ( var (i, v) in vs.WithIndexing() )
+        Assert.AreEqual( i, v );
+    }
   }
 }
