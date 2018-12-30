@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using usagi.Quantity.Extension;
 
 namespace usagi.Quantity.Tests
 {
@@ -80,8 +81,7 @@ namespace usagi.Quantity.Tests
     [TestMethod()]
     public void NearlyEqualsTest()
     {
-      // ( a, b, tolerance, expected )
-      var ps = new (int, int, int, bool)[]
+      var ps = new (int A, int B, int T, bool E)[]
       { (   0,   0,  0, true )
       , (   0,   5,  4, false )
       , (   0,   5,  5, true )
@@ -93,8 +93,8 @@ namespace usagi.Quantity.Tests
 
       foreach ( var p in ps )
       {
-        Assert.AreEqual( p.Item4, Calculation.NearlyEquals( p.Item1, p.Item2, p.Item3 ), $"a,b of {p}" );
-        Assert.AreEqual( p.Item4, Calculation.NearlyEquals( p.Item1, p.Item2, p.Item3 ), $"b,a of {p}" );
+        Assert.AreEqual( p.E, p.A.NearlyEquals( p.B, p.T ), $"a,b of {p}" );
+        Assert.AreEqual( p.E, p.B.NearlyEquals( p.A, p.T ), $"b,a of {p}" );
       }
     }
   }

@@ -4,185 +4,396 @@
     <name>usagi</name>
   </assembly>
   <members>
-    <member name="N:usagi.Boxing">
+    <member name="N:usagi.Collection">
       <summary>
-            オブジェクトの Boxing に関する便利かもしれないおまけ機能を提供する
+            集合とかそういうの
             </summary>
     </member>
-    <member name="T:usagi.Boxing.Optional">
+    <member name="T:usagi.Collection.Enumerable">
       <summary>
-            Optional&lt;T&gt; への糖衣構文
+        <see cref="T:System.Linq.Enumerable" /> をより便利に
+            した列挙機能を提供する。
+            <para />
+            大別して2系統の Range が使用可能になる。
+            <para />
+            1. <see cref="T:System.Linq.Enumerable" /> 互換の
+            <code>Range( Begin, Count )</code> 系
+            2. 数学や工学で一般的な区間表現に互換の
+            <code>Range( Begin, End, Termination )</code> 系
+            <para />
+            後者は必ず引数を3つ以上とり、区間の始端、終端に続けて
+            区間端の開閉を <see cref="T:usagi.Collection.Enumerable.RangeTermination" /> で要求する。
             </summary>
     </member>
-    <member name="M:usagi.Boxing.Optional.FromValue``1(``0)">
+    <member name="M:usagi.Collection.Enumerable.Range(System.Int32,System.Int32)">
       <summary>
-            Optional&lt;T&gt;.FromValu&lt;T&gt; への糖衣構文
+            [ begin, ...., begin + count ) な列挙を得る。
+            但し、 <code>count &lt; 0</code> では空の結果を得る。
+            <para /><see cref="M:System.Linq.Enumerable.Range(System.Int32,System.Int32)" /> への糖衣構文
             </summary>
-      <typeparam name="T">ボクシングしたい任意のオブジェクトの型</typeparam>
-      <param name="value">ボクシングしたい任意のオブジェクト</param>
-      <returns>ボクシングされた任意のオブジェクト</returns>
-    </member>
-    <member name="T:usagi.Boxing.Optional`1">
-      <summary>
-            任意の型&lt;T&gt; についてオブジェクトの有無のチェック機構を設けたボクシングされた型を提供する
-            <list type="bullet"><item><description>オブジェクトを放り込むと暗黙的に T 型のオブジェクトとしても振る舞う</description></item><item><description>null を放り込むと T 型の空のオブジェクトとして振る舞う</description></item><item><description>IDisposable なオブジェクトに対してはボクシングしたまま IDisposable できる</description></item></list></summary>
-      <typeparam name="T">ボクシングしたい任意の型</typeparam>
       <remarks>
-            内部表現は object による
+            とかしても Enumerable.Range と EnumerableHelper.Range を
+            使い分けするの手間なのでこっちで .Range の面倒を全てみられるよう用意した。
             </remarks>
+      <param name="begin">はじまり</param>
+      <param name="count">いくつ欲しいのか</param>
+      <returns>[ begin, ...., begin + count ) な列挙</returns>
     </member>
-    <member name="T:usagi.Boxing.Optional`1.InvalidValueException">
+    <member name="M:usagi.Collection.Enumerable.Range(System.Int32)">
       <summary>
-            オブジェクトを内包していない状態でオブジェクトを要求するメソッドを呼んだりすると飛ばします。
+            [ 0, ...., count ) な列挙を得る
+            <para /><see cref="M:usagi.Collection.Enumerable.Range(System.Int32,System.Int32)" />
+            へ <code>( 0, count )</code> を渡す糖衣構文
             </summary>
-    </member>
-    <member name="M:usagi.Boxing.Optional`1.InvalidValueException.#ctor(System.String)">
-      <summary>
-            生成
-            </summary>
-      <param name="m">込めたいメッセージ</param>
-    </member>
-    <member name="F:usagi.Boxing.Optional`1.o">
-      <summary>
-            内部表現
-            </summary>
-    </member>
-    <member name="M:usagi.Boxing.Optional`1.#ctor">
-      <summary>
-            空のボクシングオブジェクトを生成します。
-            <para />それはおおよそソフトな null っぽいものです。
-            </summary>
-    </member>
-    <member name="M:usagi.Boxing.Optional`1.#ctor(`0)">
-      <summary>
-            オブジェクトを内包したボクシングオブジェクトを生成します。
-            <para />生成されたボクシングオブジェクトはおおよそ暗黙の型変換によりT型のオブジェクトっぽく振る舞います。
-            </summary>
-      <param name="value">内包させるオブジェクト</param>
-    </member>
-    <member name="M:usagi.Boxing.Optional`1.Reset(`0,System.Boolean)">
-      <summary>
-            ボクシングオブジェクトにオブジェクトを新たに内包させます。
-            <para />既に内包しているオブジェクトがあった場合その運命はガベージコレクターに委ねられます。たぶん。
-            </summary>
-      <param name="value">新たに内包させるオブジェクト</param>
-      <param name="dispose">既に内包しているオブジェクトがあり、かつ IDisposable を実装している場合に Dispose する場合は true 、しなくていい場合は false</param>
-      <returns>新たなオブジェクトを内包した this</returns>
-    </member>
-    <member name="M:usagi.Boxing.Optional`1.Reset(`0,`0@)">
-      <summary>
-            新たなオブジェクトを内包させると同時に既に内包しているオブジェクトがあった場合には取り出せる版の Reset　です。
-            </summary>
-      <param name="value">新たに内包させるオブジェクト</param>
-      <param name="previously">既に内包しているオブジェクトがあった場合に取り出す先</param>
-      <returns>新たなオブジェクトを内包した this</returns>
-    </member>
-    <member name="M:usagi.Boxing.Optional`1.Get">
-      <summary>
-            内包するオブジェクトがあれば取り出します。
-            この機能は T 型への暗黙の型変換と等価です。
-            </summary>
-      <exception cref="T:usagi.Boxing.Optional`1.InvalidValueException">内包するオブジェクトが無い場合に飛びます。</exception>
-      <returns>内包するオブジェクト</returns>
-    </member>
-    <member name="M:usagi.Boxing.Optional`1.TryGet(`0@)">
-      <summary>
-            内包するオブジェクトがあれば value へ取り出し true を返します。
-            <para />内包するオブジェクトが無ければ value には何もせず false を返します。
-            </summary>
-      <param name="value">内包するオブジェクトがあれば代入されます。無ければ何もされません。</param>
-      <returns>内包するオブジェクトを value へ取り出せた場合は true 、そうでない場合には false が帰ります。</returns>
       <remarks>
-            Get や暗黙の型変換で例外が飛ぶ可能性を嫌う場合にどうぞ。
+            とかしても Enumerable.Range と EnumerableHelper.Range を
+            使い分けするの手間なのでこっちで .Range の面倒を全てみられるよう用意した。
             </remarks>
+      <param name="count">いくつ欲しいのか</param>
+      <returns>[ begin, ...., begin + count ) な列挙</returns>
     </member>
-    <member name="M:usagi.Boxing.Optional`1.IsValid">
+    <member name="T:usagi.Collection.Enumerable.RangeTermination">
       <summary>
-            内包するオブジェクトの有無を返します。
-            </summary>
-      <returns>内包するオブジェクトがあれば true 、無ければ false が返ります。</returns>
-    </member>
-    <member name="M:usagi.Boxing.Optional`1.op_True(usagi.Boxing.Optional{`0})">
-      <summary>
-            内包するオブジェクトが有効な場合に operator true として true を返します。
-            </summary>
-      <param name="optional">ボクシングオブジェクト</param>
-      <returns>内包するオブジェクトが有効な場合は true 、そうでなければ false</returns>
-    </member>
-    <member name="M:usagi.Boxing.Optional`1.op_False(usagi.Boxing.Optional{`0})">
-      <summary>
-            内包するオブジェクトが無効な場合に operator false として true を返します。
-            </summary>
-      <param name="optional">ボクシングオブジェクト</param>
-      <returns>内包するオブジェクトが無効な場合は true 、そうでなければ false</returns>
-    </member>
-    <member name="M:usagi.Boxing.Optional`1.op_Implicit(usagi.Boxing.Optional{`0})~`0">
-      <summary>
-            暗黙の型変換により T 型へ変換します。
-            Get と等価に機能します。
-            </summary>
-      <param name="optional">ボクシングオブジェクト</param>
-      <returns>内包するT型のインスタンス</returns>
-    </member>
-    <member name="M:usagi.Boxing.Optional`1.FromValue(`0)">
-      <summary>
-            内包させたいオブジェクトからボクシングオブジェクトを生成するファクトリー
-            </summary>
-      <param name="value">内包させたいオブジェクト</param>
-      <returns>value を内包したボクシングオブジェクト</returns>
-    </member>
-    <member name="P:usagi.Boxing.Optional`1.Null">
-      <summary>
-            空のボクシングオブジェクトを生成するファクトリーとして機能するプロパティー
-            new Optional&lt;T&gt;() の糖衣構文です。 new と ctor の ( ) をタイプしたくないあなたに。
+            区間末尾の開閉を表す。
             </summary>
     </member>
-    <member name="M:usagi.Boxing.Optional`1.Dispose">
+    <member name="F:usagi.Collection.Enumerable.RangeTermination.OO">
+      <summary>開区間 ( ... ) </summary>
+    </member>
+    <member name="F:usagi.Collection.Enumerable.RangeTermination.OC">
+      <summary>半開区間 ( ... ] </summary>
+    </member>
+    <member name="F:usagi.Collection.Enumerable.RangeTermination.CO">
+      <summary>半開区間 [ ... ) </summary>
+    </member>
+    <member name="F:usagi.Collection.Enumerable.RangeTermination.CC">
+      <summary>閉区間 [ ... ] </summary>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range``1(System.Func{``0,``0},System.ValueTuple{``0,``0,usagi.Collection.Enumerable.RangeTermination}[])">
       <summary>
-            内包するオブジェクトが IDisposable を実装する場合には Dispose します。
-            <para />ボクシングオブジェクトとしても内包するオブジェクトの運命をガベージコレクターへ任せ、自身は何も内包しない状態へ変化します。
+            複数の区間を列挙する。
+            区間間（タイポではない）は、連続でも、不連続でも、重複が無くても、重複があっても構わない。
+            </summary>
+      <typeparam name="T">要素の型</typeparam>
+      <param name="stepper">T型をインクリメントするファンクター</param>
+      <param name="ranges">任意個の ( 始端要素, 終端要素, 区間端の開閉) 群</param>
+      <returns>すべての区間の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range``1(``0,``0,usagi.Collection.Enumerable.RangeTermination,System.Func{``0,``0})">
+      <summary>
+            始端、終端、区間端の開閉、要素のインクリメントファンクターによる
+            ジェネリック版 Range
+            </summary>
+      <typeparam name="T">区間の要素の型</typeparam>
+      <param name="begin">区間の始端</param>
+      <param name="end">区間の終端</param>
+      <param name="termination">区間端の開閉</param>
+      <param name="stepper">T型をインクリメントするファンクター</param>
+      <returns>区間の要素の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.Byte,System.Byte,usagi.Collection.Enumerable.RangeTermination)">
+      <summary>
+            区間 { begin ... end } を列挙します。
+            </summary>
+      <param name="begin">区間の始端</param>
+      <param name="end">区間の終端</param>
+      <param name="termination">区間端の開閉</param>
+      <returns>区間の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.SByte,System.SByte,usagi.Collection.Enumerable.RangeTermination)">
+      <summary>
+            区間 { begin ...  end } を列挙します。
+            </summary>
+      <param name="begin">区間の始端</param>
+      <param name="end">区間の終端</param>
+      <param name="termination">区間端の開閉</param>
+      <returns>区間の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.Int16,System.Int16,usagi.Collection.Enumerable.RangeTermination)">
+      <summary>
+            区間 { begin ... end } を列挙します。
+            </summary>
+      <param name="begin">区間の始端</param>
+      <param name="end">区間の終端</param>
+      <param name="termination">区間端の開閉</param>
+      <returns>区間の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.RangeOO(System.UInt16,System.UInt16,usagi.Collection.Enumerable.RangeTermination)">
+      <summary>
+            区間 { begin ... end } を列挙します。
+            </summary>
+      <param name="begin">区間の始端</param>
+      <param name="end">区間の終端</param>
+      <param name="termination">区間端の開閉</param>
+      <returns>区間の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.Int32,System.Int32,usagi.Collection.Enumerable.RangeTermination)">
+      <summary>
+            区間 { begin ... end } を列挙します。
+            </summary>
+      <param name="begin">区間の始端</param>
+      <param name="end">区間の終端</param>
+      <param name="termination">区間端の開閉</param>
+      <returns>区間の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.UInt32,System.UInt32,usagi.Collection.Enumerable.RangeTermination)">
+      <summary>
+            区間 { begin ... end } を列挙します。
+            </summary>
+      <param name="begin">区間の始端</param>
+      <param name="end">区間の終端</param>
+      <param name="termination">区間端の開閉</param>
+      <returns>区間の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.Int64,System.Int64,usagi.Collection.Enumerable.RangeTermination)">
+      <summary>
+            区間 { begin ... end } を列挙します。
+            </summary>
+      <param name="begin">区間の始端</param>
+      <param name="end">区間の終端</param>
+      <param name="termination">区間端の開閉</param>
+      <returns>区間の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.UInt64,System.UInt64,usagi.Collection.Enumerable.RangeTermination)">
+      <summary>
+            区間 { begin ... end } を列挙します。
+            </summary>
+      <param name="begin">区間の始端</param>
+      <param name="end">区間の終端</param>
+      <param name="termination">区間端の開閉</param>
+      <returns>区間の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.Decimal,System.Decimal,usagi.Collection.Enumerable.RangeTermination)">
+      <summary>
+            区間 { begin ... end } を列挙します。
+            </summary>
+      <param name="begin">区間の始端</param>
+      <param name="end">区間の終端</param>
+      <param name="termination">区間端の開閉</param>
+      <returns>区間の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.Double,System.Double,usagi.Collection.Enumerable.RangeTermination)">
+      <summary>
+            区間 { begin ... end } を列挙します。
+            </summary>
+      <param name="begin">区間の始端</param>
+      <param name="end">区間の終端</param>
+      <param name="termination">区間端の開閉</param>
+      <returns>区間の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.Single,System.Single,usagi.Collection.Enumerable.RangeTermination)">
+      <summary>
+            区間 { begin ... end } を列挙します。
+            </summary>
+      <param name="begin">区間の始端</param>
+      <param name="end">区間の終端</param>
+      <param name="termination">区間端の開閉</param>
+      <returns>区間の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.Byte,System.Byte,usagi.Collection.Enumerable.RangeTermination}[])">
+      <summary>
+            複数の区間の要素をまとめて列挙する
+            </summary>
+      <param name="ranges">区間群</param>
+      <returns>区間群の要素の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.SByte,System.SByte,usagi.Collection.Enumerable.RangeTermination}[])">
+      <summary>
+            複数の区間の要素をまとめて列挙する
+            </summary>
+      <param name="ranges">区間群</param>
+      <returns>区間群の要素の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.UInt16,System.UInt16,usagi.Collection.Enumerable.RangeTermination}[])">
+      <summary>
+            複数の区間の要素をまとめて列挙する
+            </summary>
+      <param name="ranges">区間群</param>
+      <returns>区間群の要素の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.Int16,System.Int16,usagi.Collection.Enumerable.RangeTermination}[])">
+      <summary>
+            複数の区間の要素をまとめて列挙する
+            </summary>
+      <param name="ranges">区間群</param>
+      <returns>区間群の要素の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.UInt32,System.UInt32,usagi.Collection.Enumerable.RangeTermination}[])">
+      <summary>
+            複数の区間の要素をまとめて列挙する
+            </summary>
+      <param name="ranges">区間群</param>
+      <returns>区間群の要素の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.Int32,System.Int32,usagi.Collection.Enumerable.RangeTermination}[])">
+      <summary>
+            複数の区間の要素をまとめて列挙する
+            </summary>
+      <param name="ranges">区間群</param>
+      <returns>区間群の要素の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.UInt64,System.UInt64,usagi.Collection.Enumerable.RangeTermination}[])">
+      <summary>
+            複数の区間の要素をまとめて列挙する
+            </summary>
+      <param name="ranges">区間群</param>
+      <returns>区間群の要素の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.Int64,System.Int64,usagi.Collection.Enumerable.RangeTermination}[])">
+      <summary>
+            複数の区間の要素をまとめて列挙する
+            </summary>
+      <param name="ranges">区間群</param>
+      <returns>区間群の要素の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.Decimal,System.Decimal,usagi.Collection.Enumerable.RangeTermination}[])">
+      <summary>
+            複数の区間の要素をまとめて列挙する
+            </summary>
+      <param name="ranges">区間群</param>
+      <returns>区間群の要素の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.Single,System.Single,usagi.Collection.Enumerable.RangeTermination}[])">
+      <summary>
+            複数の区間の要素をまとめて列挙する
+            </summary>
+      <param name="ranges">区間群</param>
+      <returns>区間群の要素の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.Double,System.Double,usagi.Collection.Enumerable.RangeTermination}[])">
+      <summary>
+            複数の区間の要素をまとめて列挙する
+            </summary>
+      <param name="ranges">区間群</param>
+      <returns>区間群の要素の列挙</returns>
+    </member>
+    <member name="T:usagi.Collection.Extension.IDictionaryExtension">
+      <summary>
+            Dictionary な何かへの機能拡張群
             </summary>
     </member>
-    <member name="T:usagi.Boxing.Utility">
+    <member name="M:usagi.Collection.Extension.IDictionaryExtension.UnorderedEqual``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEqualityComparer{``1})">
       <summary>
-            Boxing を使ったちょっとした便利機能
+            IDictionary を実装する型 a, b について等価な Key と Value の組み合わせ群を保持するか判定する。
+            SequenceEqual と異なり列挙される順序の影響を受けない
+            ref. https://stackoverflow.com/a/3928856/1211392
+            </summary>
+      <typeparam name="TK">Key の型</typeparam>
+      <typeparam name="TV">Value の型</typeparam>
+      <param name="a">比較において this となる IDictionary を実装する型のインスタンス</param>
+      <param name="b">比較において this と比較される IDictionary を実装する型のインスタンス</param>
+      <param name="c">TV型の等価判定関数。 null を与えた場合は EqualityComparer&lt;TV&gt;.Default を採用する</param>
+      <returns>a, b が等価な Key と Value の組み合わせ群を保持する場合は true 、そうでなければ false</returns>
+    </member>
+    <member name="T:usagi.Collection.Extension.IEnumerableExtension">
+      <summary>
+            Enumerable な何かの機能拡張群
             </summary>
     </member>
-    <member name="M:usagi.Boxing.Utility.FirstOfOptional``1(System.Collections.Generic.IEnumerable{``0})">
+    <member name="M:usagi.Collection.Extension.IEnumerableExtension.WithIndexing``1(System.Collections.Generic.IEnumerable{``0})">
       <summary>
-            列挙の先頭要素をボクシングオブジェクトで取り出します。
+            IEnumerable を列挙順にインデックス付きにするやつ
+            ref. https://ufcpp.net/blog/2016/12/tipsindexedforeach/
             </summary>
-      <typeparam name="T">列挙された任意の型</typeparam>
-      <param name="values">列挙された任意の型のオブジェクト群</param>
-      <returns>列挙の先頭要素または空のボクシングオブジェクト</returns>
+      <example>
+        <code>
+            // 適当な IEnumerable な何か
+            var items = new string[]{ "aaa", "bbb", "ccc" };
+            // タプルで取り出すぱたーん
+            foreach ( var indexed_item in items )
+              Console.WriteLine( $"index={indexed_item.Index} item={indexed_item.Item}" );
+            // タプルを構造化束縛で取り出すぱたーん
+            foreach ( var (index,item) in items )
+              Console.WriteLine( $"index={index} item={item}" );
+            </code>
+      </example>
+      <typeparam name="T">IEnumerable で取り出せる中身の型</typeparam>
+      <param name="items">IEnumerable な何か</param>
+      <returns>インデクシングされたアイテムの列挙</returns>
     </member>
-    <member name="M:usagi.Boxing.Utility.LastOfOptional``1(System.Collections.Generic.IEnumerable{``0})">
+    <member name="M:usagi.Collection.Extension.IEnumerableExtension.UnorderedEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
       <summary>
-            列挙の末尾要素をボクシングオブジェクトで取り出します。
+            IEnumerable を実装する型 a, b について等価な値を保持するか判定する。
+            SequenceEqual と異なり列挙される順序の影響を受けない
+            ref. https://stackoverflow.com/a/3670089/1211392
             </summary>
-      <typeparam name="T">列挙された任意の型</typeparam>
-      <param name="values">列挙された任意の型のオブジェクト群</param>
-      <returns>列挙の末尾要素または空のボクシングオブジェクト</returns>
+      <typeparam name="T">IEnumerable で取り出せる中身の型</typeparam>
+      <param name="a">IEnumerable を実装する型 a</param>
+      <param name="b">IEnumerable を実装する型 b</param>
+      <returns>等価な値を保持している場合は true</returns>
     </member>
-    <member name="T:usagi.CivilEngineering.LonLatHelper">
+    <member name="M:usagi.Collection.Extension.IEnumerableExtension.Range``1(System.Int32,System.Func{``0})">
+      <summary>
+            generator で count 個の列挙を得る。
+            但し、 <code>count &lt; 0</code> では空の結果を得る。
+            </summary>
+      <typeparam name="T">generator 出力する型</typeparam>
+      <param name="count">出力を得たい数量</param>
+      <param name="generator">出力を生成可能なファンクター</param>
+      <returns>generator により生成される count 個の列挙</returns>
+    </member>
+    <member name="M:usagi.Collection.Extension.IEnumerableExtension.Range``1(System.Int32,System.Int32,System.Func{System.Int32,``0})">
+      <summary>
+            [ begin, ... , count ) を始域とし、
+            generator を写像として得られる
+            順序対の終域の要素の列挙を得る。
+            但し、 <code>count &lt; 0</code> では空の結果を得る。
+            </summary>
+      <typeparam name="T">generator の出力する型</typeparam>
+      <param name="begin">始域のはじめに列挙される数</param>
+      <param name="count">始域の要素数</param>
+      <param name="generator">始域の要素から出力を生成可能なファンクター</param>
+      <returns>
+            [ begin, ... , count ) を始域とし、
+            generator を写像として得られる
+            順序対の終域の要素の列挙
+            </returns>
+    </member>
+    <member name="M:usagi.Collection.Extension.IEnumerableExtension.Range``1(System.Int32,System.Func{System.Int32,``0})">
+      <summary>
+            [ 0, ... , count ) を始域とし、
+            generator を写像として得られる
+            順序対の終域の要素の列挙を得る。
+            但し、 <code>count &lt; 0</code> では空の結果を得る。
+            </summary>
+      <typeparam name="T">generator の出力する型</typeparam>
+      <param name="count">始域の要素数</param>
+      <param name="generator">始域の要素から出力を生成可能なファンクター</param>
+      <returns>
+            [ 0, ... , count ) を始域とし、
+            generator を写像として得られる
+            順序対の終域の要素の列挙を得る
+            </returns>
+    </member>
+    <member name="N:usagi.Collection.Extension">
+      <summary>
+            IEnumerable, IDictionary など Collection 向けの Extension 
+            </summary>
+    </member>
+    <member name="N:usagi.CivilEngineering.Extension">
+      <summary>
+            エクステンション
+            </summary>
+    </member>
+    <member name="T:usagi.CivilEngineering.Extension.LonLatDistanceExtension">
       <summary>
             経緯度型 <see cref="T:usagi.Quantity.GeoLocation.LonLat" />, 経緯度取得可能インターフェース <see cref="T:usagi.Quantity.GeoLocation.ILonLatGettable" /> 
             を拡張する
             </summary>
     </member>
-    <member name="T:usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm">
+    <member name="T:usagi.CivilEngineering.Extension.LonLatDistanceExtension.LonLatDistanceAlgorithm">
       <summary>
             平面角次元群による経緯度から長さ次元の距離を計算する際に使用するアルゴリズム
             </summary>
     </member>
-    <member name="F:usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm.Haversine">
+    <member name="F:usagi.CivilEngineering.Extension.LonLatDistanceExtension.LonLatDistanceAlgorithm.Haversine">
       <summary>
             Haversine 法（半正矢関数の公式）
             <list type="bullet"><item><description>惑星の赤道方向への半径から概算する。</description></item><item><description>惑星の楕円体としての扁平率は無視する。</description></item><item><description>負荷は軽いが高精度な計算結果を求めたい場合には向かない。</description></item></list></summary>
       <seealso href="https://en.wikipedia.org/wiki/Haversine_formula" />
       <seealso href="https://ja.wikipedia.org/wiki/%E7%90%83%E9%9D%A2%E4%B8%89%E8%A7%92%E6%B3%95#haversine_%E5%8D%8A%E6%AD%A3%E7%9F%A2%E9%96%A2%E6%95%B0" />
     </member>
-    <member name="F:usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm.Vincenty">
+    <member name="F:usagi.CivilEngineering.Extension.LonLatDistanceExtension.LonLatDistanceAlgorithm.Vincenty">
       <summary>
             Vincenty 法
             <list type="bullet"><item><description>惑星を楕円体近似した赤道方向への半径、回転軸方向への半径、扁平率を考慮し、十分な計算精度を反復計算により確保する。</description></item><item><description>負荷は高いが高精度な計算結果を求めたい場合に向く。</description></item></list></summary>
@@ -190,7 +401,7 @@
       <seealso href="https://en.wikipedia.org/wiki/Vincenty%27s_formulae" />
       <seealso href="https://ja.wikipedia.org/wiki/Vincenty%E6%B3%95" />
     </member>
-    <member name="M:usagi.CivilEngineering.LonLatHelper.NearlyEqualsTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.Length,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
+    <member name="M:usagi.CivilEngineering.Extension.LonLatDistanceExtension.NearlyEqualsTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.Length,usagi.CivilEngineering.Extension.LonLatDistanceExtension.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
       <summary>
             経緯度の位置 a, b の惑星を楕円体近似した場合の距離が
             許容範囲 tolerance 以下か判定
@@ -202,7 +413,7 @@
       <param name="planet">楕円体近似した惑星の形状定義; null の場合は <see cref="P:usagi.CivilEngineering.Planet.GeometricalSpecification.Earth_WGS84" /> が採用されます </param>
       <returns>許容範囲以下なら true</returns>
     </member>
-    <member name="M:usagi.CivilEngineering.LonLatHelper.LongitudeDistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
+    <member name="M:usagi.CivilEngineering.Extension.LonLatDistanceExtension.LongitudeDistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.Extension.LonLatDistanceExtension.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
       <summary>
             経緯度の位置 a と b の中間の緯度における経度方向の距離を計算する
             </summary>
@@ -212,7 +423,7 @@
       <param name="planet">楕円体近似した惑星の形状定義; null の場合は <see cref="P:usagi.CivilEngineering.Planet.GeometricalSpecification.Earth_WGS84" /> が採用されます </param>
       <returns>経度方向の距離</returns>
     </member>
-    <member name="M:usagi.CivilEngineering.LonLatHelper.LatitudeDistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
+    <member name="M:usagi.CivilEngineering.Extension.LonLatDistanceExtension.LatitudeDistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.Extension.LonLatDistanceExtension.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
       <summary>
             経緯度の位置 a と b の緯度方向の距離を計算する
             </summary>
@@ -222,7 +433,7 @@
       <param name="planet">楕円体近似した惑星の形状定義; null の場合は <see cref="P:usagi.CivilEngineering.Planet.GeometricalSpecification.Earth_WGS84" /> が採用されます </param>
       <returns>緯度方向の距離</returns>
     </member>
-    <member name="M:usagi.CivilEngineering.LonLatHelper.DistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
+    <member name="M:usagi.CivilEngineering.Extension.LonLatDistanceExtension.DistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.Extension.LonLatDistanceExtension.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
       <summary>
             2つの経緯度 a, b について、
             楕円体近似した惑星の形状定義 planet 上における
@@ -234,7 +445,7 @@
       <param name="planet">楕円体近似した惑星の形状定義; null の場合は <see cref="P:usagi.CivilEngineering.Planet.GeometricalSpecification.Earth_WGS84" /> が採用されます </param>
       <returns>距離</returns>
     </member>
-    <member name="M:usagi.CivilEngineering.LonLatHelper.DistanceToHaversine(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
+    <member name="M:usagi.CivilEngineering.Extension.LonLatDistanceExtension.DistanceToHaversine(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
       <summary>
             DistanceTo の Haversine アルゴリズム版の実装詳細
             </summary>
@@ -243,7 +454,7 @@
       <param name="planet">楕円体近似した惑星の形状定義; null の場合は <see cref="P:usagi.CivilEngineering.Planet.GeometricalSpecification.Earth_WGS84" /> が採用されます </param>
       <returns>距離</returns>
     </member>
-    <member name="M:usagi.CivilEngineering.LonLatHelper.DistanceToVincenty(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
+    <member name="M:usagi.CivilEngineering.Extension.LonLatDistanceExtension.DistanceToVincenty(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)">
       <summary>
             DistanceTo の Vincenty アルゴリズム版の実装詳細
             </summary>
@@ -306,6 +517,112 @@
       <remarks>
             楕円の円周の計算は負荷がそこそこ高くなるので事前に計算した値を入れた。
             </remarks>
+    </member>
+    <member name="T:usagi.CivilEngineering.TileLocation">
+      <summary>
+            タイル座標系の位置
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.TileLocation.X">
+      <summary>
+            タイル X 座標
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.TileLocation.Y">
+      <summary>
+            タイル Y 座標
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.TileLocation.Z">
+      <summary>
+            Level of Detail ( LOD; or Zoom Level )
+            X, Y 座標の空間の大きさを定義する Z 値（この値は厳密には座標ではない）
+            </summary>
+    </member>
+    <member name="M:usagi.CivilEngineering.TileLocation.#ctor">
+      <summary>
+            X=Y=Z=0 で生成
+            </summary>
+    </member>
+    <member name="M:usagi.CivilEngineering.TileLocation.#ctor(System.UInt32,System.UInt32,System.Byte)">
+      <summary>
+            X, Y, Z 値を指定して生成
+            </summary>
+      <param name="x">X 座標</param>
+      <param name="y">Y 座標</param>
+      <param name="z">Z 値</param>
+    </member>
+    <member name="M:usagi.CivilEngineering.TileLocation.ToString">
+      <summary>
+            文字列化
+            </summary>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.TileLocation.Equals(System.Object)">
+      <summary>
+            等価な位置を保持するか判定
+            </summary>
+      <param name="obj">比較対象</param>
+      <returns>等価な位置を保持していれば true</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.TileLocation.GetHashCode">
+      <summary>
+            ハッシュ値を計算
+            </summary>
+      <returns>ハッシュ値</returns>
+    </member>
+    <member name="T:usagi.CivilEngineering.PixelLocation">
+      <summary>
+            ピクセル座標系の位置
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.PixelLocation.X">
+      <summary>
+            ピクセル X 座標
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.PixelLocation.Y">
+      <summary>
+            ピクセル Y 座標
+            </summary>
+    </member>
+    <member name="P:usagi.CivilEngineering.PixelLocation.Z">
+      <summary>
+            Level of Detail ( LOD; or Zoom Level )
+            X, Y 座標の空間の大きさを定義する Z 値（この値は厳密には座標ではない）
+            </summary>
+    </member>
+    <member name="M:usagi.CivilEngineering.PixelLocation.#ctor">
+      <summary>
+            X = Y = Z = 0 で生成
+            </summary>
+    </member>
+    <member name="M:usagi.CivilEngineering.PixelLocation.#ctor(System.UInt32,System.UInt32,System.Byte)">
+      <summary>
+            X, Y, Z 値を指定して生成
+            </summary>
+      <param name="x">X 座標</param>
+      <param name="y">Y 座標</param>
+      <param name="z">Z 値</param>
+    </member>
+    <member name="M:usagi.CivilEngineering.PixelLocation.ToString">
+      <summary>
+            文字列化
+            </summary>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.PixelLocation.Equals(System.Object)">
+      <summary>
+            等価な位置を保持するか判定
+            </summary>
+      <param name="obj">比較対象</param>
+      <returns>等価な位置を保持していれば true</returns>
+    </member>
+    <member name="M:usagi.CivilEngineering.PixelLocation.GetHashCode">
+      <summary>
+            ハッシュ値を計算
+            </summary>
+      <returns>ハッシュ値</returns>
     </member>
     <member name="T:usagi.CivilEngineering.WebMercator">
       <summary>
@@ -392,184 +709,196 @@
             土木っぽい何か
             </summary>
     </member>
-    <member name="T:usagi.CivilEngineering.PixelLocation">
+    <member name="N:usagi.ColorSpace">
       <summary>
-            ピクセル座標系の位置
+            色空間、色について扱う
             </summary>
     </member>
-    <member name="P:usagi.CivilEngineering.PixelLocation.X">
+    <member name="T:usagi.ColorSpace.Factory">
       <summary>
-            ピクセル X 座標
+            色のファクトリー
             </summary>
     </member>
-    <member name="P:usagi.CivilEngineering.PixelLocation.Y">
+    <member name="M:usagi.ColorSpace.Factory.FromRGBA(System.Byte,System.Byte,System.Byte,System.Byte)">
       <summary>
-            ピクセル Y 座標
+            R:8, G:8, B:8, A:8 から Color を作る
+            </summary>
+      <param name="r">赤っぽさ</param>
+      <param name="g">緑っぽさ</param>
+      <param name="b">青っぽさ</param>
+      <param name="a">不透明度</param>
+      <returns>色</returns>
+    </member>
+    <member name="M:usagi.ColorSpace.Factory.FromRGBA(System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            R:F32, G:F32, B:F32, A:F32 から Color を作る
+            </summary>
+      <param name="r">赤っぽさ</param>
+      <param name="g">緑っぽさ</param>
+      <param name="b">青っぽさ</param>
+      <param name="a">不透明度</param>
+      <returns>色</returns>
+    </member>
+    <member name="M:usagi.ColorSpace.Factory.FromRGBA(System.Double,System.Double,System.Double,System.Double)">
+      <summary>
+            R:F64, G:F64, B:F64, A:F64 から Color を作る
+            </summary>
+      <param name="r">赤っぽさ</param>
+      <param name="g">緑っぽさ</param>
+      <param name="b">青っぽさ</param>
+      <param name="a">不透明度</param>
+      <returns>色</returns>
+    </member>
+    <member name="M:usagi.ColorSpace.Factory.FromHSLA(System.Double,System.Double,System.Double,System.Double)">
+      <summary>
+            HSLA から色をつくる
+            </summary>
+      <param name="h_in_degrees">色相 deg</param>
+      <param name="s">飽和度</param>
+      <param name="l">明るさ</param>
+      <param name="a">不透明度</param>
+      <returns>色</returns>
+    </member>
+    <member name="M:usagi.ColorSpace.Factory.FromHSLA(usagi.Quantity.PlaneAngle,System.Double,System.Double,System.Double)">
+      <summary>
+            HSLA から色をつくる
+            </summary>
+      <param name="h">色相</param>
+      <param name="s">飽和度</param>
+      <param name="l">明るさ</param>
+      <param name="a">不透明度</param>
+      <returns>色　</returns>
+    </member>
+    <member name="N:usagi.ColorSpace.Extension">
+      <summary>
+            エクステンション
             </summary>
     </member>
-    <member name="P:usagi.CivilEngineering.PixelLocation.Z">
+    <member name="T:usagi.ColorSpace.Extension.StringExtetnsion">
       <summary>
-            Level of Detail ( LOD; or Zoom Level )
-            X, Y 座標の空間の大きさを定義する Z 値（この値は厳密には座標ではない）
+        <see cref="T:System.String" /> に色っぽい機能拡張を施す
             </summary>
     </member>
-    <member name="M:usagi.CivilEngineering.PixelLocation.#ctor">
+    <member name="T:usagi.ColorSpace.Extension.StringExtetnsion.ColorPatternTrial">
       <summary>
-            X = Y = Z = 0 で生成
+            色のパターンのどれを試すか表現。
             </summary>
     </member>
-    <member name="M:usagi.CivilEngineering.PixelLocation.#ctor(System.UInt32,System.UInt32,System.Byte)">
+    <member name="F:usagi.ColorSpace.Extension.StringExtetnsion.ColorPatternTrial.Name">
       <summary>
-            X, Y, Z 値を指定して生成
-            </summary>
-      <param name="x">X 座標</param>
-      <param name="y">Y 座標</param>
-      <param name="z">Z 値</param>
-    </member>
-    <member name="M:usagi.CivilEngineering.PixelLocation.ToString">
-      <summary>
-            文字列化
-            </summary>
-      <returns>文字列</returns>
-    </member>
-    <member name="M:usagi.CivilEngineering.PixelLocation.Equals(System.Object)">
-      <summary>
-            等価な位置を保持するか判定
-            </summary>
-      <param name="obj">比較対象</param>
-      <returns>等価な位置を保持していれば true</returns>
-    </member>
-    <member name="M:usagi.CivilEngineering.PixelLocation.GetHashCode">
-      <summary>
-            ハッシュ値を計算
-            </summary>
-      <returns>ハッシュ値</returns>
-    </member>
-    <member name="T:usagi.CivilEngineering.TileLocation">
-      <summary>
-            タイル座標系の位置
+            色名
             </summary>
     </member>
-    <member name="P:usagi.CivilEngineering.TileLocation.X">
+    <member name="F:usagi.ColorSpace.Extension.StringExtetnsion.ColorPatternTrial.Hex">
       <summary>
-            タイル X 座標
+            #RGB, #RRGGBB, #ARGB, #AARRGGBB
             </summary>
     </member>
-    <member name="P:usagi.CivilEngineering.TileLocation.Y">
+    <member name="F:usagi.ColorSpace.Extension.StringExtetnsion.ColorPatternTrial.CSS_RGBA">
       <summary>
-            タイル Y 座標
+            rgba(r,g,b,a), rgb(r,g,b)
             </summary>
     </member>
-    <member name="P:usagi.CivilEngineering.TileLocation.Z">
+    <member name="F:usagi.ColorSpace.Extension.StringExtetnsion.ColorPatternTrial.CSS_HSLA">
       <summary>
-            Level of Detail ( LOD; or Zoom Level )
-            X, Y 座標の空間の大きさを定義する Z 値（この値は厳密には座標ではない）
+            hsla(h,s,l,a ), hsl(h,s,l)
             </summary>
     </member>
-    <member name="M:usagi.CivilEngineering.TileLocation.#ctor">
+    <member name="F:usagi.ColorSpace.Extension.StringExtetnsion.ColorPatternTrial._All">
       <summary>
-            X=Y=Z=0 で生成
+            すべて試す
             </summary>
     </member>
-    <member name="M:usagi.CivilEngineering.TileLocation.#ctor(System.UInt32,System.UInt32,System.Byte)">
+    <member name="M:usagi.ColorSpace.Extension.StringExtetnsion.ToColor(System.String,usagi.ColorSpace.Extension.StringExtetnsion.ColorPatternTrial)">
       <summary>
-            X, Y, Z 値を指定して生成
+            Color へ変換
             </summary>
-      <param name="x">X 座標</param>
-      <param name="y">Y 座標</param>
-      <param name="z">Z 値</param>
+      <param name="s">色っぽい文字列</param>
+      <param name="t">パースを試みるパターン</param>
+      <returns>Color</returns>
     </member>
-    <member name="M:usagi.CivilEngineering.TileLocation.ToString">
+    <member name="M:usagi.ColorSpace.Extension.StringExtetnsion.ToColorFromHex(System.String)">
       <summary>
-            文字列化
+            #RGB, #RRGGBB, #ARGB, #AARRGGBB パターンをパース
             </summary>
-      <returns>文字列</returns>
+      <param name="s">パース対象</param>
+      <returns>色またはパース失敗時は null</returns>
     </member>
-    <member name="M:usagi.CivilEngineering.TileLocation.Equals(System.Object)">
+    <member name="M:usagi.ColorSpace.Extension.StringExtetnsion.ToColorFromName(System.String)">
       <summary>
-            等価な位置を保持するか判定
+            色名をパース
             </summary>
-      <param name="obj">比較対象</param>
-      <returns>等価な位置を保持していれば true</returns>
+      <param name="s">パース対象</param>
+      <returns>色または失敗時は null </returns>
     </member>
-    <member name="M:usagi.CivilEngineering.TileLocation.GetHashCode">
+    <member name="M:usagi.ColorSpace.Extension.StringExtetnsion.ToColorFromCSSRGBA(System.String)">
       <summary>
-            ハッシュ値を計算
+            rgba(r,g,b,a), rgb(r,g,b) をパース
             </summary>
-      <returns>ハッシュ値</returns>
+      <param name="s">パース対象</param>
+      <returns>色または失敗時は null</returns>
     </member>
-    <member name="N:usagi">
+    <member name="M:usagi.ColorSpace.Extension.StringExtetnsion.ToColorFromCSSHSLA(System.String)">
       <summary>
-            usagi.cs
-            <para />わたしが欲しいと思った適当な機能たち for C#
+            hsla(r,g,b,a), hsl(r,g,b) をパース
             </summary>
-      <seealso href="https://www.nuget.org/packages/usagi/">NuGet: packages/usagi</seealso>
-      <seealso href="https://github.com/usagi/usagi.cs/">GitHhub: usagi/usagi.cs</seealso>
-      <seealso href="https://github.com/usagi/usagi.cs/LICENSE.md">License: MIT</seealso>
-      <seealso href="https://github.com/usagi/">Author's github: usagi</seealso>
-      <seealso href="https://twitter.com/USAGI_WRP">Author's Twitter: USAGI_WRP</seealso>
-      <seealso href="https://www.facebook.com/usagi.wrp">Author's Facebook: usagi.wrp</seealso>
-      <seealso href="https://usagi.hatenablog.jp/">Author's Blog( C++ and techs ): C++ ときどき ごはん、わりとてぃーぶれいく☆</seealso>
+      <param name="s">パース対象</param>
+      <returns>色または失敗時は null</returns>
     </member>
-    <member name="T:usagi.LibraryInformation">
+    <member name="M:usagi.ColorSpace.Extension.StringExtetnsion.ToQuantity(System.String)">
       <summary>
-            このライブラリーの諸元
+            %形式などの文字列から数値をパース
             </summary>
+      <param name="s">パース対象</param>
+      <returns>数値または失敗時は null</returns>
     </member>
-    <member name="F:usagi.LibraryInformation.Name">
+    <member name="T:usagi.ColorSpace.Extension.ColorExtension">
       <summary>
-            ライブラリー名称
+        <see cref="T:System.Windows.Media.Color" /> を機能拡張する。
             </summary>
     </member>
-    <member name="F:usagi.LibraryInformation.NuGet">
+    <member name="M:usagi.ColorSpace.Extension.ColorExtension.NearlyEqualsInHSLA(System.Windows.Media.Color,System.Windows.Media.Color,usagi.Quantity.PlaneAngle,System.Double,System.Double,System.Double)">
       <summary>
-            NuGet のパッケージ URI
+            色が近似的に等価とみなせるか判定する
+            </summary>
+      <param name="a">色その1</param>
+      <param name="b">色その2</param>
+      <param name="hue_tolerance">色相の許容範囲</param>
+      <param name="satulation_tolerance">飽和度の許容範囲</param>
+      <param name="luminance_tolerance">明るさの許容範囲</param>
+      <param name="alpha_tolerance">判定結果</param>
+      <returns>近似的に等価と見做せる場合は true, それ以外は false</returns>
+    </member>
+    <member name="M:usagi.ColorSpace.Extension.ColorExtension.ToHSLA(System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte})">
+      <summary>
+            RGBA から HSLA を生成
+            </summary>
+      <param name="rgba">RGBA</param>
+      <returns>HSLA</returns>
+    </member>
+    <member name="M:usagi.ColorSpace.Extension.ColorExtension.ToHSLA(System.Windows.Media.Color)">
+      <summary>
+        <see cref="T:System.Windows.Media.Color" /> から HSLA を生成
+            </summary>
+      <param name="a">色</param>
+      <returns>HSLA</returns>
+    </member>
+    <member name="N:usagi.String">
+      <summary>
+            文字列な機能
             </summary>
     </member>
-    <member name="F:usagi.LibraryInformation.GitHub">
+    <member name="N:usagi.String.Extension">
       <summary>
-            GitHub のリポジトリー URI
+            エクステンション
             </summary>
     </member>
-    <member name="F:usagi.LibraryInformation.License">
-      <summary>
-            ライセンス
-            </summary>
-    </member>
-    <member name="F:usagi.LibraryInformation.Readme">
-      <summary>
-            りーどみー
-            </summary>
-    </member>
-    <member name="F:usagi.LibraryInformation.Authors">
-      <summary>
-            作った人々
-            </summary>
-    </member>
-    <member name="F:usagi.LibraryInformation.Comitters">
-      <summary>
-            貢献してくれた人々
-            </summary>
-    </member>
-    <member name="T:usagi.Extension.MemoryStreamHelper">
-      <summary>
-        <see cref="T:System.IO.MemoryStream" /> 型を機能拡張する何か
-            </summary>
-    </member>
-    <member name="M:usagi.Extension.MemoryStreamHelper.ToString(System.IO.MemoryStream,System.Text.Encoding)">
-      <summary>
-            string へ変換
-            </summary>
-      <param name="s">元ストリーム</param>
-      <param name="e">エンコーディング; null の場合は <see cref="P:System.Text.Encoding.UTF8" /> を使う</param>
-      <returns>文字列</returns>
-    </member>
-    <member name="T:usagi.Extension.StringHelper">
+    <member name="T:usagi.String.Extension.StringExtension">
       <summary>
             string 型を機能拡張する何か
             </summary>
     </member>
-    <member name="M:usagi.Extension.StringHelper.Contains(System.String,System.String[])">
+    <member name="M:usagi.String.Extension.StringExtension.Contains(System.String,System.String[])">
       <summary>
             Contains の複数パターンを OR 判定できる版
             </summary>
@@ -585,7 +914,7 @@
       <param name="ss">判定したい文字列群</param>
       <returns>s に ss の何れかが含まれれば true</returns>
     </member>
-    <member name="M:usagi.Extension.StringHelper.StartsWith(System.String,System.String[])">
+    <member name="M:usagi.String.Extension.StringExtension.StartsWith(System.String,System.String[])">
       <summary>
             StartsWith の複数パターンを OR 判定できる版
             </summary>
@@ -593,7 +922,7 @@
       <param name="ss">判定したい文字列群</param>
       <returns>s が ss の何れかで始まっていれば true</returns>
     </member>
-    <member name="M:usagi.Extension.StringHelper.EndsWith(System.String,System.String[])">
+    <member name="M:usagi.String.Extension.StringExtension.EndsWith(System.String,System.String[])">
       <summary>
             StartsWith の複数パターンを OR 判定できる版
             </summary>
@@ -601,7 +930,7 @@
       <param name="ss">判定したい文字列群</param>
       <returns>s が ss の何れかで終わっていれば true</returns>
     </member>
-    <member name="M:usagi.Extension.StringHelper.StartsOrEndsWith(System.String,System.String[])">
+    <member name="M:usagi.String.Extension.StringExtension.StartsOrEndsWith(System.String,System.String[])">
       <summary>
             StartsWith または EndsWith の複数パターンを OR 判定
             </summary>
@@ -609,14 +938,14 @@
       <param name="ss">判定したい文字列群</param>
       <returns>s が ss の何れかで始まるか終わるかしていれば true</returns>
     </member>
-    <member name="M:usagi.Extension.StringHelper.OrCombinator(System.String,System.Func{System.String,System.String,System.Boolean},System.String[])">
+    <member name="M:usagi.String.Extension.StringExtension.OrCombinator(System.String,System.Func{System.String,System.String,System.Boolean},System.String[])">
       <summary>
             ss に含まれる文字列 sss について f( s, sss ) が成立するものがあるか判定する
             </summary>
       <remarks>
-        <see cref="M:usagi.Extension.StringHelper.Contains(System.String,System.String[])" />
-        <see cref="M:usagi.Extension.StringHelper.StartsWith(System.String,System.String[])" />
-        <see cref="M:usagi.Extension.StringHelper.EndsWith(System.String,System.String[])" />
+        <see cref="M:usagi.String.Extension.StringExtension.Contains(System.String,System.String[])" />
+        <see cref="M:usagi.String.Extension.StringExtension.StartsWith(System.String,System.String[])" />
+        <see cref="M:usagi.String.Extension.StringExtension.EndsWith(System.String,System.String[])" />
             の実装詳細のために作った。
             </remarks>
       <param name="s">元文字列</param>
@@ -624,403 +953,1069 @@
       <param name="ss">f で s と判定させる文字列群</param>
       <returns>成立するものがあれば true</returns>
     </member>
-    <member name="M:usagi.Extension.StringHelper.ToMemoryStream(System.String,System.Text.Encoding)">
+    <member name="N:usagi.Quantity.Ratio">
       <summary>
-            MemoryStream へ変換
-            </summary>
-      <param name="s">元文字列</param>
-      <param name="e">エンコーディング; null の場合は <see cref="P:System.Text.Encoding.UTF8" /> を使う</param>
-      <returns>s を元にしたメモリーストリーム</returns>
-    </member>
-    <member name="N:usagi.Extension.Collection">
-      <summary>
-            IEnumerable, IDictionary など Collection 向けの Extension 
+            無次元数、比、係数
             </summary>
     </member>
-    <member name="T:usagi.Extension.Collection.EnumerableHelper">
+    <member name="N:usagi.Quantity.Ratio.Extension">
       <summary>
-            Enumerable な何かの機能拡張群
+            Quantity 関連の機能拡張群
             </summary>
     </member>
-    <member name="M:usagi.Extension.Collection.EnumerableHelper.WithIndexing``1(System.Collections.Generic.IEnumerable{``0})">
+    <member name="T:usagi.Quantity.Ratio.Extension.NumericExtension">
       <summary>
-            IEnumerable を列挙順にインデックス付きにするやつ
-            ref. https://ufcpp.net/blog/2016/12/tipsindexedforeach/
+            比率、係数、無次元数、
+            そういったようなものとして
+            <see cref="T:System.Double" /> を中心に <see cref="T:System.Single" />, <see cref="T:System.Decimal" /> による
+            実数値としての表現形式と
+            <see cref="T:System.SByte" />, <see cref="T:System.Byte" /> 等の
+            整数型に比率としてのセマンティクスを持たせた表現形式を
+            便利に扱えるようにする拡張。
             </summary>
       <example>
         <code>
-            // 適当な IEnumerable な何か
-            var items = new string[]{ "aaa", "bbb", "ccc" };
-            // タプルで取り出すぱたーん
-            foreach ( var indexed_item in items )
-              Console.WriteLine( $"index={indexed_item.Index} item={indexed_item.Item}" );
-            // タプルを構造化束縛で取り出すぱたーん
-            foreach ( var (index,item) in items )
-              Console.WriteLine( $"index={index} item={item}" );
+            // 赤の輝度を byte の値域 [ 0 ... 255 ] で表現しているよくある状況で
+            byte u8_red = 211;
+            // やっぱり double の値域 [ 0 ... 1 ] で計算とかしたくなったり
+            double f64_red = u8_red.ToUNorm(); // 0.82745098039
+            // その後 UInt16 形式で保存したくなったり
+            byte u16_red = f64_red.UNormToUInt16(); // 54227
+            // アスペクト比を保持していたけれど…
+            var aspect_ratio = 16.0 / 9.0;
+            // 分数表現に分解したくなったり
+            var ( numerator, denominator ) = aspect_ratio.DecompositionToCommonFraction(); // ( 16, 9 )
             </code>
       </example>
-      <typeparam name="T">IEnumerable で取り出せる中身の型</typeparam>
-      <param name="items">IEnumerable な何か</param>
-      <returns>インデクシングされたアイテムの列挙</returns>
     </member>
-    <member name="M:usagi.Extension.Collection.EnumerableHelper.UnorderedEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})">
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm(System.Byte,System.Double,System.Double,System.Double)">
       <summary>
-            IEnumerable を実装する型 a, b について等価な値を保持するか判定する。
-            SequenceEqual と異なり列挙される順序の影響を受けない
-            ref. https://stackoverflow.com/a/3670089/1211392
+            [ 0 ... 1 ] へ射影します。
             </summary>
-      <typeparam name="T">IEnumerable で取り出せる中身の型</typeparam>
-      <param name="a">IEnumerable を実装する型 a</param>
-      <param name="b">IEnumerable を実装する型 b</param>
-      <returns>等価な値を保持している場合は true</returns>
+      <param name="a">元値</param>
+      <param name="domain_logical_zero">始域の始端</param>
+      <param name="domain_logical_ceil">終域の終端</param>
+      <param name="morphism_bias">終域</param>
+      <returns>射影された値</returns>
     </member>
-    <member name="M:usagi.Extension.Collection.EnumerableHelper.Range(System.Int32,System.Int32)">
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm(System.UInt16,System.Double,System.Double,System.Double)">
       <summary>
-            [ begin, ...., begin + count ) な列挙を得る。
-            但し、 <code>count &lt; 0</code> では空の結果を得る。
-            <para /><see cref="M:System.Linq.Enumerable.Range(System.Int32,System.Int32)" /> への糖衣構文
+            [ 0 ... 1 ] へ射影します。
             </summary>
-      <remarks>
-            とかしても Enumerable.Range と EnumerableHelper.Range を
-            使い分けするの手間なのでこっちで .Range の面倒を全てみられるよう用意した。
-            </remarks>
-      <param name="begin">はじまり</param>
-      <param name="count">いくつ欲しいのか</param>
-      <returns>[ begin, ...., begin + count ) な列挙</returns>
+      <param name="a">元値</param>
+      <param name="domain_logical_zero">始域の始端</param>
+      <param name="domain_logical_ceil">終域の終端</param>
+      <param name="morphism_bias">終域</param>
+      <returns>射影された値</returns>
     </member>
-    <member name="M:usagi.Extension.Collection.EnumerableHelper.Range(System.Int32)">
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm(System.UInt32,System.Double,System.Double,System.Double)">
       <summary>
-            [ 0, ...., count ) な列挙を得る
-            <para /><see cref="M:usagi.Extension.Collection.EnumerableHelper.Range(System.Int32,System.Int32)" />
-            へ <code>( 0, count )</code> を渡す糖衣構文
+            [ 0 ... 1 ] へ射影します。
             </summary>
-      <remarks>
-            とかしても Enumerable.Range と EnumerableHelper.Range を
-            使い分けするの手間なのでこっちで .Range の面倒を全てみられるよう用意した。
-            </remarks>
-      <param name="count">いくつ欲しいのか</param>
-      <returns>[ begin, ...., begin + count ) な列挙</returns>
+      <param name="a">元値</param>
+      <param name="domain_logical_zero">始域の始端</param>
+      <param name="domain_logical_ceil">終域の終端</param>
+      <param name="morphism_bias">終域</param>
+      <returns>射影された値</returns>
     </member>
-    <member name="M:usagi.Extension.Collection.EnumerableHelper.Range``1(System.Int32,System.Func{``0})">
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm(System.UInt64,System.Double,System.Double,System.Double)">
       <summary>
-            generator で count 個の列挙を得る。
-            但し、 <code>count &lt; 0</code> では空の結果を得る。
+            [ 0 ... 1 ] へ射影します。
             </summary>
-      <typeparam name="T">generator 出力する型</typeparam>
-      <param name="count">出力を得たい数量</param>
-      <param name="generator">出力を生成可能なファンクター</param>
-      <returns>generator により生成される count 個の列挙</returns>
+      <param name="a">元値</param>
+      <param name="domain_logical_zero">始域の始端</param>
+      <param name="domain_logical_ceil">終域の終端</param>
+      <param name="morphism_bias">終域</param>
+      <returns>射影された値</returns>
     </member>
-    <member name="M:usagi.Extension.Collection.EnumerableHelper.Range``1(System.Int32,System.Int32,System.Func{System.Int32,``0})">
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm(System.SByte,System.Double,System.Double,System.Double)">
       <summary>
-            [ begin, ... , count ) を始域とし、
-            generator を写像として得られる
-            順序対の終域の要素の列挙を得る。
-            但し、 <code>count &lt; 0</code> では空の結果を得る。
+            [ 0 ... 1 ] へ射影します。
             </summary>
-      <typeparam name="T">generator の出力する型</typeparam>
-      <param name="begin">始域のはじめに列挙される数</param>
-      <param name="count">始域の要素数</param>
-      <param name="generator">始域の要素から出力を生成可能なファンクター</param>
-      <returns>
-            [ begin, ... , count ) を始域とし、
-            generator を写像として得られる
-            順序対の終域の要素の列挙
-            </returns>
+      <param name="a">元値</param>
+      <param name="domain_logical_zero">始域の始端</param>
+      <param name="domain_logical_ceil">終域の終端</param>
+      <param name="morphism_bias">終域</param>
+      <returns>射影された値</returns>
     </member>
-    <member name="M:usagi.Extension.Collection.EnumerableHelper.Range``1(System.Int32,System.Func{System.Int32,``0})">
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm(System.Int16,System.Double,System.Double,System.Double)">
       <summary>
-            [ 0, ... , count ) を始域とし、
-            generator を写像として得られる
-            順序対の終域の要素の列挙を得る。
-            但し、 <code>count &lt; 0</code> では空の結果を得る。
+            [ 0 ... 1 ] へ射影します。
             </summary>
-      <typeparam name="T">generator の出力する型</typeparam>
-      <param name="count">始域の要素数</param>
-      <param name="generator">始域の要素から出力を生成可能なファンクター</param>
-      <returns>
-            [ 0, ... , count ) を始域とし、
-            generator を写像として得られる
-            順序対の終域の要素の列挙を得る
-            </returns>
+      <param name="a">元値</param>
+      <param name="domain_logical_zero">始域の始端</param>
+      <param name="domain_logical_ceil">終域の終端</param>
+      <param name="morphism_bias">終域</param>
+      <returns>射影された値</returns>
     </member>
-    <member name="T:usagi.Extension.Collection.DictionaryHelper">
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm(System.Int32,System.Double,System.Double,System.Double)">
       <summary>
-            Dictionary な何かへの機能拡張群
+            [ 0 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="domain_logical_zero">始域の始端</param>
+      <param name="domain_logical_ceil">終域の終端</param>
+      <param name="morphism_bias">終域</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm(System.Int64,System.Double,System.Double,System.Double)">
+      <summary>
+            [ 0 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="domain_logical_zero">始域の始端</param>
+      <param name="domain_logical_ceil">終域の終端</param>
+      <param name="morphism_bias">終域</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.Byte,System.Double,System.Double,System.Double)">
+      <summary>
+            [ -1 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="domain_logical_zero">始域の始端</param>
+      <param name="domain_logical_ceil">終域の終端</param>
+      <param name="morphism_bias">終域</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.UInt16,System.Double,System.Double,System.Double)">
+      <summary>
+            [ -1 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="domain_logical_zero">始域の始端</param>
+      <param name="domain_logical_ceil">終域の終端</param>
+      <param name="morphism_bias">終域</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.UInt32,System.Double,System.Double,System.Double)">
+      <summary>
+            [ -1 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="domain_logical_zero">始域の始端</param>
+      <param name="domain_logical_ceil">終域の終端</param>
+      <param name="morphism_bias">終域</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.UInt64,System.Double,System.Double,System.Double)">
+      <summary>
+            [ -1 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="domain_logical_zero">始域の始端</param>
+      <param name="domain_logical_ceil">終域の終端</param>
+      <param name="morphism_bias">終域</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.SByte,System.Double,System.Double,System.Double)">
+      <summary>
+            [ -1 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="domain_logical_zero">始域の始端</param>
+      <param name="domain_logical_ceil">終域の終端</param>
+      <param name="morphism_bias">終域</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.Int16,System.Double,System.Double,System.Double)">
+      <summary>
+            [ -1 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="domain_logical_zero">始域の始端</param>
+      <param name="domain_logical_ceil">終域の終端</param>
+      <param name="morphism_bias">終域</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.Int32,System.Double,System.Double,System.Double)">
+      <summary>
+            [ -1 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="domain_logical_zero">始域の始端</param>
+      <param name="domain_logical_ceil">終域の終端</param>
+      <param name="morphism_bias">終域</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.Int64,System.Double,System.Double,System.Double)">
+      <summary>
+            [ -1 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="domain_logical_zero">始域の始端</param>
+      <param name="domain_logical_ceil">終域の終端</param>
+      <param name="morphism_bias">終域</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.Byte,System.Boolean)">
+      <summary>
+            [ -1 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="all_range">始域全域を定義域とするか</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.UInt16,System.Boolean)">
+      <summary>
+            [ -1 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="all_range">始域全域を定義域とするか</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.UInt32,System.Boolean)">
+      <summary>
+            [ -1 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="all_range">始域全域を定義域とするか</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.UInt64,System.Boolean)">
+      <summary>
+            [ -1 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="all_range">始域全域を定義域とするか</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.SByte,System.Boolean)">
+      <summary>
+            [ -1 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="all_range">始域全域を定義域とするか</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.Int16,System.Boolean)">
+      <summary>
+            [ -1 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="all_range">始域全域を定義域とするか</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.Int32,System.Boolean)">
+      <summary>
+            [ -1 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="all_range">始域全域を定義域とするか</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.Int64,System.Boolean)">
+      <summary>
+            [ -1 ... 1 ] へ射影します。
+            </summary>
+      <param name="a">元値</param>
+      <param name="all_range">始域全域を定義域とするか</param>
+      <returns>射影された値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToRatio(System.Double,System.Double,System.Double,System.Double)">
+      <summary>
+            比率を生成
+            </summary>
+      <param name="domain_value">始域の値</param>
+      <param name="domain_logical_zero">始域のゼロ</param>
+      <param name="domain_logical_ceil">始域の天井</param>
+      <param name="morphism_bias">終域でのバイアス</param>
+      <returns>比</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToRatio(System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+            比率を生成
+            </summary>
+      <param name="domain_value">始域の値</param>
+      <param name="domain_logical_zero">始域のゼロ</param>
+      <param name="domain_logical_ceil">始域の天井</param>
+      <param name="morphism_bias">終域でのバイアス</param>
+      <returns>比</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToRatio(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+            比率を生成
+            </summary>
+      <param name="domain_value">始域の値</param>
+      <param name="domain_logical_zero">始域のゼロ</param>
+      <param name="domain_logical_ceil">始域の天井</param>
+      <param name="morphism_bias">終域でのバイアス</param>
+      <returns>比</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ClampToUNorm(System.Double)">
+      <summary>
+            [ 0 ... 1 ] へクランプ
+            </summary>
+      <param name="a">元の値</param>
+      <returns>クランプされた値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ClampToUNorm(System.Single)">
+      <summary>
+            [ 0 ... 1 ] へクランプ
+            </summary>
+      <param name="a">元の値</param>
+      <returns>クランプされた値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ClampToUNorm(System.Decimal)">
+      <summary>
+            [ 0 ... 1 ] へクランプ
+            </summary>
+      <param name="a">元の値</param>
+      <returns>クランプされた値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ClampToSNorm(System.Double)">
+      <summary>
+            [ -1 ... 1 ] へクランプ
+            </summary>
+      <param name="a">元の値</param>
+      <returns>クランプされた値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ClampToSNorm(System.Single)">
+      <summary>
+            [ -1 ... 1 ] へクランプ
+            </summary>
+      <param name="a">元の値</param>
+      <returns>クランプされた値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ClampToSNorm(System.Decimal)">
+      <summary>
+            [ -1 ... 1 ] へクランプ
+            </summary>
+      <param name="a">元の値</param>
+      <returns>クランプされた値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPercent(System.Double,System.String,System.String)">
+      <summary>
+            パーセント単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPercent(System.Single,System.String,System.String)">
+      <summary>
+            パーセント単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPercent(System.Decimal,System.String,System.String)">
+      <summary>
+            パーセント単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPermil(System.Double,System.String,System.String)">
+      <summary>
+            パーミル単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPermil(System.Single,System.String,System.String)">
+      <summary>
+            パーミル単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPermil(System.Decimal,System.String,System.String)">
+      <summary>
+            パーミル単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPermyriad(System.Double,System.String,System.String)">
+      <summary>
+            パーミリアド単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPermyriad(System.Single,System.String,System.String)">
+      <summary>
+            パーミリアド単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPermyriad(System.Decimal,System.String,System.String)">
+      <summary>
+            パーミリアド単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPM(System.Double,System.String,System.String)">
+      <summary>
+            ppm 単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPM(System.Single,System.String,System.String)">
+      <summary>
+            ppm 単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPM(System.Decimal,System.String,System.String)">
+      <summary>
+            ppm 単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPB(System.Double,System.String,System.String)">
+      <summary>
+            ppb 単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPB(System.Single,System.String,System.String)">
+      <summary>
+            ppb 単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPB(System.Decimal,System.String,System.String)">
+      <summary>
+            ppb 単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPT(System.Double,System.String,System.String)">
+      <summary>
+            ppt 単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPT(System.Single,System.String,System.String)">
+      <summary>
+            ppt 単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPT(System.Decimal,System.String,System.String)">
+      <summary>
+            ppt 単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPQ(System.Double,System.String,System.String)">
+      <summary>
+            ppq 単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPQ(System.Single,System.String,System.String)">
+      <summary>
+            ppq 単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPQ(System.Decimal,System.String,System.String)">
+      <summary>
+            ppq 単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringBell(System.Single,System.String,System.String)">
+      <summary>
+            B 単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringNeper(System.Double,System.String,System.String)">
+      <summary>
+            Np 単位の文字列を生成
+            </summary>
+      <param name="a">元値</param>
+      <param name="symbol">記号</param>
+      <param name="format">フォーマット</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormExpandToSNorm(System.Single)">
+      <summary>
+            始域 [ 0 ... 1 ] から終域 [ -1 ... 1 ] への射
+            </summary>
+      <param name="a">射を受ける始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormExpandToSNorm(System.Double)">
+      <summary>
+            始域 [ 0 ... 1 ] から終域 [ -1 ... 1 ] への射
+            </summary>
+      <param name="a">射を受ける始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormExpandToSNorm(System.Decimal)">
+      <summary>
+            始域 [ 0 ... 1 ] から終域 [ -1 ... 1 ] への射
+            </summary>
+      <param name="a">射を受ける始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormCollapseToUNorm(System.Single)">
+      <summary>
+            始域 [ -1 ... 1 ] から終域 [ 0 ... 1 ] への射
+            </summary>
+      <param name="a">射を受ける始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormCollapseToUNorm(System.Double)">
+      <summary>
+            始域 [ -1 ... 1 ] から終域 [ 0 ... 1 ] への射
+            </summary>
+      <param name="a">射を受ける始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormCollapseToUNorm(System.Decimal)">
+      <summary>
+            始域 [ -1 ... 1 ] から終域 [ 0 ... 1 ] への射
+            </summary>
+      <param name="a">射を受ける始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToByte(System.Double)">
+      <summary>
+            始域 [ 0 ... 1 ] から Byte 型全域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt16(System.Double)">
+      <summary>
+            始域 [ 0 ... 1 ] から UInt16 型全域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt32(System.Double)">
+      <summary>
+            始域 [ 0 ... 1 ] から UInt32 型全域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt64(System.Double)">
+      <summary>
+            始域 [ 0 ... 1 ] から UInt64 型全域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToSByte(System.Double)">
+      <summary>
+            始域 [ 0 ... 1 ] から SByte 型の正の値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt16(System.Double)">
+      <summary>
+            始域 [ 0 ... 1 ] から Int16 型の正の値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt32(System.Double)">
+      <summary>
+            始域 [ 0 ... 1 ] から Int32 型の正の値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt64(System.Double)">
+      <summary>
+            始域 [ 0 ... 1 ] から Int64 型の正の値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToSByte(System.Double)">
+      <summary>
+            始域 [ -1 ... 1 ] から SByte 型の最小値を除く値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt16(System.Double)">
+      <summary>
+            始域 [ -1 ... 1 ] から Int16 型の最小値を除く値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt32(System.Double)">
+      <summary>
+            始域 [ -1 ... 1 ] から Int32 型の最小値を除く値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt64(System.Double)">
+      <summary>
+            始域 [ -1 ... 1 ] から Int64 型の最小値を除く値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToByte(System.Single)">
+      <summary>
+            始域 [ 0 ... 1 ] から Byte 型の全域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt16(System.Single)">
+      <summary>
+            始域 [ 0 ... 1 ] から UInt16 型の全域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt32(System.Single)">
+      <summary>
+            始域 [ 0 ... 1 ] から UInt32 型の全域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt64(System.Single)">
+      <summary>
+            始域 [ 0 ... 1 ] から UInt64 型の全域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToSByte(System.Single)">
+      <summary>
+            始域 [ 0 ... 1 ] から SByte 型の正の値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt16(System.Single)">
+      <summary>
+            始域 [ 0 ... 1 ] から SByte 型の正の値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt32(System.Single)">
+      <summary>
+            始域 [ 0 ... 1 ] から SByte 型の正の値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt64(System.Single)">
+      <summary>
+            始域 [ 0 ... 1 ] から SByte 型の正の値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToSByte(System.Single)">
+      <summary>
+            始域 [ -1 ... 1 ] から SByte 型の最小値を除く値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt16(System.Single)">
+      <summary>
+            始域 [ -1 ... 1 ] から Int16 型の最小値を除く値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt32(System.Single)">
+      <summary>
+            始域 [ -1 ... 1 ] から Int32 型の最小値を除く値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt64(System.Single)">
+      <summary>
+            始域 [ -1 ... 1 ] から Int64 型の最小値を除く値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToByte(System.Decimal)">
+      <summary>
+            始域 [ 0 ... 1 ] から Byte 型の全域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt16(System.Decimal)">
+      <summary>
+            始域 [ 0 ... 1 ] から UInt16 型の全域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt32(System.Decimal)">
+      <summary>
+            始域 [ 0 ... 1 ] から UInt32 型の全域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt64(System.Decimal)">
+      <summary>
+            始域 [ 0 ... 1 ] から UInt64 型の全域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToSByte(System.Decimal)">
+      <summary>
+            始域 [ 0 ... 1 ] から SByte 型の正の値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt16(System.Decimal)">
+      <summary>
+            始域 [ 0 ... 1 ] から Int16 型の正の値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt32(System.Decimal)">
+      <summary>
+            始域 [ 0 ... 1 ] から Int32 型の正の値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt64(System.Decimal)">
+      <summary>
+            始域 [ 0 ... 1 ] から Int64 型の正の値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToSByte(System.Decimal)">
+      <summary>
+            始域 [ -1 ... 1 ] から SByte 型の最小値を除く値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt16(System.Decimal)">
+      <summary>
+            始域 [ -1 ... 1 ] から Int16 型の最小値を除く値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt32(System.Decimal)">
+      <summary>
+            始域 [ -1 ... 1 ] から Int32 型の最小値を除く値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt64(System.Decimal)">
+      <summary>
+            始域 [ -1 ... 1 ] から Int64 型の最小値を除く値域を終域として射る
+            </summary>
+      <param name="a">始域の値</param>
+      <returns>射られた終域の値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Ratio.Extension.NumericExtension.DecompositionToCommonFraction(System.Double,System.Nullable{System.Double})">
+      <summary>
+            分子と分母からなる分数表現へ変換する
+            </summary>
+      <param name="a">比</param>
+      <param name="epsilon">
+            変換の粗さ; null の場合は 1.0e-6 を使う。
+            値が小さいほど精度が上がるが計算時間も増える。
+            また、精度が高すぎると大雑把な分数値が欲しい場合に
+            分子、分母の桁が大きすぎてソレじゃないになる事もある。
+            </param>
+      <returns>分母と分子からなる分数表現の比</returns>
+    </member>
+    <member name="T:usagi.Quantity.Extension.NumericNearlyEqualsExtension">
+      <summary>
+            数値型へ NearlyEquals メソッドを拡張する
             </summary>
     </member>
-    <member name="M:usagi.Extension.Collection.DictionaryHelper.UnorderedEqual``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEqualityComparer{``1})">
+    <member name="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.Double,System.Double,System.Double)">
       <summary>
-            IDictionary を実装する型 a, b について等価な Key と Value の組み合わせ群を保持するか判定する。
-            SequenceEqual と異なり列挙される順序の影響を受けない
-            ref. https://stackoverflow.com/a/3928856/1211392
+            double 特殊化版
+            <para />double, float, decimal に対しては内部的にも同じ型のまま計算を行う。
             </summary>
-      <typeparam name="TK">Key の型</typeparam>
-      <typeparam name="TV">Value の型</typeparam>
-      <param name="a">比較において this となる IDictionary を実装する型のインスタンス</param>
-      <param name="b">比較において this と比較される IDictionary を実装する型のインスタンス</param>
-      <param name="c">TV型の等価判定関数。 null を与えた場合は EqualityComparer&lt;TV&gt;.Default を採用する</param>
-      <returns>a, b が等価な Key と Value の組み合わせ群を保持する場合は true 、そうでなければ false</returns>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
     </member>
-    <member name="N:usagi.Extension">
+    <member name="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.Single,System.Single,System.Single)">
       <summary>
-            既存の何かに対する Extension 群
+            float 特殊化版
+            <para />double, float, decimal に対しては内部的にも同じ型のまま計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+            decimal 特殊化版
+            <para />double, float, decimal に対しては内部的にも同じ型のまま計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.Byte,System.Byte,System.Byte)">
+      <summary>
+            byte 特殊化版
+            <para />byte, UInt16, UInt32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.UInt16,System.UInt16,System.UInt16)">
+      <summary>
+            UInt16 特殊化版
+            <para />byte, UInt16, UInt32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.UInt32,System.UInt32,System.UInt32)">
+      <summary>
+            UInt32 特殊化版
+            <para />byte, UInt16, UInt32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.UInt64,System.UInt64,System.UInt64)">
+      <summary>
+            UInt64 特殊化版
+            <para />UInt64, Int64 に対しては内部的に decimal 型で計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.Char,System.Char,System.Char)">
+      <summary>
+            char 特殊化版
+            <para />char, Int16, Int32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.Int16,System.Int16,System.Int16)">
+      <summary>
+            Int16 特殊化版
+            <para />char, Int16, Int32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Int32 特殊化版
+            <para />char, Int16, Int32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.Int64,System.Int64,System.Int64)">
+      <summary>
+            Int64 特殊化版
+            <para />UInt64, Int64 に対しては内部的に decimal 型で計算を行う。
+            </summary>
+      <param name="a">値 a</param>
+      <param name="b">値 b</param>
+      <param name="tolerance">許容範囲</param>
+      <returns>近似的に等しいと見做せる場合は true</returns>
+    </member>
+    <member name="T:usagi.Quantity.Extension.LengthMathExtension">
+      <summary>
+            Length への System.Math 相当の機能拡張
             </summary>
     </member>
-    <member name="T:usagi.Extension.ItemsControlHelper">
+    <member name="M:usagi.Quantity.Extension.LengthMathExtension.Abs(usagi.Quantity.Length)">
       <summary>
-            System.Windows.Control.ItemsControlHelper に対する機能拡張
+            符号を正に強制します
             </summary>
+      <param name="a">長さ</param>
+      <returns>確実に正の符号の長さ</returns>
+    </member>
+    <member name="M:usagi.Quantity.Extension.LengthMathExtension.ASin(usagi.Quantity.Length,usagi.Quantity.Length)">
       <summary>
-            System.Windows.Control.ItemsControlHelper に対する機能拡張
+            逆正弦値を cathetus / hypotenuse から計算しますよ
+            </summary>
+      <param name="hypotenuse">斜辺 ( this )</param>
+      <param name="cathetus">隣辺 ( 相手 )</param>
+      <returns>逆正接による平面角</returns>
+    </member>
+    <member name="M:usagi.Quantity.Extension.LengthMathExtension.ACos(usagi.Quantity.Length,usagi.Quantity.Length)">
+      <summary>
+            逆余弦値を cathetus / hypotenuse から計算しますよ
+            </summary>
+      <param name="hypotenuse">斜辺 ( this )</param>
+      <param name="cathetus">隣辺 ( 相手 )</param>
+      <returns>逆余弦による平面角</returns>
+    </member>
+    <member name="M:usagi.Quantity.Extension.LengthMathExtension.ATan2(usagi.Quantity.Length,usagi.Quantity.Length)">
+      <summary>
+            逆正接値を計算しますよ
+            </summary>
+      <param name="x">長さ ( this )</param>
+      <param name="y">長さ ( 相手 )</param>
+      <returns>逆正接値</returns>
+    </member>
+    <member name="M:usagi.Quantity.Extension.LengthMathExtension.Sign(usagi.Quantity.Length)">
+      <summary>
+            符号を抽出しますよ
+            </summary>
+      <param name="a">長さ</param>
+      <returns>符号; -1, 0, +1 の何れか</returns>
+    </member>
+    <member name="T:usagi.Quantity.Extension.PlaneAngleMathHelper">
+      <summary>
+            PlaneAngle への System.Math 相当の機能拡張
             </summary>
     </member>
-    <member name="M:usagi.Extension.ItemsControlHelper.GetContentPresenter(System.Windows.Controls.ItemsControl,System.Int32)">
+    <member name="M:usagi.Quantity.Extension.PlaneAngleMathHelper.Abs(usagi.Quantity.PlaneAngle)">
       <summary>
-            ItemsControl から index 番目のアイテムの ContentPresenter を引っ張り出す
+            符号を正に強制します
             </summary>
-      <param name="c">引っ張り出し元</param>
-      <param name="index">ContentPresenter を引っ張り出したいアイテムのインデックス</param>
-      <returns>引っ張り出された ContentPresenter または null</returns>
+      <param name="a">平面角</param>
+      <returns>確実に正の符号の平面角</returns>
     </member>
-    <member name="M:usagi.Extension.ItemsControlHelper.FindChild(System.Windows.Controls.ContentPresenter,System.String)">
+    <member name="M:usagi.Quantity.Extension.PlaneAngleMathHelper.Sin(usagi.Quantity.PlaneAngle)">
       <summary>
-            ContentPresenter から name の object を引っ張り出す
+            正弦値を計算しますよ
             </summary>
-      <param name="p">引っ張り出し元</param>
-      <param name="name">引っ張り出したい object の名前</param>
-      <returns>引っ張り出された object または null</returns>
+      <param name="a">平面角</param>
+      <returns>正弦値</returns>
     </member>
-    <member name="M:usagi.Extension.ItemsControlHelper.FindChildAs``1(System.Windows.Controls.ContentPresenter,System.String)">
+    <member name="M:usagi.Quantity.Extension.PlaneAngleMathHelper.Cos(usagi.Quantity.PlaneAngle)">
       <summary>
-            ContentPresenter から name の object を T 型で引っ張り出す
-            <para /><see cref="M:usagi.Extension.ItemsControlHelper.FindChild(System.Windows.Controls.ContentPresenter,System.String)" /> の型キャスト付き版
+            余弦値を計算しますよ
             </summary>
-      <typeparam name="T">引っ張り出したい object の型</typeparam>
-      <param name="p">引っ張り出し元</param>
-      <param name="name">引っ張り出したい object の名前</param>
-      <returns>引っ張り出された T 型の object または null</returns>
+      <param name="a">平面角</param>
+      <returns>余弦値</returns>
     </member>
-    <member name="M:usagi.Extension.ItemsControlHelper.FindChild(System.Windows.Controls.ItemsControl,System.Int32,System.String)">
+    <member name="M:usagi.Quantity.Extension.PlaneAngleMathHelper.Tan(usagi.Quantity.PlaneAngle)">
       <summary>
-        <see cref="M:usagi.Extension.ItemsControlHelper.GetContentPresenter(System.Windows.Controls.ItemsControl,System.Int32)" /> +
-            <see cref="M:usagi.Extension.ItemsControlHelper.FindChild(System.Windows.Controls.ContentPresenter,System.String)" /> の複合技。
+            正接値を計算しますよ
             </summary>
-      <remarks>
-            取り出したいアイテムが1つだけの場合に便利。
-            複数の場合は <see cref="M:usagi.Extension.ItemsControlHelper.FindChildren(System.Windows.Controls.ItemsControl,System.Int32,System.String[])" /> を使うと良い。
-            </remarks>
-      <param name="c">引っ張り出し元</param>
-      <param name="index">ContentPresenter を引っ張り出したいアイテムのインデックス</param>
-      <param name="name">引っ張り出したいアイテムの名前</param>
-      <returns>引っ張り出したアイテムまたは null</returns>
+      <param name="a">平面角</param>
+      <returns>正接値</returns>
     </member>
-    <member name="M:usagi.Extension.ItemsControlHelper.FindChildAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String)">
+    <member name="M:usagi.Quantity.Extension.PlaneAngleMathHelper.Sinh(usagi.Quantity.PlaneAngle)">
       <summary>
-        <see cref="M:usagi.Extension.ItemsControlHelper.FindChild(System.Windows.Controls.ItemsControl,System.Int32,System.String)" /> の型キャスト付き版
+            双曲線正弦値を計算しますよ
             </summary>
-      <remarks>
-            取り出したいアイテムが1つだけの場合に便利。
-            複数の場合は <see cref="M:usagi.Extension.ItemsControlHelper.FindChildrenAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String[])" /> を使うと良い。
-            </remarks>
-      <typeparam name="T">引っ張り出したいアイテムの型</typeparam>
-      <param name="c">引っ張り出し元</param>
-      <param name="index">ContentPresenter を引っ張り出したいアイテムのインデックス</param>
-      <param name="name">引っ張り出したいアイテムの名前</param>
-      <returns>引っ張り出したアイテムまたは null</returns>
+      <param name="a">平面角</param>
+      <returns>双曲線正弦値</returns>
     </member>
-    <member name="M:usagi.Extension.ItemsControlHelper.FindChildren(System.Windows.Controls.ItemsControl,System.Int32,System.String[])">
+    <member name="M:usagi.Quantity.Extension.PlaneAngleMathHelper.Cosh(usagi.Quantity.PlaneAngle)">
       <summary>
-        <see cref="M:usagi.Extension.ItemsControlHelper.GetContentPresenter(System.Windows.Controls.ItemsControl,System.Int32)" /> +
-            <see cref="M:usagi.Extension.ItemsControlHelper.FindChild(System.Windows.Controls.ContentPresenter,System.String)" /> の合体技
+            双曲線余弦値を計算しますよ
             </summary>
-      <param name="c">引っ張り出し元</param>
-      <param name="index">ContentPresenter を引っ張り出したいアイテムのインデックス</param>
-      <param name="names">引っ張り出し元の各アイテムごとに引っ張り出したいコントロールの名前群</param>
-      <returns>&lt;&lt;Key=名前, Value=引っ張り出されたアイテムまたは null&gt;の辞書&gt;の列挙</returns>
+      <param name="a">平面角</param>
+      <returns>双曲線余弦値</returns>
     </member>
-    <member name="M:usagi.Extension.ItemsControlHelper.FindChildrenAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String[])">
+    <member name="M:usagi.Quantity.Extension.PlaneAngleMathHelper.Tanh(usagi.Quantity.PlaneAngle)">
       <summary>
-        <see cref="M:usagi.Extension.ItemsControlHelper.FindChildren(System.Windows.Controls.ItemsControl,System.String[])" />
-      </summary>
-      <typeparam name="T">
-      </typeparam>
-      <param name="c">引っ張り出し元</param>
-      <param name="index">ContentPresenter を引っ張り出したいアイテムのインデックス</param>
-      <param name="names">引っ張り出し元の各アイテムごとに引っ張り出したいコントロールの名前群</param>
-      <returns>&lt;&lt;Key=名前, Value=引っ張り出されたアイテムまたは null&gt;の辞書&gt;の列挙</returns>
-    </member>
-    <member name="M:usagi.Extension.ItemsControlHelper.FindChildren(System.Windows.Controls.ItemsControl,System.String[])">
-      <summary>
-        <see cref="M:usagi.Extension.ItemsControlHelper.FindChildren(System.Windows.Controls.ItemsControl,System.Int32,System.String[])" /> のさらにずぼら横着進化した版
-            control の全てのアイテムごとに、一度に複数の名前を与えて対応する複数の object を引っ張り出せる。
+            双曲線正接値を計算しますよ
             </summary>
-      <example>
-        <code>
-            var css = control.FindChildren( "Name1", "Name2", "Name3" );
-            foreach ( var cs in css )
-            {
-              if ( cs[ "Name1" ] is Image i )
-                i.DataContext = hoge;
-              if ( cs[ "Name2" ] is ComboBox c )
-                c.DataContext = fuga;
-              if ( cs[ "Name3" ] is TextBlock t )
-                Console.WriteLine( t.Text );
-            }
-            </code>
-      </example>
-      <param name="c">引っ張り出し元</param>
-      <param name="names">引っ張り出し元の各アイテムごとに引っ張り出したいコントロールの名前群</param>
-      <returns>&lt;&lt;Key=名前, Value=引っ張り出されたコントロールまたは null&gt;の辞書&gt;の列挙</returns>
+      <param name="a">平面角</param>
+      <returns>双曲線正接値</returns>
     </member>
-    <member name="M:usagi.Extension.ItemsControlHelper.FindChildrenAs``1(System.Windows.Controls.ItemsControl,System.String[])">
+    <member name="M:usagi.Quantity.Extension.PlaneAngleMathHelper.Sign(usagi.Quantity.PlaneAngle)">
       <summary>
-        <see cref="M:usagi.Extension.ItemsControlHelper.FindChildrenAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String[])" /> のさらにずぼら横着進化した版
-            control の全てのアイテムごとに、一度に複数の名前を与えて対応する複数の object を引っ張り出せる。
+            符号を抽出しますよ
             </summary>
-      <remarks>
-            取り出したいアイテムが全て同じ型の場合に便利。
-            そうでない場合は <see cref="M:usagi.Extension.ItemsControlHelper.FindChildren(System.Windows.Controls.ItemsControl,System.String[])" /> を使うと良い。
-            </remarks>
-      <example>
-        <code>
-            var tss = control.FindChildrenAs&lt;TextBlock&gt;( "Name1", "Name2", "Name3" );
-            var result = 
-              string.Join
-              ( "\n"
-              , from ts
-                in tss
-                select
-                  string.Join
-                  ( ", "
-                  , from c
-                    in cs
-                    select ${c.Name}.Text={c.Text}
-                  )
-              );
-            Console.Write( result );
-            </code>
-      </example>
-      <typeparam name="T">引っ張り出したい型</typeparam>
-      <param name="c">引っ張り出し元</param>
-      <param name="names">引っ張り出し元の各アイテムごとに引っ張り出したいコントロールの名前群</param>
-      <returns>&lt;&lt;Key=名前, Value=引っ張り出されたコントロールまたは null&gt;の辞書&gt;の列挙</returns>
-    </member>
-    <member name="M:usagi.Extension.ItemsControlHelper.FindControlAs``1(System.Windows.Controls.ContentPresenter,System.String)">
-      <summary>
-            ContentPresenter から name のコントロールを T 型で引っ張り出す
-            </summary>
-      <typeparam name="T">引っ張り出したいコントロールの型</typeparam>
-      <param name="presenter">引っ張り出し元</param>
-      <param name="name">引っ張り出したいコントロールの名前</param>
-      <returns>引っ張り出された T 型のコントロールまたは null</returns>
-    </member>
-    <member name="M:usagi.Extension.ItemsControlHelper.FindControl(System.Windows.Controls.ContentPresenter,System.String)">
-      <summary>
-            ContentPresenter から name のコントロールを Control 型で引っ張り出す
-            必要に応じて結果を as って使いたい場合にどうぞ。
-            </summary>
-      <param name="presenter">引っ張り出し元</param>
-      <param name="name">引っ張り出したいコントロールの名前</param>
-      <returns>引っ張り出されたコントロールまたは null</returns>
-    </member>
-    <member name="M:usagi.Extension.ItemsControlHelper.FindControlAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String)">
-      <summary>
-            GetContentPresenter + FindControlAs の合体技
-            <para />control の index 番目のアイテムから名前が name のコントロールを T 型で引っ張り出す
-            </summary>
-      <example>
-        <code>
-            if ( control.FindControlAs&lt;TextBlock&gt;( 0, "Name1" ) is TextBlock c )
-              Console.WriteLine( c.Text );
-            </code>
-      </example>
-      <typeparam name="T">引っ張り出したいコントロールの型</typeparam>
-      <param name="control">引っ張り出し元</param>
-      <param name="index">名前が name のコントロールを引っ張り出したい control のアイテムのインデックス</param>
-      <param name="name">引っ張り出したいアイテムの名前</param>
-      <returns>引っ張り出されたコントロールまたは null</returns>
-    </member>
-    <member name="M:usagi.Extension.ItemsControlHelper.FindControl(System.Windows.Controls.ItemsControl,System.Int32,System.String)">
-      <summary>
-            GetContentPresenter + FindControl の合体技
-            <para />control の index 番目のアイテムから名前が name のコントロールを Control 型で引っ張り出す
-            </summary>
-      <example>
-        <code>
-            if ( control.FindControl( 0, "Name1" ) is Control c )
-            {
-              Console.WriteLine( c.IsTabStop );
-              if ( c is TextBlock cc )
-                ConsoleWriteLine( cc.Text );
-            }
-            </code>
-      </example>
-      <param name="control">引っ張り出し元</param>
-      <param name="index">名前が name のコントロールを引っ張り出したい control のアイテムのインデックス</param>
-      <param name="name">引っ張り出したいアイテムの名前</param>
-      <returns>引っ張り出されたコントロールまたは null</returns>
-    </member>
-    <member name="M:usagi.Extension.ItemsControlHelper.FindControlsAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String[])">
-      <summary>
-            GetContentPresenter + FindControlAs の合体技 FindControlAs の進化版
-            <para />一度に複数の名前を与えて対応する複数のコントロールを引っ張り出せる。
-            </summary>
-      <example>
-        <code>
-            var cs = control.FindControlsAs&lt;TextBlock&gt;( 0, "Name1", "Name2", "Name3" );
-            cs[ "Name1" ].DataContext = hoge;
-            cs[ "Name2" ].DataContext = fuga;
-            Console.WriteLine( cs[ "Name3" ].Text );
-            </code>
-      </example>
-      <typeparam name="T">引っ張り出したいコントロールの型</typeparam>
-      <param name="control">引っ張り出し元</param>
-      <param name="index">名前が name のコントロールを引っ張り出したい control のアイテムのインデックス</param>
-      <param name="names">引っ張り出したいアイテムの名前群</param>
-      <returns>{Key=名前, Value=引っ張り出されたコントロールまたは null}の辞書</returns>
-    </member>
-    <member name="M:usagi.Extension.ItemsControlHelper.FindControls(System.Windows.Controls.ItemsControl,System.Int32,System.String[])">
-      <summary>
-            GetContentPresenter + FindControl の合体技 FindControls の進化版
-            <para />一度に複数の名前を与えて対応する複数のコントロールを引っ張り出せる。
-            </summary>
-      <example>
-        <code>
-            var cs = control.FindControls( 0, "Name1", "Name2", "Name3" );
-            if ( cs[ "Name1" ] is Image c )
-              c.DataContext = hoge;
-            if ( cs[ "Name2" ] is ComboBox c )
-              c.DataContext = fuga;
-            if ( cs[ "Name3" ] is TextBlock )
-              Console.WriteLine( c.Text );
-            </code>
-      </example>
-      <param name="control">引っ張り出し元</param>
-      <param name="index">名前が name のコントロールを引っ張り出したい control のアイテムのインデックス</param>
-      <param name="names">引っ張り出したいアイテムの名前群</param>
-      <returns>{Key=名前, Value=引っ張り出されたコントロールまたは null}の辞書</returns>
-    </member>
-    <member name="M:usagi.Extension.ItemsControlHelper.FindControls(System.Windows.Controls.ItemsControl,System.String[])">
-      <summary>
-            FindControls のさらにずぼら横着進化した版
-            control の全てのアイテムごとに、一度に複数の名前を与えて対応する複数のコントロールを引っ張り出せる。
-            </summary>
-      <example>
-        <code>
-            var css = control.FindControls( "Name1", "Name2", "Name3" );
-            foreach ( var cs in css )
-            {
-              cs[ "Name1" ].DataContext = hoge;
-              cs[ "Name2" ].DataContext = fuga;
-              if ( cs[ "Name3" ] is TextBlock c )
-                Console.WriteLine( c.Text );
-            }
-            </code>
-      </example>
-      <param name="control">引っ張り出し元</param>
-      <param name="names">引っ張り出し元の各アイテムごとに引っ張り出したいコントロールの名前群</param>
-      <returns>&lt;&lt;Key=名前, Value=引っ張り出されたコントロールまたは null&gt;の辞書&gt;の列挙</returns>
+      <param name="a">平面角</param>
+      <returns>符号; -1, 0, +1 の何れか</returns>
     </member>
     <member name="N:usagi.Quantity">
       <summary>
@@ -1092,116 +2087,6 @@
       <param name="OperatorSubtract">T型の減算関数</param>
       <param name="OperatorAdd">T型の加算関数</param>
       <returns>a と b の差が tolerance 以下なら true</returns>
-    </member>
-    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.Double,System.Double,System.Double)">
-      <summary>
-            double 特殊化版
-            <para />double, float, decimal に対しては内部的にも同じ型のまま計算を行う。
-            </summary>
-      <param name="a">値 a</param>
-      <param name="b">値 b</param>
-      <param name="tolerance">許容範囲</param>
-      <returns>近似的に等しいと見做せる場合は true</returns>
-    </member>
-    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.Single,System.Single,System.Single)">
-      <summary>
-            float 特殊化版
-            <para />double, float, decimal に対しては内部的にも同じ型のまま計算を行う。
-            </summary>
-      <param name="a">値 a</param>
-      <param name="b">値 b</param>
-      <param name="tolerance">許容範囲</param>
-      <returns>近似的に等しいと見做せる場合は true</returns>
-    </member>
-    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.Decimal,System.Decimal,System.Decimal)">
-      <summary>
-            decimal 特殊化版
-            <para />double, float, decimal に対しては内部的にも同じ型のまま計算を行う。
-            </summary>
-      <param name="a">値 a</param>
-      <param name="b">値 b</param>
-      <param name="tolerance">許容範囲</param>
-      <returns>近似的に等しいと見做せる場合は true</returns>
-    </member>
-    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.Byte,System.Byte,System.Byte)">
-      <summary>
-            byte 特殊化版
-            <para />byte, UInt16, UInt32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
-            </summary>
-      <param name="a">値 a</param>
-      <param name="b">値 b</param>
-      <param name="tolerance">許容範囲</param>
-      <returns>近似的に等しいと見做せる場合は true</returns>
-    </member>
-    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.UInt16,System.UInt16,System.UInt16)">
-      <summary>
-            UInt16 特殊化版
-            <para />byte, UInt16, UInt32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
-            </summary>
-      <param name="a">値 a</param>
-      <param name="b">値 b</param>
-      <param name="tolerance">許容範囲</param>
-      <returns>近似的に等しいと見做せる場合は true</returns>
-    </member>
-    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.UInt32,System.UInt32,System.UInt32)">
-      <summary>
-            UInt32 特殊化版
-            <para />byte, UInt16, UInt32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
-            </summary>
-      <param name="a">値 a</param>
-      <param name="b">値 b</param>
-      <param name="tolerance">許容範囲</param>
-      <returns>近似的に等しいと見做せる場合は true</returns>
-    </member>
-    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.UInt64,System.UInt64,System.UInt64)">
-      <summary>
-            UInt64 特殊化版
-            <para />UInt64, Int64 に対しては内部的に decimal 型で計算を行う。
-            </summary>
-      <param name="a">値 a</param>
-      <param name="b">値 b</param>
-      <param name="tolerance">許容範囲</param>
-      <returns>近似的に等しいと見做せる場合は true</returns>
-    </member>
-    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.Char,System.Char,System.Char)">
-      <summary>
-            char 特殊化版
-            <para />char, Int16, Int32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
-            </summary>
-      <param name="a">値 a</param>
-      <param name="b">値 b</param>
-      <param name="tolerance">許容範囲</param>
-      <returns>近似的に等しいと見做せる場合は true</returns>
-    </member>
-    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.Int16,System.Int16,System.Int16)">
-      <summary>
-            Int16 特殊化版
-            <para />char, Int16, Int32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
-            </summary>
-      <param name="a">値 a</param>
-      <param name="b">値 b</param>
-      <param name="tolerance">許容範囲</param>
-      <returns>近似的に等しいと見做せる場合は true</returns>
-    </member>
-    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.Int32,System.Int32,System.Int32)">
-      <summary>
-            Int32 特殊化版
-            <para />char, Int16, Int32 に対しては内部的に1単位大きな符号付きの型で計算を行う。
-            </summary>
-      <param name="a">値 a</param>
-      <param name="b">値 b</param>
-      <param name="tolerance">許容範囲</param>
-      <returns>近似的に等しいと見做せる場合は true</returns>
-    </member>
-    <member name="M:usagi.Quantity.Calculation.NearlyEquals(System.Int64,System.Int64,System.Int64)">
-      <summary>
-            Int64 特殊化版
-            <para />UInt64, Int64 に対しては内部的に decimal 型で計算を行う。
-            </summary>
-      <param name="a">値 a</param>
-      <param name="b">値 b</param>
-      <param name="tolerance">許容範囲</param>
-      <returns>近似的に等しいと見做せる場合は true</returns>
     </member>
     <member name="N:usagi.Quantity.GeoLocation">
       <summary>
@@ -1432,7 +2317,7 @@
             <para />計算はまあまあ早いが地球のような楕円体のフラッディングレートは考慮しないのでかなり大雑把。
             </summary>
       <remarks>
-            必要なら <see cref="M:usagi.CivilEngineering.LonLatHelper.DistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" /> を使うと良い
+            必要なら <see cref="M:usagi.CivilEngineering.Extension.LonLatDistanceExtension.DistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.Extension.LonLatDistanceExtension.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" /> を使うと良い
             </remarks>
       <param name="b">比較対象</param>
       <returns>平面角単位での距離</returns>
@@ -1444,8 +2329,10 @@
       <param name="x">判定対象</param>
       <param name="tolerance">許容範囲</param>
       <returns>近似的に等価と未為せる場合は true</returns>
-            必要なら <see cref="M:usagi.CivilEngineering.LonLatHelper.NearlyEqualsTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.Length,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" /> を使うと良い
-        </member>
+      <remarks>
+            必要なら <see cref="M:usagi.CivilEngineering.Extension.LonLatDistanceExtension.DistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.Extension.LonLatDistanceExtension.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" /> を使うと良い
+            </remarks>
+    </member>
     <member name="M:usagi.Quantity.GeoLocation.LonLat.NearlyEqualsTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
       <summary>
             平面角次元の距離が経度軸、緯度軸それぞれで許容範囲以内で近似的に等価と未為せるか判定
@@ -1454,8 +2341,10 @@
       <param name="lon_tolerance">経度軸の許容範囲; null の場合は 1″</param>
       <param name="lat_tolerance">緯度軸の許容範囲; null の場合は 1″</param>
       <returns>近似的に等価と未為せる場合は true</returns>
-            必要なら <see cref="M:usagi.CivilEngineering.LonLatHelper.NearlyEqualsTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.Length,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" /> を使うと良い
-        </member>
+      <remarks>
+            必要なら <see cref="M:usagi.CivilEngineering.Extension.LonLatDistanceExtension.DistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.Extension.LonLatDistanceExtension.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" /> を使うと良い
+            </remarks>
+    </member>
     <member name="T:usagi.Quantity.GeoLocation.LonLatAlt">
       <summary>
             経緯度＋標高
@@ -2621,7 +3510,7 @@
       <param name="b">割る長さ</param>
       <returns>割ったら余る長さ</returns>
     </member>
-    <member name="M:usagi.Quantity.Length.NearlyEqualsTo(usagi.Quantity.Length,usagi.Quantity.Length)">
+    <member name="M:usagi.Quantity.Length.NearlyEquals(usagi.Quantity.Length,usagi.Quantity.Length)">
       <summary>
             近似的に等価か判定
             </summary>
@@ -2637,54 +3526,6 @@
       <param name="b">任意の長さ2つめ</param>
       <param name="tolerance">許容範囲（誤差） null の場合は Length.From_mm(1) が代用される</param>
       <returns>a と b の差が tolerance 以下なら true 、そうでなければ false</returns>
-    </member>
-    <member name="N:usagi.Quantity.LengthMathExtension">
-      <summary>
-            Length に System.Math 相当の機能拡張を施す
-            </summary>
-    </member>
-    <member name="T:usagi.Quantity.LengthMathExtension.LengthMathHelper">
-      <summary>
-            Length への System.Math 相当の機能拡張
-            </summary>
-    </member>
-    <member name="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.Abs(usagi.Quantity.Length)">
-      <summary>
-            符号を正に強制します
-            </summary>
-      <param name="a">長さ</param>
-      <returns>確実に正の符号の長さ</returns>
-    </member>
-    <member name="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.ASin(usagi.Quantity.Length,usagi.Quantity.Length)">
-      <summary>
-            逆正弦値を cathetus / hypotenuse から計算しますよ
-            </summary>
-      <param name="hypotenuse">斜辺 ( this )</param>
-      <param name="cathetus">隣辺 ( 相手 )</param>
-      <returns>逆正接による平面角</returns>
-    </member>
-    <member name="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.ACos(usagi.Quantity.Length,usagi.Quantity.Length)">
-      <summary>
-            逆余弦値を cathetus / hypotenuse から計算しますよ
-            </summary>
-      <param name="hypotenuse">斜辺 ( this )</param>
-      <param name="cathetus">隣辺 ( 相手 )</param>
-      <returns>逆余弦による平面角</returns>
-    </member>
-    <member name="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.ATan2(usagi.Quantity.Length,usagi.Quantity.Length)">
-      <summary>
-            逆正接値を計算しますよ
-            </summary>
-      <param name="x">長さ ( this )</param>
-      <param name="y">長さ ( 相手 )</param>
-      <returns>逆正接値</returns>
-    </member>
-    <member name="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.Sign(usagi.Quantity.Length)">
-      <summary>
-            符号を抽出しますよ
-            </summary>
-      <param name="a">長さ</param>
-      <returns>符号; -1, 0, +1 の何れか</returns>
     </member>
     <member name="T:usagi.Quantity.PlaneAngle">
       <summary>
@@ -3089,14 +3930,14 @@
       <param name="a">比較対象の平面角</param>
       <returns>正規化した上で this &gt; s ならば true</returns>
     </member>
-    <member name="M:usagi.Quantity.PlaneAngle.NormalizedEqualsTo(usagi.Quantity.PlaneAngle)">
+    <member name="M:usagi.Quantity.PlaneAngle.NormalizedEquals(usagi.Quantity.PlaneAngle)">
       <summary>
             正規化した場合の this == a の判定
             </summary>
       <param name="a">比較対象の平面角</param>
       <returns>正規化した上で this == s ならば true</returns>
     </member>
-    <member name="M:usagi.Quantity.PlaneAngle.NormalizedNearlyEqualsTo(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+    <member name="M:usagi.Quantity.PlaneAngle.NormalizedNearlyEquals(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
       <summary>
             正規化した場合の this ≃ a の判定
             </summary>
@@ -3104,7 +3945,7 @@
       <param name="tolerance">許容誤差</param>
       <returns>正規化した上で this ≃ s ならば true</returns>
     </member>
-    <member name="M:usagi.Quantity.PlaneAngle.NearlyEqualsTo(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
+    <member name="M:usagi.Quantity.PlaneAngle.NearlyEquals(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)">
       <summary>
             NearlyEquals( this, a tolerance ) への糖衣構文
             </summary>
@@ -3414,72 +4255,6 @@
             </summary>
       <returns>ハッシュ値</returns>
     </member>
-    <member name="N:usagi.Quantity.PlaneAngleMathExtension">
-      <summary>
-            PlaneAngle に System.Math 相当の機能拡張を施す
-            </summary>
-    </member>
-    <member name="T:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper">
-      <summary>
-            PlaneAngle への System.Math 相当の機能拡張
-            </summary>
-    </member>
-    <member name="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Abs(usagi.Quantity.PlaneAngle)">
-      <summary>
-            符号を正に強制します
-            </summary>
-      <param name="a">平面角</param>
-      <returns>確実に正の符号の平面角</returns>
-    </member>
-    <member name="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Sin(usagi.Quantity.PlaneAngle)">
-      <summary>
-            正弦値を計算しますよ
-            </summary>
-      <param name="a">平面角</param>
-      <returns>正弦値</returns>
-    </member>
-    <member name="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Cos(usagi.Quantity.PlaneAngle)">
-      <summary>
-            余弦値を計算しますよ
-            </summary>
-      <param name="a">平面角</param>
-      <returns>余弦値</returns>
-    </member>
-    <member name="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Tan(usagi.Quantity.PlaneAngle)">
-      <summary>
-            正接値を計算しますよ
-            </summary>
-      <param name="a">平面角</param>
-      <returns>正接値</returns>
-    </member>
-    <member name="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Sinh(usagi.Quantity.PlaneAngle)">
-      <summary>
-            双曲線正弦値を計算しますよ
-            </summary>
-      <param name="a">平面角</param>
-      <returns>双曲線正弦値</returns>
-    </member>
-    <member name="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Cosh(usagi.Quantity.PlaneAngle)">
-      <summary>
-            双曲線余弦値を計算しますよ
-            </summary>
-      <param name="a">平面角</param>
-      <returns>双曲線余弦値</returns>
-    </member>
-    <member name="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Tanh(usagi.Quantity.PlaneAngle)">
-      <summary>
-            双曲線正接値を計算しますよ
-            </summary>
-      <param name="a">平面角</param>
-      <returns>双曲線正接値</returns>
-    </member>
-    <member name="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Sign(usagi.Quantity.PlaneAngle)">
-      <summary>
-            符号を抽出しますよ
-            </summary>
-      <param name="a">平面角</param>
-      <returns>符号; -1, 0, +1 の何れか</returns>
-    </member>
     <member name="N:usagi.Quantity.Unit">
       <summary>
             単位に関する何か
@@ -3677,6 +4452,1047 @@
       <param name="b">SI補助単位 b</param>
       <returns>a が b より大きな係数値なら true</returns>
     </member>
+    <member name="N:usagi.InformationEngineering.Extension">
+      <summary>
+            エクステンション
+            </summary>
+    </member>
+    <member name="T:usagi.InformationEngineering.Extension.NumericExtension">
+      <summary>
+            数値型への機能拡張
+            </summary>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.SByte)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.Byte)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.Int16)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.Int16)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16(System.Int16)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.UInt16)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.UInt16)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16(System.UInt16)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.Int32)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.Int32)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16(System.Int32)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16(System.Int32)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt32(System.Int32)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.UInt32)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.UInt32)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16(System.UInt32)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16(System.UInt32)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt32(System.UInt32)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.Int64)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.Int64)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16(System.Int64)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16(System.Int64)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt32(System.Int64)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt32(System.Int64)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt64(System.Int64)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.UInt64)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.UInt64)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16(System.UInt64)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16(System.UInt64)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt32(System.UInt64)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt32(System.UInt64)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt64(System.UInt64)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.Single)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.Single)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16(System.Single)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16(System.Single)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt32(System.Single)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt32(System.Single)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt64(System.Single)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt64(System.Single)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.Double)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.Double)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16(System.Double)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16(System.Double)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt32(System.Double)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt32(System.Double)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt64(System.Double)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt64(System.Double)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.Decimal)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.Decimal)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16(System.Decimal)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16(System.Decimal)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt32(System.Decimal)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt32(System.Decimal)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt64(System.Decimal)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt64(System.Decimal)">
+      <summary>
+            値をクランプ
+            </summary>
+      <param name="a">対象の値t</param>
+      <returns>定義域へクランプされた値</returns>
+    </member>
+    <member name="T:usagi.InformationEngineering.Extension.MemoryStreamStringExtension">
+      <summary>
+        <see cref="T:System.IO.MemoryStream" /> 型を機能拡張する何か
+            </summary>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.MemoryStreamStringExtension.ToString(System.IO.MemoryStream,System.Text.Encoding)">
+      <summary>
+            string へ変換
+            </summary>
+      <param name="s">元ストリーム</param>
+      <param name="e">エンコーディング; null の場合は <see cref="P:System.Text.Encoding.UTF8" /> を使う</param>
+      <returns>文字列</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Extension.MemoryStreamStringExtension.ToMemoryStream(System.String,System.Text.Encoding)">
+      <summary>
+            MemoryStream へ変換
+            </summary>
+      <param name="s">元文字列</param>
+      <param name="e">エンコーディング; null の場合は <see cref="P:System.Text.Encoding.UTF8" /> を使う</param>
+      <returns>s を元にしたメモリーストリーム</returns>
+    </member>
+    <member name="N:usagi.InformationEngineering">
+      <summary>
+            情報工学的な操作、
+            電算機都合の型の何かとかそういうの
+            </summary>
+    </member>
+    <member name="T:usagi.InformationEngineering.Numeric">
+      <summary>
+            数値に対する機能を提供
+            </summary>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.ConservationCast``2(``0)">
+      <summary>
+            値を可能な限り保持した別の型を取得する。
+            非負整数と符号付き整数、浮動小数点数と整数など変換したい場合にどうぞ。
+            </summary>
+      <remarks>
+            NaN を整数型へキャストしようとしたり、
+            キャスト先の型で表現不能な数値をキャストしようとすると
+            <see cref="T:System.OverflowException" /> が飛ぶ。
+            </remarks>
+      <typeparam name="A">変換元の型</typeparam>
+      <typeparam name="B">変換先の型</typeparam>
+      <param name="a">型変換したい値</param>
+      <returns>型変換された値</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.ClampAdd(System.Byte,System.Byte)">
+      <summary>
+            元の型の定義域内に必ず収まるクランプ付きの加算
+            </summary>
+      <param name="a">元の値</param>
+      <param name="b">足す値</param>
+      <returns>加算結果</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.ClampAdd(System.SByte,System.SByte)">
+      <summary>
+            元の型の定義域内に必ず収まるクランプ付きの加算
+            </summary>
+      <param name="a">元の値</param>
+      <param name="b">足す値</param>
+      <returns>加算結果</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.ClampAdd(System.UInt16,System.UInt16)">
+      <summary>
+            元の型の定義域内に必ず収まるクランプ付きの加算
+            </summary>
+      <param name="a">元の値</param>
+      <param name="b">足す値</param>
+      <returns>加算結果</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.ClampAdd(System.Int16,System.Int16)">
+      <summary>
+            元の型の定義域内に必ず収まるクランプ付きの加算
+            </summary>
+      <param name="a">元の値</param>
+      <param name="b">足す値</param>
+      <returns>加算結果</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.ClampAdd(System.UInt32,System.UInt32)">
+      <summary>
+            元の型の定義域内に必ず収まるクランプ付きの加算
+            </summary>
+      <param name="a">元の値</param>
+      <param name="b">足す値</param>
+      <returns>加算結果</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.ClampAdd(System.Int32,System.Int32)">
+      <summary>
+            元の型の定義域内に必ず収まるクランプ付きの加算
+            </summary>
+      <param name="a">元の値</param>
+      <param name="b">足す値</param>
+      <returns>加算結果</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.ClampAdd(System.UInt64,System.UInt64)">
+      <summary>
+            元の型の定義域内に必ず収まるクランプ付きの加算
+            </summary>
+      <param name="a">元の値</param>
+      <param name="b">足す値</param>
+      <returns>加算結果</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.ClampAdd(System.Int64,System.Int64)">
+      <summary>
+            元の型の定義域内に必ず収まるクランプ付きの加算
+            </summary>
+      <param name="a">元の値</param>
+      <param name="b">足す値</param>
+      <returns>加算結果</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.Byte)">
+      <summary>
+            元の値 + 1 を安全に返すメソッド。
+            インクリメントが正常に行えない場合は
+            <see cref="T:usagi.InformationEngineering.Numeric.OverflowException" /> を飛ばす
+            </summary>
+      <param name="a">元の値</param>
+      <returns>元の値 + 1</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.SByte)">
+      <summary>
+            元の値 + 1 を安全に返すメソッド。
+            インクリメントが正常に行えない場合は
+            <see cref="T:usagi.InformationEngineering.Numeric.OverflowException" /> を飛ばす
+            </summary>
+      <param name="a">元の値</param>
+      <returns>元の値 + 1</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.UInt16)">
+      <summary>
+            元の値 + 1 を安全に返すメソッド。
+            インクリメントが正常に行えない場合は
+            <see cref="T:usagi.InformationEngineering.Numeric.OverflowException" /> を飛ばす
+            </summary>
+      <param name="a">元の値</param>
+      <returns>元の値 + 1</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.Int16)">
+      <summary>
+            元の値 + 1 を安全に返すメソッド。
+            インクリメントが正常に行えない場合は
+            <see cref="T:usagi.InformationEngineering.Numeric.OverflowException" /> を飛ばす
+            </summary>
+      <param name="a">元の値</param>
+      <returns>元の値 + 1</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.UInt32)">
+      <summary>
+            元の値 + 1 を安全に返すメソッド。
+            インクリメントが正常に行えない場合は
+            <see cref="T:usagi.InformationEngineering.Numeric.OverflowException" /> を飛ばす
+            </summary>
+      <param name="a">元の値</param>
+      <returns>元の値 + 1</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.Int32)">
+      <summary>
+            元の値 + 1 を安全に返すメソッド。
+            インクリメントが正常に行えない場合は
+            <see cref="T:usagi.InformationEngineering.Numeric.OverflowException" /> を飛ばす
+            </summary>
+      <param name="a">元の値</param>
+      <returns>元の値 + 1</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.UInt64)">
+      <summary>
+            元の値 + 1 を安全に返すメソッド。
+            インクリメントが正常に行えない場合は
+            <see cref="T:usagi.InformationEngineering.Numeric.OverflowException" /> を飛ばす
+            </summary>
+      <param name="a">元の値</param>
+      <returns>元の値 + 1</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.Int64)">
+      <summary>
+            元の値 + 1 を安全に返すメソッド。
+            インクリメントが正常に行えない場合は
+            <see cref="T:usagi.InformationEngineering.Numeric.OverflowException" /> を飛ばす
+            </summary>
+      <param name="a">元の値</param>
+      <returns>元の値 + 1</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.Decimal)">
+      <summary>
+            元の値 + 1 を安全に返すメソッド。
+            インクリメントが正常に行えない場合は
+            <see cref="T:usagi.InformationEngineering.Numeric.OverflowException" /> を飛ばす
+            </summary>
+      <param name="a">元の値</param>
+      <returns>元の値 + 1</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.Double)">
+      <summary>
+            元の値 + 1 を安全に返すメソッド。
+            インクリメントが正常に行えない場合は
+            <see cref="T:usagi.InformationEngineering.Numeric.OverflowException" /> を飛ばす
+            </summary>
+      <param name="a">元の値</param>
+      <returns>元の値 + 1</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.Single)">
+      <summary>
+            元の値 + 1 を安全に返すメソッド。
+            インクリメントが正常に行えない場合は
+            <see cref="T:usagi.InformationEngineering.Numeric.OverflowException" /> を飛ばす
+            </summary>
+      <param name="a">元の値</param>
+      <returns>元の値 + 1</returns>
+    </member>
+    <member name="T:usagi.InformationEngineering.Numeric.INumericException">
+      <summary>
+        <see cref="N:usagi.InformationEngineering" /> 名前空間の
+            <see cref="T:usagi.InformationEngineering.Numeric" /> または <see cref="T:usagi.InformationEngineering.Extension.NumericExtension" /> 系
+            から発せられる例外である事を示すタグ・インターフェース
+            </summary>
+    </member>
+    <member name="T:usagi.InformationEngineering.Numeric.OverflowException">
+      <summary>
+            オーバーフローが発生する際に飛ばされる例外
+            </summary>
+      <remarks>
+        <see cref="T:usagi.InformationEngineering.Numeric.UnderflowException" /> とはトモダチ。
+            <para /><see cref="T:usagi.InformationEngineering.Numeric.UnderflowException" /> と等価な作り、名前空間、共通の基底型を持つと扱い易いので
+            それを作る手前、オーバーフローについても <see cref="T:System.OverflowException" /> も継承しつつ
+            <see cref="T:usagi.InformationEngineering.Numeric.UnderflowException" /> と対になるよう追加した。
+            </remarks>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.OverflowException.#ctor(System.Object)">
+      <summary>
+            発生原因の値についてメッセージを生成するコンストラクター
+            </summary>
+      <param name="a">発生原因の値</param>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.OverflowException.#ctor(System.Object,System.Object)">
+      <summary>
+            二項演算等で発生原因の値が2つある場合に
+            それらの値からメッセージを生成するコンストラクター
+            </summary>
+      <param name="a">発生原因の値その1</param>
+      <param name="b">発生原因の値その2</param>
+    </member>
+    <member name="T:usagi.InformationEngineering.Numeric.UnderflowException">
+      <summary>
+            アンダーフローが発生する際に飛ばされる例外。
+            </summary>
+      <remarks>
+        <see cref="T:usagi.InformationEngineering.Numeric.OverflowException" /> とはトモダチ。
+            <para /><see cref="T:System.OverflowException" /> はアンダーフローも扱うが、
+            例外処理としてアンダーフローかオーバーフローか判断できない不便さがあるから作った。
+            </remarks>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.UnderflowException.#ctor(System.Object)">
+      <summary>
+            発生原因の値についてメッセージを生成するコンストラクター
+            </summary>
+      <param name="a">発生原因の値</param>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.UnderflowException.#ctor(System.Object,System.Object)">
+      <summary>
+            二項演算等で発生原因の値が2つある場合に
+            それらの値からメッセージを生成するコンストラクター
+            </summary>
+      <param name="a">発生原因の値その1</param>
+      <param name="b">発生原因の値その2</param>
+    </member>
+    <member name="T:usagi.InformationEngineering.Numeric.PrecisionException">
+      <summary>
+            浮動小数点数に要求された計算に精度不足により正確な結果を得られない場合に飛ばされる。
+            </summary>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.PrecisionException.#ctor(System.Object)">
+      <summary>
+            発生原因の値についてメッセージを生成するコンストラクター
+            </summary>
+      <param name="a">発生原因の値</param>
+    </member>
+    <member name="M:usagi.InformationEngineering.Numeric.PrecisionException.#ctor(System.Object,System.Object)">
+      <summary>
+            二項演算等で発生原因の値が2つある場合に
+            それらの値からメッセージを生成するコンストラクター
+            </summary>
+      <param name="a">発生原因の値その1</param>
+      <param name="b">発生原因の値その2</param>
+    </member>
+    <member name="N:usagi.InformationEngineering.Boxing">
+      <summary>
+            オブジェクトの Boxing に関する便利かもしれないおまけ機能を提供する
+            </summary>
+    </member>
+    <member name="T:usagi.InformationEngineering.Boxing.Optional">
+      <summary>
+            Optional&lt;T&gt; への糖衣構文
+            </summary>
+    </member>
+    <member name="M:usagi.InformationEngineering.Boxing.Optional.FromValue``1(``0)">
+      <summary>
+            Optional&lt;T&gt;.FromValu&lt;T&gt; への糖衣構文
+            </summary>
+      <typeparam name="T">ボクシングしたい任意のオブジェクトの型</typeparam>
+      <param name="value">ボクシングしたい任意のオブジェクト</param>
+      <returns>ボクシングされた任意のオブジェクト</returns>
+    </member>
+    <member name="T:usagi.InformationEngineering.Boxing.Optional`1">
+      <summary>
+            任意の型&lt;T&gt; についてオブジェクトの有無のチェック機構を設けたボクシングされた型を提供する
+            <list type="bullet"><item><description>オブジェクトを放り込むと暗黙的に T 型のオブジェクトとしても振る舞う</description></item><item><description>null を放り込むと T 型の空のオブジェクトとして振る舞う</description></item><item><description>IDisposable なオブジェクトに対してはボクシングしたまま IDisposable できる</description></item></list></summary>
+      <typeparam name="T">ボクシングしたい任意の型</typeparam>
+      <remarks>
+            内部表現は object による
+            </remarks>
+    </member>
+    <member name="T:usagi.InformationEngineering.Boxing.Optional`1.InvalidValueException">
+      <summary>
+            オブジェクトを内包していない状態でオブジェクトを要求するメソッドを呼んだりすると飛ばします。
+            </summary>
+    </member>
+    <member name="M:usagi.InformationEngineering.Boxing.Optional`1.InvalidValueException.#ctor(System.String)">
+      <summary>
+            生成
+            </summary>
+      <param name="m">込めたいメッセージ</param>
+    </member>
+    <member name="F:usagi.InformationEngineering.Boxing.Optional`1.o">
+      <summary>
+            内部表現
+            </summary>
+    </member>
+    <member name="M:usagi.InformationEngineering.Boxing.Optional`1.#ctor">
+      <summary>
+            空のボクシングオブジェクトを生成します。
+            <para />それはおおよそソフトな null っぽいものです。
+            </summary>
+    </member>
+    <member name="M:usagi.InformationEngineering.Boxing.Optional`1.#ctor(`0)">
+      <summary>
+            オブジェクトを内包したボクシングオブジェクトを生成します。
+            <para />生成されたボクシングオブジェクトはおおよそ暗黙の型変換によりT型のオブジェクトっぽく振る舞います。
+            </summary>
+      <param name="value">内包させるオブジェクト</param>
+    </member>
+    <member name="M:usagi.InformationEngineering.Boxing.Optional`1.Reset(`0,System.Boolean)">
+      <summary>
+            ボクシングオブジェクトにオブジェクトを新たに内包させます。
+            <para />既に内包しているオブジェクトがあった場合その運命はガベージコレクターに委ねられます。たぶん。
+            </summary>
+      <param name="value">新たに内包させるオブジェクト</param>
+      <param name="dispose">既に内包しているオブジェクトがあり、かつ IDisposable を実装している場合に Dispose する場合は true 、しなくていい場合は false</param>
+      <returns>新たなオブジェクトを内包した this</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Boxing.Optional`1.Reset(`0,`0@)">
+      <summary>
+            新たなオブジェクトを内包させると同時に既に内包しているオブジェクトがあった場合には取り出せる版の Reset　です。
+            </summary>
+      <param name="value">新たに内包させるオブジェクト</param>
+      <param name="previously">既に内包しているオブジェクトがあった場合に取り出す先</param>
+      <returns>新たなオブジェクトを内包した this</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Boxing.Optional`1.Get">
+      <summary>
+            内包するオブジェクトがあれば取り出します。
+            この機能は T 型への暗黙の型変換と等価です。
+            </summary>
+      <exception cref="T:usagi.InformationEngineering.Boxing.Optional`1.InvalidValueException">内包するオブジェクトが無い場合に飛びます。</exception>
+      <returns>内包するオブジェクト</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Boxing.Optional`1.TryGet(`0@)">
+      <summary>
+            内包するオブジェクトがあれば value へ取り出し true を返します。
+            <para />内包するオブジェクトが無ければ value には何もせず false を返します。
+            </summary>
+      <param name="value">内包するオブジェクトがあれば代入されます。無ければ何もされません。</param>
+      <returns>内包するオブジェクトを value へ取り出せた場合は true 、そうでない場合には false が帰ります。</returns>
+      <remarks>
+            Get や暗黙の型変換で例外が飛ぶ可能性を嫌う場合にどうぞ。
+            </remarks>
+    </member>
+    <member name="M:usagi.InformationEngineering.Boxing.Optional`1.IsValid">
+      <summary>
+            内包するオブジェクトの有無を返します。
+            </summary>
+      <returns>内包するオブジェクトがあれば true 、無ければ false が返ります。</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Boxing.Optional`1.op_True(usagi.InformationEngineering.Boxing.Optional{`0})">
+      <summary>
+            内包するオブジェクトが有効な場合に operator true として true を返します。
+            </summary>
+      <param name="optional">ボクシングオブジェクト</param>
+      <returns>内包するオブジェクトが有効な場合は true 、そうでなければ false</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Boxing.Optional`1.op_False(usagi.InformationEngineering.Boxing.Optional{`0})">
+      <summary>
+            内包するオブジェクトが無効な場合に operator false として true を返します。
+            </summary>
+      <param name="optional">ボクシングオブジェクト</param>
+      <returns>内包するオブジェクトが無効な場合は true 、そうでなければ false</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Boxing.Optional`1.op_Implicit(usagi.InformationEngineering.Boxing.Optional{`0})~`0">
+      <summary>
+            暗黙の型変換により T 型へ変換します。
+            Get と等価に機能します。
+            </summary>
+      <param name="optional">ボクシングオブジェクト</param>
+      <returns>内包するT型のインスタンス</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Boxing.Optional`1.FromValue(`0)">
+      <summary>
+            内包させたいオブジェクトからボクシングオブジェクトを生成するファクトリー
+            </summary>
+      <param name="value">内包させたいオブジェクト</param>
+      <returns>value を内包したボクシングオブジェクト</returns>
+    </member>
+    <member name="P:usagi.InformationEngineering.Boxing.Optional`1.Null">
+      <summary>
+            空のボクシングオブジェクトを生成するファクトリーとして機能するプロパティー
+            new Optional&lt;T&gt;() の糖衣構文です。 new と ctor の ( ) をタイプしたくないあなたに。
+            </summary>
+    </member>
+    <member name="M:usagi.InformationEngineering.Boxing.Optional`1.Dispose">
+      <summary>
+            内包するオブジェクトが IDisposable を実装する場合には Dispose します。
+            <para />ボクシングオブジェクトとしても内包するオブジェクトの運命をガベージコレクターへ任せ、自身は何も内包しない状態へ変化します。
+            </summary>
+    </member>
+    <member name="T:usagi.InformationEngineering.Boxing.Utility">
+      <summary>
+            Boxing を使ったちょっとした便利機能
+            </summary>
+    </member>
+    <member name="M:usagi.InformationEngineering.Boxing.Utility.FirstOfOptional``1(System.Collections.Generic.IEnumerable{``0})">
+      <summary>
+            列挙の先頭要素をボクシングオブジェクトで取り出します。
+            </summary>
+      <typeparam name="T">列挙された任意の型</typeparam>
+      <param name="values">列挙された任意の型のオブジェクト群</param>
+      <returns>列挙の先頭要素または空のボクシングオブジェクト</returns>
+    </member>
+    <member name="M:usagi.InformationEngineering.Boxing.Utility.LastOfOptional``1(System.Collections.Generic.IEnumerable{``0})">
+      <summary>
+            列挙の末尾要素をボクシングオブジェクトで取り出します。
+            </summary>
+      <typeparam name="T">列挙された任意の型</typeparam>
+      <param name="values">列挙された任意の型のオブジェクト群</param>
+      <returns>列挙の末尾要素または空のボクシングオブジェクト</returns>
+    </member>
+    <member name="N:usagi.GUI.Extension">
+      <summary>
+            エクステンション
+            </summary>
+    </member>
+    <member name="T:usagi.GUI.Extension.ItemsControlHelper">
+      <summary>
+            System.Windows.Control.ItemsControlHelper に対する機能拡張
+            </summary>
+    </member>
+    <member name="M:usagi.GUI.Extension.ItemsControlHelper.GetContentPresenter(System.Windows.Controls.ItemsControl,System.Int32)">
+      <summary>
+            ItemsControl から index 番目のアイテムの ContentPresenter を引っ張り出す
+            </summary>
+      <param name="c">引っ張り出し元</param>
+      <param name="index">ContentPresenter を引っ張り出したいアイテムのインデックス</param>
+      <returns>引っ張り出された ContentPresenter または null</returns>
+    </member>
+    <member name="M:usagi.GUI.Extension.ItemsControlHelper.FindChild(System.Windows.Controls.ContentPresenter,System.String)">
+      <summary>
+            ContentPresenter から name の object を引っ張り出す
+            </summary>
+      <param name="p">引っ張り出し元</param>
+      <param name="name">引っ張り出したい object の名前</param>
+      <returns>引っ張り出された object または null</returns>
+    </member>
+    <member name="M:usagi.GUI.Extension.ItemsControlHelper.FindChildAs``1(System.Windows.Controls.ContentPresenter,System.String)">
+      <summary>
+            ContentPresenter から name の object を T 型で引っ張り出す
+            <para /><see cref="M:usagi.GUI.Extension.ItemsControlHelper.FindChild(System.Windows.Controls.ContentPresenter,System.String)" /> の型キャスト付き版
+            </summary>
+      <typeparam name="T">引っ張り出したい object の型</typeparam>
+      <param name="p">引っ張り出し元</param>
+      <param name="name">引っ張り出したい object の名前</param>
+      <returns>引っ張り出された T 型の object または null</returns>
+    </member>
+    <member name="M:usagi.GUI.Extension.ItemsControlHelper.FindChild(System.Windows.Controls.ItemsControl,System.Int32,System.String)">
+      <summary>
+        <see cref="M:usagi.GUI.Extension.ItemsControlHelper.GetContentPresenter(System.Windows.Controls.ItemsControl,System.Int32)" /> +
+            <see cref="M:usagi.GUI.Extension.ItemsControlHelper.FindChild(System.Windows.Controls.ContentPresenter,System.String)" /> の複合技。
+            </summary>
+      <remarks>
+            取り出したいアイテムが1つだけの場合に便利。
+            複数の場合は <see cref="M:usagi.GUI.Extension.ItemsControlHelper.FindChildren(System.Windows.Controls.ItemsControl,System.Int32,System.String[])" /> を使うと良い。
+            </remarks>
+      <param name="c">引っ張り出し元</param>
+      <param name="index">ContentPresenter を引っ張り出したいアイテムのインデックス</param>
+      <param name="name">引っ張り出したいアイテムの名前</param>
+      <returns>引っ張り出したアイテムまたは null</returns>
+    </member>
+    <member name="M:usagi.GUI.Extension.ItemsControlHelper.FindChildAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String)">
+      <summary>
+        <see cref="M:usagi.GUI.Extension.ItemsControlHelper.FindChild(System.Windows.Controls.ItemsControl,System.Int32,System.String)" /> の型キャスト付き版
+            </summary>
+      <remarks>
+            取り出したいアイテムが1つだけの場合に便利。
+            複数の場合は <see cref="M:usagi.GUI.Extension.ItemsControlHelper.FindChildrenAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String[])" /> を使うと良い。
+            </remarks>
+      <typeparam name="T">引っ張り出したいアイテムの型</typeparam>
+      <param name="c">引っ張り出し元</param>
+      <param name="index">ContentPresenter を引っ張り出したいアイテムのインデックス</param>
+      <param name="name">引っ張り出したいアイテムの名前</param>
+      <returns>引っ張り出したアイテムまたは null</returns>
+    </member>
+    <member name="M:usagi.GUI.Extension.ItemsControlHelper.FindChildren(System.Windows.Controls.ItemsControl,System.Int32,System.String[])">
+      <summary>
+        <see cref="M:usagi.GUI.Extension.ItemsControlHelper.GetContentPresenter(System.Windows.Controls.ItemsControl,System.Int32)" /> +
+            <see cref="M:usagi.GUI.Extension.ItemsControlHelper.FindChild(System.Windows.Controls.ContentPresenter,System.String)" /> の合体技
+            </summary>
+      <param name="c">引っ張り出し元</param>
+      <param name="index">ContentPresenter を引っ張り出したいアイテムのインデックス</param>
+      <param name="names">引っ張り出し元の各アイテムごとに引っ張り出したいコントロールの名前群</param>
+      <returns>&lt;&lt;Key=名前, Value=引っ張り出されたアイテムまたは null&gt;の辞書&gt;の列挙</returns>
+    </member>
+    <member name="M:usagi.GUI.Extension.ItemsControlHelper.FindChildrenAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String[])">
+      <summary>
+        <see cref="M:usagi.GUI.Extension.ItemsControlHelper.FindChildren(System.Windows.Controls.ItemsControl,System.String[])" />
+      </summary>
+      <typeparam name="T">
+      </typeparam>
+      <param name="c">引っ張り出し元</param>
+      <param name="index">ContentPresenter を引っ張り出したいアイテムのインデックス</param>
+      <param name="names">引っ張り出し元の各アイテムごとに引っ張り出したいコントロールの名前群</param>
+      <returns>&lt;&lt;Key=名前, Value=引っ張り出されたアイテムまたは null&gt;の辞書&gt;の列挙</returns>
+    </member>
+    <member name="M:usagi.GUI.Extension.ItemsControlHelper.FindChildren(System.Windows.Controls.ItemsControl,System.String[])">
+      <summary>
+        <see cref="M:usagi.GUI.Extension.ItemsControlHelper.FindChildren(System.Windows.Controls.ItemsControl,System.Int32,System.String[])" /> のさらにずぼら横着進化した版
+            control の全てのアイテムごとに、一度に複数の名前を与えて対応する複数の object を引っ張り出せる。
+            </summary>
+      <example>
+        <code>
+            var css = control.FindChildren( "Name1", "Name2", "Name3" );
+            foreach ( var cs in css )
+            {
+              if ( cs[ "Name1" ] is Image i )
+                i.DataContext = hoge;
+              if ( cs[ "Name2" ] is ComboBox c )
+                c.DataContext = fuga;
+              if ( cs[ "Name3" ] is TextBlock t )
+                Console.WriteLine( t.Text );
+            }
+            </code>
+      </example>
+      <param name="c">引っ張り出し元</param>
+      <param name="names">引っ張り出し元の各アイテムごとに引っ張り出したいコントロールの名前群</param>
+      <returns>&lt;&lt;Key=名前, Value=引っ張り出されたコントロールまたは null&gt;の辞書&gt;の列挙</returns>
+    </member>
+    <member name="M:usagi.GUI.Extension.ItemsControlHelper.FindChildrenAs``1(System.Windows.Controls.ItemsControl,System.String[])">
+      <summary>
+        <see cref="M:usagi.GUI.Extension.ItemsControlHelper.FindChildrenAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String[])" /> のさらにずぼら横着進化した版
+            control の全てのアイテムごとに、一度に複数の名前を与えて対応する複数の object を引っ張り出せる。
+            </summary>
+      <remarks>
+            取り出したいアイテムが全て同じ型の場合に便利。
+            そうでない場合は <see cref="M:usagi.GUI.Extension.ItemsControlHelper.FindChildren(System.Windows.Controls.ItemsControl,System.String[])" /> を使うと良い。
+            </remarks>
+      <example>
+        <code>
+            var tss = control.FindChildrenAs&lt;TextBlock&gt;( "Name1", "Name2", "Name3" );
+            var result = 
+              string.Join
+              ( "\n"
+              , from ts
+                in tss
+                select
+                  string.Join
+                  ( ", "
+                  , from c
+                    in cs
+                    select ${c.Name}.Text={c.Text}
+                  )
+              );
+            Console.Write( result );
+            </code>
+      </example>
+      <typeparam name="T">引っ張り出したい型</typeparam>
+      <param name="c">引っ張り出し元</param>
+      <param name="names">引っ張り出し元の各アイテムごとに引っ張り出したいコントロールの名前群</param>
+      <returns>&lt;&lt;Key=名前, Value=引っ張り出されたコントロールまたは null&gt;の辞書&gt;の列挙</returns>
+    </member>
+    <member name="N:usagi">
+      <summary>
+            usagi.cs
+            <para />わたしが欲しいと思った適当な機能たち for C#
+            </summary>
+      <seealso href="https://www.nuget.org/packages/usagi/">NuGet: packages/usagi</seealso>
+      <seealso href="https://github.com/usagi/usagi.cs/">GitHhub: usagi/usagi.cs</seealso>
+      <seealso href="https://github.com/usagi/usagi.cs/LICENSE.md">License: MIT</seealso>
+      <seealso href="https://github.com/usagi/">Author's github: usagi</seealso>
+      <seealso href="https://twitter.com/USAGI_WRP">Author's Twitter: USAGI_WRP</seealso>
+      <seealso href="https://www.facebook.com/usagi.wrp">Author's Facebook: usagi.wrp</seealso>
+      <seealso href="https://usagi.hatenablog.jp/">Author's Blog( C++ and techs ): C++ ときどき ごはん、わりとてぃーぶれいく☆</seealso>
+    </member>
+    <member name="T:usagi.LibraryInformation">
+      <summary>
+            このライブラリーの諸元
+            </summary>
+    </member>
+    <member name="F:usagi.LibraryInformation.Name">
+      <summary>
+            ライブラリー名称
+            </summary>
+    </member>
+    <member name="F:usagi.LibraryInformation.NuGet">
+      <summary>
+            NuGet のパッケージ URI
+            </summary>
+    </member>
+    <member name="F:usagi.LibraryInformation.GitHub">
+      <summary>
+            GitHub のリポジトリー URI
+            </summary>
+    </member>
+    <member name="F:usagi.LibraryInformation.License">
+      <summary>
+            ライセンス
+            </summary>
+    </member>
+    <member name="F:usagi.LibraryInformation.Readme">
+      <summary>
+            りーどみー
+            </summary>
+    </member>
+    <member name="F:usagi.LibraryInformation.Authors">
+      <summary>
+            作った人々
+            </summary>
+    </member>
+    <member name="F:usagi.LibraryInformation.Comitters">
+      <summary>
+            貢献してくれた人々
+            </summary>
+    </member>
     <member name="N:usagi.URI">
       <summary>
             URI っぽい何か
@@ -3857,6 +5673,9 @@
       <param name="angle_tolelance">平面角の許容範囲</param>
       <param name="length_tolerance">長さの許容範囲</param>
       <returns>一致する場合は true</returns>
+    </member>
+    <member name="N:usagi.Quantity.Extension">
+      <summary />
     </member>
   </members>
 </doc>

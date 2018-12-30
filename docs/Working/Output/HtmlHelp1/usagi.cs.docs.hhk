@@ -8,17 +8,17 @@
       </OBJECT></LI>
       <UL>
         <LI><OBJECT type="text/sitemap">
-          <param name="Name" value="LengthMathHelper.Abs メソッド ">
-          <param name="Local" value="html/M_usagi_Quantity_LengthMathExtension_LengthMathHelper_Abs.htm">
+          <param name="Name" value="LengthMathExtension.Abs メソッド ">
+          <param name="Local" value="html/M_usagi_Quantity_Extension_LengthMathExtension_Abs.htm">
         </OBJECT></LI>
         <LI><OBJECT type="text/sitemap">
           <param name="Name" value="PlaneAngleMathHelper.Abs メソッド ">
-          <param name="Local" value="html/M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Abs.htm">
+          <param name="Local" value="html/M_usagi_Quantity_Extension_PlaneAngleMathHelper_Abs.htm">
         </OBJECT></LI>
       </UL>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="ACos メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_LengthMathExtension_LengthMathHelper_ACos.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_LengthMathExtension_ACos.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Addition 演算子">
@@ -82,11 +82,11 @@
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="ASin メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_LengthMathExtension_LengthMathHelper_ASin.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_LengthMathExtension_ASin.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="ATan2 メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_LengthMathExtension_LengthMathHelper_ATan2.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_LengthMathExtension_ATan2.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Authors フィールド">
@@ -153,8 +153,16 @@
         <param name="Local" value="html/M_usagi_Quantity_Calculation_Min__1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="Calculation.NearlyEquals メソッド">
-        <param name="Local" value="html/Overload_usagi_Quantity_Calculation_NearlyEquals.htm">
+        <param name="Name" value="Calculation.NearlyEquals(Of T) メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_Calculation_NearlyEquals__1.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Calculation.NearlyEquals&lt;T&gt; メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_Calculation_NearlyEquals__1.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="CC 列挙体メンバー">
+        <param name="Local" value="html/T_usagi_Collection_Enumerable_RangeTermination.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="CentiDegree プロパティ">
@@ -175,6 +183,70 @@
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Clamp&lt;T&gt; メソッド">
         <param name="Local" value="html/M_usagi_Quantity_Calculation_Clamp__1.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClampAdd メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Numeric_ClampAdd.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClampToByte メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Extension_NumericExtension_ClampToByte.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClampToInt16 メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Extension_NumericExtension_ClampToInt16.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClampToInt32 メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Extension_NumericExtension_ClampToInt32.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClampToInt64 メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Extension_NumericExtension_ClampToInt64.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClampToSByte メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Extension_NumericExtension_ClampToSByte.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClampToSNorm メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ClampToSNorm.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClampToUInt16 メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Extension_NumericExtension_ClampToUInt16.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClampToUInt32 メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Extension_NumericExtension_ClampToUInt32.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClampToUInt64 メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Extension_NumericExtension_ClampToUInt64.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ClampToUNorm メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ClampToUNorm.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="CO 列挙体メンバー">
+        <param name="Local" value="html/T_usagi_Collection_Enumerable_RangeTermination.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ColorExtension クラス">
+        <param name="Local" value="html/T_usagi_ColorSpace_Extension_ColorExtension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ColorExtension クラス、メソッド">
+        <param name="Local" value="html/Methods_T_usagi_ColorSpace_Extension_ColorExtension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ColorExtension.NearlyEqualsInHSLA メソッド">
+        <param name="Local" value="html/M_usagi_ColorSpace_Extension_ColorExtension_NearlyEqualsInHSLA.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ColorExtension.ToHSLA メソッド">
+        <param name="Local" value="html/Overload_usagi_ColorSpace_Extension_ColorExtension_ToHSLA.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Comitters フィールド">
@@ -199,8 +271,16 @@
         </OBJECT></LI>
       </UL>
       <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ConservationCast(Of A, B) メソッド">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Numeric_ConservationCast__2.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ConservationCast&lt;A, B&gt; メソッド">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Numeric_ConservationCast__2.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Contains メソッド">
-        <param name="Local" value="html/M_usagi_Extension_StringHelper_Contains.htm">
+        <param name="Local" value="html/M_usagi_String_Extension_StringExtension_Contains.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="CoordinateReferenceSystem プロパティ">
@@ -208,15 +288,23 @@
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Cos メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Cos.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_PlaneAngleMathHelper_Cos.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Cosh メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Cosh.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_PlaneAngleMathHelper_Cosh.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="CriticalLatitude プロパティ">
         <param name="Local" value="html/P_usagi_CivilEngineering_WebMercator_CriticalLatitude.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="CSS_HSLA 列挙体メンバー">
+        <param name="Local" value="html/T_usagi_ColorSpace_Extension_StringExtetnsion_ColorPatternTrial.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="CSS_RGBA 列挙体メンバー">
+        <param name="Local" value="html/T_usagi_ColorSpace_Extension_StringExtetnsion_ColorPatternTrial.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="DeciDegree プロパティ">
@@ -231,28 +319,16 @@
         <param name="Local" value="html/P_usagi_Quantity_PlaneAngle_DeciSecond.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="DecompositionToCommonFraction メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_Ratio_Extension_NumericExtension_DecompositionToCommonFraction.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Degree プロパティ">
         <param name="Local" value="html/P_usagi_Quantity_PlaneAngle_Degree.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="DictionaryHelper クラス">
-        <param name="Local" value="html/T_usagi_Extension_Collection_DictionaryHelper.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="DictionaryHelper クラス、メソッド">
-        <param name="Local" value="html/Methods_T_usagi_Extension_Collection_DictionaryHelper.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="DictionaryHelper.UnorderedEqual(Of TK, TV) メソッド">
-        <param name="Local" value="html/M_usagi_Extension_Collection_DictionaryHelper_UnorderedEqual__2.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="DictionaryHelper.UnorderedEqual&lt;TK, TV&gt; メソッド">
-        <param name="Local" value="html/M_usagi_Extension_Collection_DictionaryHelper_UnorderedEqual__2.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Dispose メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_Dispose.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_Dispose.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Distance(Of T) メソッド">
@@ -264,7 +340,7 @@
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="DistanceTo メソッド">
-        <param name="Local" value="html/M_usagi_CivilEngineering_LonLatHelper_DistanceTo.htm">
+        <param name="Local" value="html/M_usagi_CivilEngineering_Extension_LonLatDistanceExtension_DistanceTo.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="DistanceToPlaneAngle メソッド">
@@ -290,35 +366,27 @@
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="EndsWith メソッド">
-        <param name="Local" value="html/M_usagi_Extension_StringHelper_EndsWith.htm">
+        <param name="Local" value="html/M_usagi_String_Extension_StringExtension_EndsWith.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="EnumerableHelper クラス">
-        <param name="Local" value="html/T_usagi_Extension_Collection_EnumerableHelper.htm">
+        <param name="Name" value="Enumerable クラス">
+        <param name="Local" value="html/T_usagi_Collection_Enumerable.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="EnumerableHelper クラス、メソッド">
-        <param name="Local" value="html/Methods_T_usagi_Extension_Collection_EnumerableHelper.htm">
+        <param name="Name" value="Enumerable クラス、メソッド">
+        <param name="Local" value="html/Methods_T_usagi_Collection_Enumerable.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="EnumerableHelper.Range メソッド">
-        <param name="Local" value="html/Overload_usagi_Extension_Collection_EnumerableHelper_Range.htm">
+        <param name="Name" value="Enumerable.Range メソッド">
+        <param name="Local" value="html/Overload_usagi_Collection_Enumerable_Range.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="EnumerableHelper.UnorderedEqual(Of T) メソッド">
-        <param name="Local" value="html/M_usagi_Extension_Collection_EnumerableHelper_UnorderedEqual__1.htm">
+        <param name="Name" value="Enumerable.RangeOO メソッド">
+        <param name="Local" value="html/M_usagi_Collection_Enumerable_RangeOO.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="EnumerableHelper.UnorderedEqual&lt;T&gt; メソッド">
-        <param name="Local" value="html/M_usagi_Extension_Collection_EnumerableHelper_UnorderedEqual__1.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="EnumerableHelper.WithIndexing(Of T) メソッド">
-        <param name="Local" value="html/M_usagi_Extension_Collection_EnumerableHelper_WithIndexing__1.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="EnumerableHelper.WithIndexing&lt;T&gt; メソッド">
-        <param name="Local" value="html/M_usagi_Extension_Collection_EnumerableHelper_WithIndexing__1.htm">
+        <param name="Name" value="Enumerable.RangeTermination 列挙体">
+        <param name="Local" value="html/T_usagi_Collection_Enumerable_RangeTermination.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Equality 演算子">
@@ -369,52 +437,48 @@
         <param name="Local" value="html/P_usagi_CivilEngineering_Planet_IGeometricalSpecificationGettable_EquatorLength.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Factory クラス">
+        <param name="Local" value="html/T_usagi_ColorSpace_Factory.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Factory クラス、メソッド">
+        <param name="Local" value="html/Methods_T_usagi_ColorSpace_Factory.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Factory.FromHSLA メソッド">
+        <param name="Local" value="html/Overload_usagi_ColorSpace_Factory_FromHSLA.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Factory.FromRGBA メソッド">
+        <param name="Local" value="html/Overload_usagi_ColorSpace_Factory_FromRGBA.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
         <param name="Name" value="False 演算子">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_op_False.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_op_False.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="FindChild メソッド">
-        <param name="Local" value="html/Overload_usagi_Extension_ItemsControlHelper_FindChild.htm">
+        <param name="Local" value="html/Overload_usagi_GUI_Extension_ItemsControlHelper_FindChild.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="FindChildAs メソッド">
-        <param name="Local" value="html/Overload_usagi_Extension_ItemsControlHelper_FindChildAs.htm">
+        <param name="Local" value="html/Overload_usagi_GUI_Extension_ItemsControlHelper_FindChildAs.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="FindChildren メソッド">
-        <param name="Local" value="html/Overload_usagi_Extension_ItemsControlHelper_FindChildren.htm">
+        <param name="Local" value="html/Overload_usagi_GUI_Extension_ItemsControlHelper_FindChildren.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="FindChildrenAs メソッド">
-        <param name="Local" value="html/Overload_usagi_Extension_ItemsControlHelper_FindChildrenAs.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="FindControl メソッド">
-        <param name="Local" value="html/Overload_usagi_Extension_ItemsControlHelper_FindControl.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="FindControlAs メソッド">
-        <param name="Local" value="html/Overload_usagi_Extension_ItemsControlHelper_FindControlAs.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="FindControls メソッド">
-        <param name="Local" value="html/Overload_usagi_Extension_ItemsControlHelper_FindControls.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="FindControlsAs(Of T) メソッド">
-        <param name="Local" value="html/M_usagi_Extension_ItemsControlHelper_FindControlsAs__1.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="FindControlsAs&lt;T&gt; メソッド">
-        <param name="Local" value="html/M_usagi_Extension_ItemsControlHelper_FindControlsAs__1.htm">
+        <param name="Local" value="html/Overload_usagi_GUI_Extension_ItemsControlHelper_FindChildrenAs.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="FirstOfOptional(Of T) メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Utility_FirstOfOptional__1.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Utility_FirstOfOptional__1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="FirstOfOptional&lt;T&gt; メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Utility_FirstOfOptional__1.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Utility_FirstOfOptional__1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Flattening プロパティ">
@@ -457,6 +521,10 @@
         <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_FromGradians.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="FromHSLA メソッド">
+        <param name="Local" value="html/Overload_usagi_ColorSpace_Factory_FromHSLA.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
         <param name="Name" value="FromMils メソッド">
         <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_FromMils.htm">
       </OBJECT></LI>
@@ -469,12 +537,16 @@
         <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_FromRadians.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="FromRGBA メソッド">
+        <param name="Local" value="html/Overload_usagi_ColorSpace_Factory_FromRGBA.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
         <param name="Name" value="FromTurns メソッド">
         <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_FromTurns.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="FromValue メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_FromValue.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_FromValue.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="From_acos メソッド">
@@ -922,11 +994,11 @@
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Get メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_Get.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_Get.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="GetContentPresenter メソッド">
-        <param name="Local" value="html/M_usagi_Extension_ItemsControlHelper_GetContentPresenter.htm">
+        <param name="Local" value="html/M_usagi_GUI_Extension_ItemsControlHelper_GetContentPresenter.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="GetHashCode メソッド">
@@ -992,7 +1064,11 @@
       </UL>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Haversine 列挙体メンバー">
-        <param name="Local" value="html/T_usagi_CivilEngineering_LonLatHelper_LonLatDistanceAlgorithm.htm">
+        <param name="Local" value="html/T_usagi_CivilEngineering_Extension_LonLatDistanceExtension_LonLatDistanceAlgorithm.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Hex 列挙体メンバー">
+        <param name="Local" value="html/T_usagi_ColorSpace_Extension_StringExtetnsion_ColorPatternTrial.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="IAltitude インターフェイス">
@@ -1025,6 +1101,50 @@
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="IAltitudeSetttable.Altitude プロパティ">
         <param name="Local" value="html/P_usagi_Quantity_GeoLocation_IAltitudeSetttable_Altitude.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IDictionaryExtension クラス">
+        <param name="Local" value="html/T_usagi_Collection_Extension_IDictionaryExtension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IDictionaryExtension クラス、メソッド">
+        <param name="Local" value="html/Methods_T_usagi_Collection_Extension_IDictionaryExtension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IDictionaryExtension.UnorderedEqual(Of TK, TV) メソッド">
+        <param name="Local" value="html/M_usagi_Collection_Extension_IDictionaryExtension_UnorderedEqual__2.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IDictionaryExtension.UnorderedEqual&lt;TK, TV&gt; メソッド">
+        <param name="Local" value="html/M_usagi_Collection_Extension_IDictionaryExtension_UnorderedEqual__2.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IEnumerableExtension クラス">
+        <param name="Local" value="html/T_usagi_Collection_Extension_IEnumerableExtension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IEnumerableExtension クラス、メソッド">
+        <param name="Local" value="html/Methods_T_usagi_Collection_Extension_IEnumerableExtension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IEnumerableExtension.Range メソッド">
+        <param name="Local" value="html/Overload_usagi_Collection_Extension_IEnumerableExtension_Range.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IEnumerableExtension.UnorderedEqual(Of T) メソッド">
+        <param name="Local" value="html/M_usagi_Collection_Extension_IEnumerableExtension_UnorderedEqual__1.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IEnumerableExtension.UnorderedEqual&lt;T&gt; メソッド">
+        <param name="Local" value="html/M_usagi_Collection_Extension_IEnumerableExtension_UnorderedEqual__1.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IEnumerableExtension.WithIndexing(Of T) メソッド">
+        <param name="Local" value="html/M_usagi_Collection_Extension_IEnumerableExtension_WithIndexing__1.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="IEnumerableExtension.WithIndexing&lt;T&gt; メソッド">
+        <param name="Local" value="html/M_usagi_Collection_Extension_IEnumerableExtension_WithIndexing__1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="IFromGeoCoordinate インターフェイス">
@@ -1502,15 +1622,15 @@
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="InvalidValueException クラス、イベント">
-        <param name="Local" value="html/Events_T_usagi_Boxing_Optional_1_InvalidValueException.htm">
+        <param name="Local" value="html/Events_T_usagi_InformationEngineering_Boxing_Optional_1_InvalidValueException.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="InvalidValueException クラス、プロパティ">
-        <param name="Local" value="html/Properties_T_usagi_Boxing_Optional_1_InvalidValueException.htm">
+        <param name="Local" value="html/Properties_T_usagi_InformationEngineering_Boxing_Optional_1_InvalidValueException.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="InvalidValueException クラス、メソッド">
-        <param name="Local" value="html/Methods_T_usagi_Boxing_Optional_1_InvalidValueException.htm">
+        <param name="Local" value="html/Methods_T_usagi_InformationEngineering_Boxing_Optional_1_InvalidValueException.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="InXUnit プロパティ">
@@ -1586,55 +1706,35 @@
       </UL>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="IsValid メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_IsValid.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_IsValid.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="ItemsControlHelper クラス">
-        <param name="Local" value="html/T_usagi_Extension_ItemsControlHelper.htm">
+        <param name="Local" value="html/T_usagi_GUI_Extension_ItemsControlHelper.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="ItemsControlHelper クラス、メソッド">
-        <param name="Local" value="html/Methods_T_usagi_Extension_ItemsControlHelper.htm">
+        <param name="Local" value="html/Methods_T_usagi_GUI_Extension_ItemsControlHelper.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="ItemsControlHelper.FindChild メソッド">
-        <param name="Local" value="html/Overload_usagi_Extension_ItemsControlHelper_FindChild.htm">
+        <param name="Local" value="html/Overload_usagi_GUI_Extension_ItemsControlHelper_FindChild.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="ItemsControlHelper.FindChildAs メソッド">
-        <param name="Local" value="html/Overload_usagi_Extension_ItemsControlHelper_FindChildAs.htm">
+        <param name="Local" value="html/Overload_usagi_GUI_Extension_ItemsControlHelper_FindChildAs.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="ItemsControlHelper.FindChildren メソッド">
-        <param name="Local" value="html/Overload_usagi_Extension_ItemsControlHelper_FindChildren.htm">
+        <param name="Local" value="html/Overload_usagi_GUI_Extension_ItemsControlHelper_FindChildren.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="ItemsControlHelper.FindChildrenAs メソッド">
-        <param name="Local" value="html/Overload_usagi_Extension_ItemsControlHelper_FindChildrenAs.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="ItemsControlHelper.FindControl メソッド">
-        <param name="Local" value="html/Overload_usagi_Extension_ItemsControlHelper_FindControl.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="ItemsControlHelper.FindControlAs メソッド">
-        <param name="Local" value="html/Overload_usagi_Extension_ItemsControlHelper_FindControlAs.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="ItemsControlHelper.FindControls メソッド">
-        <param name="Local" value="html/Overload_usagi_Extension_ItemsControlHelper_FindControls.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="ItemsControlHelper.FindControlsAs(Of T) メソッド">
-        <param name="Local" value="html/M_usagi_Extension_ItemsControlHelper_FindControlsAs__1.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="ItemsControlHelper.FindControlsAs&lt;T&gt; メソッド">
-        <param name="Local" value="html/M_usagi_Extension_ItemsControlHelper_FindControlsAs__1.htm">
+        <param name="Local" value="html/Overload_usagi_GUI_Extension_ItemsControlHelper_FindChildrenAs.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="ItemsControlHelper.GetContentPresenter メソッド">
-        <param name="Local" value="html/M_usagi_Extension_ItemsControlHelper_GetContentPresenter.htm">
+        <param name="Local" value="html/M_usagi_GUI_Extension_ItemsControlHelper_GetContentPresenter.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="IToGeoCoordinate インターフェイス">
@@ -1650,11 +1750,11 @@
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="LastOfOptional(Of T) メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Utility_LastOfOptional__1.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Utility_LastOfOptional__1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="LastOfOptional&lt;T&gt; メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Utility_LastOfOptional__1.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Utility_LastOfOptional__1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Latitude プロパティ">
@@ -1680,7 +1780,7 @@
       </UL>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="LatitudeDistanceTo メソッド">
-        <param name="Local" value="html/M_usagi_CivilEngineering_LonLatHelper_LatitudeDistanceTo.htm">
+        <param name="Local" value="html/M_usagi_CivilEngineering_Extension_LonLatDistanceExtension_LatitudeDistanceTo.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="LatitudeParseFailedException クラス、イベント">
@@ -2316,11 +2416,7 @@
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Length.NearlyEquals メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_Length_NearlyEquals.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="Length.NearlyEqualsTo メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_Length_NearlyEqualsTo.htm">
+        <param name="Local" value="html/Overload_usagi_Quantity_Length_NearlyEquals.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Length.NegativeInfinity プロパティ">
@@ -2767,32 +2863,32 @@
         <param name="Local" value="html/P_usagi_Quantity_Length__間.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="LengthMathHelper クラス">
-        <param name="Local" value="html/T_usagi_Quantity_LengthMathExtension_LengthMathHelper.htm">
+        <param name="Name" value="LengthMathExtension クラス">
+        <param name="Local" value="html/T_usagi_Quantity_Extension_LengthMathExtension.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="LengthMathHelper クラス、メソッド">
-        <param name="Local" value="html/Methods_T_usagi_Quantity_LengthMathExtension_LengthMathHelper.htm">
+        <param name="Name" value="LengthMathExtension クラス、メソッド">
+        <param name="Local" value="html/Methods_T_usagi_Quantity_Extension_LengthMathExtension.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="LengthMathHelper.Abs メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_LengthMathExtension_LengthMathHelper_Abs.htm">
+        <param name="Name" value="LengthMathExtension.Abs メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_LengthMathExtension_Abs.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="LengthMathHelper.ACos メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_LengthMathExtension_LengthMathHelper_ACos.htm">
+        <param name="Name" value="LengthMathExtension.ACos メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_LengthMathExtension_ACos.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="LengthMathHelper.ASin メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_LengthMathExtension_LengthMathHelper_ASin.htm">
+        <param name="Name" value="LengthMathExtension.ASin メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_LengthMathExtension_ASin.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="LengthMathHelper.ATan2 メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_LengthMathExtension_LengthMathHelper_ATan2.htm">
+        <param name="Name" value="LengthMathExtension.ATan2 メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_LengthMathExtension_ATan2.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="LengthMathHelper.Sign メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_LengthMathExtension_LengthMathHelper_Sign.htm">
+        <param name="Name" value="LengthMathExtension.Sign メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_LengthMathExtension_Sign.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="LessThan 演算子">
@@ -2890,7 +2986,7 @@
       </UL>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="LongitudeDistanceTo メソッド">
-        <param name="Local" value="html/M_usagi_CivilEngineering_LonLatHelper_LongitudeDistanceTo.htm">
+        <param name="Local" value="html/M_usagi_CivilEngineering_Extension_LonLatDistanceExtension_LongitudeDistanceTo.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="LongitudeParseFailedException クラス、イベント">
@@ -3009,32 +3105,32 @@
         <param name="Local" value="html/Overload_usagi_Quantity_GeoLocation_LonLatAlt_ToString.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="LonLatHelper クラス">
-        <param name="Local" value="html/T_usagi_CivilEngineering_LonLatHelper.htm">
+        <param name="Name" value="LonLatDistanceExtension クラス">
+        <param name="Local" value="html/T_usagi_CivilEngineering_Extension_LonLatDistanceExtension.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="LonLatHelper クラス、メソッド">
-        <param name="Local" value="html/Methods_T_usagi_CivilEngineering_LonLatHelper.htm">
+        <param name="Name" value="LonLatDistanceExtension クラス、メソッド">
+        <param name="Local" value="html/Methods_T_usagi_CivilEngineering_Extension_LonLatDistanceExtension.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="LonLatHelper.DistanceTo メソッド">
-        <param name="Local" value="html/M_usagi_CivilEngineering_LonLatHelper_DistanceTo.htm">
+        <param name="Name" value="LonLatDistanceExtension.DistanceTo メソッド">
+        <param name="Local" value="html/M_usagi_CivilEngineering_Extension_LonLatDistanceExtension_DistanceTo.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="LonLatHelper.LatitudeDistanceTo メソッド">
-        <param name="Local" value="html/M_usagi_CivilEngineering_LonLatHelper_LatitudeDistanceTo.htm">
+        <param name="Name" value="LonLatDistanceExtension.LatitudeDistanceTo メソッド">
+        <param name="Local" value="html/M_usagi_CivilEngineering_Extension_LonLatDistanceExtension_LatitudeDistanceTo.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="LonLatHelper.LongitudeDistanceTo メソッド">
-        <param name="Local" value="html/M_usagi_CivilEngineering_LonLatHelper_LongitudeDistanceTo.htm">
+        <param name="Name" value="LonLatDistanceExtension.LongitudeDistanceTo メソッド">
+        <param name="Local" value="html/M_usagi_CivilEngineering_Extension_LonLatDistanceExtension_LongitudeDistanceTo.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="LonLatHelper.LonLatDistanceAlgorithm 列挙体">
-        <param name="Local" value="html/T_usagi_CivilEngineering_LonLatHelper_LonLatDistanceAlgorithm.htm">
+        <param name="Name" value="LonLatDistanceExtension.LonLatDistanceAlgorithm 列挙体">
+        <param name="Local" value="html/T_usagi_CivilEngineering_Extension_LonLatDistanceExtension_LonLatDistanceAlgorithm.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="LonLatHelper.NearlyEqualsTo メソッド">
-        <param name="Local" value="html/M_usagi_CivilEngineering_LonLatHelper_NearlyEqualsTo.htm">
+        <param name="Name" value="LonLatDistanceExtension.NearlyEqualsTo メソッド">
+        <param name="Local" value="html/M_usagi_CivilEngineering_Extension_LonLatDistanceExtension_NearlyEqualsTo.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="MapSize メソッド">
@@ -3053,16 +3149,20 @@
         <param name="Local" value="html/P_usagi_CivilEngineering_Planet_IGeometricalSpecificationGettable_MaximumLatitudeLength.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="MemoryStreamHelper クラス">
-        <param name="Local" value="html/T_usagi_Extension_MemoryStreamHelper.htm">
+        <param name="Name" value="MemoryStreamStringExtension クラス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Extension_MemoryStreamStringExtension.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="MemoryStreamHelper クラス、メソッド">
-        <param name="Local" value="html/Methods_T_usagi_Extension_MemoryStreamHelper.htm">
+        <param name="Name" value="MemoryStreamStringExtension クラス、メソッド">
+        <param name="Local" value="html/Methods_T_usagi_InformationEngineering_Extension_MemoryStreamStringExtension.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="MemoryStreamHelper.ToString メソッド">
-        <param name="Local" value="html/M_usagi_Extension_MemoryStreamHelper_ToString.htm">
+        <param name="Name" value="MemoryStreamStringExtension.ToMemoryStream メソッド">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Extension_MemoryStreamStringExtension_ToMemoryStream.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="MemoryStreamStringExtension.ToString メソッド">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Extension_MemoryStreamStringExtension_ToString.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Meter プロパティ">
@@ -3285,6 +3385,10 @@
         <param name="Local" value="html/F_usagi_LibraryInformation_Name.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Name 列挙体メンバー">
+        <param name="Local" value="html/T_usagi_ColorSpace_Extension_StringExtetnsion_ColorPatternTrial.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
         <param name="Name" value="NaN プロパティ">
         <param name="See Also" value="NaN プロパティ">
       </OBJECT></LI>
@@ -3304,42 +3408,46 @@
       </OBJECT></LI>
       <UL>
         <LI><OBJECT type="text/sitemap">
-          <param name="Name" value="Calculation.NearlyEquals メソッド ">
-          <param name="Local" value="html/Overload_usagi_Quantity_Calculation_NearlyEquals.htm">
-        </OBJECT></LI>
-        <LI><OBJECT type="text/sitemap">
           <param name="Name" value="GeoURI.NearlyEquals メソッド ">
           <param name="Local" value="html/M_usagi_URI_GeoURI_NearlyEquals.htm">
         </OBJECT></LI>
         <LI><OBJECT type="text/sitemap">
           <param name="Name" value="Length.NearlyEquals メソッド ">
-          <param name="Local" value="html/M_usagi_Quantity_Length_NearlyEquals.htm">
+          <param name="Local" value="html/Overload_usagi_Quantity_Length_NearlyEquals.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="NumericNearlyEqualsExtension.NearlyEquals メソッド ">
+          <param name="Local" value="html/Overload_usagi_Quantity_Extension_NumericNearlyEqualsExtension_NearlyEquals.htm">
         </OBJECT></LI>
         <LI><OBJECT type="text/sitemap">
           <param name="Name" value="PlaneAngle.NearlyEquals メソッド ">
-          <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_NearlyEquals.htm">
+          <param name="Local" value="html/Overload_usagi_Quantity_PlaneAngle_NearlyEquals.htm">
         </OBJECT></LI>
       </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NearlyEquals(Of T) メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_Calculation_NearlyEquals__1.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NearlyEquals&lt;T&gt; メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_Calculation_NearlyEquals__1.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NearlyEqualsInHSLA メソッド">
+        <param name="Local" value="html/M_usagi_ColorSpace_Extension_ColorExtension_NearlyEqualsInHSLA.htm">
+      </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="NearlyEqualsTo メソッド">
         <param name="See Also" value="NearlyEqualsTo メソッド">
       </OBJECT></LI>
       <UL>
         <LI><OBJECT type="text/sitemap">
-          <param name="Name" value="Length.NearlyEqualsTo メソッド ">
-          <param name="Local" value="html/M_usagi_Quantity_Length_NearlyEqualsTo.htm">
-        </OBJECT></LI>
-        <LI><OBJECT type="text/sitemap">
           <param name="Name" value="LonLat.NearlyEqualsTo メソッド ">
           <param name="Local" value="html/Overload_usagi_Quantity_GeoLocation_LonLat_NearlyEqualsTo.htm">
         </OBJECT></LI>
         <LI><OBJECT type="text/sitemap">
-          <param name="Name" value="LonLatHelper.NearlyEqualsTo メソッド ">
-          <param name="Local" value="html/M_usagi_CivilEngineering_LonLatHelper_NearlyEqualsTo.htm">
-        </OBJECT></LI>
-        <LI><OBJECT type="text/sitemap">
-          <param name="Name" value="PlaneAngle.NearlyEqualsTo メソッド ">
-          <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_NearlyEqualsTo.htm">
+          <param name="Name" value="LonLatDistanceExtension.NearlyEqualsTo メソッド ">
+          <param name="Local" value="html/M_usagi_CivilEngineering_Extension_LonLatDistanceExtension_NearlyEqualsTo.htm">
         </OBJECT></LI>
       </UL>
       <LI><OBJECT type="text/sitemap">
@@ -3369,8 +3477,8 @@
         <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_NormalizedCompareTo.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="NormalizedEqualsTo メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_NormalizedEqualsTo.htm">
+        <param name="Name" value="NormalizedEquals メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_NormalizedEquals.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="NormalizedGreaterThan メソッド">
@@ -3381,8 +3489,8 @@
         <param name="Local" value="html/Overload_usagi_Quantity_PlaneAngle_NormalizedLessThan.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="NormalizedNearlyEqualsTo メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_NormalizedNearlyEqualsTo.htm">
+        <param name="Name" value="NormalizedNearlyEquals メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_NormalizedNearlyEquals.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="NormalizeWebMercator メソッド">
@@ -3394,163 +3502,435 @@
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Null プロパティ">
-        <param name="Local" value="html/P_usagi_Boxing_Optional_1_Null.htm">
+        <param name="Local" value="html/P_usagi_InformationEngineering_Boxing_Optional_1_Null.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Numeric クラス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Numeric.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Numeric クラス、メソッド">
+        <param name="Local" value="html/Methods_T_usagi_InformationEngineering_Numeric.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Numeric.ClampAdd メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Numeric_ClampAdd.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Numeric.ConservationCast(Of A, B) メソッド">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Numeric_ConservationCast__2.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Numeric.ConservationCast&lt;A, B&gt; メソッド">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Numeric_ConservationCast__2.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Numeric.INumericException インターフェイス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Numeric_INumericException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Numeric.OverflowException クラス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Numeric_OverflowException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Numeric.OverflowException クラス、コンストラクター">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Numeric_OverflowException__ctor.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Numeric.OverflowException.OverflowException コンストラクター">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Numeric_OverflowException__ctor.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Numeric.PrecisionException クラス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Numeric_PrecisionException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Numeric.PrecisionException クラス、コンストラクター">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Numeric_PrecisionException__ctor.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Numeric.PrecisionException.PrecisionException コンストラクター">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Numeric_PrecisionException__ctor.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Numeric.SafeIncrement メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Numeric_SafeIncrement.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Numeric.UnderflowException クラス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Numeric_UnderflowException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Numeric.UnderflowException クラス、コンストラクター">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Numeric_UnderflowException__ctor.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="Numeric.UnderflowException.UnderflowException コンストラクター">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Numeric_UnderflowException__ctor.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension クラス">
+        <param name="See Also" value="NumericExtension クラス">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="NumericExtension クラス">
+          <param name="Local" value="html/T_usagi_Quantity_Ratio_Extension_NumericExtension.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="NumericExtension クラス">
+          <param name="Local" value="html/T_usagi_InformationEngineering_Extension_NumericExtension.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension クラス、メソッド">
+        <param name="See Also" value="NumericExtension クラス、メソッド">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="NumericExtension メソッド">
+          <param name="Local" value="html/Methods_T_usagi_Quantity_Ratio_Extension_NumericExtension.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="NumericExtension メソッド">
+          <param name="Local" value="html/Methods_T_usagi_InformationEngineering_Extension_NumericExtension.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ClampToByte メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Extension_NumericExtension_ClampToByte.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ClampToInt16 メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Extension_NumericExtension_ClampToInt16.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ClampToInt32 メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Extension_NumericExtension_ClampToInt32.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ClampToInt64 メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Extension_NumericExtension_ClampToInt64.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ClampToSByte メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Extension_NumericExtension_ClampToSByte.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ClampToSNorm メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ClampToSNorm.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ClampToUInt16 メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Extension_NumericExtension_ClampToUInt16.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ClampToUInt32 メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Extension_NumericExtension_ClampToUInt32.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ClampToUInt64 メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Extension_NumericExtension_ClampToUInt64.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ClampToUNorm メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ClampToUNorm.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.DecompositionToCommonFraction メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_Ratio_Extension_NumericExtension_DecompositionToCommonFraction.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.SNormCollapseToUNorm メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_SNormCollapseToUNorm.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.SNormToInt16 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_SNormToInt16.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.SNormToInt32 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_SNormToInt32.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.SNormToInt64 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_SNormToInt64.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.SNormToSByte メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_SNormToSByte.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ToRatio メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToRatio.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ToSNorm メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToSNorm.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ToStringBell メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringBell.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ToStringNeper メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringNeper.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ToStringPercent メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringPercent.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ToStringPermil メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringPermil.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ToStringPermyriad メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringPermyriad.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ToStringPPB メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringPPB.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ToStringPPM メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringPPM.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ToStringPPQ メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringPPQ.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ToStringPPT メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringPPT.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.ToUNorm メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToUNorm.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.UNormExpandToSNorm メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormExpandToSNorm.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.UNormToByte メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormToByte.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.UNormToInt16 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormToInt16.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.UNormToInt32 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormToInt32.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.UNormToInt64 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormToInt64.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.UNormToSByte メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormToSByte.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.UNormToUInt16 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormToUInt16.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.UNormToUInt32 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormToUInt32.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericExtension.UNormToUInt64 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormToUInt64.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericNearlyEqualsExtension クラス">
+        <param name="Local" value="html/T_usagi_Quantity_Extension_NumericNearlyEqualsExtension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericNearlyEqualsExtension クラス、メソッド">
+        <param name="Local" value="html/Methods_T_usagi_Quantity_Extension_NumericNearlyEqualsExtension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="NumericNearlyEqualsExtension.NearlyEquals メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Extension_NumericNearlyEqualsExtension_NearlyEquals.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="OC 列挙体メンバー">
+        <param name="Local" value="html/T_usagi_Collection_Enumerable_RangeTermination.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="OO 列挙体メンバー">
+        <param name="Local" value="html/T_usagi_Collection_Enumerable_RangeTermination.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T) to T 変換">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_op_Implicit.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_op_Implicit.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T) クラス">
-        <param name="Local" value="html/T_usagi_Boxing_Optional_1.htm">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Boxing_Optional_1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T) クラス、コンストラクター">
-        <param name="Local" value="html/Overload_usagi_Boxing_Optional_1__ctor.htm">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Boxing_Optional_1__ctor.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T) クラス、プロパティ">
-        <param name="Local" value="html/Properties_T_usagi_Boxing_Optional_1.htm">
+        <param name="Local" value="html/Properties_T_usagi_InformationEngineering_Boxing_Optional_1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T) クラス、メソッド">
-        <param name="Local" value="html/Methods_T_usagi_Boxing_Optional_1.htm">
+        <param name="Local" value="html/Methods_T_usagi_InformationEngineering_Boxing_Optional_1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T) クラス、演算子と型変換">
-        <param name="Local" value="html/Operators_T_usagi_Boxing_Optional_1.htm">
+        <param name="Local" value="html/Operators_T_usagi_InformationEngineering_Boxing_Optional_1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T).Dispose メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_Dispose.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_Dispose.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T).False 演算子">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_op_False.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_op_False.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T).FromValue メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_FromValue.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_FromValue.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T).Get メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_Get.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_Get.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T).InvalidValueException クラス">
-        <param name="Local" value="html/T_usagi_Boxing_Optional_1_InvalidValueException.htm">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Boxing_Optional_1_InvalidValueException.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T).InvalidValueException クラス、コンストラクター">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_InvalidValueException__ctor.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_InvalidValueException__ctor.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T).InvalidValueException.InvalidValueException コンストラクター">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_InvalidValueException__ctor.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_InvalidValueException__ctor.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T).IsValid メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_IsValid.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_IsValid.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T).Null プロパティ">
-        <param name="Local" value="html/P_usagi_Boxing_Optional_1_Null.htm">
+        <param name="Local" value="html/P_usagi_InformationEngineering_Boxing_Optional_1_Null.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T).Optional コンストラクター">
-        <param name="Local" value="html/Overload_usagi_Boxing_Optional_1__ctor.htm">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Boxing_Optional_1__ctor.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T).Reset メソッド">
-        <param name="Local" value="html/Overload_usagi_Boxing_Optional_1_Reset.htm">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Boxing_Optional_1_Reset.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T).True 演算子">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_op_True.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_op_True.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional(Of T).TryGet メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_TryGet.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_TryGet.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt; to T 変換">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_op_Implicit.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_op_Implicit.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt; クラス">
-        <param name="Local" value="html/T_usagi_Boxing_Optional_1.htm">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Boxing_Optional_1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt; クラス、コンストラクター">
-        <param name="Local" value="html/Overload_usagi_Boxing_Optional_1__ctor.htm">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Boxing_Optional_1__ctor.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt; クラス、プロパティ">
-        <param name="Local" value="html/Properties_T_usagi_Boxing_Optional_1.htm">
+        <param name="Local" value="html/Properties_T_usagi_InformationEngineering_Boxing_Optional_1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt; クラス、メソッド">
-        <param name="Local" value="html/Methods_T_usagi_Boxing_Optional_1.htm">
+        <param name="Local" value="html/Methods_T_usagi_InformationEngineering_Boxing_Optional_1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt; クラス、演算子と型変換">
-        <param name="Local" value="html/Operators_T_usagi_Boxing_Optional_1.htm">
+        <param name="Local" value="html/Operators_T_usagi_InformationEngineering_Boxing_Optional_1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt;.Dispose メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_Dispose.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_Dispose.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt;.False 演算子">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_op_False.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_op_False.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt;.FromValue メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_FromValue.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_FromValue.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt;.Get メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_Get.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_Get.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt;.InvalidValueException クラス">
-        <param name="Local" value="html/T_usagi_Boxing_Optional_1_InvalidValueException.htm">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Boxing_Optional_1_InvalidValueException.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt;.InvalidValueException クラス、コンストラクター">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_InvalidValueException__ctor.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_InvalidValueException__ctor.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt;.InvalidValueException.InvalidValueException コンストラクター">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_InvalidValueException__ctor.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_InvalidValueException__ctor.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt;.IsValid メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_IsValid.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_IsValid.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt;.Null プロパティ">
-        <param name="Local" value="html/P_usagi_Boxing_Optional_1_Null.htm">
+        <param name="Local" value="html/P_usagi_InformationEngineering_Boxing_Optional_1_Null.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt;.Optional コンストラクター">
-        <param name="Local" value="html/Overload_usagi_Boxing_Optional_1__ctor.htm">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Boxing_Optional_1__ctor.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt;.Reset メソッド">
-        <param name="Local" value="html/Overload_usagi_Boxing_Optional_1_Reset.htm">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Boxing_Optional_1_Reset.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt;.True 演算子">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_op_True.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_op_True.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Optional&lt;T&gt;.TryGet メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_TryGet.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_TryGet.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="OriginalString プロパティ">
         <param name="Local" value="html/P_usagi_URI_GeoURI_OriginalString.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="OverflowException クラス、イベント">
+        <param name="Local" value="html/Events_T_usagi_InformationEngineering_Numeric_OverflowException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="OverflowException クラス、プロパティ">
+        <param name="Local" value="html/Properties_T_usagi_InformationEngineering_Numeric_OverflowException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="OverflowException クラス、メソッド">
+        <param name="Local" value="html/Methods_T_usagi_InformationEngineering_Numeric_OverflowException.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Parse メソッド">
@@ -3852,11 +4232,7 @@
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="PlaneAngle.NearlyEquals メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_NearlyEquals.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="PlaneAngle.NearlyEqualsTo メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_NearlyEqualsTo.htm">
+        <param name="Local" value="html/Overload_usagi_Quantity_PlaneAngle_NearlyEquals.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="PlaneAngle.NegativeInfinity プロパティ">
@@ -3875,8 +4251,8 @@
         <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_NormalizedCompareTo.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="PlaneAngle.NormalizedEqualsTo メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_NormalizedEqualsTo.htm">
+        <param name="Name" value="PlaneAngle.NormalizedEquals メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_NormalizedEquals.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="PlaneAngle.NormalizedGreaterThan メソッド">
@@ -3887,8 +4263,8 @@
         <param name="Local" value="html/Overload_usagi_Quantity_PlaneAngle_NormalizedLessThan.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="PlaneAngle.NormalizedNearlyEqualsTo メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_NormalizedNearlyEqualsTo.htm">
+        <param name="Name" value="PlaneAngle.NormalizedNearlyEquals メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_NormalizedNearlyEquals.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="PlaneAngle.Parse メソッド">
@@ -4100,43 +4476,43 @@
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="PlaneAngleMathHelper クラス">
-        <param name="Local" value="html/T_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper.htm">
+        <param name="Local" value="html/T_usagi_Quantity_Extension_PlaneAngleMathHelper.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="PlaneAngleMathHelper クラス、メソッド">
-        <param name="Local" value="html/Methods_T_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper.htm">
+        <param name="Local" value="html/Methods_T_usagi_Quantity_Extension_PlaneAngleMathHelper.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="PlaneAngleMathHelper.Abs メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Abs.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_PlaneAngleMathHelper_Abs.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="PlaneAngleMathHelper.Cos メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Cos.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_PlaneAngleMathHelper_Cos.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="PlaneAngleMathHelper.Cosh メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Cosh.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_PlaneAngleMathHelper_Cosh.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="PlaneAngleMathHelper.Sign メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Sign.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_PlaneAngleMathHelper_Sign.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="PlaneAngleMathHelper.Sin メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Sin.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_PlaneAngleMathHelper_Sin.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="PlaneAngleMathHelper.Sinh メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Sinh.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_PlaneAngleMathHelper_Sinh.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="PlaneAngleMathHelper.Tan メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Tan.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_PlaneAngleMathHelper_Tan.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="PlaneAngleMathHelper.Tanh メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Tanh.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_PlaneAngleMathHelper_Tanh.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Point プロパティ">
@@ -4157,6 +4533,18 @@
         </OBJECT></LI>
       </UL>
       <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="PrecisionException クラス、イベント">
+        <param name="Local" value="html/Events_T_usagi_InformationEngineering_Numeric_PrecisionException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="PrecisionException クラス、プロパティ">
+        <param name="Local" value="html/Properties_T_usagi_InformationEngineering_Numeric_PrecisionException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="PrecisionException クラス、メソッド">
+        <param name="Local" value="html/Methods_T_usagi_InformationEngineering_Numeric_PrecisionException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Prefix プロパティ">
         <param name="Local" value="html/P_usagi_Quantity_Unit_SI_MetricPrefix_Prefix.htm">
       </OBJECT></LI>
@@ -4166,7 +4554,21 @@
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Range メソッド">
-        <param name="Local" value="html/Overload_usagi_Extension_Collection_EnumerableHelper_Range.htm">
+        <param name="See Also" value="Range メソッド">
+      </OBJECT></LI>
+      <UL>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="Enumerable.Range メソッド ">
+          <param name="Local" value="html/Overload_usagi_Collection_Enumerable_Range.htm">
+        </OBJECT></LI>
+        <LI><OBJECT type="text/sitemap">
+          <param name="Name" value="IEnumerableExtension.Range メソッド ">
+          <param name="Local" value="html/Overload_usagi_Collection_Extension_IEnumerableExtension_Range.htm">
+        </OBJECT></LI>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="RangeOO メソッド">
+        <param name="Local" value="html/M_usagi_Collection_Enumerable_RangeOO.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Readme フィールド">
@@ -4208,7 +4610,11 @@
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Reset メソッド">
-        <param name="Local" value="html/Overload_usagi_Boxing_Optional_1_Reset.htm">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Boxing_Optional_1_Reset.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="SafeIncrement メソッド">
+        <param name="Local" value="html/Overload_usagi_InformationEngineering_Numeric_SafeIncrement.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Scheme プロパティ">
@@ -4236,57 +4642,109 @@
       </OBJECT></LI>
       <UL>
         <LI><OBJECT type="text/sitemap">
-          <param name="Name" value="LengthMathHelper.Sign メソッド ">
-          <param name="Local" value="html/M_usagi_Quantity_LengthMathExtension_LengthMathHelper_Sign.htm">
+          <param name="Name" value="LengthMathExtension.Sign メソッド ">
+          <param name="Local" value="html/M_usagi_Quantity_Extension_LengthMathExtension_Sign.htm">
         </OBJECT></LI>
         <LI><OBJECT type="text/sitemap">
           <param name="Name" value="PlaneAngleMathHelper.Sign メソッド ">
-          <param name="Local" value="html/M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Sign.htm">
+          <param name="Local" value="html/M_usagi_Quantity_Extension_PlaneAngleMathHelper_Sign.htm">
         </OBJECT></LI>
       </UL>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Sin メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Sin.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_PlaneAngleMathHelper_Sin.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Sinh メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Sinh.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_PlaneAngleMathHelper_Sinh.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="SNormCollapseToUNorm メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_SNormCollapseToUNorm.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="SNormToInt16 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_SNormToInt16.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="SNormToInt32 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_SNormToInt32.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="SNormToInt64 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_SNormToInt64.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="SNormToSByte メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_SNormToSByte.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="StartsOrEndsWith メソッド">
-        <param name="Local" value="html/M_usagi_Extension_StringHelper_StartsOrEndsWith.htm">
+        <param name="Local" value="html/M_usagi_String_Extension_StringExtension_StartsOrEndsWith.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="StartsWith メソッド">
-        <param name="Local" value="html/M_usagi_Extension_StringHelper_StartsWith.htm">
+        <param name="Local" value="html/M_usagi_String_Extension_StringExtension_StartsWith.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="StringHelper クラス">
-        <param name="Local" value="html/T_usagi_Extension_StringHelper.htm">
+        <param name="Name" value="StringExtension クラス">
+        <param name="Local" value="html/T_usagi_String_Extension_StringExtension.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="StringHelper クラス、メソッド">
-        <param name="Local" value="html/Methods_T_usagi_Extension_StringHelper.htm">
+        <param name="Name" value="StringExtension クラス、メソッド">
+        <param name="Local" value="html/Methods_T_usagi_String_Extension_StringExtension.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="StringHelper.Contains メソッド">
-        <param name="Local" value="html/M_usagi_Extension_StringHelper_Contains.htm">
+        <param name="Name" value="StringExtension.Contains メソッド">
+        <param name="Local" value="html/M_usagi_String_Extension_StringExtension_Contains.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="StringHelper.EndsWith メソッド">
-        <param name="Local" value="html/M_usagi_Extension_StringHelper_EndsWith.htm">
+        <param name="Name" value="StringExtension.EndsWith メソッド">
+        <param name="Local" value="html/M_usagi_String_Extension_StringExtension_EndsWith.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="StringHelper.StartsOrEndsWith メソッド">
-        <param name="Local" value="html/M_usagi_Extension_StringHelper_StartsOrEndsWith.htm">
+        <param name="Name" value="StringExtension.StartsOrEndsWith メソッド">
+        <param name="Local" value="html/M_usagi_String_Extension_StringExtension_StartsOrEndsWith.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="StringHelper.StartsWith メソッド">
-        <param name="Local" value="html/M_usagi_Extension_StringHelper_StartsWith.htm">
+        <param name="Name" value="StringExtension.StartsWith メソッド">
+        <param name="Local" value="html/M_usagi_String_Extension_StringExtension_StartsWith.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="StringHelper.ToMemoryStream メソッド">
-        <param name="Local" value="html/M_usagi_Extension_StringHelper_ToMemoryStream.htm">
+        <param name="Name" value="StringExtetnsion クラス">
+        <param name="Local" value="html/T_usagi_ColorSpace_Extension_StringExtetnsion.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="StringExtetnsion クラス、メソッド">
+        <param name="Local" value="html/Methods_T_usagi_ColorSpace_Extension_StringExtetnsion.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="StringExtetnsion.ColorPatternTrial 列挙体">
+        <param name="Local" value="html/T_usagi_ColorSpace_Extension_StringExtetnsion_ColorPatternTrial.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="StringExtetnsion.ToColor メソッド">
+        <param name="Local" value="html/M_usagi_ColorSpace_Extension_StringExtetnsion_ToColor.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="StringExtetnsion.ToColorFromCSSHSLA メソッド">
+        <param name="Local" value="html/M_usagi_ColorSpace_Extension_StringExtetnsion_ToColorFromCSSHSLA.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="StringExtetnsion.ToColorFromCSSRGBA メソッド">
+        <param name="Local" value="html/M_usagi_ColorSpace_Extension_StringExtetnsion_ToColorFromCSSRGBA.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="StringExtetnsion.ToColorFromHex メソッド">
+        <param name="Local" value="html/M_usagi_ColorSpace_Extension_StringExtetnsion_ToColorFromHex.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="StringExtetnsion.ToColorFromName メソッド">
+        <param name="Local" value="html/M_usagi_ColorSpace_Extension_StringExtetnsion_ToColorFromName.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="StringExtetnsion.ToQuantity メソッド">
+        <param name="Local" value="html/M_usagi_ColorSpace_Extension_StringExtetnsion_ToQuantity.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Subtraction 演算子">
@@ -4416,11 +4874,11 @@
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Tan メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Tan.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_PlaneAngleMathHelper_Tan.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Tanh メソッド">
-        <param name="Local" value="html/M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Tanh.htm">
+        <param name="Local" value="html/M_usagi_Quantity_Extension_PlaneAngleMathHelper_Tanh.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="TileLocation クラス">
@@ -4467,6 +4925,26 @@
         <param name="Local" value="html/P_usagi_CivilEngineering_TileLocation_Z.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToColor メソッド">
+        <param name="Local" value="html/M_usagi_ColorSpace_Extension_StringExtetnsion_ToColor.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToColorFromCSSHSLA メソッド">
+        <param name="Local" value="html/M_usagi_ColorSpace_Extension_StringExtetnsion_ToColorFromCSSHSLA.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToColorFromCSSRGBA メソッド">
+        <param name="Local" value="html/M_usagi_ColorSpace_Extension_StringExtetnsion_ToColorFromCSSRGBA.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToColorFromHex メソッド">
+        <param name="Local" value="html/M_usagi_ColorSpace_Extension_StringExtetnsion_ToColorFromHex.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToColorFromName メソッド">
+        <param name="Local" value="html/M_usagi_ColorSpace_Extension_StringExtetnsion_ToColorFromName.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
         <param name="Name" value="ToDegrees メソッド">
         <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_ToDegrees.htm">
       </OBJECT></LI>
@@ -4493,12 +4971,28 @@
         </OBJECT></LI>
       </UL>
       <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToHSLA メソッド">
+        <param name="Local" value="html/Overload_usagi_ColorSpace_Extension_ColorExtension_ToHSLA.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
         <param name="Name" value="ToMemoryStream メソッド">
-        <param name="Local" value="html/M_usagi_Extension_StringHelper_ToMemoryStream.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Extension_MemoryStreamStringExtension_ToMemoryStream.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToQuantity メソッド">
+        <param name="Local" value="html/M_usagi_ColorSpace_Extension_StringExtetnsion_ToQuantity.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="ToRadians メソッド">
         <param name="Local" value="html/M_usagi_Quantity_PlaneAngle_ToRadians.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToRatio メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToRatio.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToSNorm メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToSNorm.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="ToString メソッド">
@@ -4522,8 +5016,8 @@
           <param name="Local" value="html/Overload_usagi_Quantity_GeoLocation_LonLatAlt_ToString.htm">
         </OBJECT></LI>
         <LI><OBJECT type="text/sitemap">
-          <param name="Name" value="MemoryStreamHelper.ToString メソッド ">
-          <param name="Local" value="html/M_usagi_Extension_MemoryStreamHelper_ToString.htm">
+          <param name="Name" value="MemoryStreamStringExtension.ToString メソッド ">
+          <param name="Local" value="html/M_usagi_InformationEngineering_Extension_MemoryStreamStringExtension_ToString.htm">
         </OBJECT></LI>
         <LI><OBJECT type="text/sitemap">
           <param name="Name" value="MetricPrefix.ToString メソッド ">
@@ -4542,6 +5036,10 @@
           <param name="Local" value="html/M_usagi_CivilEngineering_TileLocation_ToString.htm">
         </OBJECT></LI>
       </UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToStringBell メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringBell.htm">
+      </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="ToStringInAngStrom メソッド">
         <param name="Local" value="html/M_usagi_Quantity_Length_ToStringInAngStrom.htm">
@@ -4661,6 +5159,38 @@
         <param name="Local" value="html/M_usagi_Quantity_Length_ToStringInYards.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToStringNeper メソッド">
+        <param name="Local" value="html/M_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringNeper.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToStringPercent メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringPercent.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToStringPermil メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringPermil.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToStringPermyriad メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringPermyriad.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToStringPPB メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringPPB.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToStringPPM メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringPPM.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToStringPPQ メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringPPQ.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToStringPPT メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToStringPPT.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
         <param name="Name" value="ToString_cm メソッド">
         <param name="Local" value="html/M_usagi_Quantity_Length_ToString_cm.htm">
       </OBJECT></LI>
@@ -4689,12 +5219,16 @@
         <param name="Local" value="html/M_usagi_Quantity_Length_ToString_μm.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="ToUNorm メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_ToUNorm.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
         <param name="Name" value="True 演算子">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_op_True.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_op_True.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="TryGet メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Optional_1_TryGet.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Optional_1_TryGet.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Turn プロパティ">
@@ -4733,20 +5267,68 @@
         <param name="Local" value="html/P_usagi_URI_GeoURI_Uncertainty.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="UnderflowException クラス、イベント">
+        <param name="Local" value="html/Events_T_usagi_InformationEngineering_Numeric_UnderflowException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="UnderflowException クラス、プロパティ">
+        <param name="Local" value="html/Properties_T_usagi_InformationEngineering_Numeric_UnderflowException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="UnderflowException クラス、メソッド">
+        <param name="Local" value="html/Methods_T_usagi_InformationEngineering_Numeric_UnderflowException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
         <param name="Name" value="UnorderedEqual(Of T) メソッド">
-        <param name="Local" value="html/M_usagi_Extension_Collection_EnumerableHelper_UnorderedEqual__1.htm">
+        <param name="Local" value="html/M_usagi_Collection_Extension_IEnumerableExtension_UnorderedEqual__1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="UnorderedEqual(Of TK, TV) メソッド">
-        <param name="Local" value="html/M_usagi_Extension_Collection_DictionaryHelper_UnorderedEqual__2.htm">
+        <param name="Local" value="html/M_usagi_Collection_Extension_IDictionaryExtension_UnorderedEqual__2.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="UnorderedEqual&lt;T&gt; メソッド">
-        <param name="Local" value="html/M_usagi_Extension_Collection_EnumerableHelper_UnorderedEqual__1.htm">
+        <param name="Local" value="html/M_usagi_Collection_Extension_IEnumerableExtension_UnorderedEqual__1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="UnorderedEqual&lt;TK, TV&gt; メソッド">
-        <param name="Local" value="html/M_usagi_Extension_Collection_DictionaryHelper_UnorderedEqual__2.htm">
+        <param name="Local" value="html/M_usagi_Collection_Extension_IDictionaryExtension_UnorderedEqual__2.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="UNormExpandToSNorm メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormExpandToSNorm.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="UNormToByte メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormToByte.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="UNormToInt16 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormToInt16.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="UNormToInt32 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormToInt32.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="UNormToInt64 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormToInt64.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="UNormToSByte メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormToSByte.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="UNormToUInt16 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormToUInt16.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="UNormToUInt32 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormToUInt32.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="UNormToUInt64 メソッド">
+        <param name="Local" value="html/Overload_usagi_Quantity_Ratio_Extension_NumericExtension_UNormToUInt64.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="UriSchemeGeo フィールド">
@@ -4757,40 +5339,20 @@
         <param name="Local" value="html/N_usagi.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Boxing 名前空間">
-        <param name="Local" value="html/N_usagi_Boxing.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Boxing.Optional(Of T) クラス">
-        <param name="Local" value="html/T_usagi_Boxing_Optional_1.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Boxing.Optional(Of T).InvalidValueException クラス">
-        <param name="Local" value="html/T_usagi_Boxing_Optional_1_InvalidValueException.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Boxing.Optional&lt;T&gt; クラス">
-        <param name="Local" value="html/T_usagi_Boxing_Optional_1.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Boxing.Optional&lt;T&gt;.InvalidValueException クラス">
-        <param name="Local" value="html/T_usagi_Boxing_Optional_1_InvalidValueException.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Boxing.Utility クラス">
-        <param name="Local" value="html/T_usagi_Boxing_Utility.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
         <param name="Name" value="usagi.CivilEngineering 名前空間">
         <param name="Local" value="html/N_usagi_CivilEngineering.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.CivilEngineering.LonLatHelper クラス">
-        <param name="Local" value="html/T_usagi_CivilEngineering_LonLatHelper.htm">
+        <param name="Name" value="usagi.CivilEngineering.Extension 名前空間">
+        <param name="Local" value="html/N_usagi_CivilEngineering_Extension.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm 列挙体">
-        <param name="Local" value="html/T_usagi_CivilEngineering_LonLatHelper_LonLatDistanceAlgorithm.htm">
+        <param name="Name" value="usagi.CivilEngineering.Extension.LonLatDistanceExtension クラス">
+        <param name="Local" value="html/T_usagi_CivilEngineering_Extension_LonLatDistanceExtension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.CivilEngineering.Extension.LonLatDistanceExtension.LonLatDistanceAlgorithm 列挙体">
+        <param name="Local" value="html/T_usagi_CivilEngineering_Extension_LonLatDistanceExtension_LonLatDistanceAlgorithm.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="usagi.CivilEngineering.PixelLocation クラス">
@@ -4817,32 +5379,120 @@
         <param name="Local" value="html/T_usagi_CivilEngineering_WebMercator.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Extension 名前空間">
-        <param name="Local" value="html/N_usagi_Extension.htm">
+        <param name="Name" value="usagi.Collection 名前空間">
+        <param name="Local" value="html/N_usagi_Collection.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Extension.Collection 名前空間">
-        <param name="Local" value="html/N_usagi_Extension_Collection.htm">
+        <param name="Name" value="usagi.Collection.Enumerable クラス">
+        <param name="Local" value="html/T_usagi_Collection_Enumerable.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Extension.Collection.DictionaryHelper クラス">
-        <param name="Local" value="html/T_usagi_Extension_Collection_DictionaryHelper.htm">
+        <param name="Name" value="usagi.Collection.Enumerable.RangeTermination 列挙体">
+        <param name="Local" value="html/T_usagi_Collection_Enumerable_RangeTermination.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Extension.Collection.EnumerableHelper クラス">
-        <param name="Local" value="html/T_usagi_Extension_Collection_EnumerableHelper.htm">
+        <param name="Name" value="usagi.Collection.Extension 名前空間">
+        <param name="Local" value="html/N_usagi_Collection_Extension.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Extension.ItemsControlHelper クラス">
-        <param name="Local" value="html/T_usagi_Extension_ItemsControlHelper.htm">
+        <param name="Name" value="usagi.Collection.Extension.IDictionaryExtension クラス">
+        <param name="Local" value="html/T_usagi_Collection_Extension_IDictionaryExtension.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Extension.MemoryStreamHelper クラス">
-        <param name="Local" value="html/T_usagi_Extension_MemoryStreamHelper.htm">
+        <param name="Name" value="usagi.Collection.Extension.IEnumerableExtension クラス">
+        <param name="Local" value="html/T_usagi_Collection_Extension_IEnumerableExtension.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Extension.StringHelper クラス">
-        <param name="Local" value="html/T_usagi_Extension_StringHelper.htm">
+        <param name="Name" value="usagi.ColorSpace 名前空間">
+        <param name="Local" value="html/N_usagi_ColorSpace.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.ColorSpace.Extension 名前空間">
+        <param name="Local" value="html/N_usagi_ColorSpace_Extension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.ColorSpace.Extension.ColorExtension クラス">
+        <param name="Local" value="html/T_usagi_ColorSpace_Extension_ColorExtension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.ColorSpace.Extension.StringExtetnsion クラス">
+        <param name="Local" value="html/T_usagi_ColorSpace_Extension_StringExtetnsion.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.ColorSpace.Extension.StringExtetnsion.ColorPatternTrial 列挙体">
+        <param name="Local" value="html/T_usagi_ColorSpace_Extension_StringExtetnsion_ColorPatternTrial.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.ColorSpace.Factory クラス">
+        <param name="Local" value="html/T_usagi_ColorSpace_Factory.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.GUI.Extension 名前空間">
+        <param name="Local" value="html/N_usagi_GUI_Extension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.GUI.Extension.ItemsControlHelper クラス">
+        <param name="Local" value="html/T_usagi_GUI_Extension_ItemsControlHelper.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.InformationEngineering 名前空間">
+        <param name="Local" value="html/N_usagi_InformationEngineering.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.InformationEngineering.Boxing 名前空間">
+        <param name="Local" value="html/N_usagi_InformationEngineering_Boxing.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.InformationEngineering.Boxing.Optional(Of T) クラス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Boxing_Optional_1.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.InformationEngineering.Boxing.Optional(Of T).InvalidValueException クラス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Boxing_Optional_1_InvalidValueException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.InformationEngineering.Boxing.Optional&lt;T&gt; クラス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Boxing_Optional_1.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.InformationEngineering.Boxing.Optional&lt;T&gt;.InvalidValueException クラス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Boxing_Optional_1_InvalidValueException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.InformationEngineering.Boxing.Utility クラス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Boxing_Utility.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.InformationEngineering.Extension 名前空間">
+        <param name="Local" value="html/N_usagi_InformationEngineering_Extension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.InformationEngineering.Extension.MemoryStreamStringExtension クラス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Extension_MemoryStreamStringExtension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.InformationEngineering.Extension.NumericExtension クラス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Extension_NumericExtension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.InformationEngineering.Numeric クラス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Numeric.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.InformationEngineering.Numeric.INumericException インターフェイス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Numeric_INumericException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.InformationEngineering.Numeric.OverflowException クラス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Numeric_OverflowException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.InformationEngineering.Numeric.PrecisionException クラス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Numeric_PrecisionException.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.InformationEngineering.Numeric.UnderflowException クラス">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Numeric_UnderflowException.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="usagi.LibraryInformation クラス">
@@ -4855,6 +5505,22 @@
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="usagi.Quantity.Calculation クラス">
         <param name="Local" value="html/T_usagi_Quantity_Calculation.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.Quantity.Extension 名前空間">
+        <param name="Local" value="html/N_usagi_Quantity_Extension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.Quantity.Extension.LengthMathExtension クラス">
+        <param name="Local" value="html/T_usagi_Quantity_Extension_LengthMathExtension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.Quantity.Extension.NumericNearlyEqualsExtension クラス">
+        <param name="Local" value="html/T_usagi_Quantity_Extension_NumericNearlyEqualsExtension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.Quantity.Extension.PlaneAngleMathHelper クラス">
+        <param name="Local" value="html/T_usagi_Quantity_Extension_PlaneAngleMathHelper.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="usagi.Quantity.GeoLocation 名前空間">
@@ -4917,24 +5583,16 @@
         <param name="Local" value="html/T_usagi_Quantity_Length.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Quantity.LengthMathExtension 名前空間">
-        <param name="Local" value="html/N_usagi_Quantity_LengthMathExtension.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Quantity.LengthMathExtension.LengthMathHelper クラス">
-        <param name="Local" value="html/T_usagi_Quantity_LengthMathExtension_LengthMathHelper.htm">
-      </OBJECT></LI>
-      <LI><OBJECT type="text/sitemap">
         <param name="Name" value="usagi.Quantity.PlaneAngle クラス">
         <param name="Local" value="html/T_usagi_Quantity_PlaneAngle.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Quantity.PlaneAngleMathExtension 名前空間">
-        <param name="Local" value="html/N_usagi_Quantity_PlaneAngleMathExtension.htm">
+        <param name="Name" value="usagi.Quantity.Ratio.Extension 名前空間">
+        <param name="Local" value="html/N_usagi_Quantity_Ratio_Extension.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
-        <param name="Name" value="usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper クラス">
-        <param name="Local" value="html/T_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper.htm">
+        <param name="Name" value="usagi.Quantity.Ratio.Extension.NumericExtension クラス">
+        <param name="Local" value="html/T_usagi_Quantity_Ratio_Extension_NumericExtension.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="usagi.Quantity.Unit.SI 名前空間">
@@ -4943,6 +5601,14 @@
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="usagi.Quantity.Unit.SI.MetricPrefix クラス">
         <param name="Local" value="html/T_usagi_Quantity_Unit_SI_MetricPrefix.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.String.Extension 名前空間">
+        <param name="Local" value="html/N_usagi_String_Extension.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="usagi.String.Extension.StringExtension クラス">
+        <param name="Local" value="html/T_usagi_String_Extension_StringExtension.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="usagi.URI 名前空間">
@@ -4978,31 +5644,31 @@
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Utility クラス">
-        <param name="Local" value="html/T_usagi_Boxing_Utility.htm">
+        <param name="Local" value="html/T_usagi_InformationEngineering_Boxing_Utility.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Utility クラス、メソッド">
-        <param name="Local" value="html/Methods_T_usagi_Boxing_Utility.htm">
+        <param name="Local" value="html/Methods_T_usagi_InformationEngineering_Boxing_Utility.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Utility.FirstOfOptional(Of T) メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Utility_FirstOfOptional__1.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Utility_FirstOfOptional__1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Utility.FirstOfOptional&lt;T&gt; メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Utility_FirstOfOptional__1.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Utility_FirstOfOptional__1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Utility.LastOfOptional(Of T) メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Utility_LastOfOptional__1.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Utility_LastOfOptional__1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Utility.LastOfOptional&lt;T&gt; メソッド">
-        <param name="Local" value="html/M_usagi_Boxing_Utility_LastOfOptional__1.htm">
+        <param name="Local" value="html/M_usagi_InformationEngineering_Boxing_Utility_LastOfOptional__1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="Vincenty 列挙体メンバー">
-        <param name="Local" value="html/T_usagi_CivilEngineering_LonLatHelper_LonLatDistanceAlgorithm.htm">
+        <param name="Local" value="html/T_usagi_CivilEngineering_Extension_LonLatDistanceExtension_LonLatDistanceAlgorithm.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="WebMercator クラス">
@@ -5042,11 +5708,11 @@
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="WithIndexing(Of T) メソッド">
-        <param name="Local" value="html/M_usagi_Extension_Collection_EnumerableHelper_WithIndexing__1.htm">
+        <param name="Local" value="html/M_usagi_Collection_Extension_IEnumerableExtension_WithIndexing__1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="WithIndexing&lt;T&gt; メソッド">
-        <param name="Local" value="html/M_usagi_Extension_Collection_EnumerableHelper_WithIndexing__1.htm">
+        <param name="Local" value="html/M_usagi_Collection_Extension_IEnumerableExtension_WithIndexing__1.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="X プロパティ">
@@ -5107,6 +5773,10 @@
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="_a プロパティ">
         <param name="Local" value="html/P_usagi_Quantity_Unit_SI_MetricPrefix__a.htm">
+      </OBJECT></LI>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="_All 列挙体メンバー">
+        <param name="Local" value="html/T_usagi_ColorSpace_Extension_StringExtetnsion_ColorPatternTrial.htm">
       </OBJECT></LI>
       <LI><OBJECT type="text/sitemap">
         <param name="Name" value="_am プロパティ">

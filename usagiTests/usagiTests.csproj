@@ -60,12 +60,20 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CalculationTests.cs" />
+    <Compile Include="Collection\EnumerableRangeCCTests.cs" />
+    <Compile Include="Collection\EnumerableRangeCOTests.cs" />
+    <Compile Include="Collection\EnumerableRangeOCTests.cs" />
+    <Compile Include="Collection\EnumerableRangeOOTests.cs" />
+    <Compile Include="ExperimentalTests.cs" />
     <Compile Include="DictionaryHelperTests.cs" />
     <Compile Include="EnumerableHelperTests.cs" />
     <Compile Include="GeoURITests.cs" />
+    <Compile Include="InformationEngineering\NumericExtensionTests.cs" />
     <Compile Include="LonLatTests.cs" />
     <Compile Include="PlaneAngleTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quantity\Ratio\NumericExtensionTests.cs" />
+    <Compile Include="StringHelperTests.cs" />
     <Compile Include="WebMercatorTests.cs" />
   </ItemGroup>
   <ItemGroup>

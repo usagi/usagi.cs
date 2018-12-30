@@ -1,12 +1,13 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using usagi.Extension.Collection;
+using usagi.Collection.Extension;
+using static usagi.Collection.Enumerable;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace usagi.Extension.Collection.Tests
+namespace usagi.Collection.Extension.Tests
 {
   [TestClass()]
   public class EnumerableHelperTests
@@ -14,7 +15,7 @@ namespace usagi.Extension.Collection.Tests
     [TestMethod()]
     public void UnorderedEqualTest()
     {
-      var a = Enumerable.Range( -100, 100 );
+      var a = Range( -100, 100 );
       IEnumerable<int> b;
       do
         b = a.OrderBy( _ => Guid.NewGuid() );
@@ -26,7 +27,7 @@ namespace usagi.Extension.Collection.Tests
     [TestMethod()]
     public void WithIndexingTest()
     {
-      var vs = Enumerable.Range( 0, 100 );
+      var vs = Range( 100 );
       foreach ( var (i, v) in vs.WithIndexing() )
         Assert.AreEqual( i, v );
     }

@@ -21,40 +21,7 @@ a が [ floor ... ceil ] に含まれるか判定する</td></tr><tr><td>![Publi
 任意個の値から最大の値を1つ抽出する</td></tr><tr><td>![Protected メソッド](media/protmethod.gif "Protected メソッド")</td><td><a href="http://msdn2.microsoft.com/ja-jp/library/57ctke0a" target="_blank">MemberwiseClone</a></td><td>
 現在の <a href="http://msdn2.microsoft.com/ja-jp/library/e5kfa45b" target="_blank">Object</a> の簡易コピーを作成します。
  (<a href="http://msdn2.microsoft.com/ja-jp/library/e5kfa45b" target="_blank">Object</a>から継承)</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_Calculation_Min__1.md">Min(T)</a></td><td>
-任意個の値から最小の値を1つ抽出する</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_Calculation_NearlyEquals.md">NearlyEquals(Byte, Byte, Byte)</a></td><td>
-byte 特殊化版 
-
-byte, UInt16, UInt32 に対しては内部的に1単位大きな符号付きの型で計算を行う。</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_Calculation_NearlyEquals_1.md">NearlyEquals(Char, Char, Char)</a></td><td>
-char 特殊化版 
-
-char, Int16, Int32 に対しては内部的に1単位大きな符号付きの型で計算を行う。</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_Calculation_NearlyEquals_2.md">NearlyEquals(Decimal, Decimal, Decimal)</a></td><td>
-decimal 特殊化版 
-
-double, float, decimal に対しては内部的にも同じ型のまま計算を行う。</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_Calculation_NearlyEquals_3.md">NearlyEquals(Double, Double, Double)</a></td><td>
-double 特殊化版 
-
-double, float, decimal に対しては内部的にも同じ型のまま計算を行う。</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_Calculation_NearlyEquals_4.md">NearlyEquals(Int16, Int16, Int16)</a></td><td>
-Int16 特殊化版 
-
-char, Int16, Int32 に対しては内部的に1単位大きな符号付きの型で計算を行う。</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_Calculation_NearlyEquals_5.md">NearlyEquals(Int32, Int32, Int32)</a></td><td>
-Int32 特殊化版 
-
-char, Int16, Int32 に対しては内部的に1単位大きな符号付きの型で計算を行う。</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_Calculation_NearlyEquals_6.md">NearlyEquals(Int64, Int64, Int64)</a></td><td>
-Int64 特殊化版 
-
-UInt64, Int64 に対しては内部的に decimal 型で計算を行う。</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_Calculation_NearlyEquals_7.md">NearlyEquals(Single, Single, Single)</a></td><td>
-float 特殊化版 
-
-double, float, decimal に対しては内部的にも同じ型のまま計算を行う。</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_Calculation_NearlyEquals_8.md">NearlyEquals(UInt16, UInt16, UInt16)</a></td><td>
-UInt16 特殊化版 
-
-byte, UInt16, UInt32 に対しては内部的に1単位大きな符号付きの型で計算を行う。</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_Calculation_NearlyEquals_9.md">NearlyEquals(UInt32, UInt32, UInt32)</a></td><td>
-UInt32 特殊化版 
-
-byte, UInt16, UInt32 に対しては内部的に1単位大きな符号付きの型で計算を行う。</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_Calculation_NearlyEquals_10.md">NearlyEquals(UInt64, UInt64, UInt64)</a></td><td>
-UInt64 特殊化版 
-
-UInt64, Int64 に対しては内部的に decimal 型で計算を行う。</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_Calculation_NearlyEquals__1.md">NearlyEquals(T)(T, T, T, Func(T, T, T), Func(T, T, T))</a></td><td>
+任意個の値から最小の値を1つ抽出する</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_Calculation_NearlyEquals__1.md">NearlyEquals(T)</a></td><td>
 a と b の差が tolerance 以下か判定する 
 
 許容範囲（許容誤差）において近似的に等価</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="http://msdn2.microsoft.com/ja-jp/library/7bxwbwt2" target="_blank">ToString</a></td><td>

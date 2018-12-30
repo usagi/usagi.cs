@@ -5,7 +5,7 @@
 
     <strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_Quantity_GeoLocation.md">usagi.Quantity.GeoLocation</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 1.2.0.0 (1.2.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 2.0.0.0 (2.0.0.0)
 
 ## 構文
 
@@ -23,6 +23,9 @@ public bool NearlyEqualsTo(
 
 #### 戻り値
 型: <a href="http://msdn2.microsoft.com/ja-jp/library/a28wyd50" target="_blank">Boolean</a><br />近似的に等価と未為せる場合は true
+
+## 解説
+必要なら <a href="M_usagi_CivilEngineering_Extension_LonLatDistanceExtension_DistanceTo.md">DistanceTo(ILonLatGettable, ILonLatGettable, LonLatDistanceExtension.LonLatDistanceAlgorithm, IGeometricalSpecificationGettable)</a> を使うと良い
 
 ## 関連項目
 

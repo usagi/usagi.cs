@@ -1,12 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using usagi.Extension.Collection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace usagi.Extension.Collection.Tests
+namespace usagi.Collection.Extension.Tests
 {
   [TestClass()]
   public class DictionaryHelperTests

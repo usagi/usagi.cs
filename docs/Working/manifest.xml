@@ -10,43 +10,7 @@
   <topic id="F:usagi.LibraryInformation.Name" type="API" />
   <topic id="F:usagi.LibraryInformation.NuGet" type="API" />
   <topic id="F:usagi.LibraryInformation.Readme" type="API" />
-  <topic id="N:usagi.Boxing" type="API" />
-  <topic id="T:usagi.Boxing.Optional`1" type="API" />
-  <topic id="Methods.T:usagi.Boxing.Optional`1" type="API" />
-  <topic id="Operators.T:usagi.Boxing.Optional`1" type="API" />
-  <topic id="Properties.T:usagi.Boxing.Optional`1" type="API" />
-  <topic id="Overload:usagi.Boxing.Optional`1.#ctor" type="API" />
-  <topic id="Overload:usagi.Boxing.Optional`1.Reset" type="API" />
-  <topic id="M:usagi.Boxing.Optional`1.#ctor" type="API" />
-  <topic id="M:usagi.Boxing.Optional`1.#ctor(`0)" type="API" />
-  <topic id="M:usagi.Boxing.Optional`1.Dispose" type="API" />
-  <topic id="M:usagi.Boxing.Optional`1.FromValue(`0)" type="API" />
-  <topic id="M:usagi.Boxing.Optional`1.Get" type="API" />
-  <topic id="M:usagi.Boxing.Optional`1.IsValid" type="API" />
-  <topic id="P:usagi.Boxing.Optional`1.Null" type="API" />
-  <topic id="M:usagi.Boxing.Optional`1.op_False(usagi.Boxing.Optional{`0})" type="API" />
-  <topic id="M:usagi.Boxing.Optional`1.op_Implicit(usagi.Boxing.Optional{`0})~`0" type="API" />
-  <topic id="M:usagi.Boxing.Optional`1.op_True(usagi.Boxing.Optional{`0})" type="API" />
-  <topic id="M:usagi.Boxing.Optional`1.Reset(`0,System.Boolean)" type="API" />
-  <topic id="M:usagi.Boxing.Optional`1.Reset(`0,`0@)" type="API" />
-  <topic id="M:usagi.Boxing.Optional`1.TryGet(`0@)" type="API" />
-  <topic id="T:usagi.Boxing.Optional`1.InvalidValueException" type="API" />
-  <topic id="Methods.T:usagi.Boxing.Optional`1.InvalidValueException" type="API" />
-  <topic id="Properties.T:usagi.Boxing.Optional`1.InvalidValueException" type="API" />
-  <topic id="Events.T:usagi.Boxing.Optional`1.InvalidValueException" type="API" />
-  <topic id="M:usagi.Boxing.Optional`1.InvalidValueException.#ctor(System.String)" type="API" />
-  <topic id="T:usagi.Boxing.Utility" type="API" />
-  <topic id="Methods.T:usagi.Boxing.Utility" type="API" />
-  <topic id="M:usagi.Boxing.Utility.FirstOfOptional``1(System.Collections.Generic.IEnumerable{``0})" type="API" />
-  <topic id="M:usagi.Boxing.Utility.LastOfOptional``1(System.Collections.Generic.IEnumerable{``0})" type="API" />
   <topic id="N:usagi.CivilEngineering" type="API" />
-  <topic id="T:usagi.CivilEngineering.LonLatHelper" type="API" />
-  <topic id="Methods.T:usagi.CivilEngineering.LonLatHelper" type="API" />
-  <topic id="M:usagi.CivilEngineering.LonLatHelper.DistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" type="API" />
-  <topic id="M:usagi.CivilEngineering.LonLatHelper.LatitudeDistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" type="API" />
-  <topic id="M:usagi.CivilEngineering.LonLatHelper.LongitudeDistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" type="API" />
-  <topic id="M:usagi.CivilEngineering.LonLatHelper.NearlyEqualsTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.Length,usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" type="API" />
-  <topic id="T:usagi.CivilEngineering.LonLatHelper.LonLatDistanceAlgorithm" type="API" />
   <topic id="T:usagi.CivilEngineering.PixelLocation" type="API" />
   <topic id="Methods.T:usagi.CivilEngineering.PixelLocation" type="API" />
   <topic id="Properties.T:usagi.CivilEngineering.PixelLocation" type="API" />
@@ -86,6 +50,14 @@
   <topic id="M:usagi.CivilEngineering.WebMercator.NormalizeWebMercator(usagi.Quantity.GeoLocation.LonLat)" type="API" />
   <topic id="M:usagi.CivilEngineering.WebMercator.PixelToTile(System.UInt32,System.UInt32,System.Byte,System.UInt32)" type="API" />
   <topic id="M:usagi.CivilEngineering.WebMercator.PixelToTile(usagi.CivilEngineering.PixelLocation,System.UInt32)" type="API" />
+  <topic id="N:usagi.CivilEngineering.Extension" type="API" />
+  <topic id="T:usagi.CivilEngineering.Extension.LonLatDistanceExtension" type="API" />
+  <topic id="Methods.T:usagi.CivilEngineering.Extension.LonLatDistanceExtension" type="API" />
+  <topic id="M:usagi.CivilEngineering.Extension.LonLatDistanceExtension.DistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.Extension.LonLatDistanceExtension.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" type="API" />
+  <topic id="M:usagi.CivilEngineering.Extension.LonLatDistanceExtension.LatitudeDistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.Extension.LonLatDistanceExtension.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" type="API" />
+  <topic id="M:usagi.CivilEngineering.Extension.LonLatDistanceExtension.LongitudeDistanceTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.CivilEngineering.Extension.LonLatDistanceExtension.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" type="API" />
+  <topic id="M:usagi.CivilEngineering.Extension.LonLatDistanceExtension.NearlyEqualsTo(usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.GeoLocation.ILonLatGettable,usagi.Quantity.Length,usagi.CivilEngineering.Extension.LonLatDistanceExtension.LonLatDistanceAlgorithm,usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable)" type="API" />
+  <topic id="T:usagi.CivilEngineering.Extension.LonLatDistanceExtension.LonLatDistanceAlgorithm" type="API" />
   <topic id="N:usagi.CivilEngineering.Planet" type="API" />
   <topic id="T:usagi.CivilEngineering.Planet.GeometricalSpecification" type="API" />
   <topic id="Methods.T:usagi.CivilEngineering.Planet.GeometricalSpecification" type="API" />
@@ -99,83 +71,254 @@
   <topic id="P:usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable.EquatorLength" type="API" />
   <topic id="P:usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable.Flattening" type="API" />
   <topic id="P:usagi.CivilEngineering.Planet.IGeometricalSpecificationGettable.MaximumLatitudeLength" type="API" />
-  <topic id="N:usagi.Extension" type="API" />
-  <topic id="T:usagi.Extension.ItemsControlHelper" type="API" />
-  <topic id="Methods.T:usagi.Extension.ItemsControlHelper" type="API" />
-  <topic id="Overload:usagi.Extension.ItemsControlHelper.FindChild" type="API" />
-  <topic id="Overload:usagi.Extension.ItemsControlHelper.FindChildAs" type="API" />
-  <topic id="Overload:usagi.Extension.ItemsControlHelper.FindChildren" type="API" />
-  <topic id="Overload:usagi.Extension.ItemsControlHelper.FindChildrenAs" type="API" />
-  <topic id="Overload:usagi.Extension.ItemsControlHelper.FindControl" type="API" />
-  <topic id="Overload:usagi.Extension.ItemsControlHelper.FindControlAs" type="API" />
-  <topic id="Overload:usagi.Extension.ItemsControlHelper.FindControls" type="API" />
-  <topic id="M:usagi.Extension.ItemsControlHelper.FindChild(System.Windows.Controls.ContentPresenter,System.String)" type="API" />
-  <topic id="M:usagi.Extension.ItemsControlHelper.FindChild(System.Windows.Controls.ItemsControl,System.Int32,System.String)" type="API" />
-  <topic id="M:usagi.Extension.ItemsControlHelper.FindChildAs``1(System.Windows.Controls.ContentPresenter,System.String)" type="API" />
-  <topic id="M:usagi.Extension.ItemsControlHelper.FindChildAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String)" type="API" />
-  <topic id="M:usagi.Extension.ItemsControlHelper.FindChildren(System.Windows.Controls.ItemsControl,System.Int32,System.String[])" type="API" />
-  <topic id="M:usagi.Extension.ItemsControlHelper.FindChildren(System.Windows.Controls.ItemsControl,System.String[])" type="API" />
-  <topic id="M:usagi.Extension.ItemsControlHelper.FindChildrenAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String[])" type="API" />
-  <topic id="M:usagi.Extension.ItemsControlHelper.FindChildrenAs``1(System.Windows.Controls.ItemsControl,System.String[])" type="API" />
-  <topic id="M:usagi.Extension.ItemsControlHelper.FindControl(System.Windows.Controls.ContentPresenter,System.String)" type="API" />
-  <topic id="M:usagi.Extension.ItemsControlHelper.FindControl(System.Windows.Controls.ItemsControl,System.Int32,System.String)" type="API" />
-  <topic id="M:usagi.Extension.ItemsControlHelper.FindControlAs``1(System.Windows.Controls.ContentPresenter,System.String)" type="API" />
-  <topic id="M:usagi.Extension.ItemsControlHelper.FindControlAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String)" type="API" />
-  <topic id="M:usagi.Extension.ItemsControlHelper.FindControls(System.Windows.Controls.ItemsControl,System.Int32,System.String[])" type="API" />
-  <topic id="M:usagi.Extension.ItemsControlHelper.FindControls(System.Windows.Controls.ItemsControl,System.String[])" type="API" />
-  <topic id="M:usagi.Extension.ItemsControlHelper.FindControlsAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String[])" type="API" />
-  <topic id="M:usagi.Extension.ItemsControlHelper.GetContentPresenter(System.Windows.Controls.ItemsControl,System.Int32)" type="API" />
-  <topic id="T:usagi.Extension.MemoryStreamHelper" type="API" />
-  <topic id="Methods.T:usagi.Extension.MemoryStreamHelper" type="API" />
-  <topic id="M:usagi.Extension.MemoryStreamHelper.ToString(System.IO.MemoryStream,System.Text.Encoding)" type="API" />
-  <topic id="T:usagi.Extension.StringHelper" type="API" />
-  <topic id="Methods.T:usagi.Extension.StringHelper" type="API" />
-  <topic id="M:usagi.Extension.StringHelper.Contains(System.String,System.String[])" type="API" />
-  <topic id="M:usagi.Extension.StringHelper.EndsWith(System.String,System.String[])" type="API" />
-  <topic id="M:usagi.Extension.StringHelper.StartsOrEndsWith(System.String,System.String[])" type="API" />
-  <topic id="M:usagi.Extension.StringHelper.StartsWith(System.String,System.String[])" type="API" />
-  <topic id="M:usagi.Extension.StringHelper.ToMemoryStream(System.String,System.Text.Encoding)" type="API" />
-  <topic id="N:usagi.Extension.Collection" type="API" />
-  <topic id="T:usagi.Extension.Collection.DictionaryHelper" type="API" />
-  <topic id="Methods.T:usagi.Extension.Collection.DictionaryHelper" type="API" />
-  <topic id="M:usagi.Extension.Collection.DictionaryHelper.UnorderedEqual``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEqualityComparer{``1})" type="API" />
-  <topic id="T:usagi.Extension.Collection.EnumerableHelper" type="API" />
-  <topic id="Methods.T:usagi.Extension.Collection.EnumerableHelper" type="API" />
-  <topic id="Overload:usagi.Extension.Collection.EnumerableHelper.Range" type="API" />
-  <topic id="M:usagi.Extension.Collection.EnumerableHelper.Range(System.Int32)" type="API" />
-  <topic id="M:usagi.Extension.Collection.EnumerableHelper.Range``1(System.Int32,System.Func{``0})" type="API" />
-  <topic id="M:usagi.Extension.Collection.EnumerableHelper.Range``1(System.Int32,System.Func{System.Int32,``0})" type="API" />
-  <topic id="M:usagi.Extension.Collection.EnumerableHelper.Range(System.Int32,System.Int32)" type="API" />
-  <topic id="M:usagi.Extension.Collection.EnumerableHelper.Range``1(System.Int32,System.Int32,System.Func{System.Int32,``0})" type="API" />
-  <topic id="M:usagi.Extension.Collection.EnumerableHelper.UnorderedEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})" type="API" />
-  <topic id="M:usagi.Extension.Collection.EnumerableHelper.WithIndexing``1(System.Collections.Generic.IEnumerable{``0})" type="API" />
+  <topic id="N:usagi.Collection" type="API" />
+  <topic id="T:usagi.Collection.Enumerable" type="API" />
+  <topic id="Methods.T:usagi.Collection.Enumerable" type="API" />
+  <topic id="Overload:usagi.Collection.Enumerable.Range" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.Byte,System.Byte,usagi.Collection.Enumerable.RangeTermination)" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.Decimal,System.Decimal,usagi.Collection.Enumerable.RangeTermination)" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.Double,System.Double,usagi.Collection.Enumerable.RangeTermination)" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range``1(System.Func{``0,``0},System.ValueTuple{``0,``0,usagi.Collection.Enumerable.RangeTermination}[])" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.Int16,System.Int16,usagi.Collection.Enumerable.RangeTermination)" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.Int32)" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.Int32,System.Int32)" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.Int32,System.Int32,usagi.Collection.Enumerable.RangeTermination)" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.Int64,System.Int64,usagi.Collection.Enumerable.RangeTermination)" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.SByte,System.SByte,usagi.Collection.Enumerable.RangeTermination)" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.Single,System.Single,usagi.Collection.Enumerable.RangeTermination)" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.UInt32,System.UInt32,usagi.Collection.Enumerable.RangeTermination)" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.UInt64,System.UInt64,usagi.Collection.Enumerable.RangeTermination)" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.Byte,System.Byte,usagi.Collection.Enumerable.RangeTermination}[])" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.Decimal,System.Decimal,usagi.Collection.Enumerable.RangeTermination}[])" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.Double,System.Double,usagi.Collection.Enumerable.RangeTermination}[])" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.Int16,System.Int16,usagi.Collection.Enumerable.RangeTermination}[])" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.Int32,System.Int32,usagi.Collection.Enumerable.RangeTermination}[])" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.Int64,System.Int64,usagi.Collection.Enumerable.RangeTermination}[])" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.SByte,System.SByte,usagi.Collection.Enumerable.RangeTermination}[])" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.Single,System.Single,usagi.Collection.Enumerable.RangeTermination}[])" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.UInt16,System.UInt16,usagi.Collection.Enumerable.RangeTermination}[])" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.UInt32,System.UInt32,usagi.Collection.Enumerable.RangeTermination}[])" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range(System.ValueTuple{System.UInt64,System.UInt64,usagi.Collection.Enumerable.RangeTermination}[])" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.Range``1(``0,``0,usagi.Collection.Enumerable.RangeTermination,System.Func{``0,``0})" type="API" />
+  <topic id="M:usagi.Collection.Enumerable.RangeOO(System.UInt16,System.UInt16,usagi.Collection.Enumerable.RangeTermination)" type="API" />
+  <topic id="T:usagi.Collection.Enumerable.RangeTermination" type="API" />
+  <topic id="N:usagi.Collection.Extension" type="API" />
+  <topic id="T:usagi.Collection.Extension.IDictionaryExtension" type="API" />
+  <topic id="Methods.T:usagi.Collection.Extension.IDictionaryExtension" type="API" />
+  <topic id="M:usagi.Collection.Extension.IDictionaryExtension.UnorderedEqual``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IEqualityComparer{``1})" type="API" />
+  <topic id="T:usagi.Collection.Extension.IEnumerableExtension" type="API" />
+  <topic id="Methods.T:usagi.Collection.Extension.IEnumerableExtension" type="API" />
+  <topic id="Overload:usagi.Collection.Extension.IEnumerableExtension.Range" type="API" />
+  <topic id="M:usagi.Collection.Extension.IEnumerableExtension.Range``1(System.Int32,System.Func{``0})" type="API" />
+  <topic id="M:usagi.Collection.Extension.IEnumerableExtension.Range``1(System.Int32,System.Func{System.Int32,``0})" type="API" />
+  <topic id="M:usagi.Collection.Extension.IEnumerableExtension.Range``1(System.Int32,System.Int32,System.Func{System.Int32,``0})" type="API" />
+  <topic id="M:usagi.Collection.Extension.IEnumerableExtension.UnorderedEqual``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})" type="API" />
+  <topic id="M:usagi.Collection.Extension.IEnumerableExtension.WithIndexing``1(System.Collections.Generic.IEnumerable{``0})" type="API" />
+  <topic id="N:usagi.ColorSpace" type="API" />
+  <topic id="T:usagi.ColorSpace.Factory" type="API" />
+  <topic id="Methods.T:usagi.ColorSpace.Factory" type="API" />
+  <topic id="Overload:usagi.ColorSpace.Factory.FromHSLA" type="API" />
+  <topic id="Overload:usagi.ColorSpace.Factory.FromRGBA" type="API" />
+  <topic id="M:usagi.ColorSpace.Factory.FromHSLA(System.Double,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.ColorSpace.Factory.FromHSLA(usagi.Quantity.PlaneAngle,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.ColorSpace.Factory.FromRGBA(System.Byte,System.Byte,System.Byte,System.Byte)" type="API" />
+  <topic id="M:usagi.ColorSpace.Factory.FromRGBA(System.Double,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.ColorSpace.Factory.FromRGBA(System.Single,System.Single,System.Single,System.Single)" type="API" />
+  <topic id="N:usagi.ColorSpace.Extension" type="API" />
+  <topic id="T:usagi.ColorSpace.Extension.ColorExtension" type="API" />
+  <topic id="Methods.T:usagi.ColorSpace.Extension.ColorExtension" type="API" />
+  <topic id="Overload:usagi.ColorSpace.Extension.ColorExtension.ToHSLA" type="API" />
+  <topic id="M:usagi.ColorSpace.Extension.ColorExtension.NearlyEqualsInHSLA(System.Windows.Media.Color,System.Windows.Media.Color,usagi.Quantity.PlaneAngle,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.ColorSpace.Extension.ColorExtension.ToHSLA(System.ValueTuple{System.Byte,System.Byte,System.Byte,System.Byte})" type="API" />
+  <topic id="M:usagi.ColorSpace.Extension.ColorExtension.ToHSLA(System.Windows.Media.Color)" type="API" />
+  <topic id="T:usagi.ColorSpace.Extension.StringExtetnsion" type="API" />
+  <topic id="Methods.T:usagi.ColorSpace.Extension.StringExtetnsion" type="API" />
+  <topic id="M:usagi.ColorSpace.Extension.StringExtetnsion.ToColor(System.String,usagi.ColorSpace.Extension.StringExtetnsion.ColorPatternTrial)" type="API" />
+  <topic id="M:usagi.ColorSpace.Extension.StringExtetnsion.ToColorFromCSSHSLA(System.String)" type="API" />
+  <topic id="M:usagi.ColorSpace.Extension.StringExtetnsion.ToColorFromCSSRGBA(System.String)" type="API" />
+  <topic id="M:usagi.ColorSpace.Extension.StringExtetnsion.ToColorFromHex(System.String)" type="API" />
+  <topic id="M:usagi.ColorSpace.Extension.StringExtetnsion.ToColorFromName(System.String)" type="API" />
+  <topic id="M:usagi.ColorSpace.Extension.StringExtetnsion.ToQuantity(System.String)" type="API" />
+  <topic id="T:usagi.ColorSpace.Extension.StringExtetnsion.ColorPatternTrial" type="API" />
+  <topic id="N:usagi.GUI.Extension" type="API" />
+  <topic id="T:usagi.GUI.Extension.ItemsControlHelper" type="API" />
+  <topic id="Methods.T:usagi.GUI.Extension.ItemsControlHelper" type="API" />
+  <topic id="Overload:usagi.GUI.Extension.ItemsControlHelper.FindChild" type="API" />
+  <topic id="Overload:usagi.GUI.Extension.ItemsControlHelper.FindChildAs" type="API" />
+  <topic id="Overload:usagi.GUI.Extension.ItemsControlHelper.FindChildren" type="API" />
+  <topic id="Overload:usagi.GUI.Extension.ItemsControlHelper.FindChildrenAs" type="API" />
+  <topic id="M:usagi.GUI.Extension.ItemsControlHelper.FindChild(System.Windows.Controls.ContentPresenter,System.String)" type="API" />
+  <topic id="M:usagi.GUI.Extension.ItemsControlHelper.FindChild(System.Windows.Controls.ItemsControl,System.Int32,System.String)" type="API" />
+  <topic id="M:usagi.GUI.Extension.ItemsControlHelper.FindChildAs``1(System.Windows.Controls.ContentPresenter,System.String)" type="API" />
+  <topic id="M:usagi.GUI.Extension.ItemsControlHelper.FindChildAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String)" type="API" />
+  <topic id="M:usagi.GUI.Extension.ItemsControlHelper.FindChildren(System.Windows.Controls.ItemsControl,System.Int32,System.String[])" type="API" />
+  <topic id="M:usagi.GUI.Extension.ItemsControlHelper.FindChildren(System.Windows.Controls.ItemsControl,System.String[])" type="API" />
+  <topic id="M:usagi.GUI.Extension.ItemsControlHelper.FindChildrenAs``1(System.Windows.Controls.ItemsControl,System.Int32,System.String[])" type="API" />
+  <topic id="M:usagi.GUI.Extension.ItemsControlHelper.FindChildrenAs``1(System.Windows.Controls.ItemsControl,System.String[])" type="API" />
+  <topic id="M:usagi.GUI.Extension.ItemsControlHelper.GetContentPresenter(System.Windows.Controls.ItemsControl,System.Int32)" type="API" />
+  <topic id="N:usagi.InformationEngineering" type="API" />
+  <topic id="T:usagi.InformationEngineering.Numeric" type="API" />
+  <topic id="Methods.T:usagi.InformationEngineering.Numeric" type="API" />
+  <topic id="Overload:usagi.InformationEngineering.Numeric.ClampAdd" type="API" />
+  <topic id="Overload:usagi.InformationEngineering.Numeric.SafeIncrement" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.ClampAdd(System.Byte,System.Byte)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.ClampAdd(System.Int16,System.Int16)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.ClampAdd(System.Int32,System.Int32)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.ClampAdd(System.Int64,System.Int64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.ClampAdd(System.SByte,System.SByte)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.ClampAdd(System.UInt16,System.UInt16)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.ClampAdd(System.UInt32,System.UInt32)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.ClampAdd(System.UInt64,System.UInt64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.ConservationCast``2(``0)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.Byte)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.Decimal)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.Double)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.Int16)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.Int32)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.Int64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.SByte)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.Single)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.UInt16)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.UInt32)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.SafeIncrement(System.UInt64)" type="API" />
+  <topic id="T:usagi.InformationEngineering.Numeric.INumericException" type="API" />
+  <topic id="T:usagi.InformationEngineering.Numeric.OverflowException" type="API" />
+  <topic id="Methods.T:usagi.InformationEngineering.Numeric.OverflowException" type="API" />
+  <topic id="Properties.T:usagi.InformationEngineering.Numeric.OverflowException" type="API" />
+  <topic id="Events.T:usagi.InformationEngineering.Numeric.OverflowException" type="API" />
+  <topic id="Overload:usagi.InformationEngineering.Numeric.OverflowException.#ctor" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.OverflowException.#ctor(System.Object)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.OverflowException.#ctor(System.Object,System.Object)" type="API" />
+  <topic id="T:usagi.InformationEngineering.Numeric.PrecisionException" type="API" />
+  <topic id="Methods.T:usagi.InformationEngineering.Numeric.PrecisionException" type="API" />
+  <topic id="Properties.T:usagi.InformationEngineering.Numeric.PrecisionException" type="API" />
+  <topic id="Events.T:usagi.InformationEngineering.Numeric.PrecisionException" type="API" />
+  <topic id="Overload:usagi.InformationEngineering.Numeric.PrecisionException.#ctor" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.PrecisionException.#ctor(System.Object)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.PrecisionException.#ctor(System.Object,System.Object)" type="API" />
+  <topic id="T:usagi.InformationEngineering.Numeric.UnderflowException" type="API" />
+  <topic id="Methods.T:usagi.InformationEngineering.Numeric.UnderflowException" type="API" />
+  <topic id="Properties.T:usagi.InformationEngineering.Numeric.UnderflowException" type="API" />
+  <topic id="Events.T:usagi.InformationEngineering.Numeric.UnderflowException" type="API" />
+  <topic id="Overload:usagi.InformationEngineering.Numeric.UnderflowException.#ctor" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.UnderflowException.#ctor(System.Object)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Numeric.UnderflowException.#ctor(System.Object,System.Object)" type="API" />
+  <topic id="N:usagi.InformationEngineering.Boxing" type="API" />
+  <topic id="T:usagi.InformationEngineering.Boxing.Optional`1" type="API" />
+  <topic id="Methods.T:usagi.InformationEngineering.Boxing.Optional`1" type="API" />
+  <topic id="Operators.T:usagi.InformationEngineering.Boxing.Optional`1" type="API" />
+  <topic id="Properties.T:usagi.InformationEngineering.Boxing.Optional`1" type="API" />
+  <topic id="Overload:usagi.InformationEngineering.Boxing.Optional`1.#ctor" type="API" />
+  <topic id="Overload:usagi.InformationEngineering.Boxing.Optional`1.Reset" type="API" />
+  <topic id="M:usagi.InformationEngineering.Boxing.Optional`1.#ctor" type="API" />
+  <topic id="M:usagi.InformationEngineering.Boxing.Optional`1.#ctor(`0)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Boxing.Optional`1.Dispose" type="API" />
+  <topic id="M:usagi.InformationEngineering.Boxing.Optional`1.FromValue(`0)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Boxing.Optional`1.Get" type="API" />
+  <topic id="M:usagi.InformationEngineering.Boxing.Optional`1.IsValid" type="API" />
+  <topic id="P:usagi.InformationEngineering.Boxing.Optional`1.Null" type="API" />
+  <topic id="M:usagi.InformationEngineering.Boxing.Optional`1.op_False(usagi.InformationEngineering.Boxing.Optional{`0})" type="API" />
+  <topic id="M:usagi.InformationEngineering.Boxing.Optional`1.op_Implicit(usagi.InformationEngineering.Boxing.Optional{`0})~`0" type="API" />
+  <topic id="M:usagi.InformationEngineering.Boxing.Optional`1.op_True(usagi.InformationEngineering.Boxing.Optional{`0})" type="API" />
+  <topic id="M:usagi.InformationEngineering.Boxing.Optional`1.Reset(`0,System.Boolean)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Boxing.Optional`1.Reset(`0,`0@)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Boxing.Optional`1.TryGet(`0@)" type="API" />
+  <topic id="T:usagi.InformationEngineering.Boxing.Optional`1.InvalidValueException" type="API" />
+  <topic id="Methods.T:usagi.InformationEngineering.Boxing.Optional`1.InvalidValueException" type="API" />
+  <topic id="Properties.T:usagi.InformationEngineering.Boxing.Optional`1.InvalidValueException" type="API" />
+  <topic id="Events.T:usagi.InformationEngineering.Boxing.Optional`1.InvalidValueException" type="API" />
+  <topic id="M:usagi.InformationEngineering.Boxing.Optional`1.InvalidValueException.#ctor(System.String)" type="API" />
+  <topic id="T:usagi.InformationEngineering.Boxing.Utility" type="API" />
+  <topic id="Methods.T:usagi.InformationEngineering.Boxing.Utility" type="API" />
+  <topic id="M:usagi.InformationEngineering.Boxing.Utility.FirstOfOptional``1(System.Collections.Generic.IEnumerable{``0})" type="API" />
+  <topic id="M:usagi.InformationEngineering.Boxing.Utility.LastOfOptional``1(System.Collections.Generic.IEnumerable{``0})" type="API" />
+  <topic id="N:usagi.InformationEngineering.Extension" type="API" />
+  <topic id="T:usagi.InformationEngineering.Extension.MemoryStreamStringExtension" type="API" />
+  <topic id="Methods.T:usagi.InformationEngineering.Extension.MemoryStreamStringExtension" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.MemoryStreamStringExtension.ToMemoryStream(System.String,System.Text.Encoding)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.MemoryStreamStringExtension.ToString(System.IO.MemoryStream,System.Text.Encoding)" type="API" />
+  <topic id="T:usagi.InformationEngineering.Extension.NumericExtension" type="API" />
+  <topic id="Methods.T:usagi.InformationEngineering.Extension.NumericExtension" type="API" />
+  <topic id="Overload:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte" type="API" />
+  <topic id="Overload:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16" type="API" />
+  <topic id="Overload:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt32" type="API" />
+  <topic id="Overload:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt64" type="API" />
+  <topic id="Overload:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte" type="API" />
+  <topic id="Overload:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16" type="API" />
+  <topic id="Overload:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt32" type="API" />
+  <topic id="Overload:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt64" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.Decimal)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.Double)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.Int16)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.Int32)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.Int64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.SByte)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.Single)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.UInt16)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.UInt32)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToByte(System.UInt64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16(System.Decimal)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16(System.Double)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16(System.Int32)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16(System.Int64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16(System.Single)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16(System.UInt16)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16(System.UInt32)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt16(System.UInt64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt32(System.Decimal)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt32(System.Double)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt32(System.Int64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt32(System.Single)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt32(System.UInt32)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt32(System.UInt64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt64(System.Decimal)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt64(System.Double)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt64(System.Single)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToInt64(System.UInt64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.Byte)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.Decimal)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.Double)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.Int16)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.Int32)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.Int64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.Single)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.UInt16)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.UInt32)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToSByte(System.UInt64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16(System.Decimal)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16(System.Double)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16(System.Int16)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16(System.Int32)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16(System.Int64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16(System.Single)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16(System.UInt32)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt16(System.UInt64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt32(System.Decimal)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt32(System.Double)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt32(System.Int32)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt32(System.Int64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt32(System.Single)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt32(System.UInt64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt64(System.Decimal)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt64(System.Double)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt64(System.Int64)" type="API" />
+  <topic id="M:usagi.InformationEngineering.Extension.NumericExtension.ClampToUInt64(System.Single)" type="API" />
   <topic id="N:usagi.Quantity" type="API" />
   <topic id="T:usagi.Quantity.Calculation" type="API" />
   <topic id="Methods.T:usagi.Quantity.Calculation" type="API" />
-  <topic id="Overload:usagi.Quantity.Calculation.NearlyEquals" type="API" />
   <topic id="M:usagi.Quantity.Calculation.#ctor" type="API" />
   <topic id="M:usagi.Quantity.Calculation.Clamp``1(``0,``0,``0)" type="API" />
   <topic id="M:usagi.Quantity.Calculation.Distance``1(``0,``0,System.Func{``0,``0,``0})" type="API" />
   <topic id="M:usagi.Quantity.Calculation.IsInRangeOf``1(``0,``0,``0)" type="API" />
   <topic id="M:usagi.Quantity.Calculation.Max``1(``0[])" type="API" />
   <topic id="M:usagi.Quantity.Calculation.Min``1(``0[])" type="API" />
-  <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.Byte,System.Byte,System.Byte)" type="API" />
-  <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.Char,System.Char,System.Char)" type="API" />
-  <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.Decimal,System.Decimal,System.Decimal)" type="API" />
-  <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.Double,System.Double,System.Double)" type="API" />
-  <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.Int16,System.Int16,System.Int16)" type="API" />
-  <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.Int32,System.Int32,System.Int32)" type="API" />
-  <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.Int64,System.Int64,System.Int64)" type="API" />
-  <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.Single,System.Single,System.Single)" type="API" />
-  <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.UInt16,System.UInt16,System.UInt16)" type="API" />
-  <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.UInt32,System.UInt32,System.UInt32)" type="API" />
-  <topic id="M:usagi.Quantity.Calculation.NearlyEquals(System.UInt64,System.UInt64,System.UInt64)" type="API" />
   <topic id="M:usagi.Quantity.Calculation.NearlyEquals``1(``0,``0,``0,System.Func{``0,``0,``0},System.Func{``0,``0,``0})" type="API" />
   <topic id="T:usagi.Quantity.Length" type="API" />
   <topic id="Methods.T:usagi.Quantity.Length" type="API" />
   <topic id="Operators.T:usagi.Quantity.Length" type="API" />
   <topic id="Properties.T:usagi.Quantity.Length" type="API" />
   <topic id="Overload:usagi.Quantity.Length.ToString" type="API" />
+  <topic id="Overload:usagi.Quantity.Length.NearlyEquals" type="API" />
   <topic id="Overload:usagi.Quantity.Length.op_Division" type="API" />
   <topic id="Overload:usagi.Quantity.Length.op_Multiply" type="API" />
   <topic id="M:usagi.Quantity.Length.#ctor" type="API" />
@@ -387,8 +530,8 @@
   <topic id="M:usagi.Quantity.Length.IsPositiveInfinity" type="API" />
   <topic id="P:usagi.Quantity.Length.Meter" type="API" />
   <topic id="P:usagi.Quantity.Length.NaN" type="API" />
+  <topic id="M:usagi.Quantity.Length.NearlyEquals(usagi.Quantity.Length,usagi.Quantity.Length)" type="API" />
   <topic id="M:usagi.Quantity.Length.NearlyEquals(usagi.Quantity.Length,usagi.Quantity.Length,usagi.Quantity.Length)" type="API" />
-  <topic id="M:usagi.Quantity.Length.NearlyEqualsTo(usagi.Quantity.Length,usagi.Quantity.Length)" type="API" />
   <topic id="P:usagi.Quantity.Length.NegativeInfinity" type="API" />
   <topic id="M:usagi.Quantity.Length.op_Addition(usagi.Quantity.Length,usagi.Quantity.Length)" type="API" />
   <topic id="M:usagi.Quantity.Length.op_Division(usagi.Quantity.Length,System.Double)" type="API" />
@@ -458,6 +601,7 @@
   <topic id="Properties.T:usagi.Quantity.PlaneAngle" type="API" />
   <topic id="Fields.T:usagi.Quantity.PlaneAngle" type="API" />
   <topic id="Overload:usagi.Quantity.PlaneAngle.Equals" type="API" />
+  <topic id="Overload:usagi.Quantity.PlaneAngle.NearlyEquals" type="API" />
   <topic id="Overload:usagi.Quantity.PlaneAngle.Normalize180" type="API" />
   <topic id="Overload:usagi.Quantity.PlaneAngle.Normalize360" type="API" />
   <topic id="Overload:usagi.Quantity.PlaneAngle.NormalizedGreaterThan" type="API" />
@@ -517,20 +661,20 @@
   <topic id="P:usagi.Quantity.PlaneAngle.MilliSecond" type="API" />
   <topic id="P:usagi.Quantity.PlaneAngle.Minute" type="API" />
   <topic id="P:usagi.Quantity.PlaneAngle.NaN" type="API" />
+  <topic id="M:usagi.Quantity.PlaneAngle.NearlyEquals(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" type="API" />
   <topic id="M:usagi.Quantity.PlaneAngle.NearlyEquals(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" type="API" />
-  <topic id="M:usagi.Quantity.PlaneAngle.NearlyEqualsTo(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" type="API" />
   <topic id="P:usagi.Quantity.PlaneAngle.NegativeInfinity" type="API" />
   <topic id="M:usagi.Quantity.PlaneAngle.Normalize180" type="API" />
   <topic id="M:usagi.Quantity.PlaneAngle.Normalize180(usagi.Quantity.PlaneAngle)" type="API" />
   <topic id="M:usagi.Quantity.PlaneAngle.Normalize360" type="API" />
   <topic id="M:usagi.Quantity.PlaneAngle.Normalize360(usagi.Quantity.PlaneAngle)" type="API" />
   <topic id="M:usagi.Quantity.PlaneAngle.NormalizedCompareTo(usagi.Quantity.PlaneAngle)" type="API" />
-  <topic id="M:usagi.Quantity.PlaneAngle.NormalizedEqualsTo(usagi.Quantity.PlaneAngle)" type="API" />
+  <topic id="M:usagi.Quantity.PlaneAngle.NormalizedEquals(usagi.Quantity.PlaneAngle)" type="API" />
   <topic id="M:usagi.Quantity.PlaneAngle.NormalizedGreaterThan(usagi.Quantity.PlaneAngle)" type="API" />
   <topic id="M:usagi.Quantity.PlaneAngle.NormalizedGreaterThan(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" type="API" />
   <topic id="M:usagi.Quantity.PlaneAngle.NormalizedLessThan(usagi.Quantity.PlaneAngle)" type="API" />
   <topic id="M:usagi.Quantity.PlaneAngle.NormalizedLessThan(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" type="API" />
-  <topic id="M:usagi.Quantity.PlaneAngle.NormalizedNearlyEqualsTo(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" type="API" />
+  <topic id="M:usagi.Quantity.PlaneAngle.NormalizedNearlyEquals(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" type="API" />
   <topic id="M:usagi.Quantity.PlaneAngle.op_Addition(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" type="API" />
   <topic id="M:usagi.Quantity.PlaneAngle.op_Division(usagi.Quantity.PlaneAngle,System.Double)" type="API" />
   <topic id="M:usagi.Quantity.PlaneAngle.op_Division(usagi.Quantity.PlaneAngle,usagi.Quantity.PlaneAngle)" type="API" />
@@ -583,6 +727,38 @@
   <topic id="M:usagi.Quantity.PlaneAngle.ToStringInTurns(System.String)" type="API" />
   <topic id="P:usagi.Quantity.PlaneAngle.Turn" type="API" />
   <topic id="P:usagi.Quantity.PlaneAngle.Zero" type="API" />
+  <topic id="N:usagi.Quantity.Extension" type="API" />
+  <topic id="T:usagi.Quantity.Extension.LengthMathExtension" type="API" />
+  <topic id="Methods.T:usagi.Quantity.Extension.LengthMathExtension" type="API" />
+  <topic id="M:usagi.Quantity.Extension.LengthMathExtension.Abs(usagi.Quantity.Length)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.LengthMathExtension.ACos(usagi.Quantity.Length,usagi.Quantity.Length)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.LengthMathExtension.ASin(usagi.Quantity.Length,usagi.Quantity.Length)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.LengthMathExtension.ATan2(usagi.Quantity.Length,usagi.Quantity.Length)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.LengthMathExtension.Sign(usagi.Quantity.Length)" type="API" />
+  <topic id="T:usagi.Quantity.Extension.NumericNearlyEqualsExtension" type="API" />
+  <topic id="Methods.T:usagi.Quantity.Extension.NumericNearlyEqualsExtension" type="API" />
+  <topic id="Overload:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals" type="API" />
+  <topic id="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.Byte,System.Byte,System.Byte)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.Char,System.Char,System.Char)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.Decimal,System.Decimal,System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.Int16,System.Int16,System.Int16)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.Int32,System.Int32,System.Int32)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.Int64,System.Int64,System.Int64)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.Single,System.Single,System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.UInt16,System.UInt16,System.UInt16)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.UInt32,System.UInt32,System.UInt32)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.NumericNearlyEqualsExtension.NearlyEquals(System.UInt64,System.UInt64,System.UInt64)" type="API" />
+  <topic id="T:usagi.Quantity.Extension.PlaneAngleMathHelper" type="API" />
+  <topic id="Methods.T:usagi.Quantity.Extension.PlaneAngleMathHelper" type="API" />
+  <topic id="M:usagi.Quantity.Extension.PlaneAngleMathHelper.Abs(usagi.Quantity.PlaneAngle)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.PlaneAngleMathHelper.Cos(usagi.Quantity.PlaneAngle)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.PlaneAngleMathHelper.Cosh(usagi.Quantity.PlaneAngle)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.PlaneAngleMathHelper.Sign(usagi.Quantity.PlaneAngle)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.PlaneAngleMathHelper.Sin(usagi.Quantity.PlaneAngle)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.PlaneAngleMathHelper.Sinh(usagi.Quantity.PlaneAngle)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.PlaneAngleMathHelper.Tan(usagi.Quantity.PlaneAngle)" type="API" />
+  <topic id="M:usagi.Quantity.Extension.PlaneAngleMathHelper.Tanh(usagi.Quantity.PlaneAngle)" type="API" />
   <topic id="N:usagi.Quantity.GeoLocation" type="API" />
   <topic id="T:usagi.Quantity.GeoLocation.IAltitude" type="API" />
   <topic id="Properties.T:usagi.Quantity.GeoLocation.IAltitude" type="API" />
@@ -657,25 +833,134 @@
   <topic id="M:usagi.Quantity.GeoLocation.LonLatAlt.FromGeoCoordinate(System.Device.Location.GeoCoordinate)" type="API" />
   <topic id="M:usagi.Quantity.GeoLocation.LonLatAlt.ToGeoCoordinate" type="API" />
   <topic id="M:usagi.Quantity.GeoLocation.LonLatAlt.ToString" type="API" />
-  <topic id="N:usagi.Quantity.LengthMathExtension" type="API" />
-  <topic id="T:usagi.Quantity.LengthMathExtension.LengthMathHelper" type="API" />
-  <topic id="Methods.T:usagi.Quantity.LengthMathExtension.LengthMathHelper" type="API" />
-  <topic id="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.Abs(usagi.Quantity.Length)" type="API" />
-  <topic id="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.ACos(usagi.Quantity.Length,usagi.Quantity.Length)" type="API" />
-  <topic id="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.ASin(usagi.Quantity.Length,usagi.Quantity.Length)" type="API" />
-  <topic id="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.ATan2(usagi.Quantity.Length,usagi.Quantity.Length)" type="API" />
-  <topic id="M:usagi.Quantity.LengthMathExtension.LengthMathHelper.Sign(usagi.Quantity.Length)" type="API" />
-  <topic id="N:usagi.Quantity.PlaneAngleMathExtension" type="API" />
-  <topic id="T:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper" type="API" />
-  <topic id="Methods.T:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper" type="API" />
-  <topic id="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Abs(usagi.Quantity.PlaneAngle)" type="API" />
-  <topic id="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Cos(usagi.Quantity.PlaneAngle)" type="API" />
-  <topic id="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Cosh(usagi.Quantity.PlaneAngle)" type="API" />
-  <topic id="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Sign(usagi.Quantity.PlaneAngle)" type="API" />
-  <topic id="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Sin(usagi.Quantity.PlaneAngle)" type="API" />
-  <topic id="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Sinh(usagi.Quantity.PlaneAngle)" type="API" />
-  <topic id="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Tan(usagi.Quantity.PlaneAngle)" type="API" />
-  <topic id="M:usagi.Quantity.PlaneAngleMathExtension.PlaneAngleMathHelper.Tanh(usagi.Quantity.PlaneAngle)" type="API" />
+  <topic id="N:usagi.Quantity.Ratio.Extension" type="API" />
+  <topic id="T:usagi.Quantity.Ratio.Extension.NumericExtension" type="API" />
+  <topic id="Methods.T:usagi.Quantity.Ratio.Extension.NumericExtension" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.ClampToSNorm" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.ClampToUNorm" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.SNormCollapseToUNorm" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt16" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt32" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt64" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToSByte" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.ToRatio" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPercent" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPermil" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPermyriad" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPB" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPM" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPQ" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPT" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.UNormExpandToSNorm" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToByte" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt16" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt32" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt64" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToSByte" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt16" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt32" type="API" />
+  <topic id="Overload:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt64" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ClampToSNorm(System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ClampToSNorm(System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ClampToSNorm(System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ClampToUNorm(System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ClampToUNorm(System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ClampToUNorm(System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.DecompositionToCommonFraction(System.Double,System.Nullable{System.Double})" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormCollapseToUNorm(System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormCollapseToUNorm(System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormCollapseToUNorm(System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt16(System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt16(System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt16(System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt32(System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt32(System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt32(System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt64(System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt64(System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToInt64(System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToSByte(System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToSByte(System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.SNormToSByte(System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToRatio(System.Decimal,System.Decimal,System.Decimal,System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToRatio(System.Double,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToRatio(System.Single,System.Single,System.Single,System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.Byte,System.Boolean)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.Byte,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.Int16,System.Boolean)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.Int16,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.Int32,System.Boolean)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.Int32,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.Int64,System.Boolean)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.Int64,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.SByte,System.Boolean)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.SByte,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.UInt16,System.Boolean)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.UInt16,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.UInt32,System.Boolean)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.UInt32,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.UInt64,System.Boolean)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToSNorm(System.UInt64,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringBell(System.Single,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringNeper(System.Double,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPercent(System.Decimal,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPercent(System.Double,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPercent(System.Single,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPermil(System.Decimal,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPermil(System.Double,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPermil(System.Single,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPermyriad(System.Decimal,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPermyriad(System.Double,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPermyriad(System.Single,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPB(System.Decimal,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPB(System.Double,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPB(System.Single,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPM(System.Decimal,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPM(System.Double,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPM(System.Single,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPQ(System.Decimal,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPQ(System.Double,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPQ(System.Single,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPT(System.Decimal,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPT(System.Double,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToStringPPT(System.Single,System.String,System.String)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm(System.Byte,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm(System.Int16,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm(System.Int32,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm(System.Int64,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm(System.SByte,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm(System.UInt16,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm(System.UInt32,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.ToUNorm(System.UInt64,System.Double,System.Double,System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormExpandToSNorm(System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormExpandToSNorm(System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormExpandToSNorm(System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToByte(System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToByte(System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToByte(System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt16(System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt16(System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt16(System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt32(System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt32(System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt32(System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt64(System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt64(System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToInt64(System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToSByte(System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToSByte(System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToSByte(System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt16(System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt16(System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt16(System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt32(System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt32(System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt32(System.Single)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt64(System.Decimal)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt64(System.Double)" type="API" />
+  <topic id="M:usagi.Quantity.Ratio.Extension.NumericExtension.UNormToUInt64(System.Single)" type="API" />
   <topic id="N:usagi.Quantity.Unit.SI" type="API" />
   <topic id="T:usagi.Quantity.Unit.SI.MetricPrefix" type="API" />
   <topic id="Methods.T:usagi.Quantity.Unit.SI.MetricPrefix" type="API" />
@@ -723,6 +1008,13 @@
   <topic id="F:usagi.Quantity.Unit.SI.MetricPrefix.RegexPattern" type="API" />
   <topic id="M:usagi.Quantity.Unit.SI.MetricPrefix.ToString" type="API" />
   <topic id="M:usagi.Quantity.Unit.SI.MetricPrefix.ToString(System.String,System.IFormatProvider)" type="API" />
+  <topic id="N:usagi.String.Extension" type="API" />
+  <topic id="T:usagi.String.Extension.StringExtension" type="API" />
+  <topic id="Methods.T:usagi.String.Extension.StringExtension" type="API" />
+  <topic id="M:usagi.String.Extension.StringExtension.Contains(System.String,System.String[])" type="API" />
+  <topic id="M:usagi.String.Extension.StringExtension.EndsWith(System.String,System.String[])" type="API" />
+  <topic id="M:usagi.String.Extension.StringExtension.StartsOrEndsWith(System.String,System.String[])" type="API" />
+  <topic id="M:usagi.String.Extension.StringExtension.StartsWith(System.String,System.String[])" type="API" />
   <topic id="N:usagi.URI" type="API" />
   <topic id="T:usagi.URI.GeoURI" type="API" />
   <topic id="Methods.T:usagi.URI.GeoURI" type="API" />

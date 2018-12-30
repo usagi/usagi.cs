@@ -81,9 +81,9 @@ NaN 判定</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public �
 -∞判定</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_Length_IsPositiveInfinity.md">IsPositiveInfinity</a></td><td>
 +∞判定</td></tr><tr><td>![Protected メソッド](media/protmethod.gif "Protected メソッド")</td><td><a href="http://msdn2.microsoft.com/ja-jp/library/57ctke0a" target="_blank">MemberwiseClone</a></td><td>
 現在の <a href="http://msdn2.microsoft.com/ja-jp/library/e5kfa45b" target="_blank">Object</a> の簡易コピーを作成します。
- (<a href="http://msdn2.microsoft.com/ja-jp/library/e5kfa45b" target="_blank">Object</a>から継承)</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_Length_NearlyEquals.md">NearlyEquals</a></td><td>
-a と b の差が tolerance 以下か判定する</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_Length_NearlyEqualsTo.md">NearlyEqualsTo</a></td><td>
-近似的に等価か判定</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="http://msdn2.microsoft.com/ja-jp/library/7bxwbwt2" target="_blank">ToString()</a></td><td>
+ (<a href="http://msdn2.microsoft.com/ja-jp/library/e5kfa45b" target="_blank">Object</a>から継承)</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_Length_NearlyEquals.md">NearlyEquals(Length, Length)</a></td><td>
+近似的に等価か判定</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_Length_NearlyEquals_1.md">NearlyEquals(Length, Length, Length)</a></td><td>
+a と b の差が tolerance 以下か判定する</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="http://msdn2.microsoft.com/ja-jp/library/7bxwbwt2" target="_blank">ToString()</a></td><td>
 現在のオブジェクトを表す文字列を返します。
  (<a href="http://msdn2.microsoft.com/ja-jp/library/e5kfa45b" target="_blank">Object</a>から継承)</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_Length_ToString.md">ToString(String, IFormatProvider)</a></td><td>
 メートル単位で文字列化</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_Length_ToString_cm.md">ToString_cm</a></td><td>
@@ -117,15 +117,15 @@ a と b の差が tolerance 以下か判定する</td></tr><tr><td>![Public メ�
 <a href="#length-メソッド">トップ</a>
 
 ## 拡張メソッド
-&nbsp;<table><tr><th></th><th>名前</th><th>説明</th></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_LengthMathExtension_LengthMathHelper_Abs.md">Abs</a></td><td>
+&nbsp;<table><tr><th></th><th>名前</th><th>説明</th></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_Extension_LengthMathExtension_Abs.md">Abs</a></td><td>
 符号を正に強制します
- (<a href="T_usagi_Quantity_LengthMathExtension_LengthMathHelper.md">LengthMathHelper</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_LengthMathExtension_LengthMathHelper_ACos.md">ACos</a></td><td>
+ (<a href="T_usagi_Quantity_Extension_LengthMathExtension.md">LengthMathExtension</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_Extension_LengthMathExtension_ACos.md">ACos</a></td><td>
 逆余弦値を cathetus / hypotenuse から計算しますよ
- (<a href="T_usagi_Quantity_LengthMathExtension_LengthMathHelper.md">LengthMathHelper</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_LengthMathExtension_LengthMathHelper_ASin.md">ASin</a></td><td>
+ (<a href="T_usagi_Quantity_Extension_LengthMathExtension.md">LengthMathExtension</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_Extension_LengthMathExtension_ASin.md">ASin</a></td><td>
 逆正弦値を cathetus / hypotenuse から計算しますよ
- (<a href="T_usagi_Quantity_LengthMathExtension_LengthMathHelper.md">LengthMathHelper</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_LengthMathExtension_LengthMathHelper_ATan2.md">ATan2</a></td><td>
+ (<a href="T_usagi_Quantity_Extension_LengthMathExtension.md">LengthMathExtension</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_Extension_LengthMathExtension_ATan2.md">ATan2</a></td><td>
 逆正接値を計算しますよ
- (<a href="T_usagi_Quantity_LengthMathExtension_LengthMathHelper.md">LengthMathHelper</a>により定義)</td></tr></table>&nbsp;
+ (<a href="T_usagi_Quantity_Extension_LengthMathExtension.md">LengthMathExtension</a>により定義)</td></tr></table>&nbsp;
 <a href="#length-メソッド">トップ</a>
 
 ## 関連項目

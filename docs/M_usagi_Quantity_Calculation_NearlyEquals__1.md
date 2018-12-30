@@ -1,4 +1,4 @@
-# Calculation.NearlyEquals(*T*) メソッド (*T*, *T*, *T*, Func(*T*, *T*, *T*), Func(*T*, *T*, *T*))<div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
+# Calculation.NearlyEquals(*T*) メソッド <div style="font-size:30%"><a href="https://github.com/usagi/usagi.cs/blob/master/docs/Home.md">≪Back to Home</a></div> 
 
 a と b の差が tolerance 以下か判定する 
 
@@ -7,7 +7,7 @@ a と b の差が tolerance 以下か判定する
 
     <strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_Quantity.md">usagi.Quantity</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 1.2.0.0 (1.2.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 2.0.0.0 (2.0.0.0)
 
 ## 構文
 
@@ -38,4 +38,4 @@ where T : Object, IComparable<T>
 
 
 #### 参照
-<a href="T_usagi_Quantity_Calculation.md">Calculation クラス</a><br /><a href="Overload_usagi_Quantity_Calculation_NearlyEquals.md">NearlyEquals オーバーロード</a><br /><a href="N_usagi_Quantity.md">usagi.Quantity 名前空間</a><br />
+<a href="T_usagi_Quantity_Calculation.md">Calculation クラス</a><br /><a href="N_usagi_Quantity.md">usagi.Quantity 名前空間</a><br />

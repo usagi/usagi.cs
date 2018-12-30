@@ -56,12 +56,12 @@ namespace usagi.Quantity.Tests
       {
         var a = PlaneAngle.FromTurns( p );
 
-        Assert.IsTrue( a.NearlyEqualsTo( a ), $"p={p} a={a} case=1" );
-        Assert.IsTrue( a.NearlyEqualsTo( a, PlaneAngle.Zero ), $"p={p} a={a} case=2" );
-        Assert.IsFalse( a.NearlyEqualsTo( a + PlaneAngle.CentiSecond * 2 ), $"p={p} a={a} case=3" );
-        Assert.IsTrue( a.NearlyEqualsTo( a + PlaneAngle.CentiSecond / 2 ), $"p={p} a={a} case=4" );
-        Assert.IsFalse( a.NearlyEqualsTo( a - PlaneAngle.CentiSecond * 2 ), $"p={p} a={a} case=5" );
-        Assert.IsTrue( a.NearlyEqualsTo( a - PlaneAngle.CentiSecond / 2 ), $"p={p} a={a} case=6" );
+        Assert.IsTrue( a.NearlyEquals( a ), $"p={p} a={a} case=1" );
+        Assert.IsTrue( a.NearlyEquals( a, PlaneAngle.Zero ), $"p={p} a={a} case=2" );
+        Assert.IsFalse( a.NearlyEquals( a + PlaneAngle.CentiSecond * 2 ), $"p={p} a={a} case=3" );
+        Assert.IsTrue( a.NearlyEquals( a + PlaneAngle.CentiSecond / 2 ), $"p={p} a={a} case=4" );
+        Assert.IsFalse( a.NearlyEquals( a - PlaneAngle.CentiSecond * 2 ), $"p={p} a={a} case=5" );
+        Assert.IsTrue( a.NearlyEquals( a - PlaneAngle.CentiSecond / 2 ), $"p={p} a={a} case=6" );
       }
     }
 
@@ -79,19 +79,19 @@ namespace usagi.Quantity.Tests
     }
 
     [TestMethod()]
-    public void NormalizedNearlyEqualsToTest()
+    public void NormalizedNearlyEqualsTest()
     {
       var ps = from _ in Enumerable.Range( -40, 40 ) select _ * 1.0e-1;
       foreach ( var p in ps )
       {
         var a = PlaneAngle.FromTurns( p );
 
-        Assert.IsTrue( a.NormalizedNearlyEqualsTo( a ), $"p={p} a={a} case=1" );
-        Assert.IsTrue( a.NormalizedNearlyEqualsTo( a, PlaneAngle.Zero ), $"p={p} a={a} case=2" );
-        Assert.IsFalse( a.NormalizedNearlyEqualsTo( a + PlaneAngle.CentiSecond * 2 ), $"p={p} a={a} case=3" );
-        Assert.IsTrue( a.NormalizedNearlyEqualsTo( a + PlaneAngle.CentiSecond / 2 ), $"p={p} a={a} case=4" );
-        Assert.IsFalse( a.NormalizedNearlyEqualsTo( a - PlaneAngle.CentiSecond * 2 ), $"p={p} a={a} case=5" );
-        Assert.IsTrue( a.NormalizedNearlyEqualsTo( a - PlaneAngle.CentiSecond / 2 ), $"p={p} a={a} case=6" );
+        Assert.IsTrue( a.NormalizedNearlyEquals( a ), $"p={p} a={a} case=1" );
+        Assert.IsTrue( a.NormalizedNearlyEquals( a, PlaneAngle.Zero ), $"p={p} a={a} case=2" );
+        Assert.IsFalse( a.NormalizedNearlyEquals( a + PlaneAngle.CentiSecond * 2 ), $"p={p} a={a} case=3" );
+        Assert.IsTrue( a.NormalizedNearlyEquals( a + PlaneAngle.CentiSecond / 2 ), $"p={p} a={a} case=4" );
+        Assert.IsFalse( a.NormalizedNearlyEquals( a - PlaneAngle.CentiSecond * 2 ), $"p={p} a={a} case=5" );
+        Assert.IsTrue( a.NormalizedNearlyEquals( a - PlaneAngle.CentiSecond / 2 ), $"p={p} a={a} case=6" );
       }
     }
 

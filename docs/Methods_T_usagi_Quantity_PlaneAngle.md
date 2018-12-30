@@ -53,21 +53,21 @@ NaN 判定</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public �
 -∞判定</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngle_IsPositiveInfinity.md">IsPositiveInfinity</a></td><td>
 +∞判定</td></tr><tr><td>![Protected メソッド](media/protmethod.gif "Protected メソッド")</td><td><a href="http://msdn2.microsoft.com/ja-jp/library/57ctke0a" target="_blank">MemberwiseClone</a></td><td>
 現在の <a href="http://msdn2.microsoft.com/ja-jp/library/e5kfa45b" target="_blank">Object</a> の簡易コピーを作成します。
- (<a href="http://msdn2.microsoft.com/ja-jp/library/e5kfa45b" target="_blank">Object</a>から継承)</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_PlaneAngle_NearlyEquals.md">NearlyEquals</a></td><td>
-a と b の差が tolerance 以下か判定する</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngle_NearlyEqualsTo.md">NearlyEqualsTo</a></td><td>
-NearlyEquals( this, a tolerance ) への糖衣構文</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngle_Normalize180.md">Normalize180()</a></td><td>
+ (<a href="http://msdn2.microsoft.com/ja-jp/library/e5kfa45b" target="_blank">Object</a>から継承)</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngle_NearlyEquals.md">NearlyEquals(PlaneAngle, PlaneAngle)</a></td><td>
+NearlyEquals( this, a tolerance ) への糖衣構文</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_PlaneAngle_NearlyEquals_1.md">NearlyEquals(PlaneAngle, PlaneAngle, PlaneAngle)</a></td><td>
+a と b の差が tolerance 以下か判定する</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngle_Normalize180.md">Normalize180()</a></td><td>
 this 自身を [ -180 ... 180 ) へ正規化する。正規化前の情報は失われる。</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_PlaneAngle_Normalize180_1.md">Normalize180(PlaneAngle)</a></td><td>
 a を元に新たに [ -180 ... 180 ) へ正規化した平面角オブジェクトを生成するファクトリー</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngle_Normalize360.md">Normalize360()</a></td><td>
 this 自身を [ 0 ... 360 ) へ正規化する。正規化前の情報は失われる。</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_PlaneAngle_Normalize360_1.md">Normalize360(PlaneAngle)</a></td><td>
 a を元に新たに [ 0 ... 360 ) へ正規化した平面角オブジェクトを生成するファクトリー</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngle_NormalizedCompareTo.md">NormalizedCompareTo</a></td><td>
 [0...360) deg へ正規化した場合の角度の比較を行います。 
 
-例: a=-30, b=60 が与えられた場合、 330 vs. 60 となり結果は false となります。</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngle_NormalizedEqualsTo.md">NormalizedEqualsTo</a></td><td>
+例: a=-30, b=60 が与えられた場合、 330 vs. 60 となり結果は false となります。</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngle_NormalizedEquals.md">NormalizedEquals</a></td><td>
 正規化した場合の this == a の判定</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngle_NormalizedGreaterThan.md">NormalizedGreaterThan(PlaneAngle)</a></td><td>
 正規化した場合の this > a の判定</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_PlaneAngle_NormalizedGreaterThan_1.md">NormalizedGreaterThan(PlaneAngle, PlaneAngle)</a></td><td>
 正規化した場合に角度が a > b か判定する</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngle_NormalizedLessThan.md">NormalizedLessThan(PlaneAngle)</a></td><td>
 正規化した場合の this < a の判定</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_PlaneAngle_NormalizedLessThan_1.md">NormalizedLessThan(PlaneAngle, PlaneAngle)</a></td><td>
-正規化した場合に角度が a < b か判定する</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngle_NormalizedNearlyEqualsTo.md">NormalizedNearlyEqualsTo</a></td><td>
+正規化した場合に角度が a < b か判定する</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngle_NormalizedNearlyEquals.md">NormalizedNearlyEquals</a></td><td>
 正規化した場合の this ≃ a の判定</td></tr><tr><td>![Public メソッド](media/pubmethod.gif "Public メソッド")![静的メンバー](media/static.gif "静的メンバー")</td><td><a href="M_usagi_Quantity_PlaneAngle_Parse.md">Parse</a></td><td>
 度数法による Degrees または Minutes または Seconds の組み合わせ または Radians, Points, Mils, Gradians, Turns で読み取り可能な文字列 から PlaneAngle オブジェクトを生成する。 
 
@@ -97,21 +97,21 @@ Turns 単位で文字列化する。数値に加え、単位として SymbolOfTu
 <a href="#planeangle-メソッド">トップ</a>
 
 ## 拡張メソッド
-&nbsp;<table><tr><th></th><th>名前</th><th>説明</th></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Abs.md">Abs</a></td><td>
+&nbsp;<table><tr><th></th><th>名前</th><th>説明</th></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_Extension_PlaneAngleMathHelper_Abs.md">Abs</a></td><td>
 符号を正に強制します
- (<a href="T_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper.md">PlaneAngleMathHelper</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Cos.md">Cos</a></td><td>
+ (<a href="T_usagi_Quantity_Extension_PlaneAngleMathHelper.md">PlaneAngleMathHelper</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_Extension_PlaneAngleMathHelper_Cos.md">Cos</a></td><td>
 余弦値を計算しますよ
- (<a href="T_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper.md">PlaneAngleMathHelper</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Cosh.md">Cosh</a></td><td>
+ (<a href="T_usagi_Quantity_Extension_PlaneAngleMathHelper.md">PlaneAngleMathHelper</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_Extension_PlaneAngleMathHelper_Cosh.md">Cosh</a></td><td>
 双曲線余弦値を計算しますよ
- (<a href="T_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper.md">PlaneAngleMathHelper</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Sin.md">Sin</a></td><td>
+ (<a href="T_usagi_Quantity_Extension_PlaneAngleMathHelper.md">PlaneAngleMathHelper</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_Extension_PlaneAngleMathHelper_Sin.md">Sin</a></td><td>
 正弦値を計算しますよ
- (<a href="T_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper.md">PlaneAngleMathHelper</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Sinh.md">Sinh</a></td><td>
+ (<a href="T_usagi_Quantity_Extension_PlaneAngleMathHelper.md">PlaneAngleMathHelper</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_Extension_PlaneAngleMathHelper_Sinh.md">Sinh</a></td><td>
 双曲線正弦値を計算しますよ
- (<a href="T_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper.md">PlaneAngleMathHelper</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Tan.md">Tan</a></td><td>
+ (<a href="T_usagi_Quantity_Extension_PlaneAngleMathHelper.md">PlaneAngleMathHelper</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_Extension_PlaneAngleMathHelper_Tan.md">Tan</a></td><td>
 正接値を計算しますよ
- (<a href="T_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper.md">PlaneAngleMathHelper</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper_Tanh.md">Tanh</a></td><td>
+ (<a href="T_usagi_Quantity_Extension_PlaneAngleMathHelper.md">PlaneAngleMathHelper</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_Quantity_Extension_PlaneAngleMathHelper_Tanh.md">Tanh</a></td><td>
 双曲線正接値を計算しますよ
- (<a href="T_usagi_Quantity_PlaneAngleMathExtension_PlaneAngleMathHelper.md">PlaneAngleMathHelper</a>により定義)</td></tr></table>&nbsp;
+ (<a href="T_usagi_Quantity_Extension_PlaneAngleMathHelper.md">PlaneAngleMathHelper</a>により定義)</td></tr></table>&nbsp;
 <a href="#planeangle-メソッド">トップ</a>
 
 ## 関連項目
