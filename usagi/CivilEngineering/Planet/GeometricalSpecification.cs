@@ -21,7 +21,7 @@ namespace usagi.CivilEngineering.Planet
       : IGeometricalSpecificationGettable
     {
       public double Flattening => 1.0 / 298.257_223_563;
-      public Length EquatorialRadius => Length.From_m( 6_356_752.314_2 );
+      public Length EquatorialRadius => Length.From_m( 6_378_137.0 );
       public Length EquatorLength => EquatorialRadius * 2 * Math.PI;
       public Length AxialRadius => EquatorialRadius * ( 1 - Flattening );
       /// <remarks>
