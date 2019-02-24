@@ -266,5 +266,70 @@ namespace usagi.CivilEngineering.Extension
 
       return Length.From_m( planet.AxialRadius._m * A * ( Sigma - DeltaSigma ) );
     }
+
+    /// <summary>
+    /// Vincenty のアルゴリズムで経緯度 origin から距離 distance だけ角度 angle の方位へ射影した経緯度を計算するよ
+    /// </summary>
+    /// <param name="origin">基点とする位置</param>
+    /// <param name="distance">射影先までの距離</param>
+    /// <param name="angle">射影する方位。北=0deg, 西=+90deg, 東=-90deg, 南=180deg。 atans(y,x) 的には 北向き=+x, 西向き=+y の系</param>
+    /// <param name="planet">惑星。null の場合は WGS84</param>
+    /// <returns>射影先の経緯度</returns>
+    public static LonLat ProjectionTo
+    ( this ILonLatGettable origin
+    , Length distance
+    , PlaneAngle angle
+    , IGeometricalSpecificationGettable planet = null
+    )
+    {
+      planet = planet ?? GeometricalSpecification.Earth_WGS84;
+
+      var SinAlphpa1 = angle.Sin();
+      var CosAlpha1 = angle.Cos();
+
+      var TanU1 = ( 1 - planet.Flattening ) * origin.Latitude.Tan();
+      var CosU1 = 1 / Math.Sqrt( 1 + TanU1 * TanU1 );
+      var SinU1 = TanU1 * CosU1;
+      var Sigma1 = Math.Atan2( TanU1, CosAlpha1 );
+      var SinAlpha = CosU1 * SinAlphpa1;
+      var CosSqAlpha = 1 - SinAlpha * SinAlpha;
+
+      var ERSq = planet.EquatorialRadius._m * planet.EquatorialRadius._m;
+      var ARSq = planet.AxialRadius._m * planet.AxialRadius._m;
+
+      var uSq = CosSqAlpha * ( ERSq - ARSq ) / ARSq;
+      var A = 1 + uSq / 16384 * ( 4096 + uSq * ( -768 + uSq * ( 320 - 175 * uSq ) ) );
+      var B = uSq / 1024 * ( 256 + uSq * ( -128 + uSq * ( 74 - 47 * uSq ) ) );
+
+      var Sigma = distance._m / ( planet.AxialRadius._m * A );
+      var SigmaP = 0.0;
+      var SinSigma = 0.0;
+      var CosSigma = 0.0;
+      var Cos2SigmaM = 0.0;
+      do
+      {
+        Cos2SigmaM = Math.Cos( 2 * Sigma1 + Sigma );
+        SinSigma = Math.Sin( Sigma );
+        CosSigma = Math.Cos( Sigma );
+        var DeltaSigma =
+          B * SinSigma * ( Cos2SigmaM + B / 4 * ( CosSigma * ( -1 + 2 * Cos2SigmaM * Cos2SigmaM ) -
+          B / 6 * Cos2SigmaM * ( -3 + 4 * SinSigma * SinSigma ) * ( -3 + 4 * Cos2SigmaM * Cos2SigmaM ) ) )
+          ;
+        SigmaP = Sigma;
+        Sigma = distance._m / ( planet.AxialRadius._m * A ) + DeltaSigma;
+      } while ( Math.Abs( Sigma - SigmaP ) > 1e-12 );
+
+      var tmp = SinU1 * SinSigma - CosU1 * CosSigma * CosAlpha1;
+      var Phi2 = PlaneAngle.FromRadians( Math.Atan2( SinU1 * CosSigma + CosU1 * SinSigma * CosAlpha1, ( 1 - planet.Flattening ) * Math.Sqrt( SinAlpha * SinAlpha + tmp * tmp ) ) );
+      var Labmda = Math.Atan2( SinSigma * SinAlphpa1, CosU1 * CosSigma - SinU1 * SinSigma * CosAlpha1 );
+      var C = planet.Flattening / 16 * CosSqAlpha * ( 4 + planet.Flattening * ( 4 - 3 * CosSqAlpha ) );
+      var L = Labmda - ( 1 - C ) * planet.Flattening * SinAlpha *
+          ( Sigma + C * SinSigma * ( Cos2SigmaM + C * CosSigma * ( -1 + 2 * Cos2SigmaM * Cos2SigmaM ) ) );
+      var Lambda2 = PlaneAngle.FromRadians( ( origin.Longitude._rad + L + 3 * Math.PI ) % ( 2 * Math.PI ) - Math.PI );  // normalise to -180...+180
+
+      //var revAz = Math.Atan2( SinAlpha, -tmp );
+      return new LonLat( Lambda2, Phi2 );
+    }
+
   }
 }
