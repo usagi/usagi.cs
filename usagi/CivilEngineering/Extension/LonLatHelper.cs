@@ -236,7 +236,7 @@ namespace usagi.CivilEngineering.Extension
           ;
       }
       while
-      ( Lambda.NearlyEquals( LambdaP, PlaneAngle.FromRadians( 1.0e-12 ) )
+      ( !Lambda.NearlyEquals( LambdaP, PlaneAngle.FromRadians( 0.5e-12 ) )
       && --IterationLimit > 0
       );
 
@@ -264,7 +264,7 @@ namespace usagi.CivilEngineering.Extension
           )
         ;
 
-      return Length.From_m( B * A * ( Sigma - DeltaSigma ) );
+      return Length.From_m( planet.AxialRadius._m * A * ( Sigma - DeltaSigma ) );
     }
   }
 }
