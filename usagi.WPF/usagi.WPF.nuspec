@@ -15,25 +15,12 @@
     <copyright>Copyright 2019 Usagi Ito</copyright>
     <tags>
       usagi
-      Unit
-      Utility
-      Generic
-      Math
-      CivilEngineering
-      Quantity
-      URI
-      PlaneAngle
-      Length
-      ItemsControl
-      IEnumerable
-      IDictionary
-      Extension
-      Range
-      string
-      MemoryStream
-      Japanese
-      日本語
-      Ratio
+      WPF
+      GUI
+      ColorSpace
     </tags>
+    <dependencies>
+      <dependency id="usagi" version="3.0.0"/>
+    </dependencies>
   </metadata>
 </package>

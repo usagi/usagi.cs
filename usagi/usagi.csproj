@@ -55,6 +55,7 @@
     <Compile Include="Collection\Enumerable.cs" />
     <Compile Include="Collection\Extension\IDictionaryExtension.cs" />
     <Compile Include="Collection\Extension\IEnumerableExtension.cs" />
+    <Compile Include="FileSystem\FileSystem.cs" />
     <Compile Include="FileSystem\SanitizePath.cs" />
     <Compile Include="String\String.cs" />
     <Compile Include="String\Extetnsion\Extension.cs" />

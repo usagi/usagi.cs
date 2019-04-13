@@ -60,5 +60,8 @@
       <Name>usagi</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="usagi.WPF.nuspec" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
