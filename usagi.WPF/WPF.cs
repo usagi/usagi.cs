@@ -1,7 +1,7 @@
-﻿namespace usagi.ColorSpace.Extension
+﻿namespace usagi.WPF
 {
   /// <summary>
-  /// エクステンション
+  /// usagi.cs から .net Framework の WPF を扱う部分を分離したライブラリー
   /// </summary>
   [System.Runtime.CompilerServices.CompilerGeneratedAttribute]
   internal class NamespaceDoc { }

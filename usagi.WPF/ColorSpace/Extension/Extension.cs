@@ -1,4 +1,4 @@
-﻿namespace usagi.GUI.Extension
+﻿namespace usagi.WPF.ColorSpace.Extension
 {
   /// <summary>
   /// エクステンション

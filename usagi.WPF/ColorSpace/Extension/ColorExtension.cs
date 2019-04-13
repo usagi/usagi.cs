@@ -8,7 +8,7 @@ using usagi.Quantity;
 using usagi.Quantity.Ratio.Extension;
 using usagi.Quantity.Extension;
 
-namespace usagi.ColorSpace.Extension
+namespace usagi.WPF.ColorSpace.Extension
 {
   /// <summary>
   /// <see cref="Color"/> を機能拡張する。

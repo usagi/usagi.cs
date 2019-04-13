@@ -2,8 +2,6 @@
 using System;
 using System.IO;
 using System.Text;
-using System.Windows.Media;
-using usagi.ColorSpace;
 using usagi.Quantity;
 using usagi.Quantity.Ratio.Extension;
 

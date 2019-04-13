@@ -7,7 +7,7 @@ using Color = System.Windows.Media.Color;
 using usagi.Quantity;
 using usagi.Quantity.Ratio.Extension;
 
-namespace usagi.ColorSpace
+namespace usagi.WPF.ColorSpace
 {
 #if false
   public static class Converter

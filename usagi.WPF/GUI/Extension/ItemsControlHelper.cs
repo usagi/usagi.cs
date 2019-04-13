@@ -1,16 +1,13 @@
 ﻿using System.Windows.Controls;
 using System.Collections.Generic;
 using System.Linq;
-using System;
-using System.Windows;
-using usagi.GUI.Extension;
 
-namespace usagi.GUI.Extension
+namespace usagi.WPF.GUI.Extension
 {
   /// <summary>
   /// System.Windows.Control.ItemsControlHelper に対する機能拡張
   /// </summary>
-  static public partial class ItemsControlHelper
+  static public class ItemsControlHelper
   {
     /// <summary>
     /// ItemsControl から index 番目のアイテムの ContentPresenter を引っ張り出す

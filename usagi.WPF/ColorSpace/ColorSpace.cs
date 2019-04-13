@@ -1,4 +1,4 @@
-﻿namespace usagi.ColorSpace
+﻿namespace usagi.WPF.ColorSpace
 {
   /// <summary>
   /// 色空間、色について扱う

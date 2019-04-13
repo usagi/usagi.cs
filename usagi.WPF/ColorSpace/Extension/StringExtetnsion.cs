@@ -7,9 +7,9 @@ using System.Windows.Media;
 using usagi.Quantity;
 using usagi.Quantity.Ratio.Extension;
 using usagi.String.Extension;
-using static usagi.ColorSpace.Factory;
+using static usagi.WPF.ColorSpace.Factory;
 
-namespace usagi.ColorSpace.Extension
+namespace usagi.WPF.ColorSpace.Extension
 {
   /// <summary>
   /// <see cref="string"/> に色っぽい機能拡張を施す

@@ -33,8 +33,6 @@
     <DocumentationFile>bin\Release\usagi.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Device" />
@@ -44,7 +42,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collection\Collection.cs" />
@@ -56,25 +53,19 @@
     <Compile Include="Collection\Enumerable.cs" />
     <Compile Include="Collection\Extension\IDictionaryExtension.cs" />
     <Compile Include="Collection\Extension\IEnumerableExtension.cs" />
-    <Compile Include="ColorSpace\ColorSpace.cs" />
-    <Compile Include="ColorSpace\ColorFactory.cs" />
     <Compile Include="String\String.cs" />
     <Compile Include="String\Extetnsion\Extension.cs" />
     <Compile Include="Quantity\Ratio\Ratio.cs" />
     <Compile Include="InformationEngineering\Extension\Extension.cs" />
     <Compile Include="InformationEngineering\InformationEngineering.cs" />
-    <Compile Include="GUI\Extension\Extension.cs" />
-    <Compile Include="ColorSpace\Extension\Extension.cs" />
-    <Compile Include="ColorSpace\Extension\StringExtetnsion.cs" />
     <Compile Include="InformationEngineering\Numeric.cs" />
     <Compile Include="InformationEngineering\Extension\NumericExtension.cs" />
     <Compile Include="InformationEngineering\Boxing\Boxing.cs" />
     <Compile Include="InformationEngineering\Boxing\Optional.cs" />
-    <Compile Include="CivilEngineering\Extension\LonLatHelper.cs" />
+    <Compile Include="CivilEngineering\Extension\ILonLatGettableExtension.cs" />
     <Compile Include="CivilEngineering\Planet\GeometricalSpecification.cs" />
     <Compile Include="CivilEngineering\WebMercator.cs" />
     <Compile Include="CivilEngineering\CivilEngineering.cs" />
-    <Compile Include="ColorSpace\Extension\ColorExtension.cs" />
     <Compile Include="Quantity\Extension\Extension.cs" />
     <Compile Include="Quantity\Extension\NumericNearlyEqualsToExtension.cs" />
     <Compile Include="usagi.cs" />
@@ -83,7 +74,6 @@
     <Compile Include="Quantity\Ratio\Extension\NumericExtension.cs" />
     <Compile Include="String\Extetnsion\StringExtetnsion.cs" />
     <Compile Include="Collection\Extension\Extension.cs" />
-    <Compile Include="GUI\Extension\ItemsControlHelper.cs" />
     <Compile Include="Quantity\Quantity.cs" />
     <Compile Include="Quantity\Calculation.cs" />
     <Compile Include="Quantity\GeoLocation.cs" />

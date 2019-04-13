@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using usagi.Quantity.Ratio.Extension;
 using System.Windows.Media;
-using static usagi.ColorSpace.Extension.StringExtetnsion;
+using static usagi.WPF.ColorSpace.Extension.StringExtetnsion;
 
 namespace usagi.ColorSpace.Extension.Tests
 {
