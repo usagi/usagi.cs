@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assembly\Assembly.cs" />
+    <Compile Include="Assembly\Utility.cs" />
     <Compile Include="Collection\Collection.cs" />
     <Compile Include="CivilEngineering\Extension\Extension.cs" />
     <Compile Include="CivilEngineering\Planet\Planet.cs" />
@@ -53,6 +55,7 @@
     <Compile Include="Collection\Enumerable.cs" />
     <Compile Include="Collection\Extension\IDictionaryExtension.cs" />
     <Compile Include="Collection\Extension\IEnumerableExtension.cs" />
+    <Compile Include="FileSystem\SanitizePath.cs" />
     <Compile Include="String\String.cs" />
     <Compile Include="String\Extetnsion\Extension.cs" />
     <Compile Include="Quantity\Ratio\Ratio.cs" />
