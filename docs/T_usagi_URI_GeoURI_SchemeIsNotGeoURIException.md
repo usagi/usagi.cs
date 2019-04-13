@@ -8,7 +8,7 @@ Scheme が geo じゃないよ例外
 ## 継承階層
 <a href="http://msdn2.microsoft.com/ja-jp/library/e5kfa45b" target="_blank">System.Object</a><br />&nbsp;&nbsp;<a href="http://msdn2.microsoft.com/ja-jp/library/c18k6c59" target="_blank">System.Exception</a><br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="T_usagi_URI_GeoURI_GeoURIException.md">usagi.URI.GeoURI.GeoURIException</a><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usagi.URI.GeoURI.SchemeIsNotGeoURIException<br /><strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_URI.md">usagi.URI</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 2.0.0.0 (2.0.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 3.0.0.0
 
 ## 構文
 

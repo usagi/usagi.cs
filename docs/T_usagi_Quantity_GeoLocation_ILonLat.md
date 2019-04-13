@@ -7,7 +7,7 @@ PlaneAngle 型の Longitude, Latitude プロパティーを読み書きできる
 
     <strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_Quantity_GeoLocation.md">usagi.Quantity.GeoLocation</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 2.0.0.0 (2.0.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 3.0.0.0
 
 ## 構文
 
@@ -37,6 +37,8 @@ ILonLat 型は下記のメンバーを公開します。
 経緯度の位置 a と b の中間の緯度における経度方向の距離を計算する
  (<a href="T_usagi_CivilEngineering_Extension_LonLatDistanceExtension.md">LonLatDistanceExtension</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_CivilEngineering_Extension_LonLatDistanceExtension_NearlyEqualsTo.md">NearlyEqualsTo</a></td><td>
 経緯度の位置 a, b の惑星を楕円体近似した場合の距離が 許容範囲 tolerance 以下か判定
+ (<a href="T_usagi_CivilEngineering_Extension_LonLatDistanceExtension.md">LonLatDistanceExtension</a>により定義)</td></tr><tr><td>![Public 拡張メソッド](media/pubextension.gif "Public 拡張メソッド")</td><td><a href="M_usagi_CivilEngineering_Extension_LonLatDistanceExtension_ProjectionTo.md">ProjectionTo</a></td><td>
+Vincenty のアルゴリズムで経緯度 origin から距離 distance だけ角度 angle の方位へ射影した経緯度を計算するよ
  (<a href="T_usagi_CivilEngineering_Extension_LonLatDistanceExtension.md">LonLatDistanceExtension</a>により定義)</td></tr></table>&nbsp;
 <a href="#ilonlat-インターフェイス">トップ</a>
 

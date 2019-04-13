@@ -5,7 +5,7 @@ ppt 単位の文字列を生成
 
     <strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_Quantity_Ratio_Extension.md">usagi.Quantity.Ratio.Extension</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 2.0.0.0 (2.0.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 3.0.0.0
 
 ## 構文
 

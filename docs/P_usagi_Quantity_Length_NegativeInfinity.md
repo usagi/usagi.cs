@@ -5,7 +5,7 @@ NegativeInfinity な平面角オブジェクトを得る糖衣構文
 
     <strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_Quantity.md">usagi.Quantity</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 2.0.0.0 (2.0.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 3.0.0.0
 
 ## 構文
 

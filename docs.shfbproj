@@ -17,9 +17,9 @@
     <OutputPath>docs\</OutputPath>
     <HtmlHelpName>usagi.cs.docs</HtmlHelpName>
     <Language>ja-JP</Language>
-    <HelpFileFormat>HtmlHelp1</HelpFileFormat>
+    <HelpFileFormat>Markdown</HelpFileFormat>
     <SyntaxFilters>C#</SyntaxFilters>
-    <PresentationStyle>VS2013</PresentationStyle>
+    <PresentationStyle>Markdown</PresentationStyle>
     <CleanIntermediates>True</CleanIntermediates>
     <KeepLogFile>False</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
@@ -28,8 +28,9 @@
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
     <DocumentationSources>
       <DocumentationSource sourceFile="usagi\bin\Release\usagi.xml" />
-      <DocumentationSource sourceFile="usagi\bin\Release\usagi.dll" />
-    </DocumentationSources>
+<DocumentationSource sourceFile="usagi\bin\Release\usagi.dll" />
+<DocumentationSource sourceFile="usagi.WPF\bin\Release\usagi.xml" />
+<DocumentationSource sourceFile="usagi.WPF\bin\Release\usagi.WPF.dll" /></DocumentationSources>
     <HelpTitle>usagi.cs docs</HelpTitle>
     <HelpFileVersion>1.0.0.0</HelpFileVersion>
     <RootNamespaceContainer>True</RootNamespaceContainer>

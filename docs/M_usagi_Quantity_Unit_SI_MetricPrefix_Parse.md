@@ -4,7 +4,7 @@
 &nbsp;<ul><li>与えられた文字列がSI接頭辞として有効な場合は MetricPrefix オブジェクトを返す。</li><li>与えられた文字列が空文字列の場合は等倍（1.0倍）の MetricPrefix オブジェクトを返す。</li><li>与えられた文字列がSI接頭辞として無効な場合は null を返す。</li></ul>&nbsp;
 <strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_Quantity_Unit_SI.md">usagi.Quantity.Unit.SI</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 2.0.0.0 (2.0.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 3.0.0.0
 
 ## 構文
 

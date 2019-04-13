@@ -5,7 +5,7 @@ IEnumerable を実装する型 a, b について等価な値を保持するか�
 
     <strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_Collection_Extension.md">usagi.Collection.Extension</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 2.0.0.0 (2.0.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 3.0.0.0
 
 ## 構文
 

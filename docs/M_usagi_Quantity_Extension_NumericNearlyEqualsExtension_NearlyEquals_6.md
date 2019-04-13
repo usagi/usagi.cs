@@ -7,7 +7,7 @@ UInt64, Int64 に対しては内部的に decimal 型で計算を行う。
 
     <strong>名前空間:</strong>
 &nbsp;<a href="N_usagi_Quantity_Extension.md">usagi.Quantity.Extension</a><br /><strong>アセンブリ:</strong>
-&nbsp;usagi (in usagi.dll) バージョン: 2.0.0.0 (2.0.0.0)
+&nbsp;usagi (in usagi.dll) バージョン: 3.0.0.0
 
 ## 構文
 
