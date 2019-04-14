@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Device" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,13 @@
   <ItemGroup>
     <Compile Include="Assembly\Assembly.cs" />
     <Compile Include="Assembly\Utility.cs" />
+    <Compile Include="CivilEngineering\Terrain\GSI\GSI.cs" />
+    <Compile Include="CivilEngineering\Terrain\GSI\maps\maps.cs" />
+    <Compile Include="CivilEngineering\Terrain\GSI\maps\Utility.cs" />
+    <Compile Include="CivilEngineering\Terrain\GSJ\GSJ.cs" />
+    <Compile Include="CivilEngineering\Terrain\Terrain.cs" />
+    <Compile Include="CivilEngineering\Terrain\GSJ\datatilemap\Utility.cs" />
+    <Compile Include="CivilEngineering\Terrain\GSJ\datatilemap\datatilemap.cs" />
     <Compile Include="Collection\Collection.cs" />
     <Compile Include="CivilEngineering\Extension\Extension.cs" />
     <Compile Include="CivilEngineering\Planet\Planet.cs" />

@@ -17,6 +17,7 @@
       usagi
       WPF
       GUI
+      ItemsControl
       ColorSpace
     </tags>
     <dependencies>

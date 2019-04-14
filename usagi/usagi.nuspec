@@ -16,15 +16,28 @@
     <tags>
       usagi
       Unit
+      単位
       Utility
       Generic
       Math
       CivilEngineering
+      土木工学
+      GSJ
+      データタイルマップ
+      datatilemap
+      GSI
+      地理院地図
+      DEM
       Quantity
+      次元
       URI
+      GeoURI
       PlaneAngle
+      平面角
+      LonLat
+      経緯度
       Length
-      ItemsControl
+      長さ
       IEnumerable
       IDictionary
       Extension

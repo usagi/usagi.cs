@@ -7,19 +7,25 @@
     - docs( Online Markdown ): [docs/Home.md](docs/Home.md)
     - docs( chm; for Download ): [docs/usagi.cs.docs.chm](docs/usagi.cs.docs.chm)
 
-# Release Note 3.0.0
+# Release Note 3.1.0
 
-- [Issue #9 ファイルパスのサニタイザーユーティリティーを追加する](https://github.com/usagi/usagi.cs/issues/9)
-    - `usagi.FileSystem.Utility` にパスに使用不能な文字があったら置き換えまたは削除する `SanitizePath` メソッドを追加しました。
-- [Issue #8 バージョン情報とか扱うのに便利な usagi.Assembly.Utility を結合](https://github.com/usagi/usagi.cs/issues/8)
-    - `usagi.Assembly.Utility` に .net アッセンブリーとしてのバージョン文字列や製品名の取得を簡単にするメソッド群を追加しました。
-- [Issue #6 WPF, Windows に関連する機能をライブラリーレベルで分離](https://github.com/usagi/usagi.cs/issues/6)
-    - `usagi.cs` 内の `usagi` プロジェクト から WPF 用の機能を `usagi.WPF` プロジェクトへ分離しました。
-        - WPF が不要なプロジェクトで `usagi` ライブラリーを使いたい場合に便利がよくなりました。
-    - `usagi.WPF` の分離に伴い単体試験プロジェクトも `usagiTests` と `usagi.WPFTests` に分離しました。
-- [Issue #5 `usagi.CivilEngineering.Extension.LonLatHelper` ←こいつ 2.0.0 のリネームし忘れてるよね](https://github.com/usagi/usagi.cs/issues/5)
-    - ファイル名を変更しました。
-        - `LonLatHelper.cs` `ILonLatGettableExtension.cs`
+- [Issue #10 CivilEngineering に GSJ/datatilemap の入出力と変換、それを応用した GSI/dem のラッパーとかほしい](https://github.com/usagi/usagi.cs/issues/10)
+    - `usagi.CivilEngineering.Terrain.GSJ.datatilemap.Utility` を追加しました。
+        - GSJ/datatilemap 2.1 仕様のデータを読み込んだり変換したりできるようになりました。
+        - `LoadPNGDataTile`;  PNG Data Tile の読み込み
+        - `SavePNGNumberTileU`; PNG Number Tile （符号なし）のタイル単位の書き出し
+        - `SavePNGNumberTileS`; PNG Number Tile （符号付き）のタイル単位の書き出し
+        - `LoadPNGNumberTileU`; PNG Number Tile （符号なし）のタイル単位の読み出し
+        - `LoadPNGNumberTileS`; PNG Number Tile （符号付き）のタイル単位の読み出し
+        - `LoadPNGPaletteTile`; PNG Palette Tile のタイル単位の読み出し
+        - `DecodeNumberPixelU`; PNG Number Tile （符号なし）のピクセル単位のデコード
+        - `DecodeNumberPixelS`; PNG Number Tile （符号付き）のピクセル単位のデコード
+        - `EncodeNumberPixelU`; PNG Number Tile （符号なし）のピクセル単位のエンコード
+        - `EncodeNumberPixelS`; PNG Number Tile （符号付き）のピクセル単位のエンコード
+        - `DecodePalettePixel`; PNG Palette Tile のピクセル単位のデコード
+        - `EncodePalattePixel`; PNG Palette Tile のピクセル単位のエンコード
+    - `usagi.CivilEngineering.Terrain.GSI.maps.Utility` を追加しました。
+        - `LoadDEM`; DEM5A, DEM5B, DEM10B, DEMGM を組み合わせて必要に応じて補完した地形の数値標高群をタイル座標から取得
 
 ## Old Release Notes
 

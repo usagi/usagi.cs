@@ -48,6 +48,7 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <Choose>
@@ -60,6 +61,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CalculationTests.cs" />
+    <Compile Include="CivilEngineering\Terrain\GSI\maps\UtilityTests.cs" />
+    <Compile Include="CivilEngineering\Terrain\GSJ\datatilemap\UtilityTests.cs" />
     <Compile Include="Collection\EnumerableRangeCCTests.cs" />
     <Compile Include="Collection\EnumerableRangeCOTests.cs" />
     <Compile Include="Collection\EnumerableRangeOCTests.cs" />
