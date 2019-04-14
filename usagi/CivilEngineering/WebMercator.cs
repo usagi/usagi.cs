@@ -23,7 +23,7 @@ namespace usagi.CivilEngineering
     /// </summary>
     /// <param name="a">任意の経緯度</param>
     /// <returns>正規化された経緯度</returns>
-    static public LonLat NormalizeWebMercator( LonLat a )
+    static public LonLat NormalizeWebMercator( ILonLatGettable a )
     {
       PlaneAngle lon;
       var lat = a.Latitude.Normalize180();
@@ -69,7 +69,7 @@ namespace usagi.CivilEngineering
     /// <param name="a">経緯度</param>
     /// <param name="z">Level of Detail ( LOD; or Zoom Level )</param>
     /// <returns>ピクセル座標系の位置</returns>
-    static public PixelLocation AngleToPixel( LonLat a, byte z )
+    static public PixelLocation AngleToPixel( ILonLatGettable a, byte z )
     {
       var aa = NormalizeWebMercator( a );
 
@@ -127,7 +127,7 @@ namespace usagi.CivilEngineering
     /// <param name="a">経緯度</param>
     /// <param name="z">Level of Detail ( LOD; or Zoom Level )</param>
     /// <returns>所属するタイル座標系の位置</returns>
-    static public TileLocation AngleToTile( LonLat a, byte z )
+    static public TileLocation AngleToTile( ILonLatGettable a, byte z )
     {
       return PixelToTile( AngleToPixel( a, z ) );
     }
