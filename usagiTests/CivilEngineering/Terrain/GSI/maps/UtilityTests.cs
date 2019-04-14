@@ -11,10 +11,8 @@ namespace usagi.CivilEngineering.Terrain.GSI.maps.Tests
     [TestMethod()]
     public void LoadDEMTest()
     {
-      const byte z = 15;
-      const uint x = 29632;
-      const uint y = 12000;
-      var vs = LoadDEM( z, x, y, DEMType.DEM_5A | DEMType.DEM_10B );
+      var tile_location = new TileLocation( 29632, 12000, 15 );
+      var vs = LoadDEM( tile_location );
       Assert.IsNotNull( vs );
       Assert.AreEqual( 256, vs.GetLength( 0 ) );
       Assert.AreEqual( 256, vs.GetLength( 1 ) );

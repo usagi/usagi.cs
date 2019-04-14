@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using static usagi.CivilEngineering.Terrain.GSJ.datatilemap.Utility;
 using System.Drawing;
+using usagi.Quantity.GeoLocation;
+using usagi.CivilEngineering.Extension;
 
 namespace usagi.CivilEngineering.Terrain.GSI.maps
 {
@@ -63,18 +65,16 @@ namespace usagi.CivilEngineering.Terrain.GSI.maps
     /// <summary>
     /// 「標高タイル」をロード
     /// </summary>
-    /// <param name="z">Z</param>
-    /// <param name="x">X</param>
-    /// <param name="y">Y</param>
+    /// <param name="tile_location">タイル座標</param>
     /// <param name="dem_type">対象とするDEM群</param>
     /// <returns>標高群</returns>
-    public static double[,] LoadDEM( byte z, UInt32 x, UInt32 y, DEMType dem_type = DEMType.DEM_5A_5B_10B )
+    public static double[,] LoadDEM( TileLocation tile_location, DEMType dem_type = DEMType.DEM_5A_5B_10B )
     {
-      if ( z > 15 )
+      if ( tile_location.Z > 15 )
         return null;
 
       if
-      ( z == 15
+      ( tile_location.Z == 15
         && !( dem_type.HasFlag( DEMType.DEM_5A )
             || dem_type.HasFlag( DEMType.DEM_5B )
             )
@@ -86,12 +86,12 @@ namespace usagi.CivilEngineering.Terrain.GSI.maps
       const string ext = ".png";
       const double f = 1.0e-2;
 
-      if ( z == 15 )
+      if ( tile_location.Z == 15 )
       {
         if ( dem_type.HasFlag( DEMType.DEM_5A ) )
         {
           const string id = "dem5a_png";
-          var uri = new Uri( $"{URIPatternBase}{id}/{z}/{x}/{y}{ext}" );
+          var uri = new Uri( $"{URIPatternBase}{id}/{tile_location.Z}/{tile_location.X}/{tile_location.Y}{ext}" );
 
           r = LoadPNGNumberTileS( out var has_invalid_value, uri, f, additional_invalid_values: DEMAdditionalInvalidValue );
 
@@ -102,7 +102,7 @@ namespace usagi.CivilEngineering.Terrain.GSI.maps
         if ( dem_type.HasFlag( DEMType.DEM_5B ) )
         {
           const string id = "dem5b_png";
-          var uri = new Uri( $"{URIPatternBase}{id}/{z}/{x}/{y}{ext}" );
+          var uri = new Uri( $"{URIPatternBase}{id}/{tile_location.Z}/{tile_location.X}/{tile_location.Y}{ext}" );
 
           bool has_invalid_value;
 
@@ -121,19 +121,19 @@ namespace usagi.CivilEngineering.Terrain.GSI.maps
         const string id = "dem_png";
 
         // over-z
-        if ( z == 15 )
+        if ( tile_location.Z == 15 )
         {
           var zz = 14;
-          var xx = x >> 1;
-          var yy = y >> 1;
+          var xx = tile_location.X >> 1;
+          var yy = tile_location.Y >> 1;
           var uri = new Uri( $"{URIPatternBase}{id}/{zz}/{xx}/{yy}{ext}" );
 
           using ( var i = LoadPNGDataTile( uri ) )
           {
             // trimming
             const int half = ArrisLength >> 1;
-            var trim_x0 = ( x & 1 ) == 1 ? half : 0;
-            var trim_y0 = ( y & 1 ) == 1 ? half : 0;
+            var trim_x0 = ( tile_location.X & 1 ) == 1 ? half : 0;
+            var trim_y0 = ( tile_location.Y & 1 ) == 1 ? half : 0;
             using ( var trimmed = i.Clone( new Rectangle( trim_x0, trim_y0, half, half ), i.PixelFormat ) )
             {
               // scaling
@@ -160,7 +160,7 @@ namespace usagi.CivilEngineering.Terrain.GSI.maps
         }
         else
         {
-          var uri = new Uri( $"{URIPatternBase}{id}/{z}/{x}/{y}{ext}" );
+          var uri = new Uri( $"{URIPatternBase}{id}/{tile_location.Z}/{tile_location.X}/{tile_location.Y}{ext}" );
 
           r = LoadPNGNumberTileS( out var has_invalid_value, uri, f, additional_invalid_values: DEMAdditionalInvalidValue );
 
@@ -174,20 +174,20 @@ namespace usagi.CivilEngineering.Terrain.GSI.maps
         const string id = "demgm_png";
         const byte critical_z = 8;
 
-        if ( z > critical_z )
+        if ( tile_location.Z > critical_z )
         {
-          var dz = z - critical_z;
+          var dz = tile_location.Z - critical_z;
 
-          var xx = x >> dz;
-          var yy = y >> dz;
+          var xx = tile_location.X >> dz;
+          var yy = tile_location.Y >> dz;
           var uri = new Uri( $"{URIPatternBase}{id}/{critical_z}/{xx}/{yy}{ext}" );
 
           using ( var i = LoadPNGDataTile( uri ) )
           {
             // trimming
             var scaled_length = ArrisLength >> dz;
-            var dx = x - ( xx << dz );
-            var dy = y - ( yy << dz );
+            var dx = tile_location.X - ( xx << dz );
+            var dy = tile_location.Y - ( yy << dz );
             var trim_x0 = scaled_length * dx;
             var trim_y0 = scaled_length * dy;
             using ( var trimmed = i.Clone( new Rectangle( ( int )trim_x0, ( int )trim_y0, scaled_length, scaled_length ), i.PixelFormat ) )
@@ -216,7 +216,7 @@ namespace usagi.CivilEngineering.Terrain.GSI.maps
         }
         else
         {
-          var uri = new Uri( $"{URIPatternBase}{id}/{z}/{x}/{y}{ext}" );
+          var uri = new Uri( $"{URIPatternBase}{id}/{tile_location.Z}/{tile_location.X}/{tile_location.Y}{ext}" );
 
           if ( r == null )
             r = LoadPNGNumberTileS( out var has_invalid_value, uri, f, additional_invalid_values: DEMAdditionalInvalidValue );
@@ -227,5 +227,6 @@ namespace usagi.CivilEngineering.Terrain.GSI.maps
 
       return r;
     }
+
   }
 }
