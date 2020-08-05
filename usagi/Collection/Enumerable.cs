@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static System.Linq.Enumerable;
 using SE = System.Linq.Enumerable;
-using static usagi.Collection.Enumerable;
-using UE = usagi.Collection.Enumerable;
 using static usagi.InformationEngineering.Numeric;
 
 namespace usagi.Collection
