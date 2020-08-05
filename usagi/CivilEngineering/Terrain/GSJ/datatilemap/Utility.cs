@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Net;
 using System.Drawing;
 
@@ -56,7 +53,7 @@ namespace usagi.CivilEngineering.Terrain.GSJ.datatilemap
 
       using ( var r = new Bitmap( data.GetLength( 0 ), data.GetLength( 1 ) ) )
       {
-        for ( var y = 0; y < r.Width; ++y )
+        for ( var y = 0; y < r.Height; ++y )
           for ( var x = 0; x < r.Width; ++x )
           {
             var c = EncodeNumberPixelU( data[ x, y ], f, o, invalid_value );
@@ -85,7 +82,7 @@ namespace usagi.CivilEngineering.Terrain.GSJ.datatilemap
       var r = new Bitmap( data.GetLength( 0 ), data.GetLength( 1 ) );
         //)
       //{
-        for ( var y = 0; y < r.Width; ++y )
+        for ( var y = 0; y < r.Height; ++y )
           for ( var x = 0; x < r.Width; ++x )
           {
             var c = EncodeNumberPixelS( data[ x, y ], f, o, invalid_value );
@@ -411,8 +408,8 @@ namespace usagi.CivilEngineering.Terrain.GSJ.datatilemap
       const UInt32 critical_value = 1 << 23;
       const UInt32 critical_diff = 1 << 24;
       var s = ( iu.Value < critical_value )
-        ? iu.Value
-        : ( iu.Value - critical_diff )
+        ? (double)iu.Value
+        : ( (double)iu.Value - critical_diff )
         ;
 
       return f * s + o;
